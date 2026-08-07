@@ -426,58 +426,104 @@
             {
               "name": "beaconator-2.2.0+1.21.1.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.2.0/beaconator-2.2.0%2B1.21.1.jar",
-              "size": 286532
+              "size": 286532,
+              "minecraft": [
+                "1.21.1"
+              ]
             },
             {
               "name": "beaconator-2.2.0+1.21.11.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.2.0/beaconator-2.2.0%2B1.21.11.jar",
-              "size": 292464
+              "size": 292464,
+              "minecraft": [
+                "1.21.11"
+              ]
             },
             {
               "name": "beaconator-2.2.0+1.21.2.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.2.0/beaconator-2.2.0%2B1.21.2.jar",
-              "size": 286913
+              "size": 286913,
+              "minecraft": [
+                "1.21.2"
+              ]
             },
             {
               "name": "beaconator-2.2.0+1.21.3.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.2.0/beaconator-2.2.0%2B1.21.3.jar",
-              "size": 286915
+              "size": 286915,
+              "minecraft": [
+                "1.21.3"
+              ]
             },
             {
               "name": "beaconator-2.2.0+1.21.4.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.2.0/beaconator-2.2.0%2B1.21.4.jar",
-              "size": 286963
+              "size": 286963,
+              "minecraft": [
+                "1.21.4"
+              ]
             },
             {
               "name": "beaconator-2.2.0+1.21.5.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.2.0/beaconator-2.2.0%2B1.21.5.jar",
-              "size": 290321
+              "size": 290321,
+              "minecraft": [
+                "1.21.5"
+              ]
             },
             {
               "name": "beaconator-2.2.0+1.21.6.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.2.0/beaconator-2.2.0%2B1.21.6.jar",
-              "size": 290795
+              "size": 290795,
+              "minecraft": [
+                "1.21.6"
+              ]
             },
             {
               "name": "beaconator-2.2.0+1.21.7.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.2.0/beaconator-2.2.0%2B1.21.7.jar",
-              "size": 290795
+              "size": 290795,
+              "minecraft": [
+                "1.21.7"
+              ]
             },
             {
               "name": "beaconator-2.2.0+1.21.8.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.2.0/beaconator-2.2.0%2B1.21.8.jar",
-              "size": 290796
+              "size": 290796,
+              "minecraft": [
+                "1.21.8"
+              ]
             },
             {
               "name": "beaconator-2.2.0+1.21.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.2.0/beaconator-2.2.0%2B1.21.jar",
-              "size": 286529
+              "size": 286529,
+              "minecraft": [
+                "1.21"
+              ]
             },
             {
               "name": "beaconator-2.2.0+26.1.2.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.2.0/beaconator-2.2.0%2B26.1.2.jar",
-              "size": 292197
+              "size": 292197,
+              "minecraft": [
+                "26.1.2"
+              ]
             }
+          ],
+          "minecraft": [
+            "1.21",
+            "1.21.1",
+            "1.21.11",
+            "1.21.2",
+            "1.21.3",
+            "1.21.4",
+            "1.21.5",
+            "1.21.6",
+            "1.21.7",
+            "1.21.8",
+            "26.1.2"
           ]
         },
         {
@@ -490,53 +536,95 @@
             {
               "name": "beaconator-2.0.0+1.21.1.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.0.0/beaconator-2.0.0%2B1.21.1.jar",
-              "size": 285472
+              "size": 285472,
+              "minecraft": [
+                "1.21.1"
+              ]
             },
             {
               "name": "beaconator-2.0.0+1.21.11.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.0.0/beaconator-2.0.0%2B1.21.11.jar",
-              "size": 291445
+              "size": 291445,
+              "minecraft": [
+                "1.21.11"
+              ]
             },
             {
               "name": "beaconator-2.0.0+1.21.2.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.0.0/beaconator-2.0.0%2B1.21.2.jar",
-              "size": 285853
+              "size": 285853,
+              "minecraft": [
+                "1.21.2"
+              ]
             },
             {
               "name": "beaconator-2.0.0+1.21.3.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.0.0/beaconator-2.0.0%2B1.21.3.jar",
-              "size": 285855
+              "size": 285855,
+              "minecraft": [
+                "1.21.3"
+              ]
             },
             {
               "name": "beaconator-2.0.0+1.21.4.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.0.0/beaconator-2.0.0%2B1.21.4.jar",
-              "size": 285903
+              "size": 285903,
+              "minecraft": [
+                "1.21.4"
+              ]
             },
             {
               "name": "beaconator-2.0.0+1.21.5.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.0.0/beaconator-2.0.0%2B1.21.5.jar",
-              "size": 289261
+              "size": 289261,
+              "minecraft": [
+                "1.21.5"
+              ]
             },
             {
               "name": "beaconator-2.0.0+1.21.6.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.0.0/beaconator-2.0.0%2B1.21.6.jar",
-              "size": 289738
+              "size": 289738,
+              "minecraft": [
+                "1.21.6"
+              ]
             },
             {
               "name": "beaconator-2.0.0+1.21.7.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.0.0/beaconator-2.0.0%2B1.21.7.jar",
-              "size": 289738
+              "size": 289738,
+              "minecraft": [
+                "1.21.7"
+              ]
             },
             {
               "name": "beaconator-2.0.0+1.21.8.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.0.0/beaconator-2.0.0%2B1.21.8.jar",
-              "size": 289739
+              "size": 289739,
+              "minecraft": [
+                "1.21.8"
+              ]
             },
             {
               "name": "beaconator-2.0.0+1.21.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.0.0/beaconator-2.0.0%2B1.21.jar",
-              "size": 285469
+              "size": 285469,
+              "minecraft": [
+                "1.21"
+              ]
             }
+          ],
+          "minecraft": [
+            "1.21",
+            "1.21.1",
+            "1.21.11",
+            "1.21.2",
+            "1.21.3",
+            "1.21.4",
+            "1.21.5",
+            "1.21.6",
+            "1.21.7",
+            "1.21.8"
           ]
         },
         {
@@ -549,53 +637,95 @@
             {
               "name": "beaconator-1.3.0+1.21.1.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v1.3.0/beaconator-1.3.0%2B1.21.1.jar",
-              "size": 247275
+              "size": 247275,
+              "minecraft": [
+                "1.21.1"
+              ]
             },
             {
               "name": "beaconator-1.3.0+1.21.11.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v1.3.0/beaconator-1.3.0%2B1.21.11.jar",
-              "size": 253222
+              "size": 253222,
+              "minecraft": [
+                "1.21.11"
+              ]
             },
             {
               "name": "beaconator-1.3.0+1.21.2.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v1.3.0/beaconator-1.3.0%2B1.21.2.jar",
-              "size": 247644
+              "size": 247644,
+              "minecraft": [
+                "1.21.2"
+              ]
             },
             {
               "name": "beaconator-1.3.0+1.21.3.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v1.3.0/beaconator-1.3.0%2B1.21.3.jar",
-              "size": 247645
+              "size": 247645,
+              "minecraft": [
+                "1.21.3"
+              ]
             },
             {
               "name": "beaconator-1.3.0+1.21.4.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v1.3.0/beaconator-1.3.0%2B1.21.4.jar",
-              "size": 247695
+              "size": 247695,
+              "minecraft": [
+                "1.21.4"
+              ]
             },
             {
               "name": "beaconator-1.3.0+1.21.5.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v1.3.0/beaconator-1.3.0%2B1.21.5.jar",
-              "size": 251060
+              "size": 251060,
+              "minecraft": [
+                "1.21.5"
+              ]
             },
             {
               "name": "beaconator-1.3.0+1.21.6.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v1.3.0/beaconator-1.3.0%2B1.21.6.jar",
-              "size": 251550
+              "size": 251550,
+              "minecraft": [
+                "1.21.6"
+              ]
             },
             {
               "name": "beaconator-1.3.0+1.21.7.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v1.3.0/beaconator-1.3.0%2B1.21.7.jar",
-              "size": 251549
+              "size": 251549,
+              "minecraft": [
+                "1.21.7"
+              ]
             },
             {
               "name": "beaconator-1.3.0+1.21.8.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v1.3.0/beaconator-1.3.0%2B1.21.8.jar",
-              "size": 251550
+              "size": 251550,
+              "minecraft": [
+                "1.21.8"
+              ]
             },
             {
               "name": "beaconator-1.3.0+1.21.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v1.3.0/beaconator-1.3.0%2B1.21.jar",
-              "size": 247272
+              "size": 247272,
+              "minecraft": [
+                "1.21"
+              ]
             }
+          ],
+          "minecraft": [
+            "1.21",
+            "1.21.1",
+            "1.21.11",
+            "1.21.2",
+            "1.21.3",
+            "1.21.4",
+            "1.21.5",
+            "1.21.6",
+            "1.21.7",
+            "1.21.8"
           ]
         },
         {
@@ -608,53 +738,95 @@
             {
               "name": "beaconator-1.2.0+1.21.1.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v1.2.0/beaconator-1.2.0%2B1.21.1.jar",
-              "size": 240173
+              "size": 240173,
+              "minecraft": [
+                "1.21.1"
+              ]
             },
             {
               "name": "beaconator-1.2.0+1.21.11.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v1.2.0/beaconator-1.2.0%2B1.21.11.jar",
-              "size": 246078
+              "size": 246078,
+              "minecraft": [
+                "1.21.11"
+              ]
             },
             {
               "name": "beaconator-1.2.0+1.21.2.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v1.2.0/beaconator-1.2.0%2B1.21.2.jar",
-              "size": 240557
+              "size": 240557,
+              "minecraft": [
+                "1.21.2"
+              ]
             },
             {
               "name": "beaconator-1.2.0+1.21.3.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v1.2.0/beaconator-1.2.0%2B1.21.3.jar",
-              "size": 240559
+              "size": 240559,
+              "minecraft": [
+                "1.21.3"
+              ]
             },
             {
               "name": "beaconator-1.2.0+1.21.4.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v1.2.0/beaconator-1.2.0%2B1.21.4.jar",
-              "size": 240608
+              "size": 240608,
+              "minecraft": [
+                "1.21.4"
+              ]
             },
             {
               "name": "beaconator-1.2.0+1.21.5.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v1.2.0/beaconator-1.2.0%2B1.21.5.jar",
-              "size": 243973
+              "size": 243973,
+              "minecraft": [
+                "1.21.5"
+              ]
             },
             {
               "name": "beaconator-1.2.0+1.21.6.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v1.2.0/beaconator-1.2.0%2B1.21.6.jar",
-              "size": 244454
+              "size": 244454,
+              "minecraft": [
+                "1.21.6"
+              ]
             },
             {
               "name": "beaconator-1.2.0+1.21.7.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v1.2.0/beaconator-1.2.0%2B1.21.7.jar",
-              "size": 244453
+              "size": 244453,
+              "minecraft": [
+                "1.21.7"
+              ]
             },
             {
               "name": "beaconator-1.2.0+1.21.8.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v1.2.0/beaconator-1.2.0%2B1.21.8.jar",
-              "size": 244454
+              "size": 244454,
+              "minecraft": [
+                "1.21.8"
+              ]
             },
             {
               "name": "beaconator-1.2.0+1.21.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v1.2.0/beaconator-1.2.0%2B1.21.jar",
-              "size": 240171
+              "size": 240171,
+              "minecraft": [
+                "1.21"
+              ]
             }
+          ],
+          "minecraft": [
+            "1.21",
+            "1.21.1",
+            "1.21.11",
+            "1.21.2",
+            "1.21.3",
+            "1.21.4",
+            "1.21.5",
+            "1.21.6",
+            "1.21.7",
+            "1.21.8"
           ]
         },
         {
@@ -667,58 +839,103 @@
             {
               "name": "beaconator-1.1.1+1.21-sources.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v1.1.1/beaconator-1.1.1%2B1.21-sources.jar",
-              "size": 113267
+              "size": 113267,
+              "minecraft": [
+                "1.21"
+              ]
             },
             {
               "name": "beaconator-1.1.1+1.21.1.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v1.1.1/beaconator-1.1.1%2B1.21.1.jar",
-              "size": 233340
+              "size": 233340,
+              "minecraft": [
+                "1.21.1"
+              ]
             },
             {
               "name": "beaconator-1.1.1+1.21.11.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v1.1.1/beaconator-1.1.1%2B1.21.11.jar",
-              "size": 239287
+              "size": 239287,
+              "minecraft": [
+                "1.21.11"
+              ]
             },
             {
               "name": "beaconator-1.1.1+1.21.2.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v1.1.1/beaconator-1.1.1%2B1.21.2.jar",
-              "size": 233720
+              "size": 233720,
+              "minecraft": [
+                "1.21.2"
+              ]
             },
             {
               "name": "beaconator-1.1.1+1.21.3.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v1.1.1/beaconator-1.1.1%2B1.21.3.jar",
-              "size": 233722
+              "size": 233722,
+              "minecraft": [
+                "1.21.3"
+              ]
             },
             {
               "name": "beaconator-1.1.1+1.21.4.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v1.1.1/beaconator-1.1.1%2B1.21.4.jar",
-              "size": 233771
+              "size": 233771,
+              "minecraft": [
+                "1.21.4"
+              ]
             },
             {
               "name": "beaconator-1.1.1+1.21.5.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v1.1.1/beaconator-1.1.1%2B1.21.5.jar",
-              "size": 237155
+              "size": 237155,
+              "minecraft": [
+                "1.21.5"
+              ]
             },
             {
               "name": "beaconator-1.1.1+1.21.6.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v1.1.1/beaconator-1.1.1%2B1.21.6.jar",
-              "size": 237639
+              "size": 237639,
+              "minecraft": [
+                "1.21.6"
+              ]
             },
             {
               "name": "beaconator-1.1.1+1.21.7.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v1.1.1/beaconator-1.1.1%2B1.21.7.jar",
-              "size": 237638
+              "size": 237638,
+              "minecraft": [
+                "1.21.7"
+              ]
             },
             {
               "name": "beaconator-1.1.1+1.21.8.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v1.1.1/beaconator-1.1.1%2B1.21.8.jar",
-              "size": 237639
+              "size": 237639,
+              "minecraft": [
+                "1.21.8"
+              ]
             },
             {
               "name": "beaconator-1.1.1+1.21.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v1.1.1/beaconator-1.1.1%2B1.21.jar",
-              "size": 215174
+              "size": 215174,
+              "minecraft": [
+                "1.21"
+              ]
             }
+          ],
+          "minecraft": [
+            "1.21",
+            "1.21.1",
+            "1.21.11",
+            "1.21.2",
+            "1.21.3",
+            "1.21.4",
+            "1.21.5",
+            "1.21.6",
+            "1.21.7",
+            "1.21.8"
           ]
         },
         {
@@ -731,48 +948,85 @@
             {
               "name": "beaconator-1.1.0+1.21-sources.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v1.1.0/beaconator-1.1.0%2B1.21-sources.jar",
-              "size": 112615
+              "size": 112615,
+              "minecraft": [
+                "1.21"
+              ]
             },
             {
               "name": "beaconator-1.1.0+1.21.2.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v1.1.0/beaconator-1.1.0%2B1.21.2.jar",
-              "size": 214078
+              "size": 214078,
+              "minecraft": [
+                "1.21.2"
+              ]
             },
             {
               "name": "beaconator-1.1.0+1.21.3.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v1.1.0/beaconator-1.1.0%2B1.21.3.jar",
-              "size": 214079
+              "size": 214079,
+              "minecraft": [
+                "1.21.3"
+              ]
             },
             {
               "name": "beaconator-1.1.0+1.21.4.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v1.1.0/beaconator-1.1.0%2B1.21.4.jar",
-              "size": 214128
+              "size": 214128,
+              "minecraft": [
+                "1.21.4"
+              ]
             },
             {
               "name": "beaconator-1.1.0+1.21.5.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v1.1.0/beaconator-1.1.0%2B1.21.5.jar",
-              "size": 217512
+              "size": 217512,
+              "minecraft": [
+                "1.21.5"
+              ]
             },
             {
               "name": "beaconator-1.1.0+1.21.6.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v1.1.0/beaconator-1.1.0%2B1.21.6.jar",
-              "size": 217995
+              "size": 217995,
+              "minecraft": [
+                "1.21.6"
+              ]
             },
             {
               "name": "beaconator-1.1.0+1.21.7.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v1.1.0/beaconator-1.1.0%2B1.21.7.jar",
-              "size": 217995
+              "size": 217995,
+              "minecraft": [
+                "1.21.7"
+              ]
             },
             {
               "name": "beaconator-1.1.0+1.21.8.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v1.1.0/beaconator-1.1.0%2B1.21.8.jar",
-              "size": 217996
+              "size": 217996,
+              "minecraft": [
+                "1.21.8"
+              ]
             },
             {
               "name": "beaconator-1.1.0+1.21.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v1.1.0/beaconator-1.1.0%2B1.21.jar",
-              "size": 214461
+              "size": 214461,
+              "minecraft": [
+                "1.21"
+              ]
             }
+          ],
+          "minecraft": [
+            "1.21",
+            "1.21.2",
+            "1.21.3",
+            "1.21.4",
+            "1.21.5",
+            "1.21.6",
+            "1.21.7",
+            "1.21.8"
           ]
         },
         {
@@ -785,28 +1039,49 @@
             {
               "name": "beaconator-1.0.0+1.21-sources.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v1.0.0/beaconator-1.0.0%2B1.21-sources.jar",
-              "size": 109834
+              "size": 109834,
+              "minecraft": [
+                "1.21"
+              ]
             },
             {
               "name": "beaconator-1.0.0+1.21.2.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v1.0.0/beaconator-1.0.0%2B1.21.2.jar",
-              "size": 211033
+              "size": 211033,
+              "minecraft": [
+                "1.21.2"
+              ]
             },
             {
               "name": "beaconator-1.0.0+1.21.3.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v1.0.0/beaconator-1.0.0%2B1.21.3.jar",
-              "size": 211035
+              "size": 211035,
+              "minecraft": [
+                "1.21.3"
+              ]
             },
             {
               "name": "beaconator-1.0.0+1.21.4.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v1.0.0/beaconator-1.0.0%2B1.21.4.jar",
-              "size": 211083
+              "size": 211083,
+              "minecraft": [
+                "1.21.4"
+              ]
             },
             {
               "name": "beaconator-1.0.0+1.21.jar",
               "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v1.0.0/beaconator-1.0.0%2B1.21.jar",
-              "size": 211373
+              "size": 211373,
+              "minecraft": [
+                "1.21"
+              ]
             }
+          ],
+          "minecraft": [
+            "1.21",
+            "1.21.2",
+            "1.21.3",
+            "1.21.4"
           ]
         }
       ],
@@ -5463,13 +5738,22 @@
             {
               "name": "mankedomath-1.1.0+1.21-sources.jar",
               "url": "https://github.com/CodeW4VE/MankeDoMath/releases/download/v1.1.0/mankedomath-1.1.0%2B1.21-sources.jar",
-              "size": 22839
+              "size": 22839,
+              "minecraft": [
+                "1.21"
+              ]
             },
             {
               "name": "mankedomath-1.1.0+1.21.jar",
               "url": "https://github.com/CodeW4VE/MankeDoMath/releases/download/v1.1.0/mankedomath-1.1.0%2B1.21.jar",
-              "size": 44413
+              "size": 44413,
+              "minecraft": [
+                "1.21"
+              ]
             }
+          ],
+          "minecraft": [
+            "1.21"
           ]
         },
         {
@@ -5482,13 +5766,22 @@
             {
               "name": "mankedomath-1.0.1+1.21-sources.jar",
               "url": "https://github.com/CodeW4VE/MankeDoMath/releases/download/v1.0.1/mankedomath-1.0.1%2B1.21-sources.jar",
-              "size": 20460
+              "size": 20460,
+              "minecraft": [
+                "1.21"
+              ]
             },
             {
               "name": "mankedomath-1.0.1+1.21.jar",
               "url": "https://github.com/CodeW4VE/MankeDoMath/releases/download/v1.0.1/mankedomath-1.0.1%2B1.21.jar",
-              "size": 40048
+              "size": 40048,
+              "minecraft": [
+                "1.21"
+              ]
             }
+          ],
+          "minecraft": [
+            "1.21"
           ]
         },
         {
@@ -5501,13 +5794,22 @@
             {
               "name": "mankedomath-1.0.0+1.21-sources.jar",
               "url": "https://github.com/CodeW4VE/MankeDoMath/releases/download/v1.0.0/mankedomath-1.0.0%2B1.21-sources.jar",
-              "size": 20375
+              "size": 20375,
+              "minecraft": [
+                "1.21"
+              ]
             },
             {
               "name": "mankedomath-1.0.0+1.21.jar",
               "url": "https://github.com/CodeW4VE/MankeDoMath/releases/download/v1.0.0/mankedomath-1.0.0%2B1.21.jar",
-              "size": 40001
+              "size": 40001,
+              "minecraft": [
+                "1.21"
+              ]
             }
+          ],
+          "minecraft": [
+            "1.21"
           ]
         }
       ],
@@ -5547,13 +5849,22 @@
             {
               "name": "mankelist-1.0.0+1.21-sources.jar",
               "url": "https://github.com/CodeW4VE/MankeList/releases/download/v1.0.0/mankelist-1.0.0%2B1.21-sources.jar",
-              "size": 421038
+              "size": 421038,
+              "minecraft": [
+                "1.21"
+              ]
             },
             {
               "name": "mankelist-1.0.0+1.21.jar",
               "url": "https://github.com/CodeW4VE/MankeList/releases/download/v1.0.0/mankelist-1.0.0%2B1.21.jar",
-              "size": 474048
+              "size": 474048,
+              "minecraft": [
+                "1.21"
+              ]
             }
+          ],
+          "minecraft": [
+            "1.21"
           ]
         }
       ],
@@ -5712,8 +6023,14 @@
             {
               "name": "minimapsync-1.2.3-w4ve.1+mc1.21.1.jar",
               "url": "https://github.com/CodeW4VE/minimap-sync/releases/download/v1.2.3-w4ve.1/minimapsync-1.2.3-w4ve.1%2Bmc1.21.1.jar",
-              "size": 182464
+              "size": 182464,
+              "minecraft": [
+                "1.21.1"
+              ]
             }
+          ],
+          "minecraft": [
+            "1.21.1"
           ]
         }
       ],
@@ -6263,13 +6580,22 @@
             {
               "name": "regioncast-1.0.1+1.21-sources.jar",
               "url": "https://github.com/CodeW4VE/RegionCast/releases/download/v1.0.1/regioncast-1.0.1%2B1.21-sources.jar",
-              "size": 69393
+              "size": 69393,
+              "minecraft": [
+                "1.21"
+              ]
             },
             {
               "name": "regioncast-1.0.1+1.21.jar",
               "url": "https://github.com/CodeW4VE/RegionCast/releases/download/v1.0.1/regioncast-1.0.1%2B1.21.jar",
-              "size": 124054
+              "size": 124054,
+              "minecraft": [
+                "1.21"
+              ]
             }
+          ],
+          "minecraft": [
+            "1.21"
           ]
         },
         {
@@ -6282,13 +6608,22 @@
             {
               "name": "regioncast-1.0.0+1.21-sources.jar",
               "url": "https://github.com/CodeW4VE/RegionCast/releases/download/v1.0.0/regioncast-1.0.0%2B1.21-sources.jar",
-              "size": 67910
+              "size": 67910,
+              "minecraft": [
+                "1.21"
+              ]
             },
             {
               "name": "regioncast-1.0.0+1.21.jar",
               "url": "https://github.com/CodeW4VE/RegionCast/releases/download/v1.0.0/regioncast-1.0.0%2B1.21.jar",
-              "size": 122885
+              "size": 122885,
+              "minecraft": [
+                "1.21"
+              ]
             }
+          ],
+          "minecraft": [
+            "1.21"
           ]
         }
       ],
@@ -7184,68 +7519,122 @@
             {
               "name": "shapeboard-1.7.0+1.21.10.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.7.0/shapeboard-1.7.0%2B1.21.10.jar",
-              "size": 262057
+              "size": 262057,
+              "minecraft": [
+                "1.21.10"
+              ]
             },
             {
               "name": "shapeboard-1.7.0+1.21.11.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.7.0/shapeboard-1.7.0%2B1.21.11.jar",
-              "size": 261647
+              "size": 261647,
+              "minecraft": [
+                "1.21.11"
+              ]
             },
             {
               "name": "shapeboard-1.7.0+1.21.2.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.7.0/shapeboard-1.7.0%2B1.21.2.jar",
-              "size": 262081
+              "size": 262081,
+              "minecraft": [
+                "1.21.2"
+              ]
             },
             {
               "name": "shapeboard-1.7.0+1.21.3.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.7.0/shapeboard-1.7.0%2B1.21.3.jar",
-              "size": 262082
+              "size": 262082,
+              "minecraft": [
+                "1.21.3"
+              ]
             },
             {
               "name": "shapeboard-1.7.0+1.21.4.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.7.0/shapeboard-1.7.0%2B1.21.4.jar",
-              "size": 262082
+              "size": 262082,
+              "minecraft": [
+                "1.21.4"
+              ]
             },
             {
               "name": "shapeboard-1.7.0+1.21.5.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.7.0/shapeboard-1.7.0%2B1.21.5.jar",
-              "size": 262048
+              "size": 262048,
+              "minecraft": [
+                "1.21.5"
+              ]
             },
             {
               "name": "shapeboard-1.7.0+1.21.6.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.7.0/shapeboard-1.7.0%2B1.21.6.jar",
-              "size": 262058
+              "size": 262058,
+              "minecraft": [
+                "1.21.6"
+              ]
             },
             {
               "name": "shapeboard-1.7.0+1.21.7.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.7.0/shapeboard-1.7.0%2B1.21.7.jar",
-              "size": 262057
+              "size": 262057,
+              "minecraft": [
+                "1.21.7"
+              ]
             },
             {
               "name": "shapeboard-1.7.0+1.21.8.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.7.0/shapeboard-1.7.0%2B1.21.8.jar",
-              "size": 262057
+              "size": 262057,
+              "minecraft": [
+                "1.21.8"
+              ]
             },
             {
               "name": "shapeboard-1.7.0+1.21.9.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.7.0/shapeboard-1.7.0%2B1.21.9.jar",
-              "size": 262058
+              "size": 262058,
+              "minecraft": [
+                "1.21.9"
+              ]
             },
             {
               "name": "shapeboard-1.7.0+1.21.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.7.0/shapeboard-1.7.0%2B1.21.jar",
-              "size": 262076
+              "size": 262076,
+              "minecraft": [
+                "1.21"
+              ]
             },
             {
               "name": "shapeboard-1.7.0+26.1.2.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.7.0/shapeboard-1.7.0%2B26.1.2.jar",
-              "size": 261626
+              "size": 261626,
+              "minecraft": [
+                "26.1.2"
+              ]
             },
             {
               "name": "shapeboard-1.7.0+26.2.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.7.0/shapeboard-1.7.0%2B26.2.jar",
-              "size": 261620
+              "size": 261620,
+              "minecraft": [
+                "26.2"
+              ]
             }
+          ],
+          "minecraft": [
+            "1.21",
+            "1.21.10",
+            "1.21.11",
+            "1.21.2",
+            "1.21.3",
+            "1.21.4",
+            "1.21.5",
+            "1.21.6",
+            "1.21.7",
+            "1.21.8",
+            "1.21.9",
+            "26.1.2",
+            "26.2"
           ]
         },
         {
@@ -7258,48 +7647,85 @@
             {
               "name": "shapeboard-1.6.0+1.21-sources.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.6.0/shapeboard-1.6.0%2B1.21-sources.jar",
-              "size": 226412
+              "size": 226412,
+              "minecraft": [
+                "1.21"
+              ]
             },
             {
               "name": "shapeboard-1.6.0+1.21.2.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.6.0/shapeboard-1.6.0%2B1.21.2.jar",
-              "size": 262799
+              "size": 262799,
+              "minecraft": [
+                "1.21.2"
+              ]
             },
             {
               "name": "shapeboard-1.6.0+1.21.3.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.6.0/shapeboard-1.6.0%2B1.21.3.jar",
-              "size": 262801
+              "size": 262801,
+              "minecraft": [
+                "1.21.3"
+              ]
             },
             {
               "name": "shapeboard-1.6.0+1.21.4.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.6.0/shapeboard-1.6.0%2B1.21.4.jar",
-              "size": 262801
+              "size": 262801,
+              "minecraft": [
+                "1.21.4"
+              ]
             },
             {
               "name": "shapeboard-1.6.0+1.21.5.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.6.0/shapeboard-1.6.0%2B1.21.5.jar",
-              "size": 262800
+              "size": 262800,
+              "minecraft": [
+                "1.21.5"
+              ]
             },
             {
               "name": "shapeboard-1.6.0+1.21.6.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.6.0/shapeboard-1.6.0%2B1.21.6.jar",
-              "size": 262811
+              "size": 262811,
+              "minecraft": [
+                "1.21.6"
+              ]
             },
             {
               "name": "shapeboard-1.6.0+1.21.7.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.6.0/shapeboard-1.6.0%2B1.21.7.jar",
-              "size": 262813
+              "size": 262813,
+              "minecraft": [
+                "1.21.7"
+              ]
             },
             {
               "name": "shapeboard-1.6.0+1.21.8.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.6.0/shapeboard-1.6.0%2B1.21.8.jar",
-              "size": 262814
+              "size": 262814,
+              "minecraft": [
+                "1.21.8"
+              ]
             },
             {
               "name": "shapeboard-1.6.0+1.21.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.6.0/shapeboard-1.6.0%2B1.21.jar",
-              "size": 262793
+              "size": 262793,
+              "minecraft": [
+                "1.21"
+              ]
             }
+          ],
+          "minecraft": [
+            "1.21",
+            "1.21.2",
+            "1.21.3",
+            "1.21.4",
+            "1.21.5",
+            "1.21.6",
+            "1.21.7",
+            "1.21.8"
           ]
         },
         {
@@ -7312,48 +7738,85 @@
             {
               "name": "shapeboard-1.5.0+1.21-sources.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.5.0/shapeboard-1.5.0%2B1.21-sources.jar",
-              "size": 225924
+              "size": 225924,
+              "minecraft": [
+                "1.21"
+              ]
             },
             {
               "name": "shapeboard-1.5.0+1.21.2.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.5.0/shapeboard-1.5.0%2B1.21.2.jar",
-              "size": 261518
+              "size": 261518,
+              "minecraft": [
+                "1.21.2"
+              ]
             },
             {
               "name": "shapeboard-1.5.0+1.21.3.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.5.0/shapeboard-1.5.0%2B1.21.3.jar",
-              "size": 261520
+              "size": 261520,
+              "minecraft": [
+                "1.21.3"
+              ]
             },
             {
               "name": "shapeboard-1.5.0+1.21.4.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.5.0/shapeboard-1.5.0%2B1.21.4.jar",
-              "size": 261519
+              "size": 261519,
+              "minecraft": [
+                "1.21.4"
+              ]
             },
             {
               "name": "shapeboard-1.5.0+1.21.5.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.5.0/shapeboard-1.5.0%2B1.21.5.jar",
-              "size": 261517
+              "size": 261517,
+              "minecraft": [
+                "1.21.5"
+              ]
             },
             {
               "name": "shapeboard-1.5.0+1.21.6.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.5.0/shapeboard-1.5.0%2B1.21.6.jar",
-              "size": 261531
+              "size": 261531,
+              "minecraft": [
+                "1.21.6"
+              ]
             },
             {
               "name": "shapeboard-1.5.0+1.21.7.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.5.0/shapeboard-1.5.0%2B1.21.7.jar",
-              "size": 261532
+              "size": 261532,
+              "minecraft": [
+                "1.21.7"
+              ]
             },
             {
               "name": "shapeboard-1.5.0+1.21.8.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.5.0/shapeboard-1.5.0%2B1.21.8.jar",
-              "size": 261533
+              "size": 261533,
+              "minecraft": [
+                "1.21.8"
+              ]
             },
             {
               "name": "shapeboard-1.5.0+1.21.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.5.0/shapeboard-1.5.0%2B1.21.jar",
-              "size": 261515
+              "size": 261515,
+              "minecraft": [
+                "1.21"
+              ]
             }
+          ],
+          "minecraft": [
+            "1.21",
+            "1.21.2",
+            "1.21.3",
+            "1.21.4",
+            "1.21.5",
+            "1.21.6",
+            "1.21.7",
+            "1.21.8"
           ]
         },
         {
@@ -7366,48 +7829,85 @@
             {
               "name": "shapeboard-1.4.2+1.21-sources.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.2/shapeboard-1.4.2%2B1.21-sources.jar",
-              "size": 222931
+              "size": 222931,
+              "minecraft": [
+                "1.21"
+              ]
             },
             {
               "name": "shapeboard-1.4.2+1.21.2.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.2/shapeboard-1.4.2%2B1.21.2.jar",
-              "size": 256470
+              "size": 256470,
+              "minecraft": [
+                "1.21.2"
+              ]
             },
             {
               "name": "shapeboard-1.4.2+1.21.3.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.2/shapeboard-1.4.2%2B1.21.3.jar",
-              "size": 256472
+              "size": 256472,
+              "minecraft": [
+                "1.21.3"
+              ]
             },
             {
               "name": "shapeboard-1.4.2+1.21.4.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.2/shapeboard-1.4.2%2B1.21.4.jar",
-              "size": 256471
+              "size": 256471,
+              "minecraft": [
+                "1.21.4"
+              ]
             },
             {
               "name": "shapeboard-1.4.2+1.21.5.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.2/shapeboard-1.4.2%2B1.21.5.jar",
-              "size": 256471
+              "size": 256471,
+              "minecraft": [
+                "1.21.5"
+              ]
             },
             {
               "name": "shapeboard-1.4.2+1.21.6.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.2/shapeboard-1.4.2%2B1.21.6.jar",
-              "size": 256498
+              "size": 256498,
+              "minecraft": [
+                "1.21.6"
+              ]
             },
             {
               "name": "shapeboard-1.4.2+1.21.7.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.2/shapeboard-1.4.2%2B1.21.7.jar",
-              "size": 256498
+              "size": 256498,
+              "minecraft": [
+                "1.21.7"
+              ]
             },
             {
               "name": "shapeboard-1.4.2+1.21.8.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.2/shapeboard-1.4.2%2B1.21.8.jar",
-              "size": 256500
+              "size": 256500,
+              "minecraft": [
+                "1.21.8"
+              ]
             },
             {
               "name": "shapeboard-1.4.2+1.21.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.2/shapeboard-1.4.2%2B1.21.jar",
-              "size": 256466
+              "size": 256466,
+              "minecraft": [
+                "1.21"
+              ]
             }
+          ],
+          "minecraft": [
+            "1.21",
+            "1.21.2",
+            "1.21.3",
+            "1.21.4",
+            "1.21.5",
+            "1.21.6",
+            "1.21.7",
+            "1.21.8"
           ]
         },
         {
@@ -7420,48 +7920,85 @@
             {
               "name": "shapeboard-1.4.1+1.21-sources.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.1/shapeboard-1.4.1%2B1.21-sources.jar",
-              "size": 222597
+              "size": 222597,
+              "minecraft": [
+                "1.21"
+              ]
             },
             {
               "name": "shapeboard-1.4.1+1.21.2.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.1/shapeboard-1.4.1%2B1.21.2.jar",
-              "size": 255756
+              "size": 255756,
+              "minecraft": [
+                "1.21.2"
+              ]
             },
             {
               "name": "shapeboard-1.4.1+1.21.3.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.1/shapeboard-1.4.1%2B1.21.3.jar",
-              "size": 255757
+              "size": 255757,
+              "minecraft": [
+                "1.21.3"
+              ]
             },
             {
               "name": "shapeboard-1.4.1+1.21.4.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.1/shapeboard-1.4.1%2B1.21.4.jar",
-              "size": 255756
+              "size": 255756,
+              "minecraft": [
+                "1.21.4"
+              ]
             },
             {
               "name": "shapeboard-1.4.1+1.21.5.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.1/shapeboard-1.4.1%2B1.21.5.jar",
-              "size": 255765
+              "size": 255765,
+              "minecraft": [
+                "1.21.5"
+              ]
             },
             {
               "name": "shapeboard-1.4.1+1.21.6.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.1/shapeboard-1.4.1%2B1.21.6.jar",
-              "size": 255792
+              "size": 255792,
+              "minecraft": [
+                "1.21.6"
+              ]
             },
             {
               "name": "shapeboard-1.4.1+1.21.7.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.1/shapeboard-1.4.1%2B1.21.7.jar",
-              "size": 255793
+              "size": 255793,
+              "minecraft": [
+                "1.21.7"
+              ]
             },
             {
               "name": "shapeboard-1.4.1+1.21.8.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.1/shapeboard-1.4.1%2B1.21.8.jar",
-              "size": 255795
+              "size": 255795,
+              "minecraft": [
+                "1.21.8"
+              ]
             },
             {
               "name": "shapeboard-1.4.1+1.21.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.1/shapeboard-1.4.1%2B1.21.jar",
-              "size": 255752
+              "size": 255752,
+              "minecraft": [
+                "1.21"
+              ]
             }
+          ],
+          "minecraft": [
+            "1.21",
+            "1.21.2",
+            "1.21.3",
+            "1.21.4",
+            "1.21.5",
+            "1.21.6",
+            "1.21.7",
+            "1.21.8"
           ]
         },
         {
@@ -7474,48 +8011,85 @@
             {
               "name": "shapeboard-1.4.0+1.21-sources.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.0/shapeboard-1.4.0%2B1.21-sources.jar",
-              "size": 221782
+              "size": 221782,
+              "minecraft": [
+                "1.21"
+              ]
             },
             {
               "name": "shapeboard-1.4.0+1.21.2.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.0/shapeboard-1.4.0%2B1.21.2.jar",
-              "size": 254526
+              "size": 254526,
+              "minecraft": [
+                "1.21.2"
+              ]
             },
             {
               "name": "shapeboard-1.4.0+1.21.3.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.0/shapeboard-1.4.0%2B1.21.3.jar",
-              "size": 254528
+              "size": 254528,
+              "minecraft": [
+                "1.21.3"
+              ]
             },
             {
               "name": "shapeboard-1.4.0+1.21.4.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.0/shapeboard-1.4.0%2B1.21.4.jar",
-              "size": 254527
+              "size": 254527,
+              "minecraft": [
+                "1.21.4"
+              ]
             },
             {
               "name": "shapeboard-1.4.0+1.21.5.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.0/shapeboard-1.4.0%2B1.21.5.jar",
-              "size": 254537
+              "size": 254537,
+              "minecraft": [
+                "1.21.5"
+              ]
             },
             {
               "name": "shapeboard-1.4.0+1.21.6.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.0/shapeboard-1.4.0%2B1.21.6.jar",
-              "size": 254564
+              "size": 254564,
+              "minecraft": [
+                "1.21.6"
+              ]
             },
             {
               "name": "shapeboard-1.4.0+1.21.7.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.0/shapeboard-1.4.0%2B1.21.7.jar",
-              "size": 254564
+              "size": 254564,
+              "minecraft": [
+                "1.21.7"
+              ]
             },
             {
               "name": "shapeboard-1.4.0+1.21.8.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.0/shapeboard-1.4.0%2B1.21.8.jar",
-              "size": 254566
+              "size": 254566,
+              "minecraft": [
+                "1.21.8"
+              ]
             },
             {
               "name": "shapeboard-1.4.0+1.21.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.0/shapeboard-1.4.0%2B1.21.jar",
-              "size": 254522
+              "size": 254522,
+              "minecraft": [
+                "1.21"
+              ]
             }
+          ],
+          "minecraft": [
+            "1.21",
+            "1.21.2",
+            "1.21.3",
+            "1.21.4",
+            "1.21.5",
+            "1.21.6",
+            "1.21.7",
+            "1.21.8"
           ]
         },
         {
@@ -7528,38 +8102,67 @@
             {
               "name": "shapeboard-1.3.0+1.21-sources.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.3.0/shapeboard-1.3.0%2B1.21-sources.jar",
-              "size": 213452
+              "size": 213452,
+              "minecraft": [
+                "1.21"
+              ]
             },
             {
               "name": "shapeboard-1.3.0+1.21.2.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.3.0/shapeboard-1.3.0%2B1.21.2.jar",
-              "size": 236683
+              "size": 236683,
+              "minecraft": [
+                "1.21.2"
+              ]
             },
             {
               "name": "shapeboard-1.3.0+1.21.3.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.3.0/shapeboard-1.3.0%2B1.21.3.jar",
-              "size": 236684
+              "size": 236684,
+              "minecraft": [
+                "1.21.3"
+              ]
             },
             {
               "name": "shapeboard-1.3.0+1.21.4.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.3.0/shapeboard-1.3.0%2B1.21.4.jar",
-              "size": 236684
+              "size": 236684,
+              "minecraft": [
+                "1.21.4"
+              ]
             },
             {
               "name": "shapeboard-1.3.0+1.21.5.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.3.0/shapeboard-1.3.0%2B1.21.5.jar",
-              "size": 236632
+              "size": 236632,
+              "minecraft": [
+                "1.21.5"
+              ]
             },
             {
               "name": "shapeboard-1.3.0+1.21.6.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.3.0/shapeboard-1.3.0%2B1.21.6.jar",
-              "size": 236659
+              "size": 236659,
+              "minecraft": [
+                "1.21.6"
+              ]
             },
             {
               "name": "shapeboard-1.3.0+1.21.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.3.0/shapeboard-1.3.0%2B1.21.jar",
-              "size": 236678
+              "size": 236678,
+              "minecraft": [
+                "1.21"
+              ]
             }
+          ],
+          "minecraft": [
+            "1.21",
+            "1.21.2",
+            "1.21.3",
+            "1.21.4",
+            "1.21.5",
+            "1.21.6"
           ]
         },
         {
@@ -7572,13 +8175,22 @@
             {
               "name": "shapeboard-1.2.0+1.21-sources.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.2.0/shapeboard-1.2.0%2B1.21-sources.jar",
-              "size": 212841
+              "size": 212841,
+              "minecraft": [
+                "1.21"
+              ]
             },
             {
               "name": "shapeboard-1.2.0+1.21.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.2.0/shapeboard-1.2.0%2B1.21.jar",
-              "size": 235642
+              "size": 235642,
+              "minecraft": [
+                "1.21"
+              ]
             }
+          ],
+          "minecraft": [
+            "1.21"
           ]
         },
         {
@@ -7591,13 +8203,22 @@
             {
               "name": "shapeboard-1.1.0+1.21-sources.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.1.0/shapeboard-1.1.0%2B1.21-sources.jar",
-              "size": 212395
+              "size": 212395,
+              "minecraft": [
+                "1.21"
+              ]
             },
             {
               "name": "shapeboard-1.1.0+1.21.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.1.0/shapeboard-1.1.0%2B1.21.jar",
-              "size": 234737
+              "size": 234737,
+              "minecraft": [
+                "1.21"
+              ]
             }
+          ],
+          "minecraft": [
+            "1.21"
           ]
         },
         {
@@ -7610,13 +8231,22 @@
             {
               "name": "shapeboard-1.0.1+1.21-sources.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.0.1/shapeboard-1.0.1%2B1.21-sources.jar",
-              "size": 211905
+              "size": 211905,
+              "minecraft": [
+                "1.21"
+              ]
             },
             {
               "name": "shapeboard-1.0.1+1.21.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.0.1/shapeboard-1.0.1%2B1.21.jar",
-              "size": 233388
+              "size": 233388,
+              "minecraft": [
+                "1.21"
+              ]
             }
+          ],
+          "minecraft": [
+            "1.21"
           ]
         },
         {
@@ -7629,13 +8259,22 @@
             {
               "name": "shapeboard-1.0.0+1.21-sources.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.0.0/shapeboard-1.0.0%2B1.21-sources.jar",
-              "size": 211687
+              "size": 211687,
+              "minecraft": [
+                "1.21"
+              ]
             },
             {
               "name": "shapeboard-1.0.0+1.21.jar",
               "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.0.0/shapeboard-1.0.0%2B1.21.jar",
-              "size": 233204
+              "size": 233204,
+              "minecraft": [
+                "1.21"
+              ]
             }
+          ],
+          "minecraft": [
+            "1.21"
           ]
         }
       ],
@@ -9194,6 +9833,34 @@
               },
               "primary": true
             }
+          ]
+        },
+        {
+          "version": "2.0.1",
+          "tag": "v2.0.1",
+          "source": "github",
+          "published": "2026-07-11T06:22:09Z",
+          "prerelease": false,
+          "files": [
+            {
+              "name": "wavemotes-2.0.1+1.21-sources.jar",
+              "url": "https://github.com/CodeW4VE/WaveMotes/releases/download/v2.0.1/wavemotes-2.0.1%2B1.21-sources.jar",
+              "size": 1996612,
+              "minecraft": [
+                "1.21"
+              ]
+            },
+            {
+              "name": "wavemotes-2.0.1+1.21.jar",
+              "url": "https://github.com/CodeW4VE/WaveMotes/releases/download/v2.0.1/wavemotes-2.0.1%2B1.21.jar",
+              "size": 2010513,
+              "minecraft": [
+                "1.21"
+              ]
+            }
+          ],
+          "minecraft": [
+            "1.21"
           ]
         },
         {

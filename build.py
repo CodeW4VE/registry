@@ -40,6 +40,11 @@ USER_AGENT = "CodeW4VE/registry (+https://w4ve.xyz)"
 # is ignored so `w4ve install` never has to guess.
 ASSET_SUFFIXES = (".jar", ".mcdr", ".pyz", ".zip")
 
+# Only these care which Minecraft they are for. An MCDR plugin or a Discord bot
+# does not, and pretending otherwise is how the catalog decided that
+# `PrimeBackup-v1.13.1.pyz` was for Minecraft 1.13.
+MC_SENSITIVE_TYPES = ("fabric-mod", "library", "datapack", "resource-pack")
+
 # Version numbers inside a file name, the only clue GitHub gives us about
 # which Minecraft a jar is for.
 VERSION_TOKEN = re.compile(r"\d+\.\d+(?:\.\d+)?")
@@ -91,8 +96,28 @@ def get_json(url, token=None):
 
 # ------------------------------------------------------------------- fetchers
 
-def fetch_github(repo, token):
-    """Releases of a GitHub repo, newest first."""
+# The Fabric convention for a multi-version release: `shapeboard-1.7.0+26.2.jar`.
+# What comes after the `+` is the Minecraft version, and it is the only place a
+# GitHub release says so, because GitHub has no metadata of its own.
+#
+# Only what follows a `+` is read, never a loose number in the name. That is the
+# lesson `PrimeBackup-v1.13.1.pyz` taught twice: it is a plugin for MCDR, not a
+# mod for Minecraft 1.13.
+MC_IN_ASSET = re.compile(r"\+(?:mc)?(\d+\.\d+(?:\.\d+)?)", re.IGNORECASE)
+
+
+def mc_in_asset(name):
+    stem = re.sub(r"\.(jar|mcdr|pyz|zip)$", "", name, flags=re.IGNORECASE)
+    return sorted({m.group(1) for m in MC_IN_ASSET.finditer(stem)})
+
+
+def fetch_github(repo, token, mc_aware=False):
+    """Releases of a GitHub repo, newest first.
+
+    With `mc_aware`, the Minecraft versions are read off the asset names. A mod
+    of ours that ships thirteen jars, one per Minecraft, publishes that fact
+    only in the file names; without this the index claimed ShapeBoard had
+    nothing for 26.2 while the jar was sitting right there in the release."""
     data = get_json(f"{GITHUB_API}/repos/{repo}/releases?per_page=20", token)
     if not data:
         return []
@@ -100,23 +125,32 @@ def fetch_github(repo, token):
     for rel in data:
         if rel.get("draft"):
             continue
-        files = [
-            {
+        files = []
+        for a in rel.get("assets", []):
+            if not a["name"].lower().endswith(ASSET_SUFFIXES):
+                continue
+            entry = {
                 "name": a["name"],
                 "url": a["browser_download_url"],
                 "size": a["size"],
             }
-            for a in rel.get("assets", [])
-            if a["name"].lower().endswith(ASSET_SUFFIXES)
-        ]
-        releases.append({
+            if mc_aware:
+                found = mc_in_asset(a["name"])
+                if found:
+                    entry["minecraft"] = found
+            files.append(entry)
+        versions = sorted({v for f in files for v in f.get("minecraft", ())})
+        entry = {
             "version": rel["tag_name"].lstrip("v"),
             "tag": rel["tag_name"],
             "source": "github",
             "published": rel.get("published_at"),
             "prerelease": rel.get("prerelease", False),
             "files": files,
-        })
+        }
+        if versions:
+            entry["minecraft"] = versions
+        releases.append(entry)
     return releases
 
 
@@ -348,7 +382,9 @@ def main():
                     piece["modrinth"],
                     loader="fabric" if piece.get("type") == "fabric-mod" else None)
             if piece.get("repo") and not piece.get("private"):
-                releases += fetch_github(piece["repo"], token)
+                releases += fetch_github(
+                    piece["repo"], token,
+                    mc_aware=piece.get("type") in MC_SENSITIVE_TYPES)
             if piece.get("pypi"):
                 releases += fetch_pypi(piece["pypi"])
 
