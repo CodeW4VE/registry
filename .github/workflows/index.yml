@@ -1,0 +1,54 @@
+name: index
+
+# Two jobs, on purpose:
+#   check    a pull request must not leave index.json out of step with pieces.toml
+#   refresh  upstream keeps releasing without asking us, so the index goes stale
+#            on its own. Once a day it rebuilds itself and commits if anything moved.
+
+on:
+  pull_request:
+    paths: ['pieces.toml', 'build.py', 'index.json']
+  push:
+    branches: [main]
+    paths: ['pieces.toml', 'build.py']
+  schedule:
+    - cron: '17 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 build.py --check
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  refresh:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 build.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit the index if it moved
+        run: |
+          if git diff --quiet -- index.json; then
+            echo "nothing new upstream"
+            exit 0
+          fi
+          git config user.name  'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git commit -q -m 'Refresh index.json' -- index.json
+          git push

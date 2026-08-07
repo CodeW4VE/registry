@@ -1,0 +1,1035 @@
+# W4VE registry - curated source
+# =============================================================================
+# This file is the ONLY thing a human edits. Everything a machine can find out
+# on its own (release tags, download URLs, file hashes, Modrinth game versions)
+# is added by build.py, which turns this into index.json.
+#
+# Edit it, run `python3 build.py`, done. If something looks wrong in the
+# published catalog, the fix is here, in plain text, with comments.
+#
+# FIELD REFERENCE (per piece)
+#   name          Display name.
+#   summary       One line, English, what it does. This is the catalog copy.
+#   blurb         Longer version for the org front page. Optional: without it
+#                 the front page falls back to `summary`.
+#   type          fabric-mod | mcdr-plugin | discord-bot | service | library |
+#                 runtime | tool | datapack
+#   side          server | client | both        (where the CLI installs it)
+#   origin        w4ve   own code
+#                 fork   someone else's code we maintain (keep `upstream`)
+#                 external  not ours at all, listed so a server can be built
+#   status        stable | beta | planned | infra | unreleased
+#                 infra = "this runs our stuff, it is not a product"
+#   install_dir   folder inside the server/instance where the file goes
+#   requires      list of piece ids that must be present
+#   conflicts     pieces known to break when installed together. Either a
+#                 plain list of ids (any version with any version), or entries
+#                 with versions, which is usually the truth:
+#                   conflicts = [
+#                     { with = "lithium", mine = ">=1.82", theirs = "<0.14",
+#                       why = "Fabric refuses to boot" },
+#                   ]
+#                 `mine` and `theirs` are optional and default to any version.
+#   mc            supported Minecraft range, semver-ish. Ranges, not lists,
+#                 because listing every 1.21.x by hand is how Beaconator got
+#                 four build pipelines.
+#   mc_exclude    explicit holes in that range (versions we skipped)
+#   repo          owner/name on GitHub
+#   modrinth      Modrinth slug, when it is published there
+#   docs          URL, when it has its own page
+#   tags          used for GitHub topics, Modrinth categories and docs filters
+# =============================================================================
+
+schema = 1
+
+[registry]
+name = "W4VE"
+tagline = "Ware 4 Vanilla Experience"
+description = "Tools for technical Minecraft servers that do not break vanilla."
+homepage = "https://w4ve.xyz/"
+docs = "https://docs.w4ve.xyz/"
+github_org = "CodeW4VE"
+
+# Minecraft versions we promise to support. This is not decoration: releases of
+# external pieces are pruned per target, so a 1.21 server can still install
+# Fabric API after upstream has moved to 26.2. Add a version here and the next
+# build keeps downloadable releases for it.
+mc_targets = ["1.21", "1.21.1", "26.2"]
+
+# Where the CLI prefers to download from, first match wins.
+# Modrinth gives us a CDN, download counts and discovery for free; GitHub
+# Releases is the fallback for anything Modrinth does not host (MCDR plugins,
+# Discord bots, forks we do not want to publish there).
+sources = ["modrinth", "github"]
+
+
+# =============================================================================
+# MODS - ours
+# =============================================================================
+
+[pieces.beaconator]
+name = "Beaconator"
+summary = "Plan beacon perimeters: ring grid from one point, real coverage volumes, and beams where beacons are still missing."
+blurb = "Plan a beacon perimeter before you place a single beacon: ring grid from one point, real coverage volumes, and beams shooting up where a beacon is still missing."
+type = "fabric-mod"
+side = "client"
+origin = "w4ve"
+status = "stable"
+install_dir = "mods"
+requires = ["fabric-api"]
+mc = ">=1.21 <=26.1.2"
+# The versions we never built. Kept explicit so nobody files a bug for them.
+mc_exclude = ["1.21.9", "1.21.10"]
+repo = "CodeW4VE/Beaconator"
+modrinth = "beaconator"
+tags = ["beacon", "perimeter", "technical-minecraft", "client-side"]
+
+[pieces.shapeboard]
+name = "ShapeBoard"
+summary = "Scoreboards for areas of any shape: outline it with blocks in the sky, count digs and placements inside, per-player sidebar."
+blurb = "Scoreboards for areas of **any shape**, not just boxes. Outline the zone with blocks in the sky, every block broken or placed inside counts, and a per-player sidebar leaderboard appears when you walk in."
+type = "fabric-mod"
+side = "server"
+origin = "w4ve"
+status = "stable"
+install_dir = "mods"
+requires = ["fabric-api"]
+mc = ">=1.21 <1.22"
+repo = "CodeW4VE/ShapeBoard"
+modrinth = "shapeboard"
+tags = ["scoreboard", "world-eater", "perimeter", "server-side"]
+
+[pieces.regioncast]
+name = "RegionCast"
+summary = "Pull region files from another server's world into this one, picked off a map. Single chunks too, and recent updates stay undoable."
+blurb = "Pull **region files** from another server's world into this one, picked off a map where one tile is one region. Single chunks too, when a whole region is more than you wanted, and the last few updates stay undoable."
+type = "fabric-mod"
+side = "both"
+origin = "w4ve"
+status = "stable"
+install_dir = "mods"
+# Needs an MCDR-side helper because a mod cannot restart its own server.
+# w4ve-core is meant to make this dependency disappear.
+requires = ["fabric-api", "mcdreforged"]
+mc = ">=1.21 <1.22"
+repo = "CodeW4VE/RegionCast"
+modrinth = "regioncast"
+tags = ["anvil", "region-files", "world-sync", "admin"]
+
+[pieces.mankelist]
+name = "MankeList"
+summary = "Material list for a build: /ml plus a HUD overlay, and an optional Discord board that tracks progress."
+blurb = "Material list for whatever you are building: `/ml`, a HUD overlay, and an optional Discord board that tracks what is still missing."
+type = "fabric-mod"
+side = "both"
+origin = "w4ve"
+status = "stable"
+install_dir = "mods"
+requires = ["fabric-api"]
+mc = ">=1.21 <1.22"
+repo = "CodeW4VE/MankeList"
+modrinth = "mankelist"
+tags = ["material-list", "building", "litematica", "hud"]
+
+[pieces.wavemotes]
+name = "WaveMotes"
+summary = "Type :emote: in chat and pick it from a popup. Built-in emote pack rendered client-side, no resource pack needed, plus optional Discord emojis."
+blurb = "Type `:emote:` in chat, pick from a `/`-style popup. Emotes baked into the jar and rendered client-side, plus optional Discord emojis."
+type = "fabric-mod"
+side = "client"
+origin = "w4ve"
+status = "stable"
+install_dir = "mods"
+requires = ["fabric-api"]
+mc = ">=1.21 <1.22"
+repo = "CodeW4VE/WaveMotes"
+modrinth = "wavemotes"
+tags = ["chat", "emotes", "emoji", "client-side"]
+
+[pieces.worldeaternotifier]
+name = "WorldEaterNotifier"
+summary = "Watches world eaters, trenchers and bedrock breakers, and pings Discord when one stops or gets stuck."
+blurb = "Watches world eaters and trenchers and pings **Discord** when one stops or gets obstructed, with per-event ping control so you only get the alerts you want."
+type = "fabric-mod"
+side = "server"
+origin = "w4ve"
+status = "stable"
+install_dir = "mods"
+requires = ["fabric-api"]
+mc = ">=1.21 <1.22"
+repo = "CodeW4VE/WorldEaterNotifier"
+docs = "https://codew4ve.github.io/WorldEaterNotifier/"
+tags = ["world-eater", "discord", "monitoring", "server-side"]
+
+[pieces.ripdeepslate]
+name = "RipDeepslate"
+summary = "Deepslate mines exactly like stone with a netherite pickaxe. Single jar, no dependencies."
+blurb = "Deepslate mines **exactly like stone** with a netherite pickaxe, instant with Efficiency V + Haste II. No ghost blocks, no crack animation."
+type = "fabric-mod"
+side = "both"
+origin = "w4ve"
+status = "stable"
+install_dir = "mods"
+requires = []
+mc = ">=1.21 <1.22"
+repo = "CodeW4VE/RipDeepslate"
+modrinth = "ripdeepslate"
+tags = ["mining", "quality-of-life", "technical-minecraft"]
+
+[pieces.botinventory-carpet]
+name = "BotInventory"
+summary = "View and manage fake player inventories and ender chests by right-click or command. Carpet addon."
+blurb = "View and manage fake player inventories and ender chests by right-click or command, without stopping the farm."
+type = "fabric-mod"
+side = "server"
+origin = "w4ve"
+status = "stable"
+install_dir = "mods"
+requires = ["fabric-api", "carpet"]
+mc = ">=1.21 <1.22"
+repo = "CodeW4VE/BotInventory-Carpet"
+tags = ["carpet", "fake-players", "bots", "server-side"]
+
+[pieces.rconhush]
+name = "RconHush"
+summary = "Keeps RCON command output out of the server log and out of chat."
+type = "fabric-mod"
+side = "server"
+origin = "w4ve"
+# Written, working, never published: no repo and no release yet.
+status = "unreleased"
+install_dir = "mods"
+requires = []
+mc = ">=1.21 <1.22"
+tags = ["rcon", "logging", "server-side"]
+
+
+[pieces.w4vecarpet]
+name = "W4VECarpet"
+summary = "Carpet extension written for MineWave: quick teleport command and a whitelist with zones."
+type = "fabric-mod"
+side = "server"
+# NOT ours despite the name. The jar on the servers is version 1.0, authored by
+# luisch444 (`xyz.luisch444.w4vecarpet`), built for MC 1.21, and there is no
+# repository and no release anywhere. Nothing to install from and nothing to
+# port to 26.2 without the source. Either ask him for it or drop it.
+origin = "external"
+status = "unreleased"
+install_dir = "mods"
+requires = ["carpet"]
+mc = ">=1.21 <1.22"
+tags = ["carpet", "minewave", "server-side"]
+
+[pieces.mankedomath]
+name = "MankeDoMath"
+summary = "A calculator inside the game: quick maths in chat, with Minecraft units like stacks, shulkers and ticks."
+blurb = "A calculator that **knows what a shulker box is**. Farm rates, item counts and timings without leaving the game, with stacks, shulker boxes, ticks and chunks as real units: `5sb / 2h` works out to items per hour on its own."
+type = "fabric-mod"
+side = "server"
+origin = "w4ve"
+status = "stable"
+install_dir = "mods"
+requires = ["fabric-api"]
+mc = ">=1.21 <1.22"
+repo = "CodeW4VE/MankeDoMath"
+tags = ["calculator", "utility", "server-side", "quality-of-life"]
+
+# =============================================================================
+# MODS - forks we maintain
+# =============================================================================
+
+[pieces.minimap-sync]
+name = "MinimapSync"
+summary = "Server-side waypoint sync for Xaero's Minimap, kept compatible with current Xaero releases."
+blurb = "Server-side waypoint sync for Xaero's Minimap, kept working on current Xaero releases instead of crashing them."
+type = "fabric-mod"
+side = "both"
+origin = "fork"
+upstream = "Earthcomputer/minimap-sync"
+# Why the fork exists: upstream 1.2.2 crashes clients on Xaero 25.2.10.
+status = "stable"
+install_dir = "mods"
+requires = ["fabric-api"]
+mc = ">=1.21 <1.22"
+repo = "CodeW4VE/minimap-sync"
+tags = ["waypoints", "xaero", "minimap", "sync"]
+# Made public on 5 Aug 2026.
+
+
+# =============================================================================
+# MCDR PLUGINS
+# =============================================================================
+
+[pieces.digall]
+name = "DigAll"
+summary = "Real grand total of blocks mined for DiggyScoreboard, including offline and historical players, bots excluded."
+blurb = "A real grand total of blocks mined for [DiggyScoreboard](https://github.com/Fallen-Breath/DiggyScoreboard), counting offline and historical players too, bots excluded."
+type = "mcdr-plugin"
+side = "server"
+origin = "w4ve"
+status = "stable"
+install_dir = "plugins"
+requires = ["mcdreforged"]
+repo = "CodeW4VE/DigAll"
+tags = ["mcdreforged", "statistics", "scoreboard"]
+
+[pieces.primebackup]
+name = "PrimeBackup"
+summary = "Backup plugin with deduplication. This fork restores the clickable command buttons that 1.20.5+ clients silently ignore."
+blurb = "Deduplicated backups for MCDR. This fork brings back the clickable command buttons that 1.20.5+ clients silently ignore."
+type = "mcdr-plugin"
+side = "server"
+origin = "fork"
+upstream = "TISUnion/PrimeBackup"
+status = "stable"
+install_dir = "plugins"
+requires = ["mcdreforged"]
+repo = "CodeW4VE/PrimeBackup"
+docs = "https://tisunion.github.io/PrimeBackup/"
+tags = ["mcdreforged", "backup", "admin"]
+
+[pieces.statshelper]
+name = "StatsHelper"
+summary = "Minecraft statistics helper for MCDR, with the MineWave-side fixes."
+blurb = "Minecraft statistics for MCDR, with a UUID and rename de-duplication fix on top of upstream."
+type = "mcdr-plugin"
+side = "server"
+origin = "fork"
+upstream = "TISUnion/StatsHelper"
+status = "stable"
+install_dir = "plugins"
+requires = ["mcdreforged", "minecraft-data-api"]
+repo = "CodeW4VE/StatsHelper"
+tags = ["mcdreforged", "statistics"]
+
+
+# =============================================================================
+# SERVICES AND BOTS
+# =============================================================================
+
+[pieces.chatbridge]
+name = "ChatBridge"
+summary = "Chat bridge between Minecraft servers and Discord, with full-body avatars, per-player mute and cross-server emotes."
+blurb = "Discord and Minecraft chat bridge: MC players show up as themselves in Discord, with per-player mute and cross-server emotes."
+# Typed `service` until August 2026, which made the CLI refuse to install it.
+# On our own servers it is a `.pyz` in `plugins/` like any other MCDR plugin,
+# and the release ships exactly that, so that is what it is.
+type = "mcdr-plugin"
+side = "server"
+origin = "fork"
+upstream = "TISUnion/ChatBridge"
+status = "stable"
+install_dir = "plugins"
+requires = ["mcdreforged"]
+repo = "CodeW4VE/ChatBridge"
+tags = ["discord", "chat-bridge", "mcdreforged"]
+
+[pieces.wavemotes-server]
+name = "WaveMotes Server"
+summary = "Server half of WaveMotes: resource-pack generator plus chat injector so even vanilla clients see the emotes."
+blurb = "The server side: resource-pack generator and chat injector so **everyone**, even vanilla clients, sees the emotes, bridged to Discord across servers."
+type = "service"
+side = "server"
+origin = "w4ve"
+status = "stable"
+install_dir = "."
+requires = []
+repo = "CodeW4VE/WaveMotes-Server"
+tags = ["emotes", "resource-pack", "chat"]
+
+[pieces.discord-todo-board]
+name = "Discord To-Do Board"
+summary = "Self-hosted Discord bot: a live project board in a channel, all buttons. One or many boards, optional HTTP webhook."
+blurb = "A live project board inside a Discord channel, all buttons, no web app. One board or many, optional HTTP webhook."
+type = "discord-bot"
+side = "standalone"
+origin = "w4ve"
+status = "stable"
+install_dir = "."
+requires = []
+repo = "CodeW4VE/discord-todo-board"
+tags = ["discord", "kanban", "self-hosted", "project-management"]
+
+[pieces.schem-converter]
+name = "Schem Converter"
+summary = "Discord bot that converts .litematic files between NBT versions 4, 5, 6 and 7."
+blurb = "Converts `.litematic` files between NBT versions 4, 5, 6 and 7, so old schematics open in newer Litematica and the other way round."
+type = "discord-bot"
+side = "standalone"
+origin = "w4ve"
+status = "stable"
+install_dir = "."
+requires = []
+repo = "CodeW4VE/Schem-Converter"
+tags = ["discord", "litematica", "schematics"]
+
+[pieces.manke]
+name = "Manke"
+summary = "The Discord bot that runs MineWave. Public so you can read it, not packaged for you to install."
+blurb = "MineWave's own **Discord bot**: chat bridge, stats dashboards, roles, logs and more. Powered by monkeys, for monkeys. 🐒 Public to read, not packaged to install."
+type = "discord-bot"
+side = "standalone"
+origin = "w4ve"
+# Deliberately NOT a product. README says so, no release, no support.
+status = "infra"
+install_dir = "."
+requires = []
+repo = "CodeW4VE/Manke"
+tags = ["discord", "minewave", "reference"]
+
+
+# =============================================================================
+# THE PLATFORM (does not exist yet - listed so the plan is public)
+# =============================================================================
+
+# The CLI and the runtime are one repo (they version together), so they are one
+# piece. PyW4VE was renamed to w4ve on 7 Aug 2026; the old name only survives as
+# a GitHub redirect.
+[pieces.w4ve]
+name = "w4ve"
+summary = "One command to install, update and check every piece of the ecosystem. The Python runtime that wraps the server process and keeps MCDR plugins working lands in the same repo."
+type = "tool"
+side = "standalone"
+origin = "w4ve"
+status = "stable"
+install_dir = "."
+requires = []
+repo = "CodeW4VE/w4ve"
+tags = ["cli", "package-manager", "tooling", "runtime", "mcdreforged-compatible"]
+
+[pieces.w4ve-core]
+name = "w4ve-core"
+summary = "Shared Java library for W4VE mods: config with hot reload, commands, permissions, Discord boards, and the link to PyW4VE."
+type = "library"
+side = "both"
+origin = "w4ve"
+status = "planned"
+install_dir = "mods"
+requires = ["fabric-api"]
+mc = ">=1.21"
+repo = "CodeW4VE/w4ve-core"
+tags = ["library", "fabric", "modding"]
+
+
+# =============================================================================
+# EXTERNAL - not ours, listed so `w4ve install profile` can build a whole
+# server without sending anyone on a scavenger hunt.
+# =============================================================================
+
+[pieces.fabric-api]
+name = "Fabric API"
+type = "fabric-mod"
+side = "both"
+origin = "external"
+status = "stable"
+install_dir = "mods"
+modrinth = "fabric-api"
+summary = "Core hooks nearly every Fabric mod needs."
+
+[pieces.carpet]
+name = "Carpet"
+type = "fabric-mod"
+side = "server"
+origin = "external"
+status = "stable"
+install_dir = "mods"
+modrinth = "carpet"
+summary = "The technical player's toolbox: fake players, tick control, hundreds of rules."
+
+[pieces.carpet-extra]
+name = "Carpet Extra"
+type = "fabric-mod"
+side = "server"
+origin = "external"
+status = "stable"
+install_dir = "mods"
+modrinth = "carpet-extra"
+requires = ["carpet"]
+summary = "Extra Carpet rules that did not fit in the base mod."
+
+[pieces.carpet-tis-addition]
+name = "Carpet TIS Addition"
+type = "fabric-mod"
+side = "server"
+origin = "external"
+status = "stable"
+install_dir = "mods"
+modrinth = "carpet-tis-addition"
+requires = ["carpet"]
+# Learned the hard way on the mirror server, August 2026: 1.82.0 declares it
+# needs lithium 0.14 or newer, and Fabric refuses to boot with an older one.
+# The 1.64.0 + 0.13.1 pair that the smp and the mirror run is fine.
+conflicts = [
+    { with = "lithium", mine = ">=1.82", theirs = "<0.14", why = "Fabric refuses to boot: incompatible mods found" },
+]
+summary = "TIS Union's Carpet addon: extra tools and fixes for technical servers."
+
+[pieces.lithium]
+name = "Lithium"
+type = "fabric-mod"
+side = "server"
+origin = "external"
+status = "stable"
+install_dir = "mods"
+modrinth = "lithium"
+conflicts = [
+    { with = "carpet-tis-addition", mine = "<0.14", theirs = ">=1.82", why = "Fabric refuses to boot: incompatible mods found" },
+]
+summary = "Server optimisation that keeps vanilla behaviour intact."
+
+[pieces.servux]
+name = "Servux"
+type = "fabric-mod"
+side = "server"
+origin = "external"
+status = "stable"
+install_dir = "mods"
+modrinth = "servux"
+# The pairing matters: a client on a mismatched Litematica loops on
+# "Receive Buffer is empty". Keep this in sync with the client side.
+summary = "Serves structure and entity data to Litematica and friends."
+
+[pieces.litematica]
+name = "Litematica"
+type = "fabric-mod"
+side = "client"
+origin = "external"
+status = "stable"
+install_dir = "mods"
+modrinth = "litematica"
+requires = ["malilib"]
+summary = "Schematic placement and printing, the standard building tool."
+
+[pieces.malilib]
+name = "MaLiLib"
+type = "fabric-mod"
+side = "client"
+origin = "external"
+status = "stable"
+install_dir = "mods"
+modrinth = "malilib"
+summary = "Shared library for Litematica, MiniHUD and Tweakeroo."
+
+[pieces.xaeros-minimap]
+name = "Xaero's Minimap"
+type = "fabric-mod"
+side = "client"
+origin = "external"
+status = "stable"
+install_dir = "mods"
+modrinth = "xaeros-minimap"
+summary = "Minimap with waypoints. What MinimapSync syncs into."
+
+[pieces.mcdreforged]
+name = "MCDReforged"
+type = "runtime"
+side = "server"
+origin = "external"
+status = "stable"
+install_dir = "."
+pypi = "mcdreforged"
+repo = "MCDReforged/MCDReforged"
+summary = "Python server wrapper with hot-reloadable plugins. PyW4VE stays compatible with its plugins."
+
+[pieces.minecraft-data-api]
+name = "MinecraftDataAPI"
+type = "mcdr-plugin"
+side = "server"
+origin = "external"
+status = "stable"
+install_dir = "plugins"
+requires = ["mcdreforged"]
+repo = "MCDReforged/MinecraftDataAPI"
+summary = "Reads player data and NBT from the server for other MCDR plugins."
+
+
+# -----------------------------------------------------------------------------
+# EXTERNAL - performance and platform
+# Added in August 2026 after `w4ve adopt` ran against a real server: the catalog
+# claimed to build a technical server while missing half of what ours run.
+# Dependencies below are the ones Modrinth actually declares, not guesses.
+# -----------------------------------------------------------------------------
+
+[pieces.krypton]
+name = "Krypton"
+type = "fabric-mod"
+side = "server"
+origin = "external"
+status = "stable"
+install_dir = "mods"
+modrinth = "krypton"
+summary = "Optimises the networking stack, which is what a server with many players spends its time on."
+
+[pieces.ferritecore]
+name = "FerriteCore"
+type = "fabric-mod"
+side = "both"
+origin = "external"
+status = "stable"
+install_dir = "mods"
+# The Modrinth slug is `ferrite-core`, not `ferritecore`. Both spellings exist
+# in the wild and only this one resolves.
+modrinth = "ferrite-core"
+summary = "Cuts memory usage without changing any behaviour."
+
+[pieces.spark]
+name = "spark"
+type = "fabric-mod"
+side = "both"
+origin = "external"
+status = "stable"
+install_dir = "mods"
+modrinth = "spark"
+summary = "Profiler for clients, servers and proxies. The first thing to install when something is slow and nobody knows why."
+
+[pieces.scalablelux]
+name = "ScalableLux"
+type = "fabric-mod"
+side = "server"
+origin = "external"
+status = "stable"
+install_dir = "mods"
+modrinth = "scalablelux"
+summary = "Starlight-based light engine that makes light updates cheap."
+
+[pieces.fabric-language-kotlin]
+name = "Fabric Language Kotlin"
+type = "library"
+side = "both"
+origin = "external"
+status = "stable"
+install_dir = "mods"
+modrinth = "fabric-language-kotlin"
+summary = "Runtime for Fabric mods written in Kotlin. Several mods here need it."
+
+[pieces.architectury-api]
+name = "Architectury API"
+type = "library"
+side = "both"
+origin = "external"
+status = "stable"
+install_dir = "mods"
+modrinth = "architectury-api"
+requires = ["fabric-api"]
+summary = "Compatibility layer that multiplatform mods build against."
+
+[pieces.fabricproxy-lite]
+name = "FabricProxy-Lite"
+type = "fabric-mod"
+side = "server"
+origin = "external"
+status = "stable"
+install_dir = "mods"
+modrinth = "fabricproxy-lite"
+requires = ["fabric-api"]
+# Every backend server behind our Velocity proxy runs this. Without it the
+# proxy cannot forward player data and everyone joins as a fresh account.
+summary = "Forwards player data from a Velocity proxy, so a server behind one keeps real identities."
+
+
+# -----------------------------------------------------------------------------
+# EXTERNAL - carpet extensions
+# -----------------------------------------------------------------------------
+
+[pieces.essentialaddons]
+name = "EssentialAddons"
+type = "fabric-mod"
+side = "server"
+origin = "external"
+status = "stable"
+install_dir = "mods"
+modrinth = "essentialaddons"
+requires = ["carpet", "fabric-api", "fabric-language-kotlin"]
+summary = "Carpet extension with admin and creative tools, many ported from the Essentials plugin."
+
+[pieces.carpet-ams-addition]
+name = "Carpet AMS Addition"
+type = "fabric-mod"
+side = "server"
+origin = "external"
+status = "stable"
+install_dir = "mods"
+modrinth = "carpet-ams-addition"
+requires = ["carpet"]
+summary = "Carpet extension from AMS with extra rules and tools for technical play."
+
+[pieces.intricarpet]
+name = "Intricarpet"
+type = "fabric-mod"
+side = "server"
+origin = "external"
+status = "stable"
+install_dir = "mods"
+modrinth = "intricarpet"
+requires = ["carpet"]
+# Heads up: upstream stopped at 1.20.2, so there is nothing installable on a
+# 1.21 or 26.2 server. Listed because our servers still carry it.
+summary = "Carpet extension aimed at TNT tech."
+
+[pieces.joacarpet]
+name = "JoaCarpet"
+type = "fabric-mod"
+side = "server"
+origin = "external"
+status = "stable"
+install_dir = "mods"
+modrinth = "joacarpet"
+# Modrinth does not declare the dependency, but it is a Carpet extension and
+# will not load without it.
+requires = ["carpet"]
+summary = "Small Carpet extension for redstone and storage tech, plus a few survival tweaks."
+
+[pieces.pca-protocol]
+name = "pca-protocol"
+type = "fabric-mod"
+side = "server"
+origin = "external"
+status = "stable"
+install_dir = "mods"
+modrinth = "pca-protocol"
+summary = "Server half of the PCA protocol, so clients can inspect containers and entities remotely."
+
+
+# -----------------------------------------------------------------------------
+# EXTERNAL - gameplay, building and debugging
+# -----------------------------------------------------------------------------
+
+[pieces.chunk-debug]
+name = "ChunkDebug"
+type = "fabric-mod"
+side = "both"
+origin = "external"
+status = "stable"
+install_dir = "mods"
+modrinth = "chunk-debug"
+requires = ["fabric-api"]
+summary = "Live map of chunk loading states in any dimension. Both sides needed."
+
+[pieces.g4mespeed]
+name = "G4mespeed"
+type = "fabric-mod"
+side = "both"
+origin = "external"
+status = "stable"
+install_dir = "mods"
+modrinth = "g4mespeed"
+summary = "Changes tick rate reliably and keeps client and server in step."
+
+[pieces.redstone-multimeter]
+name = "Redstone Multimeter"
+type = "fabric-mod"
+side = "both"
+origin = "external"
+status = "stable"
+install_dir = "mods"
+modrinth = "redstone-multimeter"
+summary = "Measures redstone timing tick by tick. Needed on both sides."
+
+[pieces.gooderrails]
+name = "Gooder Rails"
+type = "fabric-mod"
+side = "server"
+origin = "external"
+status = "stable"
+install_dir = "mods"
+modrinth = "gooderrails"
+requires = ["fabric-api"]
+summary = "Server-side port of the better rail placements from MendedMinecarts."
+
+[pieces.shulkerfix]
+name = "ShulkerFix"
+type = "fabric-mod"
+side = "server"
+origin = "external"
+status = "stable"
+install_dir = "mods"
+modrinth = "shulkerfix"
+summary = "Stops shulker bullets from breaking armor stands."
+
+[pieces.deepslate-instamine]
+name = "Deepslate Instamine"
+type = "fabric-mod"
+side = "both"
+origin = "external"
+status = "stable"
+install_dir = "mods"
+modrinth = "deepslate-instamine"
+# Same itch as our own RipDeepslate, solved by someone else and dual-side.
+# Listed so nobody installs both and wonders which one is doing what.
+summary = "Instamines deepslate with an Efficiency V netherite pickaxe and Haste II."
+
+[pieces.invview]
+name = "Inv View"
+type = "fabric-mod"
+side = "server"
+origin = "external"
+status = "stable"
+install_dir = "mods"
+modrinth = "invview"
+requires = ["fabric-api"]
+summary = "Open and edit inventories and ender chests of online and offline players."
+
+[pieces.server-replay]
+name = "ServerReplay"
+type = "fabric-mod"
+side = "server"
+origin = "external"
+status = "stable"
+install_dir = "mods"
+modrinth = "server-replay"
+requires = ["fabric-api", "fabric-language-kotlin"]
+summary = "Records replays server-side, for Replay Mod or Flashback, without anyone running a client."
+
+[pieces.litematica-server-paster]
+name = "Litematica Server Paster"
+type = "fabric-mod"
+side = "server"
+origin = "external"
+status = "stable"
+install_dir = "mods"
+modrinth = "litematica-server-paster"
+# Modrinth declares Litematica as required because of the client half. On the
+# server it stands alone, so it is deliberately NOT in `requires`: listing it
+# would make the CLI drop a client mod into a server's mods folder.
+summary = "Lets Litematica paste block and entity data on a server."
+
+[pieces.worldedit]
+name = "WorldEdit"
+type = "fabric-mod"
+side = "server"
+origin = "external"
+status = "stable"
+install_dir = "mods"
+modrinth = "worldedit"
+summary = "The map editor that runs in-game: selections, schematics, copy and paste, brushes."
+
+[pieces.axiom]
+name = "Axiom"
+type = "fabric-mod"
+side = "both"
+origin = "external"
+status = "stable"
+install_dir = "mods"
+modrinth = "axiom"
+requires = ["fabric-api"]
+summary = "All-in-one world editing tool, with a server half so a whole build team can use it."
+
+
+[pieces.styled-chat]
+name = "Styled Chat"
+type = "fabric-mod"
+side = "server"
+origin = "external"
+status = "stable"
+install_dir = "mods"
+modrinth = "styled-chat"
+# The other half of the emote stack: this is what rewrites chat server-side so
+# a vanilla client sees the emote glyphs. See WaveMotes Server.
+summary = "Formats server chat with placeholders and per-player styles, no client mod needed."
+
+[pieces.syncmatica]
+name = "Syncmatica"
+type = "fabric-mod"
+side = "both"
+origin = "external"
+status = "stable"
+install_dir = "mods"
+modrinth = "syncmatica"
+summary = "Shares Litematica schematics and their placements between everyone on the server."
+
+[pieces.buildevents]
+name = "Build Events"
+type = "fabric-mod"
+side = "server"
+origin = "external"
+status = "stable"
+install_dir = "mods"
+modrinth = "buildevents"
+requires = ["fabric-api"]
+summary = "Tracks block placements and breaks inside an area, for build events."
+
+[pieces.bluemap]
+name = "BlueMap"
+type = "fabric-mod"
+side = "server"
+origin = "external"
+status = "stable"
+install_dir = "mods"
+modrinth = "bluemap"
+requires = ["fabric-api"]
+summary = "Builds a 3D model of the world and serves it as a web map."
+
+[pieces.server-waypoint]
+name = "Server Waypoint"
+type = "fabric-mod"
+side = "server"
+origin = "external"
+status = "stable"
+install_dir = "mods"
+modrinth = "server_waypoint"
+requires = ["fabric-api"]
+# What the smp actually runs for waypoints. Our MinimapSync fork is a different
+# answer to the same problem: do not install both.
+conflicts = ["minimap-sync"]
+summary = "Server-side waypoints that sync themselves into Xaero's Minimap."
+
+[pieces.stackdeobf]
+name = "StackDeobfuscator"
+type = "fabric-mod"
+side = "both"
+origin = "external"
+status = "stable"
+install_dir = "mods"
+modrinth = "stackdeobf"
+summary = "Remaps stacktraces in the log to readable names, so a crash report says something."
+
+
+# -----------------------------------------------------------------------------
+# EXTERNAL - MCDR plugins
+# The ones our own servers run and the catalog did not have.
+# -----------------------------------------------------------------------------
+
+[pieces.here]
+name = "Here"
+type = "mcdr-plugin"
+side = "server"
+origin = "external"
+status = "stable"
+install_dir = "plugins"
+requires = ["mcdreforged", "minecraft-data-api"]
+repo = "TISUnion/Here"
+# Our servers run a locally patched copy: since 1.20.5 clients silently ignore
+# `run_command` without a leading `/`, so the waypoint button is emitted as a
+# separate `xaero-waypoint:` line instead. Not published anywhere yet.
+summary = "Broadcasts where you are, with a clickable waypoint for the people who ask every five minutes."
+
+[pieces.where-is]
+name = "WhereIs"
+type = "mcdr-plugin"
+side = "server"
+origin = "external"
+status = "stable"
+install_dir = "plugins"
+requires = ["mcdreforged", "minecraft-data-api"]
+repo = "Lazy-Bing-Server/WhereIs-MCDR"
+# Same local patch as Here, same reason.
+summary = "Asks where another player is, with the same waypoint button."
+
+[pieces.online]
+name = "Online"
+type = "mcdr-plugin"
+side = "server"
+origin = "external"
+status = "stable"
+install_dir = "plugins"
+requires = ["mcdreforged"]
+repo = "FAS-Server/Online"
+summary = "Lists who is online across every server in the network, not just this one."
+
+[pieces.multi-rcon-api]
+name = "MultiRconAPI"
+type = "mcdr-plugin"
+side = "server"
+origin = "external"
+status = "stable"
+install_dir = "plugins"
+requires = ["mcdreforged"]
+repo = "FAS-Server/MultiRconAPI"
+summary = "Talks RCON to several servers at once. What cross-server commands are built on."
+
+[pieces.daycount-nbt]
+name = "DayCountNBT"
+type = "mcdr-plugin"
+side = "server"
+origin = "external"
+status = "stable"
+install_dir = "plugins"
+requires = ["mcdreforged"]
+repo = "alex3236/daycount-NBT"
+summary = "Reads the world day count straight from the NBT, so it survives restarts and resets."
+
+[pieces.beep]
+name = "Beep"
+type = "mcdr-plugin"
+side = "server"
+origin = "external"
+status = "stable"
+install_dir = "plugins"
+requires = ["mcdreforged"]
+repo = "TISUnion/Beep"
+summary = "Plays a sound to a player who is being talked to, so nobody misses a message."
+
+[pieces.command-suggest]
+name = "CommandSuggest"
+type = "mcdr-plugin"
+side = "server"
+origin = "external"
+status = "stable"
+install_dir = "plugins"
+requires = ["mcdreforged"]
+repo = "PairZhu/CommandSuggest-MCDR"
+summary = "Suggests the right command when someone gets it slightly wrong."
+
+[pieces.url-preview-api]
+name = "URLPreviewAPI"
+type = "mcdr-plugin"
+side = "server"
+origin = "external"
+status = "stable"
+install_dir = "plugins"
+requires = ["mcdreforged"]
+repo = "Mooling0602/URLPreviewAPI-MCDR"
+summary = "Fetches link previews for other plugins to use."
+
+
+# =============================================================================
+# PROFILES - curated sets. "Install the technical profile and you have the
+# stack" is easier to say than a list of fifteen links.
+# =============================================================================
+
+[profiles.technical-survival]
+name = "Technical survival server"
+description = "A vanilla-behaviour server for people who build farms and perimeters."
+pieces = [
+  "fabric-api", "carpet", "carpet-extra", "servux",
+  "shapeboard", "worldeaternotifier", "regioncast", "rconhush",
+  "mcdreforged", "minecraft-data-api", "primebackup", "statshelper",
+]
+
+[profiles.technical-client]
+name = "Technical player client"
+description = "What to put in your own instance to play on one of these servers."
+pieces = [
+  "fabric-api", "litematica", "malilib", "xaeros-minimap",
+  "beaconator", "wavemotes", "mankelist",
+]
+
+[profiles.minewave]
+name = "MineWave"
+description = "Exactly what runs on the MineWave survival server. Kept honest: if it is not here, it is not on the server."
+# Rewritten in August 2026 by reading the smp's own mods and plugins folders
+# instead of trusting this list. What it taught us:
+#   - The old list had `minimap-sync`, `regioncast`, `servux` and `wavemotes`,
+#     none of which are on the smp. RegionCast lives on the mirror, WaveMotes is
+#     a client mod, and waypoints are done by `server-waypoint`.
+#   - Thirteen mods that ARE on the server were missing from here.
+#   - `wavemotes-server` is out on purpose: it is host-side scripting, not
+#     something you drop in a folder.
+pieces = [
+  # platform
+  "fabric-api", "fabric-language-kotlin", "architectury-api",
+  "carpet", "carpet-extra", "carpet-tis-addition", "essentialaddons",
+  # performance and diagnostics
+  "lithium", "krypton", "ferritecore", "scalablelux", "spark", "stackdeobf",
+  # network
+  "fabricproxy-lite", "bluemap",
+  # technical play and building
+  "chunk-debug", "pca-protocol", "server-replay", "invview", "syncmatica",
+  "server-waypoint", "buildevents", "styled-chat", "deepslate-instamine",
+  # ours
+  "shapeboard", "mankelist", "worldeaternotifier", "ripdeepslate", "rconhush",
+  # MCDR and its plugins
+  "mcdreforged", "minecraft-data-api", "primebackup", "statshelper",
+  "digall", "chatbridge", "here", "where-is", "online", "multi-rcon-api",
+  "daycount-nbt", "beep", "command-suggest", "url-preview-api",
+]
