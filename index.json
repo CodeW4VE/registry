@@ -9725,6 +9725,14 @@
       "conflicts": [],
       "releases": [
         {
+          "version": "0.1.1",
+          "tag": "v0.1.1",
+          "source": "github",
+          "published": "2026-08-07T16:59:11Z",
+          "prerelease": false,
+          "files": []
+        },
+        {
           "version": "0.1.0",
           "tag": "v0.1.0",
           "source": "github",
@@ -9733,7 +9741,7 @@
           "files": []
         }
       ],
-      "latest": "0.1.0"
+      "latest": "0.1.1"
     },
     "w4ve-core": {
       "name": "w4ve-core",
