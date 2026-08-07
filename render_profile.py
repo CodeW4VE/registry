@@ -24,6 +24,8 @@ LIVE_MAP = "https://mapmine.w4ve.xyz/"
 
 # Order and headings of the front page. Each section is (title, blurb, filter).
 SECTIONS = [
+    ("Start here", "One command installs any of the rest.",
+     lambda p: p["type"] in ("tool", "runtime")),
     ("Server mods", "Drop the jar in `mods/`. Players install nothing.",
      lambda p: p["type"] == "fabric-mod" and p["side"] in ("server", "both")),
     ("Client mods", "For your own instance.",
@@ -100,8 +102,8 @@ def render(index):
     profiles = index.get("profiles", {})
     if profiles:
         out += ["## Profiles", "",
-                "Curated sets, so you do not have to pick fifteen mods one by one. "
-                "Installable in one command once the CLI lands.",
+                "Curated sets, so you do not have to pick fifteen mods one by "
+                "one. `w4ve install --profile <name>` and you are done.",
                 ""]
         for key, prof in profiles.items():
             count = len(prof.get("pieces", []))

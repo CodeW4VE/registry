@@ -6030,26 +6030,6 @@
       ],
       "latest": "1.13.1-w4ve.1"
     },
-    "pyw4ve": {
-      "name": "PyW4VE",
-      "summary": "The Python runtime: wraps the server process, runs hot-reloadable plugins, and keeps MCDR plugins working.",
-      "type": "runtime",
-      "side": "server",
-      "origin": "w4ve",
-      "status": "planned",
-      "install_dir": ".",
-      "requires": [],
-      "repo": "CodeW4VE/PyW4VE",
-      "tags": [
-        "runtime",
-        "plugins",
-        "mcdreforged-compatible"
-      ],
-      "id": "pyw4ve",
-      "conflicts": [],
-      "releases": [],
-      "latest": null
-    },
     "rconhush": {
       "name": "RconHush",
       "summary": "Keeps RCON command output out of the server log and out of chat.",
@@ -9085,25 +9065,36 @@
       ],
       "latest": "0.0.3"
     },
-    "w4ve-cli": {
+    "w4ve": {
       "name": "w4ve",
-      "summary": "One command to install, update and check every piece of the ecosystem, on a server or on your own game instance.",
+      "summary": "One command to install, update and check every piece of the ecosystem. The Python runtime that wraps the server process and keeps MCDR plugins working lands in the same repo.",
       "type": "tool",
       "side": "standalone",
       "origin": "w4ve",
-      "status": "planned",
+      "status": "stable",
       "install_dir": ".",
       "requires": [],
       "repo": "CodeW4VE/w4ve",
       "tags": [
         "cli",
         "package-manager",
-        "tooling"
+        "tooling",
+        "runtime",
+        "mcdreforged-compatible"
       ],
-      "id": "w4ve-cli",
+      "id": "w4ve",
       "conflicts": [],
-      "releases": [],
-      "latest": null
+      "releases": [
+        {
+          "version": "0.1.0",
+          "tag": "v0.1.0",
+          "source": "github",
+          "published": "2026-08-07T16:21:55Z",
+          "prerelease": false,
+          "files": []
+        }
+      ],
+      "latest": "0.1.0"
     },
     "w4ve-core": {
       "name": "w4ve-core",
