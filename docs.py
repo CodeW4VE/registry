@@ -55,87 +55,121 @@ SIDE_LABEL = {
 
 # --------------------------------------------------------------------- styling
 
+# The look is a printed technical manual, not a landing page, because that is
+# what this is: dense reference you come to with a question. Everything here is
+# a decision away from the defaults an editor hands you, and each one has a
+# reason:
+#
+#   serif for prose, mono for anything a machine said   not one neutral sans
+#   paper and ink, redstone red for accent              not the safe teal
+#   rules and margins                                   not cards and shadows
+#   square corners                                      not pills
+#
+# The accent comes from the subject matter (redstone) instead of from a
+# framework's default palette. No web fonts: nothing here loads from anywhere.
 CSS = """
 :root {
-  --bg: #fbfaf8; --fg: #1a1a19; --muted: #6b6a66; --line: #e2e0da;
-  --card: #ffffff; --accent: #1f6f4a; --accent-soft: #eaf3ee;
-  --code-bg: #f3f1ec; --warn-bg: #fdf3e3; --warn-line: #e3c48a;
+  --paper: #f4f1ea; --ink: #191712; --faded: #6a6357; --rule: #ccc4b4;
+  --accent: #8c2f1f; --accent-bright: #b03f28;
+  --quote: #ece7db; --flag: #f0e5c8;
 }
-:root:not([data-theme="light"]) { }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #14140f; --fg: #e8e6df; --muted: #9c9a92; --line: #2e2e27;
-    --card: #1b1b16; --accent: #6cc79a; --accent-soft: #1d2b23;
-    --code-bg: #201f1a; --warn-bg: #2a2317; --warn-line: #6a5730;
+    --paper: #12100d; --ink: #e4ddcf; --faded: #968d7c; --rule: #362f26;
+    --accent: #d4674a; --accent-bright: #e8825f;
+    --quote: #1b1814; --flag: #241d12;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #14140f; --fg: #e8e6df; --muted: #9c9a92; --line: #2e2e27;
-  --card: #1b1b16; --accent: #6cc79a; --accent-soft: #1d2b23;
-  --code-bg: #201f1a; --warn-bg: #2a2317; --warn-line: #6a5730;
+  --paper: #12100d; --ink: #e4ddcf; --faded: #968d7c; --rule: #362f26;
+  --accent: #d4674a; --accent-bright: #e8825f;
+  --quote: #1b1814; --flag: #241d12;
 }
 
 * { box-sizing: border-box; }
 body {
-  margin: 0; background: var(--bg); color: var(--fg);
-  font: 16px/1.65 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  margin: 0; background: var(--paper); color: var(--ink);
+  font: 17px/1.6 "Iowan Old Style", "Palatino Linotype", Palatino, Charter,
+        "Bitstream Charter", "Source Serif 4", Georgia, serif;
   -webkit-text-size-adjust: 100%;
 }
-.wrap { max-width: 60rem; margin: 0 auto; padding: 0 1.25rem 5rem; }
+.wrap { max-width: 46rem; margin: 0 auto; padding: 0 1.4rem 6rem; }
 
-header.top { border-bottom: 1px solid var(--line); margin-bottom: 2.5rem; }
-header.top .wrap { padding-top: 1.1rem; padding-bottom: 1.1rem;
-  display: flex; gap: 1.5rem; align-items: baseline; flex-wrap: wrap; }
-header.top a.brand { font-weight: 700; font-size: 1.05rem; letter-spacing: .02em;
-  color: var(--fg); text-decoration: none; }
-header.top nav { display: flex; gap: 1.1rem; flex-wrap: wrap; }
-header.top nav a { color: var(--muted); text-decoration: none; font-size: .93rem; }
-header.top nav a:hover, header.top nav a[aria-current] { color: var(--accent); }
+code, pre, .mono, th, .tag, header.top, .facts dt {
+  font-family: "JetBrains Mono", "IBM Plex Mono", "DejaVu Sans Mono",
+               ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
 
-h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 .4rem; letter-spacing: -.01em; }
-h2 { font-size: 1.3rem; margin: 2.6rem 0 .8rem; letter-spacing: -.005em; }
-h3 { font-size: 1.02rem; margin: 1.8rem 0 .5rem; }
-p { margin: 0 0 1rem; }
-a { color: var(--accent); }
-.lede { font-size: 1.12rem; color: var(--muted); margin-bottom: 2rem; }
-.muted { color: var(--muted); }
+/* The masthead of a manual: a double rule, and the section you are in. */
+header.top { border-bottom: 3px double var(--rule); margin-bottom: 3rem; }
+header.top .wrap { padding-top: .9rem; padding-bottom: .8rem;
+  display: flex; gap: 1.6rem; align-items: baseline; flex-wrap: wrap;
+  font-size: .8rem; letter-spacing: .06em; text-transform: uppercase; }
+header.top a.brand { font-weight: 700; color: var(--ink); text-decoration: none; }
+header.top nav { display: flex; gap: 1.4rem; flex-wrap: wrap; }
+header.top nav a { color: var(--faded); text-decoration: none; }
+header.top nav a:hover { color: var(--accent); }
+header.top nav a[aria-current] { color: var(--ink);
+  box-shadow: inset 0 -2px 0 var(--accent); }
 
-code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
-code { background: var(--code-bg); padding: .12em .38em; border-radius: 4px;
-  font-size: .88em; }
-pre { background: var(--code-bg); border: 1px solid var(--line); border-radius: 8px;
-  padding: .9rem 1rem; overflow-x: auto; font-size: .87rem; line-height: 1.55; }
-pre code { background: none; padding: 0; font-size: inherit; }
+h1 { font-size: 2.1rem; line-height: 1.15; margin: 0 0 .5rem; font-weight: 400; }
+h2 { font-size: 1.05rem; margin: 3rem 0 .9rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .09em;
+  padding-bottom: .35rem; border-bottom: 1px solid var(--rule); }
+h3 { font-size: 1.05rem; margin: 2rem 0 .4rem; font-weight: 700; }
+p { margin: 0 0 1.05rem; }
+a { color: var(--accent); text-underline-offset: .16em;
+  text-decoration-thickness: 1px; }
+a:hover { color: var(--accent-bright); }
+.lede { font-size: 1.2rem; line-height: 1.5; margin-bottom: 2.2rem;
+  color: var(--faded); font-style: italic; }
+.muted { color: var(--faded); }
 
-table { border-collapse: collapse; width: 100%; font-size: .93rem; }
-.scroll { overflow-x: auto; margin-bottom: 1.4rem; }
-th, td { text-align: left; padding: .55rem .7rem; border-bottom: 1px solid var(--line);
-  vertical-align: top; }
-th { font-weight: 600; font-size: .82rem; text-transform: uppercase;
-  letter-spacing: .04em; color: var(--muted); }
+code { font-size: .82em; }
+pre { background: var(--quote); border-left: 3px solid var(--rule);
+  padding: .9rem 1.1rem; overflow-x: auto; font-size: .8rem; line-height: 1.6; }
+pre code { font-size: inherit; }
+
+table { border-collapse: collapse; width: 100%; font-size: .92rem; }
+.scroll { overflow-x: auto; margin-bottom: 1.6rem; }
+th, td { text-align: left; padding: .45rem .8rem .45rem 0; vertical-align: top;
+  border-bottom: 1px solid var(--rule); }
+th { font-size: .7rem; text-transform: uppercase; letter-spacing: .1em;
+  color: var(--faded); font-weight: 400; border-bottom-width: 2px; }
 td code { white-space: nowrap; }
 
-.card { background: var(--card); border: 1px solid var(--line); border-radius: 10px;
-  padding: 1rem 1.15rem; margin-bottom: .7rem; }
-.card h3 { margin: 0 0 .3rem; font-size: 1rem; }
-.card h3 a { text-decoration: none; }
-.card p { margin: 0; font-size: .93rem; color: var(--muted); }
-.grid { display: grid; gap: .7rem; grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); }
+/* The catalog is an index, so it is set like one: name in the margin, what it
+   is beside it. No cards, no grid of three. */
+dl.index { margin: 0 0 1rem; }
+dl.index dt { margin-top: 1.1rem; font-weight: 700; font-size: 1rem; }
+dl.index dt a { text-decoration: none; }
+dl.index dt a:hover { text-decoration: underline; }
+dl.index dd { margin: .1rem 0 0; color: var(--faded); font-size: .95rem; }
+@media (min-width: 46rem) {
+  dl.index dt { float: left; clear: left; width: 13rem; margin-top: .55rem;
+    padding-right: 1rem; }
+  dl.index dd { margin-left: 13rem; margin-top: .55rem; min-height: 1.6rem; }
+}
 
-.tag { display: inline-block; font-size: .74rem; letter-spacing: .03em;
-  background: var(--accent-soft); color: var(--accent); border-radius: 999px;
-  padding: .12rem .55rem; margin-right: .3rem; white-space: nowrap; }
-.note { background: var(--warn-bg); border: 1px solid var(--warn-line);
-  border-radius: 8px; padding: .8rem 1rem; margin: 1.2rem 0; font-size: .93rem; }
-.note strong { display: block; margin-bottom: .2rem; }
+.tag { font-size: .68rem; letter-spacing: .08em; color: var(--accent);
+  text-transform: uppercase; white-space: nowrap; }
+.tag::before { content: "["; } .tag::after { content: "]"; }
 
-dl.facts { display: grid; grid-template-columns: max-content 1fr; gap: .35rem 1.2rem;
-  margin: 0 0 1.6rem; font-size: .94rem; }
-dl.facts dt { color: var(--muted); }
+.note { background: var(--flag); border-left: 3px solid var(--accent);
+  padding: .85rem 1.1rem; margin: 1.5rem 0; font-size: .95rem; }
+.note strong { display: block; text-transform: uppercase; font-size: .72rem;
+  letter-spacing: .1em; margin-bottom: .35rem; }
+
+dl.facts { display: grid; grid-template-columns: max-content 1fr;
+  gap: .3rem 1.4rem; margin: 0 0 2rem; font-size: .95rem;
+  border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+  padding: .9rem 0; }
+dl.facts dt { color: var(--faded); font-size: .72rem; text-transform: uppercase;
+  letter-spacing: .08em; padding-top: .22rem; }
 dl.facts dd { margin: 0; }
 
-footer { border-top: 1px solid var(--line); margin-top: 4rem; padding-top: 1.4rem;
-  color: var(--muted); font-size: .87rem; }
+footer { border-top: 3px double var(--rule); margin-top: 5rem; padding-top: 1.3rem;
+  color: var(--faded); font-size: .85rem; }
 img, svg { max-width: 100%; }
 """
 
@@ -317,19 +351,18 @@ def render_catalog(pieces):
         if not group:
             continue
         body.append(f"<h2>{esc(TYPE_LABEL.get(kind, kind))}</h2>")
-        cards = []
+        rows = []
         for p in group:
             versions = mc_versions(p)
             tag = ""
             if versions:
-                tag = f'<span class="tag">MC {esc(versions[-1])}</span>'
+                tag = f' <span class="tag">up to MC {esc(versions[-1])}</span>'
             elif not p.get("releases"):
-                tag = '<span class="tag">not released</span>'
-            cards.append(
-                f'<div class="card"><h3><a href="{esc(p["id"])}.html">'
-                f'{esc(p["name"])}</a></h3>{tag}'
-                f'<p>{inline(p["summary"])}</p></div>')
-        body.append('<div class="grid">' + "".join(cards) + "</div>")
+                tag = ' <span class="tag">not released</span>'
+            rows.append(
+                f'<dt><a href="{esc(p["id"])}.html">{esc(p["name"])}</a></dt>'
+                f'<dd>{inline(p["summary"])}{tag}</dd>')
+        body.append('<dl class="index">' + "".join(rows) + "</dl>")
     return page("Catalog - W4VE docs", "\n".join(body), "pieces", depth=1)
 
 
@@ -404,14 +437,14 @@ def render_home(index):
         f"plugins, and the tools and bots around them. Kept honest for "
         f"Minecraft {esc(targets)}, because those are the versions our own "
         f"servers run.</p>",
-        '<div class="grid">'
-        '<div class="card"><h3><a href="pieces/index.html">Browse the catalog</a></h3>'
-        "<p>Every piece, what it needs, and what it refuses to sit next to.</p></div>"
-        '<div class="card"><h3><a href="profiles.html">Profiles</a></h3>'
-        "<p>A whole technical server in one command.</p></div>"
-        '<div class="card"><h3><a href="commands.html">Commands</a></h3>'
-        "<p>The reference, generated from the CLI itself.</p></div>"
-        "</div>",
+        '<dl class="index">'
+        '<dt><a href="pieces/index.html">The catalog</a></dt>'
+        "<dd>Every piece, what it needs, and what it refuses to sit next to.</dd>"
+        '<dt><a href="profiles.html">Profiles</a></dt>'
+        "<dd>A whole technical server in one command.</dd>"
+        '<dt><a href="commands.html">Commands</a></dt>'
+        "<dd>The reference, generated from the CLI itself.</dd>"
+        "</dl>",
         "<h2>Why this exists</h2>",
         "<p>These tools grew one at a time out of running a technical server, "
         "and for a while the only way to install them was to know which jar "
