@@ -51,4 +51,11 @@ jobs:
           git config user.name  'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
           git commit -q -m 'Refresh index.json' -- index.json
-          git push
+          # Somebody may have pushed while we were talking to Modrinth, and a
+          # plain push then fails on a checkout that is minutes old.
+          for attempt in 1 2 3; do
+            git push && exit 0
+            git pull --rebase --autostash
+          done
+          echo "could not push after three tries"
+          exit 1
