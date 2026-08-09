@@ -10067,6 +10067,31 @@
       },
       "releases": [
         {
+          "version": "7.4.5",
+          "source": "modrinth",
+          "published": "2026-08-09T07:17:29.953036Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.2"
+          ],
+          "loaders": [
+            "fabric",
+            "neoforge"
+          ],
+          "files": [
+            {
+              "name": "worldedit-mod-7.4.5.jar",
+              "url": "https://cdn.modrinth.com/data/1u6JkXh5/versions/6YnCYPwc/worldedit-mod-7.4.5.jar",
+              "size": 5154613,
+              "hashes": {
+                "sha1": "7d909b53f5fb76756bca1db08113151304cc173a",
+                "sha512": "611ff7cc00d78c63a284ef26b6fbc806af295c469375e5e71e4d7e993aa6ea3fa90945e46511c99b6157a01ed5c3868a2a6419b47a38114cc1e67b32c20f7ca3"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
           "version": "7.4.4",
           "source": "modrinth",
           "published": "2026-07-04T03:00:22.295149Z",
@@ -10111,33 +10136,6 @@
               "hashes": {
                 "sha1": "a42e743270bf2078c030ea238eaea6f2a76731ae",
                 "sha512": "92b24bf03d6db26dd776f8c9d551948995ef73f74f135a64a7dce4e84b83225bf6d41fb322963690bda041bae4b4e22b7ac5b7cdac9da151b38be906dc28e72a"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "7.4.3",
-          "source": "modrinth",
-          "published": "2026-05-04T11:31:48.820119Z",
-          "prerelease": false,
-          "minecraft": [
-            "26.1",
-            "26.1.1",
-            "26.1.2"
-          ],
-          "loaders": [
-            "fabric",
-            "neoforge"
-          ],
-          "files": [
-            {
-              "name": "worldedit-mod-7.4.3.jar",
-              "url": "https://cdn.modrinth.com/data/1u6JkXh5/versions/gjsLvJfW/worldedit-mod-7.4.3.jar",
-              "size": 5215216,
-              "hashes": {
-                "sha1": "87dc85780868e38885d188a60fc7f9f7d8be5277",
-                "sha512": "de51a1a319e057f1312ec54de2f08df5d0c00a78718080a3284e0c1ffadffb47d5353e0e538d9334b72eb7260df5a6f2c4bf8373eec8d5a4f6cdfaae1ff4524e"
               },
               "primary": true
             }
@@ -10222,7 +10220,7 @@
           ]
         }
       ],
-      "latest": "7.4.4"
+      "latest": "7.4.5"
     },
     "xaeros-minimap": {
       "name": "Xaero's Minimap",
