@@ -2831,6 +2831,30 @@
       },
       "releases": [
         {
+          "version": "2.5.1+26.2",
+          "source": "modrinth",
+          "published": "2026-08-09T20:31:06.164942Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.2"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "EssentialAddons-2.5.1+26.2.jar",
+              "url": "https://cdn.modrinth.com/data/3WQaouc1/versions/UsPC80JZ/EssentialAddons-2.5.1%2B26.2.jar",
+              "size": 1363498,
+              "hashes": {
+                "sha1": "055ca33c189becbc1066a0bca94b7fea0500179d",
+                "sha512": "a5dda462d00f2cc7326e195c266373c149aed8b0bd8b1d188086edb19513c0610bdcc8a60a0b546c945c0645cf20beac0a6121ffd0a2550ee671ea8b37af3fe7"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
           "version": "2.5.0+26.2",
           "source": "modrinth",
           "published": "2026-06-17T21:32:43.838646Z",
@@ -2874,31 +2898,6 @@
               "hashes": {
                 "sha1": "d2552573df8d0e3f0b99d8142efe62b1e5d3d325",
                 "sha512": "840b96df4df24ed25401da4e895fea70359433ddde49914b3e56b63802838e74c0198844e8ae085495b7961809182a86e367f753919c5a22ea731dcd7cbe79b5"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "2.4.2+26.1.1",
-          "source": "modrinth",
-          "published": "2026-04-03T22:45:12.222514Z",
-          "prerelease": false,
-          "minecraft": [
-            "26.1.1",
-            "26.1.2"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "EssentialAddons-2.4.2+26.1.1.jar",
-              "url": "https://cdn.modrinth.com/data/3WQaouc1/versions/OJWGgDAM/EssentialAddons-2.4.2%2B26.1.1.jar",
-              "size": 1284857,
-              "hashes": {
-                "sha1": "bc4818a198e632e3e83a5da3dffe183165ed74dc",
-                "sha512": "be9b930c17cd02149311038e466915bf12666a414afc11d74b83a9815115ac1d9aaf4d19d675069cdfcf8040cb7fb02270b4213e4171e3ddce5f15dfbbedfc2b"
               },
               "primary": true
             }
@@ -2979,7 +2978,7 @@
           ]
         }
       ],
-      "latest": "2.5.0+26.2"
+      "latest": "2.5.1+26.2"
     },
     "fabric-api": {
       "name": "Fabric API",
@@ -6891,6 +6890,30 @@
       },
       "releases": [
         {
+          "version": "3.5.2+26.2",
+          "source": "modrinth",
+          "published": "2026-08-09T20:33:07.381056Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.2"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "ServerReplay-3.5.2+26.2.jar",
+              "url": "https://cdn.modrinth.com/data/qCvSZ8ra/versions/czoujDEC/ServerReplay-3.5.2%2B26.2.jar",
+              "size": 10037432,
+              "hashes": {
+                "sha1": "faa98dbd58f0fa4407d1bcd8e2f3e33e569eca44",
+                "sha512": "b7974dc218b448aded2801bb8ed5094951b4ec2645573af2af84e39ce71a8e6910ace1932b6da81ce23902bf2b20dc30efc42553154f40d2396b7968c833c6d0"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
           "version": "3.5.1+26.2",
           "source": "modrinth",
           "published": "2026-07-30T10:38:40.099192Z",
@@ -6933,32 +6956,6 @@
               "hashes": {
                 "sha1": "70c4385d07ce3826649fdf1daff2f55a00962c98",
                 "sha512": "4cc8faffe3f2e2998209757316bc898ebfa0ce7c02731909f2d7912fd5186c6da44cf501b6e041fbd22d5dfeb4f7ebf59caab541226b4edd95e9ac735c12a4ed"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "3.4.3+26.1",
-          "source": "modrinth",
-          "published": "2026-05-29T01:33:55.011267Z",
-          "prerelease": false,
-          "minecraft": [
-            "26.1",
-            "26.1.1",
-            "26.1.2"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "ServerReplay-3.4.3+26.1.jar",
-              "url": "https://cdn.modrinth.com/data/qCvSZ8ra/versions/FHOXeRDk/ServerReplay-3.4.3%2B26.1.jar",
-              "size": 9642235,
-              "hashes": {
-                "sha1": "6268f00158e6dec9481704919005f35cebbeb1e4",
-                "sha512": "a3e0b97650840d8af0bf80fdc1b1a270adc5571e595d09b92acdaa21a15e62c801fd5a7f67f05d7ab98564d1e6ed6150f210b45b3883c08ebb2378c27c604274"
               },
               "primary": true
             }
@@ -7085,7 +7082,7 @@
           ]
         }
       ],
-      "latest": "3.5.1+26.2"
+      "latest": "3.5.2+26.2"
     },
     "server-waypoint": {
       "name": "Server Waypoint",
