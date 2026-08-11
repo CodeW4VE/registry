@@ -3001,6 +3001,54 @@
       },
       "releases": [
         {
+          "version": "0.157.0+26.3",
+          "source": "modrinth",
+          "published": "2026-08-10T13:01:36.388641Z",
+          "prerelease": true,
+          "minecraft": [
+            "26.3-snapshot-7"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "fabric-api-0.157.0+26.3.jar",
+              "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/I3s36sNv/fabric-api-0.157.0%2B26.3.jar",
+              "size": 2529549,
+              "hashes": {
+                "sha1": "dce69cc732e8791f9ec2bd6efec3a94626b6ab88",
+                "sha512": "575430452b3ba500f29ca7a635eaab08cfb397fb1d1ea7cbb72ed18a826b5f38c4cc1edd38a02b4c61448d69751a3b91aaa1cbd675e5bb7a029fbecf668c4583"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "0.157.0+26.2",
+          "source": "modrinth",
+          "published": "2026-08-10T12:56:05.057944Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.2"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "fabric-api-0.157.0+26.2.jar",
+              "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/vmQp7ixA/fabric-api-0.157.0%2B26.2.jar",
+              "size": 2533297,
+              "hashes": {
+                "sha1": "0deb9d110def35ebcaf5f15a9e6c8b8e85685319",
+                "sha512": "4ebec489f2b2ce621ebebb2d1b7e9714b6fd288ebdb4e287d767cde57612cf1d3d1d4f51daf7e7ec9541fa146df6bde4978ab98a29637ced6d9bc2f3c4217650"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
           "version": "0.156.3+26.3",
           "source": "modrinth",
           "published": "2026-08-05T17:31:06.730137Z",
@@ -3019,54 +3067,6 @@
               "hashes": {
                 "sha1": "75d64ba30992297c6011f13c6f0b48a9d3d62ee7",
                 "sha512": "5733627732098142ffd4a99b4a88f759fec23f5e51253926563d53d951a9f53dacaf703f99ee84281382ad39dff546ee3381a897cbe2bd20686fa93f93bf7910"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "0.156.2+26.3",
-          "source": "modrinth",
-          "published": "2026-08-04T15:21:05.435743Z",
-          "prerelease": true,
-          "minecraft": [
-            "26.3-snapshot-7"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "fabric-api-0.156.2+26.3.jar",
-              "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/zdqH5grm/fabric-api-0.156.2%2B26.3.jar",
-              "size": 2527167,
-              "hashes": {
-                "sha1": "5a0efb40ee312cc0555c608982d9906cba05a45d",
-                "sha512": "661232ddeb7a742ffe9bb8dfe07bbc4a0671d580a64077e66e54252e663a6965bd510d646b2dcee9a0a0b5c8b080ee159fe521ad4dfc1637ec704d5bed1bacf9"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "0.156.1+26.3",
-          "source": "modrinth",
-          "published": "2026-07-28T14:28:59.028075Z",
-          "prerelease": true,
-          "minecraft": [
-            "26.3-snapshot-6"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "fabric-api-0.156.1+26.3.jar",
-              "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/VqiMRXnF/fabric-api-0.156.1%2B26.3.jar",
-              "size": 2526476,
-              "hashes": {
-                "sha1": "bc3cfece5b7da458cd4a4f7a8c7a8291fa2f3823",
-                "sha512": "01019a36236429113dbbecd84004dfa99201e8068cb4ccad21832a085ae09dda04e2a2bf704f44d6d6ddcb85c8ae5fe370590a692280b4c9fc2abcd33ec7678c"
               },
               "primary": true
             }
@@ -3139,30 +3139,6 @@
               "hashes": {
                 "sha1": "a2bf116a5beeb27245c1a36985aa05d729f78926",
                 "sha512": "cc56984378a27c5bcd56374d6ffbb27a45c6bf3355add2ac6be9817ccac5854362249bf9d0147eb271a70fda2716129204e240d53c9aa876a2a7861f4c7f880f"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "0.155.0+26.2",
-          "source": "modrinth",
-          "published": "2026-07-16T10:54:41.973094Z",
-          "prerelease": false,
-          "minecraft": [
-            "26.2"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "fabric-api-0.155.0+26.2.jar",
-              "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/KsF7R7m6/fabric-api-0.155.0%2B26.2.jar",
-              "size": 2530040,
-              "hashes": {
-                "sha1": "e028647e89a8ba5956ce6186d92a096bd7a8d831",
-                "sha512": "cd2dfa120313093283e444e817f15c22d87f9f3c494bcc1d34b6ec88862991f3e3fc8c64d5e2a918c02919d2c8b2ae4d87acb6f0f3677f9505878f5c5a6c4deb"
               },
               "primary": true
             }
@@ -3289,7 +3265,7 @@
           ]
         }
       ],
-      "latest": "0.156.0+26.2"
+      "latest": "0.157.0+26.2"
     },
     "fabric-language-kotlin": {
       "name": "Fabric Language Kotlin",
@@ -7410,7 +7386,328 @@
       ],
       "id": "shapeboard",
       "conflicts": [],
+      "modrinth_info": {
+        "id": "42DAgMca",
+        "status": "approved",
+        "client_side": "unsupported",
+        "server_side": "required"
+      },
       "releases": [
+        {
+          "version": "1.7.0+26.2",
+          "source": "modrinth",
+          "published": "2026-08-07T05:03:53.262088Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.2"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "shapeboard-1.7.0+26.2.jar",
+              "url": "https://cdn.modrinth.com/data/42DAgMca/versions/KG3nkeTC/shapeboard-1.7.0%2B26.2.jar",
+              "size": 261620,
+              "hashes": {
+                "sha1": "fd5fe9f8d8575dbbdd26741ffff9e2345ab3d3c5",
+                "sha512": "34b511995697ef11e9f0c3b436b565799f7e189982efa68e86e351122ac38fee32c8ea76c5e224f6ea21bee8f3dea1064ab32a27119f2206f1c3b458b721f219"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "1.7.0+26.1.2",
+          "source": "modrinth",
+          "published": "2026-08-07T05:03:52.404824Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.1",
+            "26.1.1",
+            "26.1.2"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "shapeboard-1.7.0+26.1.2.jar",
+              "url": "https://cdn.modrinth.com/data/42DAgMca/versions/jv94NHRM/shapeboard-1.7.0%2B26.1.2.jar",
+              "size": 261626,
+              "hashes": {
+                "sha1": "4f9b678bd669026d8309d1b6a19c3bd518587f6d",
+                "sha512": "7d9e08c8313c41536b86d34c88fd3e99564d3c7ab2746cccecc86be1b49ef1c18b6d7510fa9b5eec0909eba2283b6dbd1684f0cf78e15cae119b7f10ad938e8b"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "1.7.0+1.21.11",
+          "source": "modrinth",
+          "published": "2026-08-07T05:03:51.658871Z",
+          "prerelease": false,
+          "minecraft": [
+            "1.21.11"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "shapeboard-1.7.0+1.21.11.jar",
+              "url": "https://cdn.modrinth.com/data/42DAgMca/versions/pba8DWl6/shapeboard-1.7.0%2B1.21.11.jar",
+              "size": 261647,
+              "hashes": {
+                "sha1": "7746f6142c0843e40a317d1ca2bbe8972f46d1a8",
+                "sha512": "2fdfb4bdba0cf408d7a4eb1f5604710682c4009ab9a6944853a5baffcd03d06c5393151303608f139071a26b0fe368e896f2a629a9eff787e5aedbfd36537df3"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "1.7.0+1.21.10",
+          "source": "modrinth",
+          "published": "2026-08-07T05:03:50.902730Z",
+          "prerelease": false,
+          "minecraft": [
+            "1.21.10"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "shapeboard-1.7.0+1.21.10.jar",
+              "url": "https://cdn.modrinth.com/data/42DAgMca/versions/h4jSDBU1/shapeboard-1.7.0%2B1.21.10.jar",
+              "size": 262057,
+              "hashes": {
+                "sha1": "17d1a0202fef32ec7ab23dfeb56991876393756e",
+                "sha512": "65bf6f0a75cf3cd281f34e31e4d9ca4c747d950130f81cd8d348887dfeb0d896940a58e7ca8d791e59833826ecd994347aa5c8e57f01cc424bd0bd544d03256a"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "1.7.0+1.21.9",
+          "source": "modrinth",
+          "published": "2026-08-07T05:03:50.076567Z",
+          "prerelease": false,
+          "minecraft": [
+            "1.21.9"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "shapeboard-1.7.0+1.21.9.jar",
+              "url": "https://cdn.modrinth.com/data/42DAgMca/versions/Neb2QXgp/shapeboard-1.7.0%2B1.21.9.jar",
+              "size": 262058,
+              "hashes": {
+                "sha1": "7f1984842fd0eac208e03bd2acf645fde440a786",
+                "sha512": "fefc61a35fd027072be8991c4642c30539e32cd074c6e5cbb143fbfd863c1621071e348e05c1e9258fe30a47e89a59ce576c2f50f74c130566c190b816ac1c4d"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "1.7.0+1.21.8",
+          "source": "modrinth",
+          "published": "2026-08-07T05:03:49.261122Z",
+          "prerelease": false,
+          "minecraft": [
+            "1.21.8"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "shapeboard-1.7.0+1.21.8.jar",
+              "url": "https://cdn.modrinth.com/data/42DAgMca/versions/CU3Ud77k/shapeboard-1.7.0%2B1.21.8.jar",
+              "size": 262057,
+              "hashes": {
+                "sha1": "ee6b74bc8bd95c01ea4fc0689a361bb15e34098e",
+                "sha512": "8cb18bfc4b4ae2a92d1d2101d8df75d98981a3a271d67f84fb48845ff3a838e6c25fe90de01d711a3ad1ef64076596eeda83b4a2836fac991f42019872d6623b"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "1.7.0+1.21.7",
+          "source": "modrinth",
+          "published": "2026-08-07T05:03:48.482505Z",
+          "prerelease": false,
+          "minecraft": [
+            "1.21.7"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "shapeboard-1.7.0+1.21.7.jar",
+              "url": "https://cdn.modrinth.com/data/42DAgMca/versions/FgEIgeJY/shapeboard-1.7.0%2B1.21.7.jar",
+              "size": 262057,
+              "hashes": {
+                "sha1": "7a4a9fff18d5a8bcb4c9ba70e00daf7041389f27",
+                "sha512": "63116299ca0c0cba799ccbe4025afae740117e858001c65ad372a1c59fcde51551d5861e49b2c736dac89cbfc207982f00c5d0771b749f3fb16bdda30305b44f"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "1.7.0+1.21.6",
+          "source": "modrinth",
+          "published": "2026-08-07T05:03:47.790611Z",
+          "prerelease": false,
+          "minecraft": [
+            "1.21.6"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "shapeboard-1.7.0+1.21.6.jar",
+              "url": "https://cdn.modrinth.com/data/42DAgMca/versions/XUV7H9ZF/shapeboard-1.7.0%2B1.21.6.jar",
+              "size": 262058,
+              "hashes": {
+                "sha1": "b9edf9b053789fd1c0421528e87740474206ea04",
+                "sha512": "75a7dfb19f97bf11efdce3f152b52e4db84f0634bbd4152d758e2efb3a5e24a252732efc2d2312d691559f0f5c76112aa150cf1bccf3162cf1e95b44fe7c252a"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "1.7.0+1.21.5",
+          "source": "modrinth",
+          "published": "2026-08-07T05:03:47.100619Z",
+          "prerelease": false,
+          "minecraft": [
+            "1.21.5"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "shapeboard-1.7.0+1.21.5.jar",
+              "url": "https://cdn.modrinth.com/data/42DAgMca/versions/EOv0mV84/shapeboard-1.7.0%2B1.21.5.jar",
+              "size": 262048,
+              "hashes": {
+                "sha1": "8369c99d64772bdbe4c47fa3b2bb8c7ab97226b8",
+                "sha512": "0f8aed66f646afc087df9dff9a6a09ebcb49950d9960d0cdd078ff79ea0776878ad5cd9c0ceeb2de88753beb3eb9eeeb37697f2c0aa8cc2cc1c4f25575b362d3"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "1.7.0+1.21.4",
+          "source": "modrinth",
+          "published": "2026-08-07T05:03:46.381445Z",
+          "prerelease": false,
+          "minecraft": [
+            "1.21.4"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "shapeboard-1.7.0+1.21.4.jar",
+              "url": "https://cdn.modrinth.com/data/42DAgMca/versions/8Vi54m3U/shapeboard-1.7.0%2B1.21.4.jar",
+              "size": 262082,
+              "hashes": {
+                "sha1": "3a952807c6cb7646a9b2ba3c303affede8089c82",
+                "sha512": "a42549e59fd2deff5264870b6beaac6c405fc59850ecff4688f93a91e8823bbf52eaecc20705213d05d4b39cb5553432062dca887e3ac36fd890692c85142457"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "1.7.0+1.21.3",
+          "source": "modrinth",
+          "published": "2026-08-07T05:03:45.633870Z",
+          "prerelease": false,
+          "minecraft": [
+            "1.21.3"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "shapeboard-1.7.0+1.21.3.jar",
+              "url": "https://cdn.modrinth.com/data/42DAgMca/versions/RNpWCacT/shapeboard-1.7.0%2B1.21.3.jar",
+              "size": 262082,
+              "hashes": {
+                "sha1": "a80a237462f5bd1d5ab1699c7e82c3c8511c2bc2",
+                "sha512": "8182f33fe44be1c0a44124a7a3aae8a1764a8ff847fb49c085236d24feb32ec5137715d1b3e492c058f777c6f8c94d58eceed7e6075c13ca0f6a922384f801c3"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "1.7.0+1.21.2",
+          "source": "modrinth",
+          "published": "2026-08-07T05:03:44.930134Z",
+          "prerelease": false,
+          "minecraft": [
+            "1.21.2"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "shapeboard-1.7.0+1.21.2.jar",
+              "url": "https://cdn.modrinth.com/data/42DAgMca/versions/3jftFOPk/shapeboard-1.7.0%2B1.21.2.jar",
+              "size": 262081,
+              "hashes": {
+                "sha1": "f5e68f0fc678e20d7ed501c93ff99df2162b92b1",
+                "sha512": "5a2f53728bf3a48c506a851a5573b78a172b89de5a01336fb50d90fc7a35cb8168f535dd28bdbe93c8b1091f84722e9cb23cc02b5d7779214a7f7ce305cc39f7"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "1.7.0+1.21",
+          "source": "modrinth",
+          "published": "2026-08-07T05:03:44.096838Z",
+          "prerelease": false,
+          "minecraft": [
+            "1.21",
+            "1.21.1"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "shapeboard-1.7.0+1.21.jar",
+              "url": "https://cdn.modrinth.com/data/42DAgMca/versions/OUiPSSjm/shapeboard-1.7.0%2B1.21.jar",
+              "size": 262076,
+              "hashes": {
+                "sha1": "209a46624f4e425d5ded733f4e000ff45efef74a",
+                "sha512": "726d929227eac7e7ba9ed371677bd4620f1d861f0669401006e78364e8ed04e162f83d3fa60330a1f8f55d16934f12ff9287aefb572fd1ddf0df3794a79599ea"
+              },
+              "primary": true
+            }
+          ]
+        },
         {
           "version": "1.7.0",
           "tag": "v1.7.0",
@@ -7540,647 +7837,154 @@
           ]
         },
         {
-          "version": "1.6.0",
-          "tag": "v1.6.0",
-          "source": "github",
-          "published": "2026-08-01T23:53:08Z",
+          "version": "1.6.0+1.21.6",
+          "source": "modrinth",
+          "published": "2026-08-02T00:01:31.232114Z",
           "prerelease": false,
+          "minecraft": [
+            "1.21.6",
+            "1.21.7",
+            "1.21.8"
+          ],
+          "loaders": [
+            "fabric"
+          ],
           "files": [
-            {
-              "name": "shapeboard-1.6.0+1.21-sources.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.6.0/shapeboard-1.6.0%2B1.21-sources.jar",
-              "size": 226412,
-              "minecraft": [
-                "1.21"
-              ]
-            },
-            {
-              "name": "shapeboard-1.6.0+1.21.2.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.6.0/shapeboard-1.6.0%2B1.21.2.jar",
-              "size": 262799,
-              "minecraft": [
-                "1.21.2"
-              ]
-            },
-            {
-              "name": "shapeboard-1.6.0+1.21.3.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.6.0/shapeboard-1.6.0%2B1.21.3.jar",
-              "size": 262801,
-              "minecraft": [
-                "1.21.3"
-              ]
-            },
-            {
-              "name": "shapeboard-1.6.0+1.21.4.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.6.0/shapeboard-1.6.0%2B1.21.4.jar",
-              "size": 262801,
-              "minecraft": [
-                "1.21.4"
-              ]
-            },
-            {
-              "name": "shapeboard-1.6.0+1.21.5.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.6.0/shapeboard-1.6.0%2B1.21.5.jar",
-              "size": 262800,
-              "minecraft": [
-                "1.21.5"
-              ]
-            },
             {
               "name": "shapeboard-1.6.0+1.21.6.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.6.0/shapeboard-1.6.0%2B1.21.6.jar",
+              "url": "https://cdn.modrinth.com/data/42DAgMca/versions/7pt4Z0cQ/shapeboard-1.6.0%2B1.21.6.jar",
               "size": 262811,
-              "minecraft": [
-                "1.21.6"
-              ]
-            },
+              "hashes": {
+                "sha1": "0aedb31c1da91b506b1a9abf551d042c0fb351d5",
+                "sha512": "e7308ebf148efa151860ca0bb69fd013888053dd4a83821f033798fe497b0cd4f3b9a30e4beb5072832cb1b910b726baa2bae8501a9adaa8924617e3903feb3e"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "1.6.0+1.21.5",
+          "source": "modrinth",
+          "published": "2026-08-02T00:01:29.999236Z",
+          "prerelease": false,
+          "minecraft": [
+            "1.21.5"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
             {
-              "name": "shapeboard-1.6.0+1.21.7.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.6.0/shapeboard-1.6.0%2B1.21.7.jar",
-              "size": 262813,
-              "minecraft": [
-                "1.21.7"
-              ]
-            },
+              "name": "shapeboard-1.6.0+1.21.5.jar",
+              "url": "https://cdn.modrinth.com/data/42DAgMca/versions/YKvyOCgH/shapeboard-1.6.0%2B1.21.5.jar",
+              "size": 262800,
+              "hashes": {
+                "sha1": "4fdd00eefb9caef1fd7be493bb9a0a072b0e6ad9",
+                "sha512": "31e94ae9685ad7ccb98197b0e6fbb26effc491abf2b7c47b04a200df0054e240c9e4d952ef742598d8096e8d37297bc830cc40be731ef1babf6d8610e245c416"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "1.6.0+1.21.4",
+          "source": "modrinth",
+          "published": "2026-08-02T00:01:28.658540Z",
+          "prerelease": false,
+          "minecraft": [
+            "1.21.4"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
             {
-              "name": "shapeboard-1.6.0+1.21.8.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.6.0/shapeboard-1.6.0%2B1.21.8.jar",
-              "size": 262814,
-              "minecraft": [
-                "1.21.8"
-              ]
-            },
+              "name": "shapeboard-1.6.0+1.21.4.jar",
+              "url": "https://cdn.modrinth.com/data/42DAgMca/versions/NSWnhMtQ/shapeboard-1.6.0%2B1.21.4.jar",
+              "size": 262801,
+              "hashes": {
+                "sha1": "94a9ed4d39bfe4755b942c5a4f4984f5f6c7a6db",
+                "sha512": "e4714fcdf3ecfdb39c85893df6217d2138d2f52432a27055b2f6db6dd077294042f3ef87bb664e2abeb9835c576881568bc28c3d095f31ac78f38a21bc40e449"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "1.6.0+1.21.3",
+          "source": "modrinth",
+          "published": "2026-08-02T00:01:27.548988Z",
+          "prerelease": false,
+          "minecraft": [
+            "1.21.3"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "shapeboard-1.6.0+1.21.3.jar",
+              "url": "https://cdn.modrinth.com/data/42DAgMca/versions/uB90Aq9S/shapeboard-1.6.0%2B1.21.3.jar",
+              "size": 262801,
+              "hashes": {
+                "sha1": "4e0be25bfc854910cf7003d03b2d8d798b1a0623",
+                "sha512": "b4848512f2cb8bf085c833eb934916ee238ba36552353093a196a25d0e7975cc21d56ca3714f246f9d5983a10d22d83e762671b5e2f89319fdbc5e506fe4ef73"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "1.6.0+1.21.2",
+          "source": "modrinth",
+          "published": "2026-08-02T00:01:26.479821Z",
+          "prerelease": false,
+          "minecraft": [
+            "1.21.2"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "shapeboard-1.6.0+1.21.2.jar",
+              "url": "https://cdn.modrinth.com/data/42DAgMca/versions/7PbETo3r/shapeboard-1.6.0%2B1.21.2.jar",
+              "size": 262799,
+              "hashes": {
+                "sha1": "124618f468faec381aa4685433b96feca87df2b0",
+                "sha512": "fcdbb7c0a9cd0779442a15f28b692185a988c578705636aff7822a2a5c9793308f107de28ed622105653b3e48cd0c22826c95d627bcf74e8e97b8af2caad37d3"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "1.6.0+1.21",
+          "source": "modrinth",
+          "published": "2026-08-02T00:01:25.404870Z",
+          "prerelease": false,
+          "minecraft": [
+            "1.21",
+            "1.21.1"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
             {
               "name": "shapeboard-1.6.0+1.21.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.6.0/shapeboard-1.6.0%2B1.21.jar",
+              "url": "https://cdn.modrinth.com/data/42DAgMca/versions/KBDTIhSC/shapeboard-1.6.0%2B1.21.jar",
               "size": 262793,
-              "minecraft": [
-                "1.21"
-              ]
+              "hashes": {
+                "sha1": "fe0ad4c2646797c0fce2336b4ba72daa8083fc9e",
+                "sha512": "61bef39dddce5e7db16f87193a3ce7a0e4ac9341fadda6a550194364e14c58329ea44c01c14c7be1d3b8e6cc0ced440702a5328e6d8d208efb76e28d41b86d14"
+              },
+              "primary": true
             }
-          ],
-          "minecraft": [
-            "1.21",
-            "1.21.2",
-            "1.21.3",
-            "1.21.4",
-            "1.21.5",
-            "1.21.6",
-            "1.21.7",
-            "1.21.8"
-          ]
-        },
-        {
-          "version": "1.5.0",
-          "tag": "v1.5.0",
-          "source": "github",
-          "published": "2026-08-01T17:09:18Z",
-          "prerelease": false,
-          "files": [
-            {
-              "name": "shapeboard-1.5.0+1.21-sources.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.5.0/shapeboard-1.5.0%2B1.21-sources.jar",
-              "size": 225924,
-              "minecraft": [
-                "1.21"
-              ]
-            },
-            {
-              "name": "shapeboard-1.5.0+1.21.2.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.5.0/shapeboard-1.5.0%2B1.21.2.jar",
-              "size": 261518,
-              "minecraft": [
-                "1.21.2"
-              ]
-            },
-            {
-              "name": "shapeboard-1.5.0+1.21.3.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.5.0/shapeboard-1.5.0%2B1.21.3.jar",
-              "size": 261520,
-              "minecraft": [
-                "1.21.3"
-              ]
-            },
-            {
-              "name": "shapeboard-1.5.0+1.21.4.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.5.0/shapeboard-1.5.0%2B1.21.4.jar",
-              "size": 261519,
-              "minecraft": [
-                "1.21.4"
-              ]
-            },
-            {
-              "name": "shapeboard-1.5.0+1.21.5.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.5.0/shapeboard-1.5.0%2B1.21.5.jar",
-              "size": 261517,
-              "minecraft": [
-                "1.21.5"
-              ]
-            },
-            {
-              "name": "shapeboard-1.5.0+1.21.6.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.5.0/shapeboard-1.5.0%2B1.21.6.jar",
-              "size": 261531,
-              "minecraft": [
-                "1.21.6"
-              ]
-            },
-            {
-              "name": "shapeboard-1.5.0+1.21.7.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.5.0/shapeboard-1.5.0%2B1.21.7.jar",
-              "size": 261532,
-              "minecraft": [
-                "1.21.7"
-              ]
-            },
-            {
-              "name": "shapeboard-1.5.0+1.21.8.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.5.0/shapeboard-1.5.0%2B1.21.8.jar",
-              "size": 261533,
-              "minecraft": [
-                "1.21.8"
-              ]
-            },
-            {
-              "name": "shapeboard-1.5.0+1.21.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.5.0/shapeboard-1.5.0%2B1.21.jar",
-              "size": 261515,
-              "minecraft": [
-                "1.21"
-              ]
-            }
-          ],
-          "minecraft": [
-            "1.21",
-            "1.21.2",
-            "1.21.3",
-            "1.21.4",
-            "1.21.5",
-            "1.21.6",
-            "1.21.7",
-            "1.21.8"
-          ]
-        },
-        {
-          "version": "1.4.2",
-          "tag": "v1.4.2",
-          "source": "github",
-          "published": "2026-07-29T19:21:58Z",
-          "prerelease": false,
-          "files": [
-            {
-              "name": "shapeboard-1.4.2+1.21-sources.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.2/shapeboard-1.4.2%2B1.21-sources.jar",
-              "size": 222931,
-              "minecraft": [
-                "1.21"
-              ]
-            },
-            {
-              "name": "shapeboard-1.4.2+1.21.2.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.2/shapeboard-1.4.2%2B1.21.2.jar",
-              "size": 256470,
-              "minecraft": [
-                "1.21.2"
-              ]
-            },
-            {
-              "name": "shapeboard-1.4.2+1.21.3.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.2/shapeboard-1.4.2%2B1.21.3.jar",
-              "size": 256472,
-              "minecraft": [
-                "1.21.3"
-              ]
-            },
-            {
-              "name": "shapeboard-1.4.2+1.21.4.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.2/shapeboard-1.4.2%2B1.21.4.jar",
-              "size": 256471,
-              "minecraft": [
-                "1.21.4"
-              ]
-            },
-            {
-              "name": "shapeboard-1.4.2+1.21.5.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.2/shapeboard-1.4.2%2B1.21.5.jar",
-              "size": 256471,
-              "minecraft": [
-                "1.21.5"
-              ]
-            },
-            {
-              "name": "shapeboard-1.4.2+1.21.6.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.2/shapeboard-1.4.2%2B1.21.6.jar",
-              "size": 256498,
-              "minecraft": [
-                "1.21.6"
-              ]
-            },
-            {
-              "name": "shapeboard-1.4.2+1.21.7.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.2/shapeboard-1.4.2%2B1.21.7.jar",
-              "size": 256498,
-              "minecraft": [
-                "1.21.7"
-              ]
-            },
-            {
-              "name": "shapeboard-1.4.2+1.21.8.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.2/shapeboard-1.4.2%2B1.21.8.jar",
-              "size": 256500,
-              "minecraft": [
-                "1.21.8"
-              ]
-            },
-            {
-              "name": "shapeboard-1.4.2+1.21.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.2/shapeboard-1.4.2%2B1.21.jar",
-              "size": 256466,
-              "minecraft": [
-                "1.21"
-              ]
-            }
-          ],
-          "minecraft": [
-            "1.21",
-            "1.21.2",
-            "1.21.3",
-            "1.21.4",
-            "1.21.5",
-            "1.21.6",
-            "1.21.7",
-            "1.21.8"
-          ]
-        },
-        {
-          "version": "1.4.1",
-          "tag": "v1.4.1",
-          "source": "github",
-          "published": "2026-07-29T18:58:10Z",
-          "prerelease": false,
-          "files": [
-            {
-              "name": "shapeboard-1.4.1+1.21-sources.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.1/shapeboard-1.4.1%2B1.21-sources.jar",
-              "size": 222597,
-              "minecraft": [
-                "1.21"
-              ]
-            },
-            {
-              "name": "shapeboard-1.4.1+1.21.2.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.1/shapeboard-1.4.1%2B1.21.2.jar",
-              "size": 255756,
-              "minecraft": [
-                "1.21.2"
-              ]
-            },
-            {
-              "name": "shapeboard-1.4.1+1.21.3.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.1/shapeboard-1.4.1%2B1.21.3.jar",
-              "size": 255757,
-              "minecraft": [
-                "1.21.3"
-              ]
-            },
-            {
-              "name": "shapeboard-1.4.1+1.21.4.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.1/shapeboard-1.4.1%2B1.21.4.jar",
-              "size": 255756,
-              "minecraft": [
-                "1.21.4"
-              ]
-            },
-            {
-              "name": "shapeboard-1.4.1+1.21.5.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.1/shapeboard-1.4.1%2B1.21.5.jar",
-              "size": 255765,
-              "minecraft": [
-                "1.21.5"
-              ]
-            },
-            {
-              "name": "shapeboard-1.4.1+1.21.6.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.1/shapeboard-1.4.1%2B1.21.6.jar",
-              "size": 255792,
-              "minecraft": [
-                "1.21.6"
-              ]
-            },
-            {
-              "name": "shapeboard-1.4.1+1.21.7.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.1/shapeboard-1.4.1%2B1.21.7.jar",
-              "size": 255793,
-              "minecraft": [
-                "1.21.7"
-              ]
-            },
-            {
-              "name": "shapeboard-1.4.1+1.21.8.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.1/shapeboard-1.4.1%2B1.21.8.jar",
-              "size": 255795,
-              "minecraft": [
-                "1.21.8"
-              ]
-            },
-            {
-              "name": "shapeboard-1.4.1+1.21.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.1/shapeboard-1.4.1%2B1.21.jar",
-              "size": 255752,
-              "minecraft": [
-                "1.21"
-              ]
-            }
-          ],
-          "minecraft": [
-            "1.21",
-            "1.21.2",
-            "1.21.3",
-            "1.21.4",
-            "1.21.5",
-            "1.21.6",
-            "1.21.7",
-            "1.21.8"
-          ]
-        },
-        {
-          "version": "1.4.0",
-          "tag": "v1.4.0",
-          "source": "github",
-          "published": "2026-07-29T15:15:46Z",
-          "prerelease": false,
-          "files": [
-            {
-              "name": "shapeboard-1.4.0+1.21-sources.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.0/shapeboard-1.4.0%2B1.21-sources.jar",
-              "size": 221782,
-              "minecraft": [
-                "1.21"
-              ]
-            },
-            {
-              "name": "shapeboard-1.4.0+1.21.2.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.0/shapeboard-1.4.0%2B1.21.2.jar",
-              "size": 254526,
-              "minecraft": [
-                "1.21.2"
-              ]
-            },
-            {
-              "name": "shapeboard-1.4.0+1.21.3.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.0/shapeboard-1.4.0%2B1.21.3.jar",
-              "size": 254528,
-              "minecraft": [
-                "1.21.3"
-              ]
-            },
-            {
-              "name": "shapeboard-1.4.0+1.21.4.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.0/shapeboard-1.4.0%2B1.21.4.jar",
-              "size": 254527,
-              "minecraft": [
-                "1.21.4"
-              ]
-            },
-            {
-              "name": "shapeboard-1.4.0+1.21.5.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.0/shapeboard-1.4.0%2B1.21.5.jar",
-              "size": 254537,
-              "minecraft": [
-                "1.21.5"
-              ]
-            },
-            {
-              "name": "shapeboard-1.4.0+1.21.6.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.0/shapeboard-1.4.0%2B1.21.6.jar",
-              "size": 254564,
-              "minecraft": [
-                "1.21.6"
-              ]
-            },
-            {
-              "name": "shapeboard-1.4.0+1.21.7.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.0/shapeboard-1.4.0%2B1.21.7.jar",
-              "size": 254564,
-              "minecraft": [
-                "1.21.7"
-              ]
-            },
-            {
-              "name": "shapeboard-1.4.0+1.21.8.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.0/shapeboard-1.4.0%2B1.21.8.jar",
-              "size": 254566,
-              "minecraft": [
-                "1.21.8"
-              ]
-            },
-            {
-              "name": "shapeboard-1.4.0+1.21.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.4.0/shapeboard-1.4.0%2B1.21.jar",
-              "size": 254522,
-              "minecraft": [
-                "1.21"
-              ]
-            }
-          ],
-          "minecraft": [
-            "1.21",
-            "1.21.2",
-            "1.21.3",
-            "1.21.4",
-            "1.21.5",
-            "1.21.6",
-            "1.21.7",
-            "1.21.8"
-          ]
-        },
-        {
-          "version": "1.3.0",
-          "tag": "v1.3.0",
-          "source": "github",
-          "published": "2026-07-04T06:39:14Z",
-          "prerelease": false,
-          "files": [
-            {
-              "name": "shapeboard-1.3.0+1.21-sources.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.3.0/shapeboard-1.3.0%2B1.21-sources.jar",
-              "size": 213452,
-              "minecraft": [
-                "1.21"
-              ]
-            },
-            {
-              "name": "shapeboard-1.3.0+1.21.2.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.3.0/shapeboard-1.3.0%2B1.21.2.jar",
-              "size": 236683,
-              "minecraft": [
-                "1.21.2"
-              ]
-            },
-            {
-              "name": "shapeboard-1.3.0+1.21.3.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.3.0/shapeboard-1.3.0%2B1.21.3.jar",
-              "size": 236684,
-              "minecraft": [
-                "1.21.3"
-              ]
-            },
-            {
-              "name": "shapeboard-1.3.0+1.21.4.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.3.0/shapeboard-1.3.0%2B1.21.4.jar",
-              "size": 236684,
-              "minecraft": [
-                "1.21.4"
-              ]
-            },
-            {
-              "name": "shapeboard-1.3.0+1.21.5.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.3.0/shapeboard-1.3.0%2B1.21.5.jar",
-              "size": 236632,
-              "minecraft": [
-                "1.21.5"
-              ]
-            },
-            {
-              "name": "shapeboard-1.3.0+1.21.6.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.3.0/shapeboard-1.3.0%2B1.21.6.jar",
-              "size": 236659,
-              "minecraft": [
-                "1.21.6"
-              ]
-            },
-            {
-              "name": "shapeboard-1.3.0+1.21.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.3.0/shapeboard-1.3.0%2B1.21.jar",
-              "size": 236678,
-              "minecraft": [
-                "1.21"
-              ]
-            }
-          ],
-          "minecraft": [
-            "1.21",
-            "1.21.2",
-            "1.21.3",
-            "1.21.4",
-            "1.21.5",
-            "1.21.6"
-          ]
-        },
-        {
-          "version": "1.2.0",
-          "tag": "v1.2.0",
-          "source": "github",
-          "published": "2026-07-02T07:56:21Z",
-          "prerelease": false,
-          "files": [
-            {
-              "name": "shapeboard-1.2.0+1.21-sources.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.2.0/shapeboard-1.2.0%2B1.21-sources.jar",
-              "size": 212841,
-              "minecraft": [
-                "1.21"
-              ]
-            },
-            {
-              "name": "shapeboard-1.2.0+1.21.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.2.0/shapeboard-1.2.0%2B1.21.jar",
-              "size": 235642,
-              "minecraft": [
-                "1.21"
-              ]
-            }
-          ],
-          "minecraft": [
-            "1.21"
-          ]
-        },
-        {
-          "version": "1.1.0",
-          "tag": "v1.1.0",
-          "source": "github",
-          "published": "2026-07-02T07:32:26Z",
-          "prerelease": false,
-          "files": [
-            {
-              "name": "shapeboard-1.1.0+1.21-sources.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.1.0/shapeboard-1.1.0%2B1.21-sources.jar",
-              "size": 212395,
-              "minecraft": [
-                "1.21"
-              ]
-            },
-            {
-              "name": "shapeboard-1.1.0+1.21.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.1.0/shapeboard-1.1.0%2B1.21.jar",
-              "size": 234737,
-              "minecraft": [
-                "1.21"
-              ]
-            }
-          ],
-          "minecraft": [
-            "1.21"
-          ]
-        },
-        {
-          "version": "1.0.1",
-          "tag": "v1.0.1",
-          "source": "github",
-          "published": "2026-07-02T05:12:33Z",
-          "prerelease": false,
-          "files": [
-            {
-              "name": "shapeboard-1.0.1+1.21-sources.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.0.1/shapeboard-1.0.1%2B1.21-sources.jar",
-              "size": 211905,
-              "minecraft": [
-                "1.21"
-              ]
-            },
-            {
-              "name": "shapeboard-1.0.1+1.21.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.0.1/shapeboard-1.0.1%2B1.21.jar",
-              "size": 233388,
-              "minecraft": [
-                "1.21"
-              ]
-            }
-          ],
-          "minecraft": [
-            "1.21"
-          ]
-        },
-        {
-          "version": "1.0.0",
-          "tag": "v1.0.0",
-          "source": "github",
-          "published": "2026-07-02T05:06:34Z",
-          "prerelease": false,
-          "files": [
-            {
-              "name": "shapeboard-1.0.0+1.21-sources.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.0.0/shapeboard-1.0.0%2B1.21-sources.jar",
-              "size": 211687,
-              "minecraft": [
-                "1.21"
-              ]
-            },
-            {
-              "name": "shapeboard-1.0.0+1.21.jar",
-              "url": "https://github.com/CodeW4VE/ShapeBoard/releases/download/v1.0.0/shapeboard-1.0.0%2B1.21.jar",
-              "size": 233204,
-              "minecraft": [
-                "1.21"
-              ]
-            }
-          ],
-          "minecraft": [
-            "1.21"
           ]
         }
       ],
-      "latest": "1.7.0"
+      "latest": "1.7.0+26.2"
     },
     "shulkerfix": {
       "name": "ShulkerFix",
