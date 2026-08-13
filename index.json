@@ -3001,6 +3001,30 @@
       },
       "releases": [
         {
+          "version": "0.157.1+26.3",
+          "source": "modrinth",
+          "published": "2026-08-12T11:33:41.954997Z",
+          "prerelease": true,
+          "minecraft": [
+            "26.3-snapshot-8"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "fabric-api-0.157.1+26.3.jar",
+              "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/6Qh0UKlg/fabric-api-0.157.1%2B26.3.jar",
+              "size": 2529540,
+              "hashes": {
+                "sha1": "9b8c2e55d01f38c18705809ab3e8e1b183724673",
+                "sha512": "4850f66d790accaaaa61b61f3aef2d0f069cabf22bb7369814503168a8924481b696e024ebfd06f98eb2a382a4d7355e1020e8379bd9b615817ba85ddeaee364"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
           "version": "0.157.0+26.3",
           "source": "modrinth",
           "published": "2026-08-10T13:01:36.388641Z",
@@ -3043,30 +3067,6 @@
               "hashes": {
                 "sha1": "0deb9d110def35ebcaf5f15a9e6c8b8e85685319",
                 "sha512": "4ebec489f2b2ce621ebebb2d1b7e9714b6fd288ebdb4e287d767cde57612cf1d3d1d4f51daf7e7ec9541fa146df6bde4978ab98a29637ced6d9bc2f3c4217650"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "0.156.3+26.3",
-          "source": "modrinth",
-          "published": "2026-08-05T17:31:06.730137Z",
-          "prerelease": true,
-          "minecraft": [
-            "26.3-snapshot-7"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "fabric-api-0.156.3+26.3.jar",
-              "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/Pp6ugxbI/fabric-api-0.156.3%2B26.3.jar",
-              "size": 2527383,
-              "hashes": {
-                "sha1": "75d64ba30992297c6011f13c6f0b48a9d3d62ee7",
-                "sha512": "5733627732098142ffd4a99b4a88f759fec23f5e51253926563d53d951a9f53dacaf703f99ee84281382ad39dff546ee3381a897cbe2bd20686fa93f93bf7910"
               },
               "primary": true
             }
