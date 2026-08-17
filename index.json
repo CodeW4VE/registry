@@ -6901,6 +6901,30 @@
       },
       "releases": [
         {
+          "version": "0.3.0-alpha.0.7+1.21.1",
+          "source": "modrinth",
+          "published": "2026-08-16T13:37:58.569409Z",
+          "prerelease": true,
+          "minecraft": [
+            "1.21.1"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "ScalableLux-fabric-0.3.0-alpha.0.7-all.jar",
+              "url": "https://cdn.modrinth.com/data/Ps1zyz6x/versions/AodeMVa6/ScalableLux-fabric-0.3.0-alpha.0.7-all.jar",
+              "size": 196331,
+              "hashes": {
+                "sha1": "ff6baa9ab1f2aecf0eba5b72595085551adddc7a",
+                "sha512": "e3c098b5136101575fe852d7d967f1be1c29a26ec687118e01a3efcea9ea1b8367d3b3be63ab7fa5029c12b478dcd764ad362980317e998674ddad4e0573349f"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
           "version": "0.3.0-alpha.0.5+1.21.1",
           "source": "modrinth",
           "published": "2026-07-12T08:55:04.698837Z",
@@ -6943,30 +6967,6 @@
               "hashes": {
                 "sha1": "e834feeca2246156f01df257da910d47dd9a5916",
                 "sha512": "521e1c4abc4193141d5894b686fa5314e89f4b0031aaf8bf59280d562c68b90abd71497634ddde84406c68b892713cefd89e622528a2984b65c0a627ca392f42"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "0.3.0-alpha.0.2+26.1.2",
-          "source": "modrinth",
-          "published": "2026-07-09T16:16:29.610899Z",
-          "prerelease": true,
-          "minecraft": [
-            "26.1.2"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "ScalableLux-fabric-0.3.0-alpha.0.2-all.jar",
-              "url": "https://cdn.modrinth.com/data/Ps1zyz6x/versions/ToW8oIIq/ScalableLux-fabric-0.3.0-alpha.0.2-all.jar",
-              "size": 193884,
-              "hashes": {
-                "sha1": "45c36984c42cab6bc05d916a1d4b75c97ea91ddc",
-                "sha512": "9b388d75e23f79eb5a5c3436c0051e93813cf608e1ea34c77e9fd6705468fe02acc2ca1daeb831743a1c3ee9d6c9c50ea992f396db49290a3d0e97fc3c084fbb"
               },
               "primary": true
             }
