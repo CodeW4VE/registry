@@ -1,0 +1,370 @@
+# Spanish for docs.w4ve.xyz
+# =============================================================================
+# The catalog itself (pieces.toml, index.json) stays in English: the CLI reads
+# it, and so does everybody who is not us. This file is only for the website.
+#
+# Anything missing here falls back to the English text instead of breaking, so
+# a new piece shows up in the Spanish pages the day it is added, untranslated,
+# and can be translated later.
+#
+# Rule for the prose: plain technical Spanish, no em dashes.
+
+[ui]
+docs = "docs"
+guide = "Guía"
+catalog_label = "Catálogo"
+on_this_page = "En esta página"
+start = "Inicio"
+the_catalog = "El catálogo"
+profiles = "Perfiles"
+commands = "Comandos"
+language = "Idioma"
+
+kind = "Tipo"
+where = "Dónde va"
+minecraft = "Minecraft"
+latest = "Última"
+installs_into = "Se instala en"
+needs = "Necesita"
+links = "Enlaces"
+code = "Código"
+versions = "versiones"
+to = "a"
+pieces_word = "piezas"
+piece_word = "pieza"
+fork_of = "fork de"
+
+install_it = "Instalarlo"
+downloads = "Descargas"
+version = "Versión"
+file = "Archivo"
+and_more = "y {n} más"
+conflicts_title = "No se lleva bien con"
+conflicts_piece = "Pieza"
+conflicts_versions = "Versiones"
+conflicts_why = "Por qué"
+conflicts_note = "El CLI se niega a hacer un update que junte una de estas parejas, y dice cuál."
+nothing_title = "Todavía no hay nada que descargar"
+nothing_body = "Esta pieza está en el catálogo para que el plan sea público, pero no tiene ninguna release que puedas instalar."
+up_to = "hasta MC"
+not_released = "sin publicar"
+
+# The three things worth colouring, because each one answers a question you
+# actually ask while reading a catalog.
+origin_w4ve = "Nuestro"
+origin_fork = "Fork nuestro"
+origin_external = "Externo"
+status_stable = "Estable"
+status_planned = "Planeado"
+status_unreleased = "Sin publicar"
+status_infra = "Infraestructura"
+status_beta = "Beta"
+
+side_server = "Lado servidor. Los jugadores no instalan nada."
+side_client = "Lado cliente. Va en tu propia instancia."
+side_both = "Los dos lados. Servidor y cliente lo necesitan."
+side_standalone = "Corre por su cuenta, al lado del servidor."
+
+type_tool = "Herramienta"
+type_runtime = "Runtime"
+type_fabric-mod = "Mod de Fabric"
+type_mcdr-plugin = "Plugin de MCDReforged"
+type_library = "Librería"
+type_discord-bot = "Bot de Discord"
+type_service = "Servicio"
+
+foot = 'Generado desde <a href="https://github.com/CodeW4VE/registry">el catálogo</a>. Si algo está mal en esta página, el arreglo va en <code>pieces.toml</code>, no en la página.'
+skip = "Ir al contenido"
+
+# ------------------------------------------------------------------ home page
+[home]
+eyebrow = "W4VE / documentación"
+tagline = "Herramientas para servidores técnicos de Minecraft que no rompen el vanilla."
+cta_start = "Empezar"
+cta_catalog = "Ver el catálogo"
+
+stat_pieces = "piezas en el catálogo"
+stat_mods = "mods de Fabric"
+stat_plugins = "plugins de MCDR"
+stat_ours = "escritas por nosotros"
+
+install_title = "Instala el comando"
+install_body = "Un solo archivo, librería estándar y nada más, Python 3.8 o más nuevo. Sin pip, sin virtualenv, sin nada que instalar antes."
+point_title = "Apúntalo a un servidor"
+c_init = "escribe w4ve.toml"
+c_adopt = "apunta los mods que el servidor ya tiene"
+c_install = "lo descarga y lo pone donde va"
+c_status = "qué hay instalado y qué espera un reinicio"
+c_doctor = "qué está mal, antes de que lo descubra el servidor"
+adopt_title = "Lee lo que ya hay puesto"
+adopt_body = "<code>w4ve adopt</code> abre cada jar y lee el manifiesto de dentro en vez de adivinar por el nombre del archivo, así que un servidor que llevas un año corriendo se entiende tal como está, y los mods que no reconoce los deja en paz."
+catalog_title = "Qué hay en el catálogo"
+catalog_body = "{n} piezas: {mods} mods de Fabric, {plugins} plugins de MCDReforged, y las herramientas y bots de alrededor. Al día para Minecraft {targets}, porque son las versiones que corren nuestros propios servidores."
+nav_catalog = "Cada pieza, qué necesita y con qué se niega a convivir."
+nav_profiles = "Un servidor técnico entero en un comando."
+nav_commands = "La referencia, generada desde el propio CLI."
+why_title = "Por qué existe esto"
+why_body = "Estas herramientas fueron naciendo de una en una mientras llevábamos un servidor técnico, y durante un tiempo la única forma de instalarlas era saberse de memoria qué jar iba dónde. El catálogo es ese conocimiento escrito en un sitio, y el comando es lo que lo lee."
+
+# --------------------------------------------------------------- other pages
+[catalog]
+title = "El catálogo"
+lede = "Todo lo que <code>w4ve install</code> sabe poner en un servidor, y todo lo que sabe que no debe poner junto."
+
+[profiles]
+title = "Perfiles"
+lede = "Conjuntos ya elegidos, para no ir escogiendo quince mods de uno en uno. Un comando instala el paquete entero."
+
+[commands]
+title = "Comandos"
+lede = "Sale directo de <code>w4ve --help</code>, así que esta página no puede describir un flag que el comando no tenga."
+note_title = "Todos los comandos aceptan <code>-n</code>"
+note_body = "Enseña lo que haría y no escribe nada. Ante la duda, primero con <code>-n</code>."
+overview = "Vista general"
+english_title = "La ayuda sale en inglés"
+english_body = "Los bloques de abajo son la salida literal del programa, no texto de esta página: se copian tal cual para que no puedan mentir sobre lo que hace el comando."
+
+[registry]
+description = "Herramientas para servidores técnicos de Minecraft que no rompen el vanilla."
+
+# ------------------------------------------------------------------- profiles
+[profiles.technical-survival]
+name = "Servidor técnico de survival"
+description = "Un servidor con comportamiento vanilla para gente que construye granjas y perímetros."
+
+[profiles.technical-client]
+name = "Cliente de jugador técnico"
+description = "Lo que hay que poner en tu propia instancia para jugar en uno de estos servidores."
+
+[profiles.minewave]
+name = "MineWave"
+description = "Exactamente lo que corre en el servidor de survival de MineWave. Sin trampa: si no está aquí, no está en el servidor."
+
+# --------------------------------------------------------------------- pieces
+[pieces.architectury-api]
+summary = "Capa de compatibilidad contra la que se compilan los mods multiplataforma."
+
+[pieces.axiom]
+summary = "Editor de mundo todo en uno, con una mitad de servidor para que lo use un equipo de builders entero."
+
+[pieces.beaconator]
+summary = "Planifica perímetros de beacons: retícula de anillos desde un punto, volúmenes de cobertura reales y haces donde todavía falta un beacon."
+blurb = "Planifica un perímetro de beacons antes de colocar el primero: retícula de anillos desde un punto, volúmenes de cobertura reales y haces disparando hacia arriba donde todavía falta un beacon."
+
+[pieces.beep]
+summary = "Le suena un pitido al jugador al que le están hablando, para que nadie se pierda un mensaje."
+
+[pieces.bluemap]
+summary = "Construye un modelo 3D del mundo y lo sirve como mapa web."
+
+[pieces.botinventory-carpet]
+summary = "Ver y manejar el inventario y la ender chest de los jugadores falsos, con clic derecho o por comando. Addon de Carpet."
+blurb = "Ver y manejar el inventario y la ender chest de los jugadores falsos, con clic derecho o por comando, sin parar la granja."
+
+[pieces.buildevents]
+summary = "Cuenta los bloques puestos y rotos dentro de un área, para eventos de construcción."
+
+[pieces.carpet]
+summary = "La caja de herramientas del jugador técnico: jugadores falsos, control de ticks, cientos de reglas."
+
+[pieces.carpet-ams-addition]
+summary = "Extensión de Carpet de AMS con reglas y herramientas extra para juego técnico."
+
+[pieces.carpet-extra]
+summary = "Reglas de Carpet que no cabían en el mod base."
+
+[pieces.carpet-tis-addition]
+summary = "El addon de Carpet de TIS Union: herramientas y arreglos extra para servidores técnicos."
+
+[pieces.chatbridge]
+summary = "Puente de chat entre servidores de Minecraft y Discord, con avatares de cuerpo entero, mute por jugador y emotes entre servidores."
+blurb = "Puente de chat entre Discord y Minecraft: los jugadores de MC aparecen como ellos mismos en Discord, con mute por jugador y emotes entre servidores."
+
+[pieces.chunk-debug]
+summary = "Mapa en vivo del estado de carga de los chunks en cualquier dimensión. Hace falta en los dos lados."
+
+[pieces.command-suggest]
+summary = "Sugiere el comando correcto cuando alguien lo escribe casi bien."
+
+[pieces.daycount-nbt]
+summary = "Lee el contador de días del mundo directo del NBT, así que sobrevive a reinicios y reseteos."
+
+[pieces.deepslate-instamine]
+summary = "La deepslate se rompe al instante con pico de netherita Eficiencia V y Prisa II."
+
+[pieces.digall]
+summary = "Total real de bloques picados para DiggyScoreboard, contando jugadores desconectados e históricos, sin los bots."
+blurb = "Un total real de bloques picados para [DiggyScoreboard](https://github.com/Fallen-Breath/DiggyScoreboard), contando también a los jugadores desconectados e históricos, sin los bots."
+
+[pieces.discord-todo-board]
+summary = "Bot de Discord autoalojado: un tablero de proyectos vivo dentro de un canal, todo con botones. Uno o varios tableros, webhook HTTP opcional."
+blurb = "Un tablero de proyectos vivo dentro de un canal de Discord, todo con botones, sin app web. Un tablero o varios, con webhook HTTP opcional."
+
+[pieces.essentialaddons]
+summary = "Extensión de Carpet con herramientas de admin y creativo, muchas portadas del plugin Essentials."
+
+[pieces.fabric-api]
+summary = "Los ganchos base que necesita casi cualquier mod de Fabric."
+
+[pieces.fabric-language-kotlin]
+summary = "Runtime para mods de Fabric escritos en Kotlin. Varios mods de aquí lo necesitan."
+
+[pieces.fabricproxy-lite]
+summary = "Reenvía los datos del jugador desde un proxy Velocity, para que un servidor detrás de uno conserve las identidades reales."
+
+[pieces.ferritecore]
+summary = "Baja el uso de memoria sin cambiar ningún comportamiento."
+
+[pieces.g4mespeed]
+summary = "Cambia la velocidad de tick de forma fiable y mantiene cliente y servidor sincronizados."
+
+[pieces.gooderrails]
+summary = "Port a lado servidor de las colocaciones de raíles mejoradas de MendedMinecarts."
+
+[pieces.here]
+summary = "Anuncia dónde estás, con un waypoint clicable para los que preguntan cada cinco minutos."
+
+[pieces.intricarpet]
+summary = "Extensión de Carpet enfocada a tecnología de TNT."
+
+[pieces.invview]
+summary = "Abre y edita inventarios y ender chests de jugadores conectados y desconectados."
+
+[pieces.joacarpet]
+summary = "Extensión pequeña de Carpet para redstone y almacenamiento, más algunos ajustes de survival."
+
+[pieces.krypton]
+summary = "Optimiza la pila de red, que es en lo que se le va el tiempo a un servidor con mucha gente."
+
+[pieces.litematica]
+summary = "Colocación e impresión de esquemáticos, la herramienta estándar para construir."
+
+[pieces.litematica-server-paster]
+summary = "Deja que Litematica pegue datos de bloques y entidades en un servidor."
+
+[pieces.lithium]
+summary = "Optimización de servidor que deja el comportamiento vanilla intacto."
+
+[pieces.malilib]
+summary = "Librería compartida de Litematica, MiniHUD y Tweakeroo."
+
+[pieces.manke]
+summary = "El bot de Discord que lleva MineWave. Público para que lo puedas leer, no empaquetado para que lo instales."
+blurb = "El **bot de Discord** propio de MineWave: puente de chat, paneles de stats, roles, logs y más. Hecho por monos, para monos. 🐒 Público para leerlo, no empaquetado para instalarlo."
+
+[pieces.mankedomath]
+summary = "Una calculadora dentro del juego: cuentas rápidas en el chat, con unidades de Minecraft como stacks, shulkers y ticks."
+blurb = "Una calculadora que **sabe lo que es una shulker box**. Ritmos de granja, cuentas de ítems y tiempos sin salir del juego, con stacks, shulker boxes, ticks y chunks como unidades de verdad: `5sb / 2h` te saca solo los ítems por hora."
+
+[pieces.mankelist]
+summary = "Lista de materiales de una construcción: /ml, un HUD encima y un tablero de Discord opcional que sigue el avance."
+blurb = "Lista de materiales de lo que estés construyendo: `/ml`, un HUD encima y un tablero de Discord opcional que sigue lo que todavía falta."
+
+[pieces.mcdreforged]
+summary = "Wrapper de servidor en Python con plugins recargables en caliente. PyW4VE se mantiene compatible con sus plugins."
+
+[pieces.minecraft-data-api]
+summary = "Lee datos de jugador y NBT del servidor para otros plugins de MCDR."
+
+[pieces.minimap-sync]
+summary = "Sincronización de waypoints desde el servidor para Xaero's Minimap, mantenida compatible con las versiones actuales de Xaero."
+blurb = "Sincronización de waypoints desde el servidor para Xaero's Minimap, que sigue funcionando con las versiones actuales de Xaero en vez de tumbarlas."
+
+[pieces.multi-rcon-api]
+summary = "Habla RCON con varios servidores a la vez. La base de los comandos entre servidores."
+
+[pieces.online]
+summary = "Lista quién está conectado en toda la red, no solo en este servidor."
+
+[pieces.pca-protocol]
+summary = "La mitad de servidor del protocolo PCA, para que los clientes puedan inspeccionar contenedores y entidades a distancia."
+
+[pieces.primebackup]
+summary = "Plugin de backups con deduplicación. Este fork recupera los botones de comando clicables que los clientes 1.20.5+ ignoran en silencio."
+blurb = "Backups deduplicados para MCDR. Este fork devuelve los botones de comando clicables que los clientes 1.20.5+ ignoran en silencio."
+
+[pieces.rconhush]
+summary = "Mantiene la salida de los comandos por RCON fuera del log del servidor y fuera del chat."
+
+[pieces.redstone-multimeter]
+summary = "Mide los tiempos de la redstone tick a tick. Hace falta en los dos lados."
+
+[pieces.regioncast]
+summary = "Trae archivos de región del mundo de otro servidor a este, eligiéndolos en un mapa. También chunks sueltos, y los últimos cambios se pueden deshacer."
+blurb = "Trae **archivos de región** del mundo de otro servidor a este, eligiéndolos en un mapa donde cada casilla es una región. También chunks sueltos, cuando una región entera es más de lo que querías, y los últimos cambios se pueden deshacer."
+
+[pieces.ripdeepslate]
+summary = "La deepslate se pica exactamente igual que la piedra con pico de netherita. Un solo jar, sin dependencias."
+blurb = "La deepslate se pica **exactamente igual que la piedra** con pico de netherita, al instante con Eficiencia V y Prisa II. Sin bloques fantasma y sin animación de grieta."
+
+[pieces.scalablelux]
+summary = "Motor de luz basado en Starlight que abarata las actualizaciones de luz."
+
+[pieces.schem-converter]
+summary = "Bot de Discord que convierte archivos .litematic entre las versiones de NBT 4, 5, 6 y 7."
+blurb = "Convierte archivos `.litematic` entre las versiones de NBT 4, 5, 6 y 7, para que los esquemáticos viejos abran en Litematica nuevo y al revés."
+
+[pieces.server-replay]
+summary = "Graba replays desde el servidor, para Replay Mod o Flashback, sin que nadie tenga que abrir un cliente."
+
+[pieces.server-waypoint]
+summary = "Waypoints del lado servidor que se sincronizan solos con Xaero's Minimap."
+
+[pieces.servux]
+summary = "Sirve datos de estructuras y entidades a Litematica y compañía."
+
+[pieces.shapeboard]
+summary = "Scoreboards para áreas de cualquier forma: la delimitas con bloques en el cielo, cuenta lo picado y lo colocado dentro, con sidebar por jugador."
+blurb = "Scoreboards para áreas de **cualquier forma**, no solo cajas. Delimita la zona con bloques en el cielo, cada bloque roto o puesto dentro cuenta, y al entrar aparece una tabla en el sidebar con la clasificación por jugador."
+
+[pieces.shulkerfix]
+summary = "Evita que los proyectiles de shulker rompan los soportes para armaduras."
+
+[pieces.spark]
+summary = "Profiler para clientes, servidores y proxies. Lo primero que se instala cuando algo va lento y nadie sabe por qué."
+
+[pieces.stackdeobf]
+summary = "Traduce los stacktraces del log a nombres legibles, para que un crash report diga algo."
+
+[pieces.statshelper]
+summary = "Ayudante de estadísticas de Minecraft para MCDR, con los arreglos del lado de MineWave."
+blurb = "Estadísticas de Minecraft para MCDR, con un arreglo de duplicados por UUID y por cambio de nombre encima del upstream."
+
+[pieces.styled-chat]
+summary = "Da formato al chat del servidor con placeholders y estilos por jugador, sin mod de cliente."
+
+[pieces.syncmatica]
+summary = "Comparte los esquemáticos de Litematica y sus colocaciones entre toda la gente del servidor."
+
+[pieces.url-preview-api]
+summary = "Trae las vistas previas de los enlaces para que las usen otros plugins."
+
+[pieces.w4ve]
+summary = "Un comando para instalar, actualizar y revisar cada pieza del ecosistema. El runtime de Python que envuelve el proceso del servidor y mantiene vivos los plugins de MCDR aterriza en el mismo repo."
+
+[pieces.w4ve-core]
+summary = "Librería Java compartida para los mods de W4VE: config con recarga en caliente, comandos, permisos, tableros de Discord y el enlace con PyW4VE."
+
+[pieces.w4vecarpet]
+summary = "Extensión de Carpet escrita para MineWave: comando de teleport rápido y una whitelist con zonas."
+
+[pieces.wavemotes]
+summary = "Escribes :emote: en el chat y lo eliges en un popup. Pack de emotes incluido y dibujado en el cliente, sin resource pack, más emojis de Discord opcionales."
+blurb = "Escribes `:emote:` en el chat y eliges en un popup tipo `/`. Los emotes van dentro del jar y se dibujan en el cliente, más emojis de Discord opcionales."
+
+[pieces.wavemotes-server]
+summary = "La mitad de servidor de WaveMotes: generador de resource pack e inyector de chat para que hasta los clientes vanilla vean los emotes."
+blurb = "El lado del servidor: generador de resource pack e inyector de chat para que **todo el mundo**, hasta los clientes vanilla, vea los emotes, con puente a Discord entre servidores."
+
+[pieces.where-is]
+summary = "Pregunta dónde está otro jugador, con el mismo botón de waypoint."
+
+[pieces.worldeaternotifier]
+summary = "Vigila world eaters, trencheadoras y rompebedrock, y avisa por Discord cuando uno se para o se atasca."
+blurb = "Vigila world eaters y trencheadoras y avisa por **Discord** cuando uno se para o se obstruye, con control de ping por evento para que solo te lleguen los avisos que quieres."
+
+[pieces.worldedit]
+summary = "El editor de mapas que corre dentro del juego: selecciones, esquemáticos, copiar y pegar, brochas."
+
+[pieces.xaeros-minimap]
+summary = "Minimapa con waypoints. Donde MinimapSync sincroniza las cosas."

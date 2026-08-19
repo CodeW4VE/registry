@@ -10,6 +10,10 @@ catalog, and the command reference comes from asking the CLI for its own help,
 so neither can drift from what is really published. If a page says something
 wrong, the fix belongs in pieces.toml or in the CLI's own help text.
 
+The site is bilingual: English at the root, Spanish under /es/. The English
+copy lives in this file, the Spanish in i18n/es.toml, and anything missing
+from the translation falls back to English instead of breaking.
+
 Standard library only, same rule as the rest of the repo.
 """
 
@@ -21,11 +25,14 @@ import re
 import shutil
 import subprocess
 import sys
+import tomllib
 import urllib.request
 from pathlib import Path
 
 HERE = Path(__file__).parent
 INDEX = HERE / "index.json"
+ASSETS = HERE / "assets"
+I18N = HERE / "i18n"
 OUT = HERE / "site"
 
 CLI_RELEASE = "https://github.com/CodeW4VE/w4ve/releases/latest/download/w4ve.py"
@@ -52,126 +59,63 @@ SIDE_LABEL = {
     "standalone": "Runs on its own, next to the server.",
 }
 
+# Colour is spent on the two questions you actually ask while reading a catalog
+# of seventy things: is this yours, and can I install it today. Gold for our
+# own code, blue for a fork we maintain, nothing at all for somebody else's.
+ORIGIN_LABEL = {"w4ve": "Ours", "fork": "Our fork", "external": "External"}
+ORIGIN_CLASS = {"w4ve": "ours", "fork": "fork"}
+STATUS_LABEL = {"stable": "Stable", "beta": "Beta", "planned": "Planned",
+                "unreleased": "Unreleased", "infra": "Infrastructure"}
+# Stable is the normal case and gets no badge: a badge on everything is a
+# badge on nothing.
+STATUS_CLASS = {"beta": "beta", "planned": "planned",
+                "unreleased": "planned", "infra": "infra"}
+
 
 # --------------------------------------------------------------------- styling
 
-# The look is a printed technical manual, not a landing page, because that is
-# what this is: dense reference you come to with a question. Everything here is
-# a decision away from the defaults an editor hands you, and each one has a
-# reason:
+# The stylesheet is a hand-written file in assets/, not a string in here: it is
+# design, it is long, and it is the one thing in this repo that is not derived
+# from the catalog. docs.py copies it, and the fonts beside it, into the site.
 #
-#   serif for prose, mono for anything a machine said   not one neutral sans
-#   paper and ink, redstone red for accent              not the safe teal
-#   rules and margins                                   not cards and shadows
-#   square corners                                      not pills
-#
-# The accent comes from the subject matter (redstone) instead of from a
-# framework's default palette. No web fonts: nothing here loads from anywhere.
-CSS = """
-:root {
-  --paper: #f4f1ea; --ink: #191712; --faded: #6a6357; --rule: #ccc4b4;
-  --accent: #8c2f1f; --accent-bright: #b03f28;
-  --quote: #ece7db; --flag: #f0e5c8;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --paper: #12100d; --ink: #e4ddcf; --faded: #968d7c; --rule: #362f26;
-    --accent: #d4674a; --accent-bright: #e8825f;
-    --quote: #1b1814; --flag: #241d12;
-  }
-}
-:root[data-theme="dark"] {
-  --paper: #12100d; --ink: #e4ddcf; --faded: #968d7c; --rule: #362f26;
-  --accent: #d4674a; --accent-bright: #e8825f;
-  --quote: #1b1814; --flag: #241d12;
-}
+# Shipping it as a file instead of inlining it also fixes the boring problem
+# that the font URLs would otherwise have to know how deep the page is.
 
-* { box-sizing: border-box; }
-body {
-  margin: 0; background: var(--paper); color: var(--ink);
-  font: 17px/1.6 "Iowan Old Style", "Palatino Linotype", Palatino, Charter,
-        "Bitstream Charter", "Source Serif 4", Georgia, serif;
-  -webkit-text-size-adjust: 100%;
-}
-.wrap { max-width: 46rem; margin: 0 auto; padding: 0 1.4rem 6rem; }
 
-code, pre, .mono, th, .tag, header.top, .facts dt {
-  font-family: "JetBrains Mono", "IBM Plex Mono", "DejaVu Sans Mono",
-               ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-}
+# ------------------------------------------------------------------- languages
 
-/* The masthead of a manual: a double rule, and the section you are in. */
-header.top { border-bottom: 3px double var(--rule); margin-bottom: 3rem; }
-header.top .wrap { padding-top: .9rem; padding-bottom: .8rem;
-  display: flex; gap: 1.6rem; align-items: baseline; flex-wrap: wrap;
-  font-size: .8rem; letter-spacing: .06em; text-transform: uppercase; }
-header.top a.brand { font-weight: 700; color: var(--ink); text-decoration: none; }
-header.top nav { display: flex; gap: 1.4rem; flex-wrap: wrap; }
-header.top nav a { color: var(--faded); text-decoration: none; }
-header.top nav a:hover { color: var(--accent); }
-header.top nav a[aria-current] { color: var(--ink);
-  box-shadow: inset 0 -2px 0 var(--accent); }
+class Lang:
+    """One language of the site. The code is also the URL prefix, except for
+    English, which lives at the root."""
 
-h1 { font-size: 2.1rem; line-height: 1.15; margin: 0 0 .5rem; font-weight: 400; }
-h2 { font-size: 1.05rem; margin: 3rem 0 .9rem; font-weight: 700;
-  text-transform: uppercase; letter-spacing: .09em;
-  padding-bottom: .35rem; border-bottom: 1px solid var(--rule); }
-h3 { font-size: 1.05rem; margin: 2rem 0 .4rem; font-weight: 700; }
-p { margin: 0 0 1.05rem; }
-a { color: var(--accent); text-underline-offset: .16em;
-  text-decoration-thickness: 1px; }
-a:hover { color: var(--accent-bright); }
-.lede { font-size: 1.2rem; line-height: 1.5; margin-bottom: 2.2rem;
-  color: var(--faded); font-style: italic; }
-.muted { color: var(--faded); }
+    def __init__(self, code, data, label):
+        self.code = code
+        self.data = data
+        self.label = label
 
-code { font-size: .82em; }
-pre { background: var(--quote); border-left: 3px solid var(--rule);
-  padding: .9rem 1.1rem; overflow-x: auto; font-size: .8rem; line-height: 1.6; }
-pre code { font-size: inherit; }
+    @property
+    def prefix(self):
+        return "" if self.code == "en" else f"{self.code}/"
 
-table { border-collapse: collapse; width: 100%; font-size: .92rem; }
-.scroll { overflow-x: auto; margin-bottom: 1.6rem; }
-th, td { text-align: left; padding: .45rem .8rem .45rem 0; vertical-align: top;
-  border-bottom: 1px solid var(--rule); }
-th { font-size: .7rem; text-transform: uppercase; letter-spacing: .1em;
-  color: var(--faded); font-weight: 400; border-bottom-width: 2px; }
-td code { white-space: nowrap; }
+    def t(self, section, key, default):
+        """Translated string, or the English one. A missing key is not an
+        error: a piece added today shows up untranslated tomorrow."""
+        return self.data.get(section, {}).get(key, default)
 
-/* The catalog is an index, so it is set like one: name in the margin, what it
-   is beside it. No cards, no grid of three. */
-dl.index { margin: 0 0 1rem; }
-dl.index dt { margin-top: 1.1rem; font-weight: 700; font-size: 1rem; }
-dl.index dt a { text-decoration: none; }
-dl.index dt a:hover { text-decoration: underline; }
-dl.index dd { margin: .1rem 0 0; color: var(--faded); font-size: .95rem; }
-@media (min-width: 46rem) {
-  dl.index dt { float: left; clear: left; width: 13rem; margin-top: .55rem;
-    padding-right: 1rem; }
-  dl.index dd { margin-left: 13rem; margin-top: .55rem; min-height: 1.6rem; }
-}
+    def piece(self, pid, field, default):
+        return self.data.get("pieces", {}).get(pid, {}).get(field) or default
 
-.tag { font-size: .68rem; letter-spacing: .08em; color: var(--accent);
-  text-transform: uppercase; white-space: nowrap; }
-.tag::before { content: "["; } .tag::after { content: "]"; }
 
-.note { background: var(--flag); border-left: 3px solid var(--accent);
-  padding: .85rem 1.1rem; margin: 1.5rem 0; font-size: .95rem; }
-.note strong { display: block; text-transform: uppercase; font-size: .72rem;
-  letter-spacing: .1em; margin-bottom: .35rem; }
+LANG_NAMES = {"es": "Español"}
 
-dl.facts { display: grid; grid-template-columns: max-content 1fr;
-  gap: .3rem 1.4rem; margin: 0 0 2rem; font-size: .95rem;
-  border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
-  padding: .9rem 0; }
-dl.facts dt { color: var(--faded); font-size: .72rem; text-transform: uppercase;
-  letter-spacing: .08em; padding-top: .22rem; }
-dl.facts dd { margin: 0; }
 
-footer { border-top: 3px double var(--rule); margin-top: 5rem; padding-top: 1.3rem;
-  color: var(--faded); font-size: .85rem; }
-img, svg { max-width: 100%; }
-"""
+def load_langs():
+    langs = [Lang("en", {}, "English")]
+    for path in sorted(I18N.glob("*.toml")) if I18N.exists() else []:
+        with path.open("rb") as fh:
+            data = tomllib.load(fh)
+        langs.append(Lang(path.stem, data, LANG_NAMES.get(path.stem, path.stem)))
+    return langs
 
 
 # ---------------------------------------------------------------- tiny helpers
@@ -189,38 +133,186 @@ def inline(text):
     return out
 
 
-def page(title, body, nav_here=None, depth=0):
+def callout(kind, title, body):
+    """info, warn or danger. Three of them exist because three things are worth
+    interrupting a paragraph for; there is no fourth colour for decoration."""
+    return (f'<div class="callout callout--{kind}">'
+            f'<p class="callout-title">{title}</p><p>{body}</p></div>')
+
+
+def type_label(lang, kind):
+    return lang.t("ui", f"type_{kind}", TYPE_LABEL.get(kind, kind))
+
+
+def side_label(lang, side):
+    if side not in SIDE_LABEL:
+        return None
+    return lang.t("ui", f"side_{side}", SIDE_LABEL[side])
+
+
+def badges(lang, piece):
+    """Origin and status, the two small coloured marks a piece can carry."""
+    out = []
+    origin = piece.get("origin")
+    if origin in ORIGIN_CLASS:
+        label = lang.t("ui", f"origin_{origin}", ORIGIN_LABEL[origin])
+        out.append(f'<span class="badge badge--{ORIGIN_CLASS[origin]}">'
+                   f"{esc(label)}</span>")
+    status = piece.get("status")
+    if status in STATUS_CLASS:
+        label = lang.t("ui", f"status_{status}", STATUS_LABEL[status])
+        out.append(f'<span class="badge badge--{STATUS_CLASS[status]}">'
+                   f"{esc(label)}</span>")
+    return "".join(out)
+
+
+# ------------------------------------------------------------------- the shell
+
+# (key, path inside the language root, translation key, English label)
+SECTIONS = [("index", "index.html", "start", "Start"),
+            ("pieces", "pieces/index.html", "the_catalog", "The catalog"),
+            ("profiles", "profiles.html", "profiles", "Profiles"),
+            ("commands", "commands.html", "commands", "Commands")]
+
+# [(kind, [(id, name, origin), ...])] for the sidebar, filled by build_nav().
+NAV_GROUPS = []
+
+
+def build_nav(pieces):
+    """The catalog as the sidebar shows it: grouped by kind, in the same order
+    as the catalog page, so the two never disagree."""
+    NAV_GROUPS.clear()
+    by_type = {}
+    for p in pieces.values():
+        by_type.setdefault(p.get("type"), []).append(p)
+    for kind in TYPE_ORDER:
+        group = sorted(by_type.get(kind, []), key=lambda p: p["name"].lower())
+        if group:
+            NAV_GROUPS.append(
+                (kind, [(p["id"], p["name"], p.get("origin")) for p in group]))
+
+
+def sidebar(lang, up, nav_here, active_piece):
+    def href(path):
+        return f"{up}{lang.prefix}{path}"
+
+    out = [f'<a class="brand" href="{href("index.html")}">'
+           '<span class="brand-mark">W4VE</span>'
+           f'<span class="brand-sub">{esc(lang.t("ui", "docs", "docs"))}</span></a>',
+           "<nav>",
+           f'<p class="navlabel">{esc(lang.t("ui", "guide", "Guide"))}</p>',
+           '<div class="navsections">']
+    for key, path, ui_key, label in SECTIONS:
+        here = ' aria-current="page"' if key == nav_here and not active_piece else ""
+        out.append(f'<a href="{href(path)}"{here}>'
+                   f'{esc(lang.t("ui", ui_key, label))}</a>')
+    out.append("</div>")
+
+    out.append('<p class="navlabel">'
+               f'{esc(lang.t("ui", "catalog_label", "Catalog"))}</p>')
+    for kind, entries in NAV_GROUPS:
+        open_ = " open" if any(pid == active_piece for pid, _, _ in entries) else ""
+        links = []
+        for pid, name, origin in entries:
+            current = ' aria-current="page"' if pid == active_piece else ""
+            # One gold dot, on our own code. In a list where most rows are
+            # other people's mods, that is the thing a visitor is looking for.
+            dot = ('<span class="dot" aria-hidden="true"></span>'
+                   if origin in ("w4ve", "fork") else "")
+            links.append(f'<a href="{href("pieces/" + pid + ".html")}"{current}>'
+                         f"{dot}{esc(name)}</a>")
+        out.append(f'<details class="navgroup"{open_}>'
+                   f"<summary>{esc(type_label(lang, kind))}"
+                   f'<span class="count">{len(entries)}</span></summary>'
+                   f'<div class="navlist">{"".join(links)}</div></details>')
+    out.append("</nav>")
+    return "\n".join(out)
+
+
+def lang_switch(lang, langs, up, path):
+    """The same page in the other language, never the home page: dumping you
+    back at the start is the classic way a language switcher annoys people."""
+    if len(langs) < 2:
+        return ""
+    items = []
+    for other in langs:
+        here = ' aria-current="true"' if other.code == lang.code else ""
+        items.append(f'<a href="{up}{other.prefix}{path}"{here} '
+                     f'lang="{other.code}">{esc(other.label)}</a>')
+    label = lang.t("ui", "language", "Language")
+    return (f'<div class="langs"><span class="langs-label">{esc(label)}</span>'
+            f'{"".join(items)}</div>')
+
+
+HEADING = re.compile(r"<h2(?P<attrs>[^>]*)>(?P<text>.*?)</h2>", re.S)
+
+
+def headings(body):
+    """Give every h2 an id and hand back the list, so the page can carry its
+    own table of contents without anybody writing one."""
+    found, seen = [], set()
+
+    def fix(match):
+        attrs, text = match.group("attrs"), match.group("text")
+        plain = re.sub(r"<[^>]+>", "", text).strip()
+        given = re.search(r'id="([^"]+)"', attrs)
+        if given:
+            hid = given.group(1)
+        else:
+            hid = re.sub(r"[^a-z0-9]+", "-", plain.lower()).strip("-") or "section"
+            n, base = 2, hid
+            while hid in seen:
+                hid, n = f"{base}-{n}", n + 1
+            attrs = f' id="{esc(hid)}"' + attrs
+        seen.add(hid)
+        found.append((hid, plain))
+        return f"<h2{attrs}>{text}</h2>"
+
+    return HEADING.sub(fix, body), found
+
+
+def page(lang, langs, path, title, body, nav_here=None, active_piece=None):
+    depth = path.count("/") + (0 if lang.code == "en" else 1)
     up = "../" * depth
-    items = [("Start", "index.html", "index"),
-             ("Catalog", "pieces/index.html", "pieces"),
-             ("Profiles", "profiles.html", "profiles"),
-             ("Commands", "commands.html", "commands")]
-    links = "".join(
-        f'<a href="{up}{href}"'
-        + (' aria-current="page"' if key == nav_here else "")
-        + f">{esc(label)}</a>"
-        for label, href, key in items)
+    body, heads = headings(body)
+    on_this = lang.t("ui", "on_this_page", "On this page")
+    toc = ""
+    if len(heads) > 1:
+        toc = (f'<nav class="toc" aria-label="{esc(on_this)}">'
+               f"<p>{esc(on_this)}</p>"
+               + "".join(f'<a href="#{esc(hid)}">{text}</a>' for hid, text in heads)
+               + "</nav>")
+    foot = lang.t("ui", "foot",
+                  'Generated from <a href="https://github.com/CodeW4VE/registry">'
+                  "the catalog</a>. If a page here is wrong, the fix belongs in "
+                  "<code>pieces.toml</code>, not in the page.")
     return f"""<!doctype html>
-<html lang="en">
+<html lang="{lang.code}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title>
-<meta name="color-scheme" content="light dark">
-<style>{CSS}</style>
+<meta name="color-scheme" content="dark">
+<link rel="stylesheet" href="{up}assets/docs.css">
+<link rel="icon" href="{up}assets/favicon.svg" type="image/svg+xml">
 </head>
 <body>
-<header class="top"><div class="wrap">
-<a class="brand" href="{up}index.html">W4VE docs</a>
-<nav>{links}</nav>
-</div></header>
-<main class="wrap">
+<a class="skip" href="#content">{esc(lang.t("ui", "skip", "Skip to content"))}</a>
+<div class="shell">
+<aside class="sidebar">
+{sidebar(lang, up, nav_here, active_piece)}
+{lang_switch(lang, langs, up, path)}
+</aside>
+<main class="main" id="content">
+<article class="prose">
 {body}
-<footer>
-Generated from <a href="https://github.com/CodeW4VE/registry">the catalog</a>.
-If a page here is wrong, the fix belongs in <code>pieces.toml</code>, not in the page.
+</article>
+<footer class="foot">
+{foot}
 </footer>
 </main>
+{toc}
+</div>
 </body>
 </html>
 """
@@ -240,6 +332,20 @@ def vkey(version):
     return tuple(int(n) for n in re.findall(r"\d+", version))
 
 
+def mc_range(lang, versions):
+    """Thirteen version numbers in a row is a wall, not an answer. Past three,
+    say the span and how many there are; the download table has the exact list
+    per release anyway."""
+    if not versions:
+        return "&mdash;"
+    if len(versions) <= 3:
+        return ", ".join(esc(v) for v in versions)
+    return (f"{esc(versions[0])} {esc(lang.t('ui', 'to', 'to'))} "
+            f"{esc(versions[-1])} "
+            f'<span class="muted">({len(versions)} '
+            f"{esc(lang.t('ui', 'versions', 'versions'))})</span>")
+
+
 # Sources and javadoc jars ride along in a release and are not what anybody
 # wants to download. The CLI skips them too.
 JUNK = ("-sources.jar", "-dev.jar", "-javadoc.jar", "-sources-dev.jar")
@@ -253,27 +359,42 @@ def installable(files):
 
 # ------------------------------------------------------------------ the pages
 
-def render_piece(piece, pieces):
+def render_piece(lang, langs, piece, pieces):
     pid = piece["id"]
     title = piece["name"]
-    body = [f"<h1>{esc(title)}</h1>"]
-    body.append(f'<p class="lede">{inline(piece.get("blurb") or piece["summary"])}</p>')
+    kind = type_label(lang, piece.get("type"))
+    body = [f'<p class="eyebrow"><a href="index.html">'
+            f'{esc(lang.t("ui", "catalog_label", "Catalog"))}</a> / {esc(kind)}</p>',
+            f"<h1>{esc(title)}</h1>"]
+    marks = badges(lang, piece)
+    if marks:
+        body.append(f'<p class="badgerow">{marks}</p>')
+    summary = lang.piece(pid, "summary", piece["summary"])
+    long_ = lang.piece(pid, "blurb", None)
+    if long_ is None and lang.code == "en":
+        long_ = piece.get("blurb")
+    body.append(f'<p class="lede">{inline(long_ or summary)}</p>')
 
     facts = []
-    facts.append(("Kind", esc(TYPE_LABEL.get(piece.get("type"), piece.get("type", "?")))))
-    if piece.get("side") in SIDE_LABEL:
-        facts.append(("Where it goes", esc(SIDE_LABEL[piece["side"]])))
+    facts.append((lang.t("ui", "kind", "Kind"), esc(kind)))
+    side = side_label(lang, piece.get("side"))
+    if side:
+        facts.append((lang.t("ui", "where", "Where it goes"), esc(side)))
     versions = mc_versions(piece)
     if versions:
-        facts.append(("Minecraft", ", ".join(esc(v) for v in versions)))
+        facts.append((lang.t("ui", "minecraft", "Minecraft"),
+                      mc_range(lang, versions)))
     elif piece.get("mc"):
-        facts.append(("Minecraft", f'<code>{esc(piece["mc"])}</code>'))
+        facts.append((lang.t("ui", "minecraft", "Minecraft"),
+                      f'<code>{esc(piece["mc"])}</code>'))
     if piece.get("latest"):
-        facts.append(("Latest", f'<code>{esc(piece["latest"])}</code>'))
+        facts.append((lang.t("ui", "latest", "Latest"),
+                      f'<code>{esc(piece["latest"])}</code>'))
     if piece.get("install_dir") and piece["install_dir"] != ".":
-        facts.append(("Installs into", f'<code>{esc(piece["install_dir"])}/</code>'))
+        facts.append((lang.t("ui", "installs_into", "Installs into"),
+                      f'<code>{esc(piece["install_dir"])}/</code>'))
     if piece.get("requires"):
-        facts.append(("Needs", ", ".join(
+        facts.append((lang.t("ui", "needs", "Needs"), ", ".join(
             f'<a href="{esc(r)}.html">{esc(pieces.get(r, {}).get("name", r))}</a>'
             if r in pieces else esc(r) for r in piece["requires"])))
     links = []
@@ -282,15 +403,16 @@ def render_piece(piece, pieces):
     if piece.get("modrinth"):
         links.append(f'<a href="https://modrinth.com/mod/{esc(piece["modrinth"])}">Modrinth</a>')
     if piece.get("upstream"):
-        links.append(f'fork of <a href="https://github.com/{esc(piece["upstream"])}">'
+        links.append(f'{esc(lang.t("ui", "fork_of", "fork of"))} '
+                     f'<a href="https://github.com/{esc(piece["upstream"])}">'
                      f'{esc(piece["upstream"])}</a>')
     if links:
-        facts.append(("Links", " &middot; ".join(links)))
+        facts.append((lang.t("ui", "links", "Links"), " &middot; ".join(links)))
     body.append('<dl class="facts">' + "".join(
-        f"<dt>{k}</dt><dd>{v}</dd>" for k, v in facts) + "</dl>")
+        f"<dt>{esc(k)}</dt><dd>{v}</dd>" for k, v in facts) + "</dl>")
 
     if piece.get("type") not in ("tool", "runtime", "discord-bot", "service"):
-        body.append("<h2>Install it</h2>")
+        body.append(f'<h2>{esc(lang.t("ui", "install_it", "Install it"))}</h2>')
         body.append(f"<pre><code>w4ve install {esc(pid)}</code></pre>")
 
     conflicts = piece.get("conflicts") or []
@@ -302,47 +424,65 @@ def render_piece(piece, pieces):
                 why = c.get("why", "")
                 mine, theirs = c.get("mine", "any"), c.get("theirs", "any")
                 rows.append(f"<tr><td><code>{esc(other)}</code></td>"
-                            f"<td><code>{esc(mine)}</code> with <code>{esc(theirs)}</code></td>"
+                            f"<td><code>{esc(mine)}</code> / "
+                            f"<code>{esc(theirs)}</code></td>"
                             f"<td>{inline(why)}</td></tr>")
             else:
-                rows.append(f"<tr><td><code>{esc(c)}</code></td><td>any</td><td></td></tr>")
-        body.append("<h2>Does not get along with</h2>")
-        body.append('<div class="scroll"><table><tr><th>Piece</th><th>Versions</th>'
-                    "<th>Why</th></tr>" + "".join(rows) + "</table></div>")
-        body.append("<p class=\"muted\">The CLI refuses an update that would put "
-                    "one of these pairs together, and says which one.</p>")
+                rows.append(f"<tr><td><code>{esc(c)}</code></td>"
+                            "<td>any</td><td></td></tr>")
+        body.append(f'<h2>{esc(lang.t("ui", "conflicts_title", "Does not get along with"))}</h2>')
+        body.append('<div class="scroll"><table><thead><tr>'
+                    f'<th>{esc(lang.t("ui", "conflicts_piece", "Piece"))}</th>'
+                    f'<th>{esc(lang.t("ui", "conflicts_versions", "Versions"))}</th>'
+                    f'<th>{esc(lang.t("ui", "conflicts_why", "Why"))}</th>'
+                    "</tr></thead><tbody>" + "".join(rows)
+                    + "</tbody></table></div>")
+        body.append('<p class="muted">' + esc(lang.t(
+            "ui", "conflicts_note",
+            "The CLI refuses an update that would put one of these pairs "
+            "together, and says which one.")) + "</p>")
 
     releases = piece.get("releases") or []
     if releases:
-        body.append("<h2>Downloads</h2>")
+        body.append(f'<h2>{esc(lang.t("ui", "downloads", "Downloads"))}</h2>')
         rows = []
         for rel in releases[:8]:
-            mcs = ", ".join(esc(v) for v in
-                            sorted(rel.get("minecraft") or [], key=vkey)) or "&mdash;"
+            mcs = mc_range(lang, sorted(rel.get("minecraft") or [], key=vkey))
             files = installable(rel.get("files") or [])
             first = files[0] if files else None
             link = (f'<a href="{esc(first["url"])}">{esc(first["name"])}</a>'
                     if first else "&mdash;")
             if len(files) > 1:
-                link += f' <span class="muted">and {len(files) - 1} more</span>'
+                more = lang.t("ui", "and_more", "and {n} more")
+                link += (f' <span class="muted">'
+                         f"{esc(more.format(n=len(files) - 1))}</span>")
             rows.append(f'<tr><td><code>{esc(rel["version"])}</code></td>'
                         f"<td>{mcs}</td><td>{link}</td></tr>")
-        body.append('<div class="scroll"><table><tr><th>Version</th>'
-                    "<th>Minecraft</th><th>File</th></tr>"
-                    + "".join(rows) + "</table></div>")
+        body.append('<div class="scroll"><table><thead><tr>'
+                    f'<th>{esc(lang.t("ui", "version", "Version"))}</th>'
+                    f'<th>{esc(lang.t("ui", "minecraft", "Minecraft"))}</th>'
+                    f'<th>{esc(lang.t("ui", "file", "File"))}</th>'
+                    "</tr></thead><tbody>" + "".join(rows)
+                    + "</tbody></table></div>")
     else:
-        body.append('<div class="note"><strong>Nothing to download yet</strong>'
-                    "This piece is in the catalog so the plan is public, but it "
-                    "has no release you can install.</div>")
+        body.append(callout(
+            "info",
+            esc(lang.t("ui", "nothing_title", "Nothing to download yet")),
+            esc(lang.t("ui", "nothing_body",
+                       "This piece is in the catalog so the plan is public, but "
+                       "it has no release you can install."))))
 
-    return page(f"{title} - W4VE docs", "\n".join(body), "pieces", depth=1)
+    return page(lang, langs, f"pieces/{pid}.html", f"{title} - W4VE docs",
+                "\n".join(body), "pieces", active_piece=pid)
 
 
-def render_catalog(pieces):
-    body = ["<h1>The catalog</h1>",
-            '<p class="lede">Everything <code>w4ve install</code> knows how to '
-            "put on a server, and everything it knows not to put next to each "
-            "other.</p>"]
+def render_catalog(lang, langs, pieces):
+    body = [f'<h1>{esc(lang.t("catalog", "title", "The catalog"))}</h1>',
+            '<p class="lede">' + lang.t(
+                "catalog", "lede",
+                "Everything <code>w4ve install</code> knows how to put on a "
+                "server, and everything it knows not to put next to each "
+                "other.") + "</p>"]
     by_type = {}
     for p in pieces.values():
         by_type.setdefault(p.get("type"), []).append(p)
@@ -350,59 +490,87 @@ def render_catalog(pieces):
         group = sorted(by_type.get(kind, []), key=lambda p: p["name"].lower())
         if not group:
             continue
-        body.append(f"<h2>{esc(TYPE_LABEL.get(kind, kind))}</h2>")
+        body.append(f"<h2>{esc(type_label(lang, kind))}</h2>")
         rows = []
         for p in group:
             versions = mc_versions(p)
             tag = ""
             if versions:
-                tag = f' <span class="tag">up to MC {esc(versions[-1])}</span>'
+                tag = (f'<span class="tag">'
+                       f'{esc(lang.t("ui", "up_to", "up to MC"))} '
+                       f"{esc(versions[-1])}</span>")
             elif not p.get("releases"):
-                tag = ' <span class="tag">not released</span>'
+                tag = (f'<span class="tag">'
+                       f'{esc(lang.t("ui", "not_released", "not released"))}</span>')
             rows.append(
-                f'<dt><a href="{esc(p["id"])}.html">{esc(p["name"])}</a></dt>'
-                f'<dd>{inline(p["summary"])}{tag}</dd>')
-        body.append('<dl class="index">' + "".join(rows) + "</dl>")
-    return page("Catalog - W4VE docs", "\n".join(body), "pieces", depth=1)
+                f'<a class="row" href="{esc(p["id"])}.html">'
+                f'<span class="row-head"><span class="row-name">{esc(p["name"])}'
+                f"</span>{badges(lang, p)}{tag}</span>"
+                f'<span class="row-desc">'
+                f'{inline(lang.piece(p["id"], "summary", p["summary"]))}</span></a>')
+        body.append('<div class="rows">' + "".join(rows) + "</div>")
+    return page(lang, langs, "pieces/index.html", "Catalog - W4VE docs",
+                "\n".join(body), "pieces")
 
 
-def render_profiles(index):
+def render_profiles(lang, langs, index):
     pieces = index["pieces"]
-    body = ["<h1>Profiles</h1>",
-            '<p class="lede">Curated sets, so you do not pick fifteen mods one '
-            "by one. One command installs the whole thing.</p>"]
+    body = [f'<h1>{esc(lang.t("profiles", "title", "Profiles"))}</h1>',
+            '<p class="lede">' + lang.t(
+                "profiles", "lede",
+                "Curated sets, so you do not pick fifteen mods one by one. One "
+                "command installs the whole thing.") + "</p>"]
     for key, prof in index.get("profiles", {}).items():
-        body.append(f'<h2>{esc(prof["name"])}</h2>')
-        body.append(f'<p>{inline(prof["description"])}</p>')
+        local = lang.data.get("profiles", {}).get(key, {})
+        body.append(f'<h2>{esc(local.get("name") or prof["name"])}</h2>')
+        body.append(f'<p>{inline(local.get("description") or prof["description"])}</p>')
         body.append(f"<pre><code>w4ve install --profile {esc(key)}</code></pre>")
         listed = []
         for pid in prof.get("pieces", []):
             name = pieces.get(pid, {}).get("name", pid)
             listed.append(f'<a href="pieces/{esc(pid)}.html">{esc(name)}</a>')
-        body.append(f'<p class="muted">{len(listed)} pieces: '
-                    + ", ".join(listed) + "</p>")
-    return page("Profiles - W4VE docs", "\n".join(body), "profiles")
+        # Twenty-five links in accent colour would be a stain, so the list of
+        # members reads as a list and only turns gold under the cursor.
+        body.append(f'<p class="eyebrow">{len(listed)} '
+                    f'{esc(lang.t("ui", "pieces_word", "pieces"))}</p>')
+        body.append('<ul class="linklist"><li>'
+                    + "</li><li>".join(listed) + "</li></ul>")
+    return page(lang, langs, "profiles.html", "Profiles - W4VE docs",
+                "\n".join(body), "profiles")
 
 
-def render_commands(help_texts):
-    body = ["<h1>Commands</h1>",
-            '<p class="lede">Straight from <code>w4ve --help</code>, so this '
-            "page cannot describe a flag the command does not have.</p>",
-            '<div class="note"><strong>Every command takes <code>-n</code>'
-            "</strong>It shows what would happen and writes nothing. When in "
-            "doubt, run it with <code>-n</code> first.</div>"]
+def render_commands(lang, langs, help_texts):
+    body = [f'<h1>{esc(lang.t("commands", "title", "Commands"))}</h1>',
+            '<p class="lede">' + lang.t(
+                "commands", "lede",
+                "Straight from <code>w4ve --help</code>, so this page cannot "
+                "describe a flag the command does not have.") + "</p>",
+            callout("info",
+                    lang.t("commands", "note_title",
+                           "Every command takes <code>-n</code>"),
+                    lang.t("commands", "note_body",
+                           "It shows what would happen and writes nothing. When "
+                           "in doubt, run it with <code>-n</code> first."))]
+    # The help below is the program's own output, copied verbatim. Translating
+    # it here would mean this page could disagree with the terminal.
+    if lang.code != "en":
+        body.append(callout("warn",
+                            lang.t("commands", "english_title",
+                                   "The help output is in English"),
+                            lang.t("commands", "english_body", "")))
     if "" in help_texts:
-        body.append("<h2>Overview</h2>")
+        body.append(f'<h2>{esc(lang.t("commands", "overview", "Overview"))}</h2>')
         body.append(f"<pre><code>{esc(help_texts[''])}</code></pre>")
     for name in COMMANDS:
         if name not in help_texts:
             continue
         body.append(f'<h2 id="{esc(name)}">w4ve {esc(name)}</h2>')
         body.append(f"<pre><code>{esc(help_texts[name])}</code></pre>")
-    return page("Commands - W4VE docs", "\n".join(body), "commands")
+    return page(lang, langs, "commands.html", "Commands - W4VE docs",
+                "\n".join(body), "commands")
 
 
-def render_home(index):
+def render_home(lang, langs, index):
     reg = index["registry"]
     pieces = index["pieces"]
     counts = {}
@@ -410,48 +578,91 @@ def render_home(index):
         counts[p.get("type")] = counts.get(p.get("type"), 0) + 1
     mods = counts.get("fabric-mod", 0)
     plugins = counts.get("mcdr-plugin", 0)
+    ours = sum(1 for p in pieces.values() if p.get("origin") in ("w4ve", "fork"))
     targets = ", ".join(reg.get("mc_targets", []))
 
+    def T(key, default):
+        return lang.t("home", key, default)
+
+    # Four numbers instead of a paragraph of adjectives: they answer "how big
+    # is this" in the time it takes to look at them.
+    stats = [(len(pieces), T("stat_pieces", "pieces in the catalog")),
+             (mods, T("stat_mods", "Fabric mods")),
+             (plugins, T("stat_plugins", "MCDR plugins")),
+             (ours, T("stat_ours", "written by us"))]
+
     body = [
+        '<div class="hero">',
+        f'<p class="eyebrow">{esc(T("eyebrow", "W4VE / documentation"))}</p>',
         f"<h1>{esc(reg['name'])}</h1>",
-        f'<p class="lede">{esc(reg["description"])}</p>',
-        "<h2>Install the command</h2>",
-        "<p>One file, standard library only, Python 3.8 or newer. No pip, no "
-        "virtualenv, nothing to install first.</p>",
+        '<p class="hero-tagline">'
+        f'{esc(lang.t("registry", "description", reg["description"]))}</p>',
+        '<p class="cta">'
+        f'<a class="btn" href="#install">{esc(T("cta_start", "Get started"))}</a>'
+        '<a class="btn btn--ghost" href="pieces/index.html">'
+        f'{esc(T("cta_catalog", "Browse the catalog"))}</a></p>',
+        '<dl class="stats">' + "".join(
+            f"<div><dt>{n}</dt><dd>{esc(label)}</dd></div>"
+            for n, label in stats) + "</dl>",
+        "</div>",
+
+        f'<h2 id="install">{esc(T("install_title", "Install the command"))}</h2>',
+        "<p>" + esc(T("install_body",
+                      "One file, standard library only, Python 3.8 or newer. No "
+                      "pip, no virtualenv, nothing to install first.")) + "</p>",
         "<pre><code>curl -LO https://github.com/CodeW4VE/w4ve/releases/latest/download/w4ve.py\n"
         "chmod +x w4ve.py &amp;&amp; sudo mv w4ve.py /usr/local/bin/w4ve</code></pre>",
-        "<h2>Point it at a server</h2>",
+
+        f'<h2>{esc(T("point_title", "Point it at a server"))}</h2>',
         "<pre><code>cd /path/to/your/server\n"
-        "w4ve init                  # writes w4ve.toml\n"
-        "w4ve adopt                 # writes down the mods this server already has\n"
-        "w4ve install shapeboard    # downloads it, puts it where it goes\n"
-        "w4ve status                # what is installed, what needs a restart\n"
-        "w4ve doctor                # what is wrong, before the server finds out</code></pre>",
-        '<div class="note"><strong>It reads what is already there</strong>'
-        "<code>w4ve adopt</code> opens every jar and reads the manifest inside "
-        "instead of guessing from the file name, so a server you have been "
-        "running for a year is understood as it is, and the mods it does not "
-        "recognise are left alone.</div>",
-        "<h2>What is in the catalog</h2>",
-        f"<p>{len(pieces)} pieces: {mods} Fabric mods, {plugins} MCDReforged "
-        f"plugins, and the tools and bots around them. Kept honest for "
-        f"Minecraft {esc(targets)}, because those are the versions our own "
-        f"servers run.</p>",
-        '<dl class="index">'
-        '<dt><a href="pieces/index.html">The catalog</a></dt>'
-        "<dd>Every piece, what it needs, and what it refuses to sit next to.</dd>"
-        '<dt><a href="profiles.html">Profiles</a></dt>'
-        "<dd>A whole technical server in one command.</dd>"
-        '<dt><a href="commands.html">Commands</a></dt>'
-        "<dd>The reference, generated from the CLI itself.</dd>"
-        "</dl>",
-        "<h2>Why this exists</h2>",
-        "<p>These tools grew one at a time out of running a technical server, "
-        "and for a while the only way to install them was to know which jar "
-        "went where. The catalog is that knowledge written down in one place, "
-        "and the command is what reads it.</p>",
+        f'w4ve init                  <span class="c"># '
+        f'{esc(T("c_init", "writes w4ve.toml"))}</span>\n'
+        f'w4ve adopt                 <span class="c"># '
+        f'{esc(T("c_adopt", "writes down the mods this server already has"))}</span>\n'
+        f'w4ve install shapeboard    <span class="c"># '
+        f'{esc(T("c_install", "downloads it, puts it where it goes"))}</span>\n'
+        f'w4ve status                <span class="c"># '
+        f'{esc(T("c_status", "what is installed, what needs a restart"))}</span>\n'
+        f'w4ve doctor                <span class="c"># '
+        f'{esc(T("c_doctor", "what is wrong, before the server finds out"))}</span>'
+        "</code></pre>",
+        callout("info", T("adopt_title", "It reads what is already there"),
+                T("adopt_body",
+                  "<code>w4ve adopt</code> opens every jar and reads the "
+                  "manifest inside instead of guessing from the file name, so a "
+                  "server you have been running for a year is understood as it "
+                  "is, and the mods it does not recognise are left alone.")),
+
+        f'<h2>{esc(T("catalog_title", "What is in the catalog"))}</h2>',
+        "<p>" + esc(T("catalog_body",
+                      "{n} pieces: {mods} Fabric mods, {plugins} MCDReforged "
+                      "plugins, and the tools and bots around them. Kept honest "
+                      "for Minecraft {targets}, because those are the versions "
+                      "our own servers run.").format(
+                          n=len(pieces), mods=mods, plugins=plugins,
+                          targets=targets)) + "</p>",
+        '<div class="cards">'
+        '<a class="card" href="pieces/index.html">'
+        f'<span class="card-title">'
+        f'{esc(lang.t("ui", "the_catalog", "The catalog"))}</span>'
+        f'<span class="card-body">{esc(T("nav_catalog", "Every piece, what it needs, and what it refuses to sit next to."))}</span></a>'
+        '<a class="card" href="profiles.html">'
+        f'<span class="card-title">{esc(lang.t("ui", "profiles", "Profiles"))}</span>'
+        f'<span class="card-body">{esc(T("nav_profiles", "A whole technical server in one command."))}</span></a>'
+        '<a class="card" href="commands.html">'
+        f'<span class="card-title">{esc(lang.t("ui", "commands", "Commands"))}</span>'
+        f'<span class="card-body">{esc(T("nav_commands", "The reference, generated from the CLI itself."))}</span></a>'
+        "</div>",
+
+        f'<h2>{esc(T("why_title", "Why this exists"))}</h2>',
+        "<p>" + esc(T("why_body",
+                      "These tools grew one at a time out of running a technical "
+                      "server, and for a while the only way to install them was "
+                      "to know which jar went where. The catalog is that "
+                      "knowledge written down in one place, and the command is "
+                      "what reads it.")) + "</p>",
     ]
-    return page("W4VE docs", "\n".join(body), "index")
+    return page(lang, langs, "index.html", "W4VE docs", "\n".join(body), "index")
 
 
 # ---------------------------------------------------------------------- driver
@@ -493,7 +704,14 @@ def main():
     out = Path(args.out)
     if out.exists():
         shutil.rmtree(out)
-    (out / "pieces").mkdir(parents=True)
+    out.mkdir(parents=True)
+
+    # The stylesheet and the fonts beside it. Everything the pages load is
+    # served from this directory: the site makes no outside requests.
+    shutil.copytree(ASSETS, out / "assets")
+
+    build_nav(pieces)
+    langs = load_langs()
 
     cli = Path(args.cli) if args.cli else None
     if cli is None:
@@ -505,25 +723,31 @@ def main():
     if not helps:
         print("  ! no command reference: the CLI could not be run", file=sys.stderr)
 
-    (out / "index.html").write_text(render_home(index))
-    (out / "profiles.html").write_text(render_profiles(index))
-    if helps:
-        (out / "commands.html").write_text(render_commands(helps))
-    (out / "pieces" / "index.html").write_text(render_catalog(pieces))
-    for piece in pieces.values():
-        (out / "pieces" / f"{piece['id']}.html").write_text(
-            render_piece(piece, pieces))
+    for lang in langs:
+        root = out / lang.prefix if lang.prefix else out
+        (root / "pieces").mkdir(parents=True, exist_ok=True)
+        (root / "index.html").write_text(render_home(lang, langs, index))
+        (root / "profiles.html").write_text(render_profiles(lang, langs, index))
+        if helps:
+            (root / "commands.html").write_text(
+                render_commands(lang, langs, helps))
+        (root / "pieces" / "index.html").write_text(
+            render_catalog(lang, langs, pieces))
+        for piece in pieces.values():
+            (root / "pieces" / f"{piece['id']}.html").write_text(
+                render_piece(lang, langs, piece, pieces))
 
     scratch = out / ".w4ve.py"
     if scratch.exists():
         scratch.unlink()
 
     written = sum(1 for _ in out.rglob("*.html"))
-    print(f"wrote {written} pages into {out}")
+    print(f"wrote {written} pages into {out} "
+          f"({', '.join(lg.code for lg in langs)})")
 
     if args.serve:
-        import http.server
         import functools
+        import http.server
         handler = functools.partial(http.server.SimpleHTTPRequestHandler,
                                     directory=str(out))
         print("serving on http://localhost:8080, ctrl-c to stop")

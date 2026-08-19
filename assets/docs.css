@@ -1,0 +1,494 @@
+/* docs.w4ve.xyz
+ *
+ * Dark, technical, editorial. The hierarchy is built out of type, space and
+ * four shades of charcoal; the gold is an accent and stays one: active
+ * navigation, inline links, and the small marks that say where you are.
+ * No gradients, no glows, no shadows doing work that a 1px border can do.
+ *
+ * Written by hand and copied verbatim by docs.py into site/assets/.
+ */
+
+/* --------------------------------------------------------------- typefaces */
+/* IBM Plex, self-hosted next to this file. The site makes no outside
+   requests, and never has. SIL OFL, see fonts/LICENSE.txt. */
+@font-face {
+  font-family: "IBM Plex Sans"; font-style: normal; font-weight: 400;
+  font-display: swap; src: url("fonts/plex-sans-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "IBM Plex Sans"; font-style: normal; font-weight: 600;
+  font-display: swap; src: url("fonts/plex-sans-600.woff2") format("woff2");
+}
+@font-face {
+  font-family: "IBM Plex Mono"; font-style: normal; font-weight: 400;
+  font-display: swap; src: url("fonts/plex-mono-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "IBM Plex Mono"; font-style: normal; font-weight: 500;
+  font-display: swap; src: url("fonts/plex-mono-500.woff2") format("woff2");
+}
+
+/* ------------------------------------------------------------------ tokens */
+:root {
+  --bg: #0B0D0E;
+  --surface: #111416;
+  --surface-raised: #171B1E;
+  --surface-hover: #1D2124;
+
+  --border: #292E32;
+  --border-strong: #3A4045;
+
+  --text: #F3F0E8;
+  --text-secondary: #A9A49B;
+  --text-muted: #85827C;
+
+  --accent: #D6A85F;
+  --accent-hover: #E5BB72;
+
+  --info: #8BB8D6;
+  --success: #91B78A;
+  --danger: #D58484;
+
+  --code-bg: #0E1113;
+
+  --sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas,
+          "DejaVu Sans Mono", monospace;
+
+  --reading: 44rem;
+  --sidebar: 16.5rem;
+  --toc: 14rem;
+  --radius: 6px;
+
+  color-scheme: dark;
+}
+
+/* --------------------------------------------------------------- the basics */
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.65;
+  letter-spacing: -0.005em;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-hover); text-decoration: underline;
+  text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px;
+  border-radius: 2px; }
+
+.skip {
+  position: absolute; left: -9999px; top: 0; z-index: 10;
+  background: var(--surface-raised); border: 1px solid var(--border-strong);
+  border-radius: var(--radius); padding: 0.5rem 0.9rem; color: var(--text);
+}
+.skip:focus { left: 1rem; top: 1rem; }
+
+/* ------------------------------------------------------------------ layout */
+.shell { display: grid; grid-template-columns: minmax(0, 1fr); }
+
+@media (min-width: 60rem) {
+  .shell { grid-template-columns: var(--sidebar) minmax(0, 1fr); }
+}
+@media (min-width: 86rem) {
+  .shell { grid-template-columns: var(--sidebar) minmax(0, 1fr) var(--toc); }
+}
+
+.main { min-width: 0; padding: 3rem 1.4rem 6rem; }
+@media (min-width: 60rem) { .main { padding: 4rem 3.5rem 8rem; } }
+
+/* Prose is set narrow because paragraphs are read; code and tables are
+   scanned, so they get the width they need and no more. */
+.prose { max-width: 56rem; }
+.prose > p, .prose > h1, .prose > h2, .prose > h3,
+.prose > .lede, .prose > .eyebrow, .prose > .facts,
+.prose > .callout, .prose > .linklist, .prose > .rows {
+  max-width: var(--reading);
+}
+
+/* ----------------------------------------------------------------- sidebar */
+.sidebar {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  font-size: 0.875rem;
+}
+@media (min-width: 60rem) {
+  .sidebar {
+    border-bottom: 0; border-right: 1px solid var(--border);
+    position: sticky; top: 0; height: 100vh; overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+}
+
+.brand {
+  display: flex; align-items: baseline; gap: 0.5rem;
+  padding: 1.15rem 1.4rem; color: var(--text);
+  border-bottom: 1px solid var(--border);
+}
+.brand:hover { color: var(--text); text-decoration: none; }
+.brand-mark {
+  font-family: var(--mono); font-weight: 500; font-size: 0.95rem;
+  letter-spacing: 0.06em;
+}
+.brand-sub {
+  font-family: var(--mono); font-size: 0.78rem; color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+.sidebar nav { padding: 0.5rem 0 3rem; }
+
+/* On a phone the sidebar is a strip: the four sections in a row you can swipe,
+   and no seventy-item catalog sitting on top of the page you came to read. */
+@media (max-width: 59.99rem) {
+  .sidebar nav { padding: 0; }
+  .sidebar .navlabel, .sidebar .navgroup { display: none; }
+  .navsections {
+    display: flex; overflow-x: auto; scrollbar-width: none;
+  }
+  .navsections::-webkit-scrollbar { display: none; }
+  .sidebar .navsections a {
+    padding: 0.7rem 1rem; white-space: nowrap; border-left: 0;
+    border-bottom: 2px solid transparent;
+  }
+  .sidebar .navsections a:first-child { padding-left: 1.4rem; }
+  .sidebar .navsections a[aria-current] {
+    border-left: 0; border-bottom-color: var(--accent); background: none;
+  }
+}
+
+.navlabel {
+  margin: 1.4rem 0 0.4rem; padding: 0 1.4rem;
+  font-family: var(--mono); font-size: 0.7rem; font-weight: 400;
+  letter-spacing: 0.11em; text-transform: uppercase; color: var(--text-muted);
+}
+
+.sidebar nav a {
+  display: block; padding: 0.3rem 1.4rem; color: var(--text-secondary);
+  border-left: 2px solid transparent;
+}
+.sidebar nav a:hover {
+  color: var(--text); background: var(--surface-hover); text-decoration: none;
+}
+.sidebar nav a[aria-current] {
+  color: var(--text); border-left-color: var(--accent);
+  background: var(--surface-hover);
+}
+
+/* Catalog groups: closed by default, the one you are reading is open. */
+.navgroup > summary {
+  list-style: none; cursor: pointer; display: flex; gap: 0.6rem;
+  align-items: baseline; padding: 0.3rem 1.4rem; color: var(--text-secondary);
+  border-left: 2px solid transparent;
+}
+.navgroup > summary::-webkit-details-marker { display: none; }
+.navgroup > summary:hover { color: var(--text); background: var(--surface-hover); }
+.navgroup > summary::before {
+  content: "\203A"; font-family: var(--mono); color: var(--text-muted);
+  transition: transform 0.12s linear; display: inline-block;
+}
+.navgroup[open] > summary::before { transform: rotate(90deg); }
+.navgroup .count {
+  margin-left: auto; font-family: var(--mono); font-size: 0.72rem;
+  color: var(--text-muted);
+}
+.navgroup > .navlist { padding-bottom: 0.35rem; }
+.navgroup > .navlist a { padding-left: 2.6rem; font-size: 0.84rem; }
+
+/* A gold dot marks our own code in a list that is mostly other people's. */
+.navlist a { position: relative; }
+.dot {
+  position: absolute; left: 1.55rem; top: 0.85em; width: 5px; height: 5px;
+  border-radius: 50%; background: var(--accent); opacity: 0.75;
+}
+
+/* ------------------------------------------------------------ language pick */
+.langs {
+  display: flex; align-items: baseline; gap: 0.9rem; flex-wrap: wrap;
+  padding: 0.9rem 1.4rem; border-top: 1px solid var(--border);
+  font-size: 0.82rem;
+}
+@media (min-width: 60rem) {
+  .langs {
+    position: sticky; bottom: 0; margin-top: auto;
+    background: var(--surface);
+  }
+  .sidebar { display: flex; flex-direction: column; }
+  .sidebar nav { flex: 1 0 auto; }
+}
+.langs-label {
+  font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--text-muted);
+}
+.langs a { color: var(--text-secondary); }
+.langs a:hover { color: var(--text); text-decoration: none; }
+.langs a[aria-current] { color: var(--accent); }
+
+/* --------------------------------------------------------------------- toc */
+.toc { display: none; }
+@media (min-width: 86rem) {
+  .toc {
+    display: block; position: sticky; top: 0; align-self: start;
+    max-height: 100vh; overflow-y: auto; padding: 4.4rem 1.5rem 4rem 0;
+    font-size: 0.82rem;
+  }
+  .toc p {
+    margin: 0 0 0.6rem; font-family: var(--mono); font-size: 0.7rem;
+    letter-spacing: 0.11em; text-transform: uppercase; color: var(--text-muted);
+  }
+  .toc a {
+    display: block; padding: 0.22rem 0; color: var(--text-secondary);
+    line-height: 1.45;
+  }
+  .toc a:hover { color: var(--text); text-decoration: none; }
+}
+
+/* ------------------------------------------------------------------- prose */
+h1 {
+  font-size: 38px; font-weight: 600; line-height: 1.12;
+  letter-spacing: -0.025em; margin: 0 0 0.6rem;
+}
+h2 {
+  font-size: 28px; font-weight: 600; line-height: 1.2; letter-spacing: -0.02em;
+  margin: 4rem 0 1rem;
+}
+h3 { font-size: 21px; font-weight: 600; line-height: 1.3; margin: 2.4rem 0 0.6rem; }
+
+/* The heading you jumped to gets the one mark that says "here". */
+h2:target::before {
+  content: ""; display: inline-block; width: 3px; height: 0.85em;
+  background: var(--accent); margin-right: 0.6rem; vertical-align: -0.06em;
+}
+
+p { margin: 0 0 1.1rem; }
+
+.eyebrow {
+  font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.11em;
+  text-transform: uppercase; color: var(--text-muted); margin: 0 0 0.9rem;
+}
+.eyebrow a { color: var(--text-muted); }
+.eyebrow a:hover { color: var(--text-secondary); }
+
+.lede {
+  font-size: 1.125rem; line-height: 1.55; color: var(--text-secondary);
+  margin: 0 0 2.5rem; max-width: 38rem;
+}
+.muted { color: var(--text-muted); }
+
+.prose > h2 + p, .prose > h3 + p { margin-top: 0; }
+
+hr { border: 0; border-top: 1px solid var(--border); margin: 3rem 0; }
+
+/* -------------------------------------------------------------------- code */
+code {
+  font-family: var(--mono); font-size: 0.875em;
+  color: var(--text); background: var(--surface-raised);
+  border: 1px solid var(--border); border-radius: 4px;
+  padding: 0.05em 0.32em;
+}
+a code { color: inherit; }
+
+pre {
+  font-family: var(--mono); font-size: 14px; line-height: 1.55;
+  background: var(--code-bg); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 1rem 1.1rem;
+  overflow-x: auto; margin: 0 0 1.6rem; color: var(--text-secondary);
+}
+pre code {
+  background: none; border: 0; padding: 0; font-size: inherit;
+  color: inherit;
+}
+/* Comments in the sample commands, the only highlighting there is. */
+pre .c { color: var(--text-muted); }
+
+/* ------------------------------------------------------------------ tables */
+.scroll { overflow-x: auto; margin: 0 0 1.8rem; }
+table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+th, td {
+  text-align: left; padding: 0.55rem 1.2rem 0.55rem 0; vertical-align: top;
+  border-bottom: 1px solid var(--border);
+}
+th {
+  font-family: var(--mono); font-size: 0.7rem; font-weight: 400;
+  letter-spacing: 0.09em; text-transform: uppercase; color: var(--text-muted);
+  border-bottom-color: var(--border-strong); white-space: nowrap;
+}
+tbody tr:last-child td { border-bottom: 0; }
+td code { white-space: nowrap; }
+
+/* ------------------------------------------------------------------- facts */
+.facts {
+  display: grid; grid-template-columns: max-content minmax(0, 1fr);
+  gap: 0.45rem 2rem; margin: 0 0 2.5rem; padding: 1.1rem 0;
+  border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+.facts dt {
+  font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--text-muted); padding-top: 0.2rem;
+}
+.facts dd { margin: 0; color: var(--text-secondary); }
+.facts dd code { color: var(--text); }
+
+/* -------------------------------------------------------------------- rows */
+/* The catalog is a list of entries, not a wall of cards. One rule between
+   them, the whole row is the link. */
+.rows { border-top: 1px solid var(--border); margin: 0 0 1rem; }
+.row {
+  display: block; padding: 0.85rem 0.9rem 0.85rem 0;
+  border-bottom: 1px solid var(--border); color: var(--text);
+}
+.row:hover {
+  background: var(--surface); text-decoration: none;
+  box-shadow: -0.9rem 0 0 var(--surface), 0.9rem 0 0 var(--surface);
+}
+.row-head { display: flex; align-items: baseline; gap: 0.75rem; }
+.row-name { font-weight: 600; }
+.row:hover .row-name { color: var(--accent); }
+.row-desc { display: block; color: var(--text-secondary); font-size: 0.9rem; }
+.row-desc code { font-size: 0.82em; }
+
+.tag {
+  font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.05em;
+  color: var(--text-muted); border: 1px solid var(--border);
+  border-radius: 4px; padding: 0.05rem 0.4rem; white-space: nowrap;
+  margin-left: auto;
+}
+
+/* A long list of links, set as a list instead of a paragraph of gold. */
+.linklist {
+  display: flex; flex-wrap: wrap; gap: 0.15rem 1.4rem;
+  list-style: none; padding: 0; margin: 0 0 1.8rem; font-size: 0.92rem;
+}
+.linklist a { color: var(--text-secondary); }
+.linklist a:hover { color: var(--accent); text-decoration: none; }
+
+/* -------------------------------------------------------------------- hero */
+/* The first screen answers three things: what this is, how big it is, and
+   where to click. It is a masthead, not a billboard: same background as the
+   rest of the page, separated by a rule and by space. */
+.hero {
+  padding-bottom: 2.5rem; margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+.hero h1 { font-size: 46px; margin-bottom: 0.8rem; }
+.hero-tagline {
+  font-size: 1.25rem; line-height: 1.45; color: var(--text-secondary);
+  max-width: 34rem; margin-bottom: 1.8rem;
+}
+
+.cta { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-bottom: 2.6rem; }
+.btn {
+  display: inline-block; padding: 0.5rem 1.1rem; border-radius: var(--radius);
+  border: 1px solid var(--accent); background: var(--accent); color: #17120A;
+  font-weight: 600; font-size: 0.94rem;
+}
+.btn:hover {
+  background: var(--accent-hover); border-color: var(--accent-hover);
+  color: #17120A; text-decoration: none;
+}
+.btn--ghost {
+  background: none; border-color: var(--border-strong); color: var(--text);
+}
+.btn--ghost:hover {
+  background: var(--surface-hover); border-color: var(--text-muted);
+  color: var(--text);
+}
+
+.stats {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.4rem 2.5rem; margin: 0; max-width: 40rem;
+}
+@media (min-width: 46rem) {
+  .stats { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+.stats dt {
+  font-family: var(--mono); font-size: 1.7rem; font-weight: 500;
+  color: var(--text); line-height: 1.1;
+}
+.stats dd {
+  margin: 0.25rem 0 0; font-size: 0.82rem; color: var(--text-muted);
+  line-height: 1.35;
+}
+
+/* ------------------------------------------------------------------- cards */
+/* Three of them, once, on the front page: they are the three doors out of it.
+   Nothing else on the site is a card. */
+.cards {
+  display: grid; gap: 0.9rem; margin: 0 0 1.8rem;
+  grid-template-columns: minmax(0, 1fr);
+}
+@media (min-width: 52rem) {
+  .cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+.card {
+  display: block; padding: 1.1rem 1.2rem; background: var(--surface);
+  border: 1px solid var(--border); border-radius: var(--radius);
+  color: var(--text);
+}
+.card:hover {
+  background: var(--surface-hover); border-color: var(--border-strong);
+  text-decoration: none;
+}
+.card-title { display: block; font-weight: 600; margin-bottom: 0.3rem; }
+.card:hover .card-title { color: var(--accent); }
+.card-body {
+  display: block; color: var(--text-secondary); font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* ------------------------------------------------------------------ badges */
+/* Two questions, two colours: is this yours, and can I install it today. */
+.badgerow { display: flex; gap: 0.45rem; margin: -0.2rem 0 1.4rem; }
+.badge {
+  font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.05em;
+  border: 1px solid var(--border); border-radius: 4px;
+  padding: 0.05rem 0.4rem; white-space: nowrap; color: var(--text-secondary);
+}
+.badge--ours { color: var(--accent); border-color: #4A3B22; }
+.badge--fork { color: var(--info); border-color: #2C3E4A; }
+.badge--beta { color: var(--success); border-color: #2E3D2C; }
+.badge--planned { color: var(--danger); border-color: #4A2E2E; }
+.badge--infra { color: var(--text-muted); }
+.row-head .badge { margin-left: auto; }
+.row-head .badge ~ .badge, .row-head .badge ~ .tag { margin-left: 0; }
+
+/* ---------------------------------------------------------------- callouts */
+.callout {
+  background: var(--surface); border: 1px solid var(--border);
+  border-left: 2px solid var(--border-strong); border-radius: var(--radius);
+  padding: 0.9rem 1.1rem; margin: 0 0 1.8rem; font-size: 0.94rem;
+  color: var(--text-secondary);
+}
+.callout > :last-child { margin-bottom: 0; }
+.callout-title {
+  font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.09em;
+  text-transform: uppercase; color: var(--text-secondary);
+  margin: 0 0 0.35rem;
+}
+.callout code { background: var(--surface-raised); }
+.callout--info { border-left-color: var(--info); }
+.callout--info .callout-title { color: var(--info); }
+.callout--warn { border-left-color: var(--accent); }
+.callout--warn .callout-title { color: var(--accent); }
+.callout--danger { border-left-color: var(--danger); }
+.callout--danger .callout-title { color: var(--danger); }
+
+/* ------------------------------------------------------------------ footer */
+.foot {
+  margin-top: 5rem; padding-top: 1.4rem; border-top: 1px solid var(--border);
+  color: var(--text-muted); font-size: 0.85rem; max-width: var(--reading);
+}
+.foot a { color: var(--text-secondary); }
+.foot a:hover { color: var(--accent); }
+
+img, svg { max-width: 100%; height: auto; }
