@@ -5569,6 +5569,30 @@
       },
       "releases": [
         {
+          "version": "0.27.18",
+          "source": "modrinth",
+          "published": "2026-08-20T19:42:47.068460Z",
+          "prerelease": false,
+          "minecraft": [
+            "1.21.11"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "malilib-fabric-1.21.11-0.27.18.jar",
+              "url": "https://cdn.modrinth.com/data/GcWjdA9I/versions/F023wiL7/malilib-fabric-1.21.11-0.27.18.jar",
+              "size": 2149012,
+              "hashes": {
+                "sha1": "ac261222b7439d8e7da0fa56146fa5b6083c1a76",
+                "sha512": "74f455325a32e330e9bfa0cf04671a876c8781bff37c31a2689d051d263f07c023e5ff16d04af6bc5cf68bd4d4b92343b1e5a08d166d22ff65143d0c39b9e5bc"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
           "version": "0.29.4",
           "source": "modrinth",
           "published": "2026-08-20T00:45:48.843067Z",
@@ -5613,30 +5637,6 @@
               "hashes": {
                 "sha1": "06b9f90bacd6c9a9b8a81804747ebacae7a6ca4e",
                 "sha512": "a28dcb2e0be26339db205c2fb436bb354525ce6a15b3bb80707854025fe4f18b238b958e1dbafb897a405a3058a999030f2101cb3df580600a66022b3dc023e5"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "0.27.17",
-          "source": "modrinth",
-          "published": "2026-08-20T00:44:31.039206Z",
-          "prerelease": false,
-          "minecraft": [
-            "1.21.11"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "malilib-fabric-1.21.11-0.27.17.jar",
-              "url": "https://cdn.modrinth.com/data/GcWjdA9I/versions/UyTEhWxl/malilib-fabric-1.21.11-0.27.17.jar",
-              "size": 2149006,
-              "hashes": {
-                "sha1": "3ecbb32d5efaa6b7092945bc9856f5387da9643e",
-                "sha512": "1e375d9f6a12026816b4ed2f6b9cfc9caebe1f599c8597cd1ea561acf850b1817b250b0b88896ddfbb7dd5608552add99bce59fe0b52638bf158740e0ab53528"
               },
               "primary": true
             }
@@ -5766,7 +5766,7 @@
           ]
         }
       ],
-      "latest": "0.29.4"
+      "latest": "0.27.18"
     },
     "manke": {
       "name": "Manke",
