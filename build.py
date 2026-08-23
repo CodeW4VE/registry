@@ -38,7 +38,10 @@ USER_AGENT = "CodeW4VE/registry (+https://w4ve.xyz)"
 
 # Assets we consider installable. Anything else in a release (sources, sigs)
 # is ignored so `w4ve install` never has to guess.
-ASSET_SUFFIXES = (".jar", ".mcdr", ".pyz", ".zip")
+# `.w4ve` is a whole piece rather than a file: the CLI installs it through the
+# package path, which is what lets the catalog offer a service, a public route
+# and a folder with a ceiling, and not only the half that happens to be a jar.
+ASSET_SUFFIXES = (".jar", ".mcdr", ".pyz", ".zip", ".w4ve")
 
 # Only these care which Minecraft they are for. An MCDR plugin or a Discord bot
 # does not, and pretending otherwise is how the catalog decided that

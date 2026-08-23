@@ -324,18 +324,21 @@ requires = ["mcdreforged"]
 repo = "CodeW4VE/ChatBridge"
 tags = ["discord", "chat-bridge", "mcdreforged"]
 
-[pieces.wavemotes-server]
-name = "WaveMotes Server"
-summary = "Server half of WaveMotes: resource-pack generator plus chat injector so even vanilla clients see the emotes."
-blurb = "The server side: resource-pack generator and chat injector so **everyone**, even vanilla clients, sees the emotes, bridged to Discord across servers."
-type = "service"
+# The server half of WaveChat, and the first piece published as a `.w4ve`
+# rather than as a file. That is the whole point of it being here: a service, a
+# public route, a folder with a ceiling and a timer are not things a jar can
+# carry, and until now installing them meant being the person who wrote them.
+[pieces.wavechat-server]
+name = "WaveChat server"
+summary = "Server half of WaveChat: images in chat, uploads from the game, private messages, emotes and optional music, with Discord as a guest rather than the centre."
+blurb = "The server side, in one command: images in chat, sending screenshots from the game, private messages that follow players between servers, and your community's emotes. Discord is optional, and so is the music."
+type = "w4ve-package"
 side = "server"
 origin = "w4ve"
 status = "stable"
-install_dir = "."
 requires = []
-repo = "CodeW4VE/WaveMotes-Server"
-tags = ["emotes", "resource-pack", "chat"]
+repo = "CodeW4VE/WaveChat-Server"
+tags = ["chat", "discord", "emotes", "images"]
 
 [pieces.discord-todo-board]
 name = "Discord To-Do Board"
@@ -1013,8 +1016,8 @@ description = "Exactly what runs on the MineWave survival server. Kept honest: i
 #     none of which are on the smp. RegionCast lives on the mirror, WaveMotes is
 #     a client mod, and waypoints are done by `server-waypoint`.
 #   - Thirteen mods that ARE on the server were missing from here.
-#   - `wavemotes-server` is out on purpose: it is host-side scripting, not
-#     something you drop in a folder.
+#   - `wavechat-server` is out on purpose: it is not something the smp drops in
+#     a folder, it is a piece with a service of its own.
 pieces = [
   # platform
   "fabric-api", "fabric-language-kotlin", "architectury-api",

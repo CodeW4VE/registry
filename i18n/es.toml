@@ -352,9 +352,9 @@ summary = "Extensión de Carpet escrita para MineWave: comando de teleport rápi
 summary = "Escribes :emote: en el chat y lo eliges en un popup. Pack de emotes incluido y dibujado en el cliente, sin resource pack, más emojis de Discord opcionales."
 blurb = "Escribes `:emote:` en el chat y eliges en un popup tipo `/`. Los emotes van dentro del jar y se dibujan en el cliente, más emojis de Discord opcionales."
 
-[pieces.wavemotes-server]
-summary = "La mitad de servidor de WaveMotes: generador de resource pack e inyector de chat para que hasta los clientes vanilla vean los emotes."
-blurb = "El lado del servidor: generador de resource pack e inyector de chat para que **todo el mundo**, hasta los clientes vanilla, vea los emotes, con puente a Discord entre servidores."
+[pieces.wavechat-server]
+summary = "La mitad de servidor de WaveChat: imágenes en el chat, mandar capturas desde el juego, mensajes privados, emotes y música opcional, con Discord de invitado y no de centro."
+blurb = "El lado del servidor, en un comando: imágenes en el chat, mandar capturas desde el juego, mensajes privados que te siguen entre servidores, y los emotes de tu comunidad. Discord es opcional, y la música también."
 
 [pieces.where-is]
 summary = "Pregunta dónde está otro jugador, con el mismo botón de waypoint."
