@@ -6861,7 +6861,38 @@
       ],
       "id": "ripdeepslate",
       "conflicts": [],
+      "modrinth_info": {
+        "id": "Py3wTTzj",
+        "status": "approved",
+        "client_side": "required",
+        "server_side": "required"
+      },
       "releases": [
+        {
+          "version": "1.0.0+1.21",
+          "source": "modrinth",
+          "published": "2026-07-01T05:50:59.415118Z",
+          "prerelease": false,
+          "minecraft": [
+            "1.21",
+            "1.21.1"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "ripdeepslate-1.0.0.jar",
+              "url": "https://cdn.modrinth.com/data/Py3wTTzj/versions/YtsSEJVA/ripdeepslate-1.0.0.jar",
+              "size": 17279,
+              "hashes": {
+                "sha1": "bb7e04a063ef3e96ac55bd3840e18401971bc100",
+                "sha512": "3be2eb02d9589524c52e53be1407f94d2f41d2ad75ab76897e3b4489ce5007be6cafc4b9db1343f23bdaa386a1431fda6c4beeabbc845bfe54baba3b476410bc"
+              },
+              "primary": true
+            }
+          ]
+        },
         {
           "version": "1.0.0",
           "tag": "v1.0.0",
@@ -6877,7 +6908,7 @@
           ]
         }
       ],
-      "latest": "1.0.0"
+      "latest": "1.0.0+1.21"
     },
     "scalablelux": {
       "name": "ScalableLux",
@@ -9927,105 +9958,6 @@
                 "sha512": "4ab5154cc8745b9f46e6879d37e6d4b4f7e616cb5c4c4a26c7d465a1cc78851f3d7751ff12636d385381de01d2325d55408ed2af616d5f7775e906c2b9bbf623"
               },
               "primary": true
-            }
-          ]
-        },
-        {
-          "version": "2.0.1",
-          "tag": "v2.0.1",
-          "source": "github",
-          "published": "2026-07-11T06:22:09Z",
-          "prerelease": false,
-          "files": [
-            {
-              "name": "wavemotes-2.0.1+1.21-sources.jar",
-              "url": "https://github.com/CodeW4VE/WaveMotes/releases/download/v2.0.1/wavemotes-2.0.1%2B1.21-sources.jar",
-              "size": 1996612,
-              "minecraft": [
-                "1.21"
-              ]
-            },
-            {
-              "name": "wavemotes-2.0.1+1.21.jar",
-              "url": "https://github.com/CodeW4VE/WaveMotes/releases/download/v2.0.1/wavemotes-2.0.1%2B1.21.jar",
-              "size": 2010513,
-              "minecraft": [
-                "1.21"
-              ]
-            }
-          ],
-          "minecraft": [
-            "1.21"
-          ]
-        },
-        {
-          "version": "1.0.3",
-          "tag": "v1.0.3",
-          "source": "github",
-          "published": "2026-06-30T05:36:28Z",
-          "prerelease": false,
-          "files": [
-            {
-              "name": "wavemotes-1.0.3-sources.jar",
-              "url": "https://github.com/CodeW4VE/WaveMotes/releases/download/v1.0.3/wavemotes-1.0.3-sources.jar",
-              "size": 1870686
-            },
-            {
-              "name": "wavemotes-1.0.3.jar",
-              "url": "https://github.com/CodeW4VE/WaveMotes/releases/download/v1.0.3/wavemotes-1.0.3.jar",
-              "size": 1879092
-            }
-          ]
-        },
-        {
-          "version": "1.0.2",
-          "tag": "v1.0.2",
-          "source": "github",
-          "published": "2026-06-30T05:29:19Z",
-          "prerelease": false,
-          "files": [
-            {
-              "name": "wavemotes-1.0.2-sources.jar",
-              "url": "https://github.com/CodeW4VE/WaveMotes/releases/download/v1.0.2/wavemotes-1.0.2-sources.jar",
-              "size": 1870685
-            },
-            {
-              "name": "wavemotes-1.0.2.jar",
-              "url": "https://github.com/CodeW4VE/WaveMotes/releases/download/v1.0.2/wavemotes-1.0.2.jar",
-              "size": 1879091
-            }
-          ]
-        },
-        {
-          "version": "1.0.1",
-          "tag": "v1.0.1",
-          "source": "github",
-          "published": "2026-06-30T05:13:40Z",
-          "prerelease": false,
-          "files": [
-            {
-              "name": "wavemotes-1.0.1-sources.jar",
-              "url": "https://github.com/CodeW4VE/WaveMotes/releases/download/v1.0.1/wavemotes-1.0.1-sources.jar",
-              "size": 1870595
-            },
-            {
-              "name": "wavemotes-1.0.1.jar",
-              "url": "https://github.com/CodeW4VE/WaveMotes/releases/download/v1.0.1/wavemotes-1.0.1.jar",
-              "size": 1879031
-            }
-          ]
-        },
-        {
-          "version": "1.0.0",
-          "tag": "v1.0.0",
-          "source": "github",
-          "published": "2026-06-30T04:41:18Z",
-          "prerelease": false,
-          "files": [
-            {
-              "name": "wavemotes-1.0.0.jar",
-              "url": "https://github.com/CodeW4VE/WaveMotes/releases/download/v1.0.0/wavemotes-1.0.0.jar",
-              "size": 1879015
             }
           ]
         }
