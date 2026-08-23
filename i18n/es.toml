@@ -340,8 +340,8 @@ summary = "Comparte los esquemáticos de Litematica y sus colocaciones entre tod
 summary = "Trae las vistas previas de los enlaces para que las usen otros plugins."
 
 [pieces.w4ve]
-summary = "Un comando para instalar, actualizar y revisar cada pieza del ecosistema. El runtime de Python que envuelve el proceso del servidor y mantiene vivos los plugins de MCDR aterriza en el mismo repo."
-
+summary = "La linea de comandos y el runtime: instala piezas, es dueño del proceso del servidor, corre plugins de MCDR y nativos, y contesta una API local."
+blurb = "Un comando para todo el ecosistema, y el runtime debajo. Es dueño del proceso del servidor, corre los plugins de MCDR que ya tienes **y** nativos en procesos propios, e instala piezas cuya segunda mitad es un servicio, una ruta publica o algo con temporizador."
 [pieces.w4ve-core]
 summary = "Librería Java compartida para los mods de W4VE: config con recarga en caliente, comandos, permisos, tableros de Discord y el enlace con PyW4VE."
 
