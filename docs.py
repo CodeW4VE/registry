@@ -36,6 +36,10 @@ I18N = HERE / "i18n"
 OUT = HERE / "site"
 
 CLI_RELEASE = "https://github.com/CodeW4VE/w4ve/releases/latest/download/w4ve.py"
+# Only a fallback. The real list is asked of the CLI (see discover_commands):
+# this was a hand written list, and it quietly went stale the day the runtime
+# arrived. Thirteen commands existed, worked, and were documented nowhere,
+# because nothing here was reading anything to find out.
 COMMANDS = ["init", "adopt", "list", "search", "info", "profiles", "install",
             "update", "remove", "sync", "status", "doctor"]
 
@@ -539,7 +543,7 @@ def render_profiles(lang, langs, index):
                 "\n".join(body), "profiles")
 
 
-def render_commands(lang, langs, help_texts):
+def render_commands(lang, langs, help_texts, commands):
     body = [f'<h1>{esc(lang.t("commands", "title", "Commands"))}</h1>',
             '<p class="lede">' + lang.t(
                 "commands", "lede",
@@ -561,7 +565,7 @@ def render_commands(lang, langs, help_texts):
     if "" in help_texts:
         body.append(f'<h2>{esc(lang.t("commands", "overview", "Overview"))}</h2>')
         body.append(f"<pre><code>{esc(help_texts[''])}</code></pre>")
-    for name in COMMANDS:
+    for name in commands:
         if name not in help_texts:
             continue
         body.append(f'<h2 id="{esc(name)}">w4ve {esc(name)}</h2>')
@@ -667,10 +671,37 @@ def render_home(lang, langs, index):
 
 # ---------------------------------------------------------------------- driver
 
-def cli_help(cli_path):
+def discover_commands(cli_path):
+    """Which commands the CLI has, according to the CLI.
+
+    argparse prints them in a `{init,adopt,...}` group, in the order the author
+    put them in, which is a better order than alphabetical: it is roughly the
+    order somebody meets them. If that group cannot be found, the hand written
+    list is used and said out loud, because silently documenting twelve of
+    twenty-five commands is how this page came to describe a version of W4VE
+    that stopped existing in August.
+    """
+    try:
+        out = subprocess.run([sys.executable, str(cli_path), "--help"],
+                             capture_output=True, text=True, timeout=30,
+                             env={**os.environ, "COLUMNS": "200"})
+    except (OSError, subprocess.SubprocessError) as err:
+        print(f"  ! could not ask the CLI for its commands: {err}", file=sys.stderr)
+        return list(COMMANDS)
+    found = re.search(r"\{([a-z0-9_,-]{20,})\}", out.stdout or "")
+    if not found:
+        print("  ! the CLI did not list its commands, using the built in list",
+              file=sys.stderr)
+        return list(COMMANDS)
+    names = [name for name in found.group(1).split(",") if name]
+    print(f"the CLI has {len(names)} commands")
+    return names
+
+
+def cli_help(cli_path, commands):
     """Ask the CLI for its own help, one call per command."""
     texts = {}
-    for name in [""] + COMMANDS:
+    for name in [""] + list(commands):
         cmd = [sys.executable, str(cli_path)] + ([name] if name else []) + ["--help"]
         try:
             out = subprocess.run(cmd, capture_output=True, text=True, timeout=30,
@@ -719,7 +750,11 @@ def main():
             cli = fetch_cli(out / ".w4ve.py")
         except Exception as err:                       # noqa: BLE001
             print(f"  ! could not fetch the CLI: {err}", file=sys.stderr)
-    helps = cli_help(cli) if cli and Path(cli).exists() else {}
+    commands = list(COMMANDS)
+    helps = {}
+    if cli and Path(cli).exists():
+        commands = discover_commands(cli)
+        helps = cli_help(cli, commands)
     if not helps:
         print("  ! no command reference: the CLI could not be run", file=sys.stderr)
 
@@ -730,7 +765,7 @@ def main():
         (root / "profiles.html").write_text(render_profiles(lang, langs, index))
         if helps:
             (root / "commands.html").write_text(
-                render_commands(lang, langs, helps))
+                render_commands(lang, langs, helps, commands))
         (root / "pieces" / "index.html").write_text(
             render_catalog(lang, langs, pieces))
         for piece in pieces.values():
