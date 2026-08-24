@@ -487,7 +487,6 @@ def main():
         print("\nThe catalog is promising what it cannot deliver:")
         for line in broken:
             print(f"  - {line}")
-        problems += broken
 
     index = {
         "schema": data.get("schema", 1),
@@ -503,7 +502,9 @@ def main():
             print("\nindex.json is out of date, run build.py")
             return 1
         print("\nindex.json is up to date")
-        return 0
+        # A broken promise fails the check, which is a pull request, which is
+        # where somebody is around to fix it.
+        return 1 if (problems or broken) else 0
 
     if args.offline:
         # --offline is for validating pieces.toml, not for publishing an index
@@ -514,6 +515,11 @@ def main():
     OUTPUT.write_text(rendered)
     print(f"\nwrote {OUTPUT} ({len(rendered)} bytes, {len(out_pieces)} pieces, "
           f"{len(profiles)} profiles)")
+    # Deliberately not counting `broken` here. This is the path the daily
+    # refresh runs, and it commits the index only if this step succeeded: one
+    # piece whose repository went away would otherwise freeze the other
+    # sixty-nine at whatever they were that morning. It is said out loud above
+    # and it fails --check; it does not get to stop the catalog from moving.
     return 1 if problems else 0
 
 
