@@ -335,7 +335,10 @@ blurb = "The server side, in one command: images in chat, sending screenshots fr
 type = "w4ve-package"
 side = "server"
 origin = "w4ve"
-status = "stable"
+# `unreleased` until the repository is public and a release carries the `.w4ve`.
+# It is written, packaged and tested, but the catalog is read by a program: a
+# `stable` piece whose repository answers 404 is the catalog lying to it.
+status = "unreleased"
 requires = []
 repo = "CodeW4VE/WaveChat-Server"
 tags = ["chat", "discord", "emotes", "images"]

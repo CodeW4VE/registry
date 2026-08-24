@@ -237,6 +237,30 @@
       },
       "releases": [
         {
+          "version": "6.0.0",
+          "source": "modrinth",
+          "published": "2026-08-24T01:40:08.492616Z",
+          "prerelease": true,
+          "minecraft": [
+            "26.2"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "Axiom-6.0.0-for-MC26.2.jar",
+              "url": "https://cdn.modrinth.com/data/N6n5dqoA/versions/DEXe5O7N/Axiom-6.0.0-for-MC26.2.jar",
+              "size": 46938160,
+              "hashes": {
+                "sha1": "c7f946928d5336307676bd32e062ffda06898975",
+                "sha512": "2af708142fcf17f19ed30134bea4f9748f8b3a0373c0f5339734694ebafdcf9d90c6a5eafb678c4798ad42aff14d12efb4ac5b2c9acb811a6dd41ac50a3f7bad"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
           "version": "5.5.0",
           "source": "modrinth",
           "published": "2026-06-22T17:35:23.386708Z",
@@ -281,30 +305,6 @@
               "hashes": {
                 "sha1": "5d89bb35ca5f73f40dd7dfc9ef6764916b89689f",
                 "sha512": "dac0681e5b377a8824153249559849eafb3a1e085b07c4586f10f3dd146a3aae935b998faef11c0bad1fbfb9e21d950ee21992af53790296bad8e7cc20b78a59"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "5.4.2",
-          "source": "modrinth",
-          "published": "2026-05-04T03:22:44.141861Z",
-          "prerelease": false,
-          "minecraft": [
-            "1.21.11"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "Axiom-5.4.2-for-MC1.21.11.jar",
-              "url": "https://cdn.modrinth.com/data/N6n5dqoA/versions/DLVQrqv2/Axiom-5.4.2-for-MC1.21.11.jar",
-              "size": 47085476,
-              "hashes": {
-                "sha1": "57a63a8a19c459b07d4275812a08c62b2f6f252c",
-                "sha512": "a74e0714a6a222d9f2c297a38792be88e39d9949698d3e49efd16d6828eb2a0bef4495a29020bd0b0fa341d6eed7e2287eab1186d9143d1594467ab51da4f539"
               },
               "primary": true
             }
@@ -9824,7 +9824,8 @@
     },
     "w4ve": {
       "name": "w4ve",
-      "summary": "One command to install, update and check every piece of the ecosystem. The Python runtime that wraps the server process and keeps MCDR plugins working lands in the same repo.",
+      "summary": "The command line and the runtime: install pieces, own the server process, run MCDR plugins and native ones, and answer a local API.",
+      "blurb": "One command for the whole ecosystem, and the runtime under it. It owns the server process, runs the MCDR plugins you already have **and** native ones in processes of their own, and installs pieces whose second half is a service, a public route or something on a timer.",
       "type": "tool",
       "side": "standalone",
       "origin": "w4ve",
@@ -9837,7 +9838,9 @@
         "package-manager",
         "tooling",
         "runtime",
-        "mcdreforged-compatible"
+        "mcdreforged-compatible",
+        "plugins",
+        "api"
       ],
       "id": "w4ve",
       "conflicts": [],
@@ -9906,6 +9909,27 @@
       "releases": [],
       "latest": null
     },
+    "wavechat-server": {
+      "name": "WaveChat server",
+      "summary": "Server half of WaveChat: images in chat, uploads from the game, private messages, emotes and optional music, with Discord as a guest rather than the centre.",
+      "blurb": "The server side, in one command: images in chat, sending screenshots from the game, private messages that follow players between servers, and your community's emotes. Discord is optional, and so is the music.",
+      "type": "w4ve-package",
+      "side": "server",
+      "origin": "w4ve",
+      "status": "unreleased",
+      "requires": [],
+      "repo": "CodeW4VE/WaveChat-Server",
+      "tags": [
+        "chat",
+        "discord",
+        "emotes",
+        "images"
+      ],
+      "id": "wavechat-server",
+      "conflicts": [],
+      "releases": [],
+      "latest": null
+    },
     "wavemotes": {
       "name": "WaveMotes",
       "summary": "Type :emote: in chat and pick it from a popup. Built-in emote pack rendered client-side, no resource pack needed, plus optional Discord emojis.",
@@ -9960,39 +9984,108 @@
               "primary": true
             }
           ]
+        },
+        {
+          "version": "2.0.1",
+          "tag": "v2.0.1",
+          "source": "github",
+          "published": "2026-07-11T06:22:09Z",
+          "prerelease": false,
+          "files": [
+            {
+              "name": "wavemotes-2.0.1+1.21-sources.jar",
+              "url": "https://github.com/CodeW4VE/WaveMotes/releases/download/v2.0.1/wavemotes-2.0.1%2B1.21-sources.jar",
+              "size": 1996612,
+              "minecraft": [
+                "1.21"
+              ]
+            },
+            {
+              "name": "wavemotes-2.0.1+1.21.jar",
+              "url": "https://github.com/CodeW4VE/WaveMotes/releases/download/v2.0.1/wavemotes-2.0.1%2B1.21.jar",
+              "size": 2010513,
+              "minecraft": [
+                "1.21"
+              ]
+            }
+          ],
+          "minecraft": [
+            "1.21"
+          ]
+        },
+        {
+          "version": "1.0.3",
+          "tag": "v1.0.3",
+          "source": "github",
+          "published": "2026-06-30T05:36:28Z",
+          "prerelease": false,
+          "files": [
+            {
+              "name": "wavemotes-1.0.3-sources.jar",
+              "url": "https://github.com/CodeW4VE/WaveMotes/releases/download/v1.0.3/wavemotes-1.0.3-sources.jar",
+              "size": 1870686
+            },
+            {
+              "name": "wavemotes-1.0.3.jar",
+              "url": "https://github.com/CodeW4VE/WaveMotes/releases/download/v1.0.3/wavemotes-1.0.3.jar",
+              "size": 1879092
+            }
+          ]
+        },
+        {
+          "version": "1.0.2",
+          "tag": "v1.0.2",
+          "source": "github",
+          "published": "2026-06-30T05:29:19Z",
+          "prerelease": false,
+          "files": [
+            {
+              "name": "wavemotes-1.0.2-sources.jar",
+              "url": "https://github.com/CodeW4VE/WaveMotes/releases/download/v1.0.2/wavemotes-1.0.2-sources.jar",
+              "size": 1870685
+            },
+            {
+              "name": "wavemotes-1.0.2.jar",
+              "url": "https://github.com/CodeW4VE/WaveMotes/releases/download/v1.0.2/wavemotes-1.0.2.jar",
+              "size": 1879091
+            }
+          ]
+        },
+        {
+          "version": "1.0.1",
+          "tag": "v1.0.1",
+          "source": "github",
+          "published": "2026-06-30T05:13:40Z",
+          "prerelease": false,
+          "files": [
+            {
+              "name": "wavemotes-1.0.1-sources.jar",
+              "url": "https://github.com/CodeW4VE/WaveMotes/releases/download/v1.0.1/wavemotes-1.0.1-sources.jar",
+              "size": 1870595
+            },
+            {
+              "name": "wavemotes-1.0.1.jar",
+              "url": "https://github.com/CodeW4VE/WaveMotes/releases/download/v1.0.1/wavemotes-1.0.1.jar",
+              "size": 1879031
+            }
+          ]
+        },
+        {
+          "version": "1.0.0",
+          "tag": "v1.0.0",
+          "source": "github",
+          "published": "2026-06-30T04:41:18Z",
+          "prerelease": false,
+          "files": [
+            {
+              "name": "wavemotes-1.0.0.jar",
+              "url": "https://github.com/CodeW4VE/WaveMotes/releases/download/v1.0.0/wavemotes-1.0.0.jar",
+              "size": 1879015
+            }
+          ]
         }
       ],
       "latest": "2.0.1"
-    },
-    "wavemotes-server": {
-      "name": "WaveMotes Server",
-      "summary": "Server half of WaveMotes: resource-pack generator plus chat injector so even vanilla clients see the emotes.",
-      "blurb": "The server side: resource-pack generator and chat injector so **everyone**, even vanilla clients, sees the emotes, bridged to Discord across servers.",
-      "type": "service",
-      "side": "server",
-      "origin": "w4ve",
-      "status": "stable",
-      "install_dir": ".",
-      "requires": [],
-      "repo": "CodeW4VE/WaveMotes-Server",
-      "tags": [
-        "emotes",
-        "resource-pack",
-        "chat"
-      ],
-      "id": "wavemotes-server",
-      "conflicts": [],
-      "releases": [
-        {
-          "version": "2.0.0",
-          "tag": "v2.0.0",
-          "source": "github",
-          "published": "2026-08-06T01:03:03Z",
-          "prerelease": false,
-          "files": []
-        }
-      ],
-      "latest": "2.0.0"
     },
     "where-is": {
       "name": "WhereIs",

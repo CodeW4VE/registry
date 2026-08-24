@@ -80,7 +80,14 @@ def github_token():
     return None
 
 
-def get_json(url, token=None):
+def get_json(url, token=None, missing=None):
+    """The JSON at `url`, or `None` when we could not get it.
+
+    `missing` is what a 404 returns. A 404 is an answer -- "there is no such
+    thing" -- and a timeout is not. The default makes them the same, because
+    most callers only want to know whether they got data; a caller that is
+    about to accuse a repository of not existing needs to tell a repository
+    that is gone from an afternoon when GitHub was slow."""
     req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
     if token and "github.com" in url:
         req.add_header("Authorization", f"Bearer {token}")
@@ -89,12 +96,18 @@ def get_json(url, token=None):
             return json.load(resp)
     except urllib.error.HTTPError as err:
         if err.code == 404:
-            return None
+            return missing
         print(f"  ! {url} -> HTTP {err.code}", file=sys.stderr)
         return None
     except (urllib.error.URLError, TimeoutError) as err:
         print(f"  ! {url} -> {err}", file=sys.stderr)
         return None
+
+
+# A repository that answered "there is no such thing", as opposed to one that
+# answered with an empty list of releases. The catalog has to tell them apart:
+# the first is a broken promise, the second is a piece that has not shipped yet.
+GONE = object()
 
 
 # ------------------------------------------------------------------- fetchers
@@ -121,7 +134,13 @@ def fetch_github(repo, token, mc_aware=False):
     of ours that ships thirteen jars, one per Minecraft, publishes that fact
     only in the file names; without this the index claimed ShapeBoard had
     nothing for 26.2 while the jar was sitting right there in the release."""
-    data = get_json(f"{GITHUB_API}/repos/{repo}/releases?per_page=20", token)
+    data = get_json(f"{GITHUB_API}/repos/{repo}/releases?per_page=20", token,
+                    missing=GONE)
+    if data is GONE:
+        # No such repository, or one we cannot see. Either way the catalog is
+        # about to hand a reader a link that answers 404, which is worse than
+        # having no link at all.
+        return GONE
     if not data:
         return []
     releases = []
@@ -368,6 +387,7 @@ def main():
         print("note: no GitHub token, running on the 60 req/hour limit\n")
 
     out_pieces = {}
+    unreachable = {}
     for pid, piece in sorted(pieces.items()):
         entry = dict(piece)
         entry["id"] = pid
@@ -385,9 +405,13 @@ def main():
                     piece["modrinth"],
                     loader="fabric" if piece.get("type") == "fabric-mod" else None)
             if piece.get("repo") and not piece.get("private"):
-                releases += fetch_github(
+                found = fetch_github(
                     piece["repo"], token,
                     mc_aware=piece.get("type") in MC_SENSITIVE_TYPES)
+                if found is GONE:
+                    unreachable[pid] = piece["repo"]
+                else:
+                    releases += found
             if piece.get("pypi"):
                 releases += fetch_pypi(piece["pypi"])
 
@@ -432,10 +456,38 @@ def main():
         info = entry.get("modrinth_info") or {}
         if info.get("status") and info["status"] != "approved":
             flag = f"  [modrinth: {info['status']}]"
+        if pid in unreachable:
+            flag += f"  [{unreachable[pid]} does not answer]"
         if not releases and piece.get("status") in ("stable",):
             flag += "  [no downloadable release]"
         print(f"{pid:<22} {entry.get('latest') or '-':<10} "
               f"{len(releases)} rel{flag}")
+
+    # A catalog is read by a program, so a piece that says `stable` is a promise
+    # that `w4ve install` can carry it out. Twice now the catalog has promised
+    # something that did not exist -- RconHush, listed as installable while it
+    # was only a folder on one laptop, and the WaveChat server, listed as stable
+    # against a repository that answers 404. Both were found by a person
+    # noticing, which is not a mechanism. This is the mechanism.
+    #
+    # `planned`, `unreleased` and `infra` are exempt: saying "this is not ready"
+    # is the honest thing those states exist for.
+    PUBLISHED = {"stable", "beta"}
+    broken = []
+    for pid, entry in sorted(out_pieces.items()):
+        if entry.get("status") not in PUBLISHED:
+            continue
+        if pid in unreachable:
+            broken.append(f"{pid}: `{unreachable[pid]}` does not exist or is "
+                          f"private, but the piece is `{entry['status']}`")
+        elif not entry.get("releases"):
+            broken.append(f"{pid}: `{entry['status']}` with nothing to download "
+                          f"(mark it `unreleased` until there is)")
+    if broken:
+        print("\nThe catalog is promising what it cannot deliver:")
+        for line in broken:
+            print(f"  - {line}")
+        problems += broken
 
     index = {
         "schema": data.get("schema", 1),
