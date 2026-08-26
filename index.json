@@ -3206,6 +3206,30 @@
       },
       "releases": [
         {
+          "version": "0.158.2+26.3",
+          "source": "modrinth",
+          "published": "2026-08-25T14:46:28.968740Z",
+          "prerelease": true,
+          "minecraft": [
+            "26.3-snapshot-10"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "fabric-api-0.158.2+26.3.jar",
+              "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/b0naBeuj/fabric-api-0.158.2%2B26.3.jar",
+              "size": 2536451,
+              "hashes": {
+                "sha1": "cff6819a5bd30082f1541d8c3ba58d3e475fdde1",
+                "sha512": "f22dca516e006334a4302a622d55ba0eed05edcd641a5e580fd93ea184ad7c208e5c4f232633b8e369c9a3eabd9a89e1fd66b95b497728a85bdae6d135c70c53"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
           "version": "0.158.1+26.3",
           "source": "modrinth",
           "published": "2026-08-24T08:30:51.764736Z",
