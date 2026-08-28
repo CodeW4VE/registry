@@ -417,6 +417,116 @@
       "conflicts": [],
       "releases": [
         {
+          "version": "2.3.1",
+          "tag": "v2.3.1",
+          "source": "github",
+          "published": "2026-08-28T02:13:07Z",
+          "prerelease": false,
+          "files": [
+            {
+              "name": "beaconator-2.3.1+1.21.1.jar",
+              "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.3.1/beaconator-2.3.1%2B1.21.1.jar",
+              "size": 302223,
+              "minecraft": [
+                "1.21.1"
+              ]
+            },
+            {
+              "name": "beaconator-2.3.1+1.21.11.jar",
+              "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.3.1/beaconator-2.3.1%2B1.21.11.jar",
+              "size": 304898,
+              "minecraft": [
+                "1.21.11"
+              ]
+            },
+            {
+              "name": "beaconator-2.3.1+1.21.2.jar",
+              "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.3.1/beaconator-2.3.1%2B1.21.2.jar",
+              "size": 302627,
+              "minecraft": [
+                "1.21.2"
+              ]
+            },
+            {
+              "name": "beaconator-2.3.1+1.21.3.jar",
+              "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.3.1/beaconator-2.3.1%2B1.21.3.jar",
+              "size": 302629,
+              "minecraft": [
+                "1.21.3"
+              ]
+            },
+            {
+              "name": "beaconator-2.3.1+1.21.4.jar",
+              "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.3.1/beaconator-2.3.1%2B1.21.4.jar",
+              "size": 302678,
+              "minecraft": [
+                "1.21.4"
+              ]
+            },
+            {
+              "name": "beaconator-2.3.1+1.21.5.jar",
+              "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.3.1/beaconator-2.3.1%2B1.21.5.jar",
+              "size": 306036,
+              "minecraft": [
+                "1.21.5"
+              ]
+            },
+            {
+              "name": "beaconator-2.3.1+1.21.6.jar",
+              "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.3.1/beaconator-2.3.1%2B1.21.6.jar",
+              "size": 306503,
+              "minecraft": [
+                "1.21.6"
+              ]
+            },
+            {
+              "name": "beaconator-2.3.1+1.21.7.jar",
+              "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.3.1/beaconator-2.3.1%2B1.21.7.jar",
+              "size": 306502,
+              "minecraft": [
+                "1.21.7"
+              ]
+            },
+            {
+              "name": "beaconator-2.3.1+1.21.8.jar",
+              "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.3.1/beaconator-2.3.1%2B1.21.8.jar",
+              "size": 306503,
+              "minecraft": [
+                "1.21.8"
+              ]
+            },
+            {
+              "name": "beaconator-2.3.1+1.21.jar",
+              "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.3.1/beaconator-2.3.1%2B1.21.jar",
+              "size": 302221,
+              "minecraft": [
+                "1.21"
+              ]
+            },
+            {
+              "name": "beaconator-2.3.1+26.1.2.jar",
+              "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.3.1/beaconator-2.3.1%2B26.1.2.jar",
+              "size": 304558,
+              "minecraft": [
+                "26.1.2"
+              ]
+            }
+          ],
+          "minecraft": [
+            "1.21",
+            "1.21.1",
+            "1.21.11",
+            "1.21.2",
+            "1.21.3",
+            "1.21.4",
+            "1.21.5",
+            "1.21.6",
+            "1.21.7",
+            "1.21.8",
+            "26.1.2"
+          ]
+        },
+        {
           "version": "2.3.0",
           "tag": "v2.3.0",
           "source": "github",
@@ -1195,7 +1305,7 @@
           ]
         }
       ],
-      "latest": "2.3.0"
+      "latest": "2.3.1"
     },
     "beep": {
       "name": "Beep",
