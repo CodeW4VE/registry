@@ -7329,6 +7329,14 @@
       "conflicts": [],
       "releases": [
         {
+          "version": "1.1.0",
+          "tag": "v1.1.0",
+          "source": "github",
+          "published": "2026-08-31T05:01:00Z",
+          "prerelease": false,
+          "files": []
+        },
+        {
           "version": "1.0.0",
           "tag": "v1.0.0",
           "source": "github",
@@ -7337,7 +7345,7 @@
           "files": []
         }
       ],
-      "latest": "1.0.0"
+      "latest": "1.1.0"
     },
     "server-replay": {
       "name": "ServerReplay",
