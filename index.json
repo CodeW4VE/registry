@@ -237,49 +237,148 @@
       },
       "releases": [
         {
-          "version": "6.0.2",
+          "version": "6.0.5",
           "source": "modrinth",
-          "published": "2026-09-01T07:32:10.690537Z",
+          "published": "2026-09-03T09:10:09.271328Z",
           "prerelease": false,
           "minecraft": [
-            "1.21.4"
+            "26.2"
           ],
           "loaders": [
             "fabric"
           ],
           "files": [
             {
-              "name": "Axiom-6.0.2-for-MC1.21.4.jar",
-              "url": "https://cdn.modrinth.com/data/N6n5dqoA/versions/qiKAHEAL/Axiom-6.0.2-for-MC1.21.4.jar",
-              "size": 47208487,
+              "name": "Axiom-6.0.5-for-MC26.2.jar",
+              "url": "https://cdn.modrinth.com/data/N6n5dqoA/versions/o59cWLPI/Axiom-6.0.5-for-MC26.2.jar",
+              "size": 46972660,
               "hashes": {
-                "sha1": "bfbec745465887f42534a25e4a83f28775d40241",
-                "sha512": "46d0fc559aa01bab904316efc4de76204c20e251836f5fabb1af436e75fe0a2bb57b31a37dcac67e1fe09bf3ad57ee1878562798f2e89759459a11bcb57ee8af"
+                "sha1": "71e67f4fcea8dc75ba29d1426d56bc247d9ea90e",
+                "sha512": "b7983617669a73739ea21486d8ea232980e10b6692b02911a873d64ab37cb4ffb0a58c27e35a31a68f65883c689a787f5f57b0cb2d29d325ed7cfc8351a0e3bc"
               },
               "primary": true
             }
           ]
         },
         {
-          "version": "6.0.2",
+          "version": "6.0.5",
           "source": "modrinth",
-          "published": "2026-09-01T07:27:00.915331Z",
+          "published": "2026-09-03T09:09:11.663743Z",
           "prerelease": false,
           "minecraft": [
-            "1.21.2",
-            "1.21.3"
+            "26.1",
+            "26.1.1",
+            "26.1.2"
           ],
           "loaders": [
             "fabric"
           ],
           "files": [
             {
-              "name": "Axiom-6.0.2-for-MC1.21.3.jar",
-              "url": "https://cdn.modrinth.com/data/N6n5dqoA/versions/9UtgKJLO/Axiom-6.0.2-for-MC1.21.3.jar",
-              "size": 47206489,
+              "name": "Axiom-6.0.5-for-MC26.1.jar",
+              "url": "https://cdn.modrinth.com/data/N6n5dqoA/versions/aZ3IOnv2/Axiom-6.0.5-for-MC26.1.jar",
+              "size": 46961058,
               "hashes": {
-                "sha1": "3cd7a9bdb73e0b373b42dc07105c7fb298d39ee7",
-                "sha512": "0149176d92688e20a85fb8c067e47ee02d16cbc456f093006c586337ce8751dcbcac902d332648343ffe2b1f0f26b1b50a42ef135eb2beb5ecfa268d80625e01"
+                "sha1": "9492f65784b78795cef24531dca9546952e47020",
+                "sha512": "cf345982280d8ac6c33b0181ee164edd09540dce7efb809290b1795509dfae90bd47b7ff54ca85259bf07460e5f870905a6d86bdb0d3b6862f06cc7a4563bed3"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "6.0.5",
+          "source": "modrinth",
+          "published": "2026-09-03T09:08:46.029398Z",
+          "prerelease": false,
+          "minecraft": [
+            "1.21.11"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "Axiom-6.0.5-for-MC1.21.11.jar",
+              "url": "https://cdn.modrinth.com/data/N6n5dqoA/versions/SAOZ8jry/Axiom-6.0.5-for-MC1.21.11.jar",
+              "size": 47226603,
+              "hashes": {
+                "sha1": "8fbab015a84d46a1a750e64f7142a11bcb431a0f",
+                "sha512": "53e413146354d4ecc73490510047f824777fb1ac1f35cb45efc767275c4555e047bbd175fa410709d508a2eabd97ebb36cd3004622fd7bf02b0fd24784f6b1bc"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "6.0.5",
+          "source": "modrinth",
+          "published": "2026-09-03T09:06:11.250771Z",
+          "prerelease": false,
+          "minecraft": [
+            "1.21",
+            "1.21.1"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "Axiom-6.0.5-for-MC1.21.1.jar",
+              "url": "https://cdn.modrinth.com/data/N6n5dqoA/versions/mDWuY6t7/Axiom-6.0.5-for-MC1.21.1.jar",
+              "size": 47202626,
+              "hashes": {
+                "sha1": "589dc29b3f03530f9404b2ab5c501c56dc5b02f1",
+                "sha512": "c8ac3482b77b0f1c167b24ada463914d24770d3865c438fce09da54bde3b7d6383fde5ddd27c2c8a81e19640847584568915f620afa05b34d82aefeaadddd52b"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "6.0.3",
+          "source": "modrinth",
+          "published": "2026-09-03T02:27:52.164196Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.2"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "Axiom-6.0.3-for-MC26.2.jar",
+              "url": "https://cdn.modrinth.com/data/N6n5dqoA/versions/SkHtNK2i/Axiom-6.0.3-for-MC26.2.jar",
+              "size": 46972259,
+              "hashes": {
+                "sha1": "a4a7d054e6b0f8f515389a1a13b9c16294963455",
+                "sha512": "1150833b4aa122c6fad62a671d8599ec749acc7edd548da1b0d6efa846b18ef17e38656aa1a41ac1ab15bc0ba40c917a293fe7216142e0f811c55760b297b55b"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "6.0.3",
+          "source": "modrinth",
+          "published": "2026-09-03T02:22:27.190527Z",
+          "prerelease": false,
+          "minecraft": [
+            "1.21",
+            "1.21.1"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "Axiom-6.0.3-for-MC1.21.1.jar",
+              "url": "https://cdn.modrinth.com/data/N6n5dqoA/versions/2KX55oZU/Axiom-6.0.3-for-MC1.21.1.jar",
+              "size": 47203130,
+              "hashes": {
+                "sha1": "c60195007258c0b38c52dedee280bcfa7c49096f",
+                "sha512": "0c3663b73c76d98de98714d26844ee0899d2559a7fb1b9c631871c40a079fa5c5e6ff062f449de7241cbc646eecba7c8527007879e1b5413fb4a664631de22f1"
               },
               "primary": true
             }
@@ -333,107 +432,9 @@
               "primary": true
             }
           ]
-        },
-        {
-          "version": "6.0.0",
-          "source": "modrinth",
-          "published": "2026-08-24T01:40:08.492616Z",
-          "prerelease": true,
-          "minecraft": [
-            "26.2"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "Axiom-6.0.0-for-MC26.2.jar",
-              "url": "https://cdn.modrinth.com/data/N6n5dqoA/versions/DEXe5O7N/Axiom-6.0.0-for-MC26.2.jar",
-              "size": 46938160,
-              "hashes": {
-                "sha1": "c7f946928d5336307676bd32e062ffda06898975",
-                "sha512": "2af708142fcf17f19ed30134bea4f9748f8b3a0373c0f5339734694ebafdcf9d90c6a5eafb678c4798ad42aff14d12efb4ac5b2c9acb811a6dd41ac50a3f7bad"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "5.5.0",
-          "source": "modrinth",
-          "published": "2026-06-22T17:35:23.386708Z",
-          "prerelease": false,
-          "minecraft": [
-            "26.2"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "Axiom-5.5.0-for-MC26.2.jar",
-              "url": "https://cdn.modrinth.com/data/N6n5dqoA/versions/QO99kC52/Axiom-5.5.0-for-MC26.2.jar",
-              "size": 46887814,
-              "hashes": {
-                "sha1": "6fe1591a7f1d08acd976d72a4b29472d9e630125",
-                "sha512": "fc6681cfe613a1d97346dacbe71b8a6df770cb86fc0424ee9f4abcb4eedc23a3754d7def1d36995f782e167bb29d15a31a99a35c662fc14278d020eba272b530"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "5.4.2",
-          "source": "modrinth",
-          "published": "2026-05-04T03:16:42.301098Z",
-          "prerelease": false,
-          "minecraft": [
-            "1.21",
-            "1.21.1"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "Axiom-5.4.2-for-MC1.21.1.jar",
-              "url": "https://cdn.modrinth.com/data/N6n5dqoA/versions/BzK22yyR/Axiom-5.4.2-for-MC1.21.1.jar",
-              "size": 47067416,
-              "hashes": {
-                "sha1": "1f98d5b1fdd4a20c6b181d9374ee93b3dc8515ca",
-                "sha512": "b73711c2809d2461dc2dfd92069a7ad3b986d7d70a11b927d2fc8c133158a4af29ea156208c42a6e61f2c26afbc5623806314622da8f4b3f21ae90c9949138e7"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "5.4.1",
-          "source": "modrinth",
-          "published": "2026-04-24T18:14:17.585865Z",
-          "prerelease": false,
-          "minecraft": [
-            "1.21",
-            "1.21.1"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "Axiom-5.4.1-for-MC1.21.1.jar",
-              "url": "https://cdn.modrinth.com/data/N6n5dqoA/versions/gEPmZrAh/Axiom-5.4.1-for-MC1.21.1.jar",
-              "size": 47066805,
-              "hashes": {
-                "sha1": "37542367e6311d472ee242a12ef6969a417239c5",
-                "sha512": "20415f005719858cf9e0bc12ceaee1424acec16c44c38fd4608d93362ef05a04ac1ab6a0538204cf7ab92e4930e0d15fedf3acdecafcc41a2ec10428726885e8"
-              },
-              "primary": true
-            }
-          ]
         }
       ],
-      "latest": "6.0.2"
+      "latest": "6.0.5"
     },
     "beaconator": {
       "name": "Beaconator",
@@ -7502,6 +7503,30 @@
       },
       "releases": [
         {
+          "version": "0.9.8",
+          "source": "modrinth",
+          "published": "2026-09-03T02:18:34.013318Z",
+          "prerelease": false,
+          "minecraft": [
+            "1.21.11"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "servux-fabric-1.21.11-0.9.8.jar",
+              "url": "https://cdn.modrinth.com/data/zQhsx8KF/versions/dd7cLE5P/servux-fabric-1.21.11-0.9.8.jar",
+              "size": 939633,
+              "hashes": {
+                "sha1": "19c908bd92b02a10422d6c09c8ec4ec6e923ee58",
+                "sha512": "8def10a9bcbd3018319278f225ee576cbfb1905efa98f5d5f3b3c6fda4ce9a239bc79f52b0b1deb8766f46572ad47f444499012474578289ae5a90689834c5aa"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
           "version": "0.11.4",
           "source": "modrinth",
           "published": "2026-08-29T20:01:17.496136Z",
@@ -7546,30 +7571,6 @@
               "hashes": {
                 "sha1": "9d6a383d80fa58be68c187bc07045b8bbddc8ee4",
                 "sha512": "522ffcaffcc9b259b7d6e9c0ed684dfa94c0c05df999048ad70a94b465a315f2758e8fcbbd4c5772c0f45ef8840df2563a225343c55cb8c3745f25c80118065b"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "0.9.7",
-          "source": "modrinth",
-          "published": "2026-08-29T20:00:31.242201Z",
-          "prerelease": false,
-          "minecraft": [
-            "1.21.11"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "servux-fabric-1.21.11-0.9.7.jar",
-              "url": "https://cdn.modrinth.com/data/zQhsx8KF/versions/wSlKd8CQ/servux-fabric-1.21.11-0.9.7.jar",
-              "size": 939749,
-              "hashes": {
-                "sha1": "bc0124d48e2399add8ed582fedcd8b0631d0f348",
-                "sha512": "8ce99f4a3e263d20bb281815395b1e0f559e4cdb1cac98a8dd2ce5a333f2257ed4c977a1ccdb3c59632f0714f12e59c992639f46aeaa95c6e65126dfea1e40a7"
               },
               "primary": true
             }
@@ -7649,7 +7650,7 @@
           ]
         }
       ],
-      "latest": "0.11.4"
+      "latest": "0.9.8"
     },
     "shapeboard": {
       "name": "ShapeBoard",
