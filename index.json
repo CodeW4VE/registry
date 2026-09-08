@@ -3049,9 +3049,9 @@
       },
       "releases": [
         {
-          "version": "0.159.4+26.3",
+          "version": "0.160.0+26.3",
           "source": "modrinth",
-          "published": "2026-09-04T14:48:24.728873Z",
+          "published": "2026-09-07T17:58:08.735164Z",
           "prerelease": true,
           "minecraft": [
             "26.3-pre-2"
@@ -3061,60 +3061,62 @@
           ],
           "files": [
             {
-              "name": "fabric-api-0.159.4+26.3.jar",
-              "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/7WKL9JPW/fabric-api-0.159.4%2B26.3.jar",
-              "size": 2549062,
+              "name": "fabric-api-0.160.0+26.3.jar",
+              "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/o9uChmGq/fabric-api-0.160.0%2B26.3.jar",
+              "size": 2582954,
               "hashes": {
-                "sha1": "a1c37794a31bf06e1d30cc98df51ce0c5281180b",
-                "sha512": "d7063c83dd46cf732b8fb746ed3296d93e45ed5a6f7d98e07c993018cfea5c1716a8eb20bd73effefb9ac84fdefef665788dfe5e10dcf928b5e6621541a26a18"
+                "sha1": "b290eb13fa2728c9ac452e83ad87c3dbc555de12",
+                "sha512": "0f9fb41ec3e480e7680e1640f90fb82a9298f5848c049ded3be47605615c3117fc17fc7acab59ec145dd4653422b742df5c5f137608d243d9aa4bf2d9ba2427d"
               },
               "primary": true
             }
           ]
         },
         {
-          "version": "0.159.3+26.3",
+          "version": "0.160.0+26.2",
           "source": "modrinth",
-          "published": "2026-09-04T08:12:19.986732Z",
-          "prerelease": true,
+          "published": "2026-09-07T17:48:36.708374Z",
+          "prerelease": false,
           "minecraft": [
-            "26.3-pre-1"
+            "26.2"
           ],
           "loaders": [
             "fabric"
           ],
           "files": [
             {
-              "name": "fabric-api-0.159.3+26.3.jar",
-              "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/4LGzM6Ys/fabric-api-0.159.3%2B26.3.jar",
-              "size": 2549147,
+              "name": "fabric-api-0.160.0+26.2.jar",
+              "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/UWwhUX3k/fabric-api-0.160.0%2B26.2.jar",
+              "size": 2542898,
               "hashes": {
-                "sha1": "1f0a993842f95577dd641d627d9ff4a85f8c571e",
-                "sha512": "580bbb10117fd745be0703d6199624785d77328cff84a85c4fcc4ecd1686d6e870b09cc7766e01ba32e46a04a9db0a98cece44af029c6ca94a878491ce339ece"
+                "sha1": "58e82722dee4a78235c4b5c06100ae433973f62e",
+                "sha512": "1a08b68b2c2c90f6005ef441ab71b65f464be964005b9c0d18e6fc6c5ec53fe346e7dd76189c4f09ade59ef9bc3b836376a2cc71d4ce6e9be47122477d1bbd1e"
               },
               "primary": true
             }
           ]
         },
         {
-          "version": "0.159.2+26.3",
+          "version": "0.155.3+26.1.2",
           "source": "modrinth",
-          "published": "2026-09-03T15:26:19.623758Z",
-          "prerelease": true,
+          "published": "2026-09-07T17:43:20.715454Z",
+          "prerelease": false,
           "minecraft": [
-            "26.3-pre-1"
+            "26.1",
+            "26.1.1",
+            "26.1.2"
           ],
           "loaders": [
             "fabric"
           ],
           "files": [
             {
-              "name": "fabric-api-0.159.2+26.3.jar",
-              "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/ciB9LsgF/fabric-api-0.159.2%2B26.3.jar",
-              "size": 2549168,
+              "name": "fabric-api-0.155.3+26.1.2.jar",
+              "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/3dM0X6ou/fabric-api-0.155.3%2B26.1.2.jar",
+              "size": 2521340,
               "hashes": {
-                "sha1": "fe4d04e541c36be1de18b2ab9b5035c792908bae",
-                "sha512": "ac35e6945861fe51f8d305bcfdf10688c1bc36a7126a5b9989653744034667bcb1305e3c806f9f4b950cd08df2e20a94db45071eeea933b0bfa0cb079ffb322c"
+                "sha1": "16c30dfcceaed1ac3b6ac84cbd348a906dc5093e",
+                "sha512": "fa0308b42e9cd0dc3ff946f246d199d74547e0c946d7e3c9780a2537155307baf25129f69bd1349273babf879ffb4608b7e4af0740938f9c0f7b371b1c67d6ca"
               },
               "primary": true
             }
@@ -3217,30 +3219,6 @@
           ]
         },
         {
-          "version": "0.157.0+26.2",
-          "source": "modrinth",
-          "published": "2026-08-10T12:56:05.057944Z",
-          "prerelease": false,
-          "minecraft": [
-            "26.2"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "fabric-api-0.157.0+26.2.jar",
-              "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/vmQp7ixA/fabric-api-0.157.0%2B26.2.jar",
-              "size": 2533297,
-              "hashes": {
-                "sha1": "0deb9d110def35ebcaf5f15a9e6c8b8e85685319",
-                "sha512": "4ebec489f2b2ce621ebebb2d1b7e9714b6fd288ebdb4e287d767cde57612cf1d3d1d4f51daf7e7ec9541fa146df6bde4978ab98a29637ced6d9bc2f3c4217650"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
           "version": "0.116.15+1.21.1",
           "source": "modrinth",
           "published": "2026-07-28T08:41:22.864336Z",
@@ -3337,7 +3315,7 @@
           ]
         }
       ],
-      "latest": "0.116.17+1.21.1"
+      "latest": "0.160.0+26.2"
     },
     "fabric-language-kotlin": {
       "name": "Fabric Language Kotlin",
@@ -3359,6 +3337,76 @@
         "server_side": "optional"
       },
       "releases": [
+        {
+          "version": "1.14.1+kotlin.2.4.20",
+          "source": "modrinth",
+          "published": "2026-09-07T12:48:38.555893Z",
+          "prerelease": false,
+          "minecraft": [
+            "1.14",
+            "1.14.1",
+            "1.14.2",
+            "1.14.3",
+            "1.14.4",
+            "1.15",
+            "1.15.1",
+            "1.15.2",
+            "1.16",
+            "1.16.1",
+            "1.16.2",
+            "1.16.3",
+            "1.16.4",
+            "1.16.5",
+            "1.17",
+            "1.17.1",
+            "1.18",
+            "1.18.1",
+            "1.18.2",
+            "1.19",
+            "1.19.1",
+            "1.19.2",
+            "1.19.3",
+            "1.19.4",
+            "1.20",
+            "1.20.1",
+            "1.20.2",
+            "1.20.3",
+            "1.20.4",
+            "1.20.5",
+            "1.20.6",
+            "1.21",
+            "1.21.1",
+            "1.21.2",
+            "1.21.3",
+            "1.21.4",
+            "1.21.5",
+            "1.21.6",
+            "1.21.7",
+            "1.21.8",
+            "1.21.9",
+            "1.21.10",
+            "1.21.11",
+            "26.1",
+            "26.1.1",
+            "26.1.2",
+            "26.2"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "fabric-language-kotlin-1.14.1+kotlin.2.4.20.jar",
+              "url": "https://cdn.modrinth.com/data/Ha28R6CL/versions/eRRZzGMc/fabric-language-kotlin-1.14.1%2Bkotlin.2.4.20.jar",
+              "size": 8142858,
+              "hashes": {
+                "sha1": "62ae40a31b689b52fde399f2143d547a631e942c",
+                "sha512": "91404f87774466ce8604aafea791d8cc97b603bc310dce17c8188f94f7783cca6dc14fc726ce871ca317bfe9033c199d8d858d51284106a00754e952147703b8"
+              },
+              "primary": true
+            }
+          ]
+        },
         {
           "version": "1.14.0+kotlin.2.4.20",
           "source": "modrinth",
@@ -3498,79 +3546,9 @@
               "primary": true
             }
           ]
-        },
-        {
-          "version": "1.13.13+kotlin.2.4.10",
-          "source": "modrinth",
-          "published": "2026-07-15T20:14:45.530782Z",
-          "prerelease": false,
-          "minecraft": [
-            "1.14",
-            "1.14.1",
-            "1.14.2",
-            "1.14.3",
-            "1.14.4",
-            "1.15",
-            "1.15.1",
-            "1.15.2",
-            "1.16",
-            "1.16.1",
-            "1.16.2",
-            "1.16.3",
-            "1.16.4",
-            "1.16.5",
-            "1.17",
-            "1.17.1",
-            "1.18",
-            "1.18.1",
-            "1.18.2",
-            "1.19",
-            "1.19.1",
-            "1.19.2",
-            "1.19.3",
-            "1.19.4",
-            "1.20",
-            "1.20.1",
-            "1.20.2",
-            "1.20.3",
-            "1.20.4",
-            "1.20.5",
-            "1.20.6",
-            "1.21",
-            "1.21.1",
-            "1.21.2",
-            "1.21.3",
-            "1.21.4",
-            "1.21.5",
-            "1.21.6",
-            "1.21.7",
-            "1.21.8",
-            "1.21.9",
-            "1.21.10",
-            "1.21.11",
-            "26.1",
-            "26.1.1",
-            "26.1.2",
-            "26.2"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "fabric-language-kotlin-1.13.13+kotlin.2.4.10.jar",
-              "url": "https://cdn.modrinth.com/data/Ha28R6CL/versions/bdhiINYC/fabric-language-kotlin-1.13.13%2Bkotlin.2.4.10.jar",
-              "size": 8076363,
-              "hashes": {
-                "sha1": "620cb137a9dc69ce86f3114f19d9eedab16366f5",
-                "sha512": "9a63c35a550b0362b7b25ff045d93709c7b0dae08c89076cba422813fdfb9e5f5dd021ed3afac9f82e74e95b88c249e8f68b240717151540ca3e88cc27fb9c77"
-              },
-              "primary": true
-            }
-          ]
         }
       ],
-      "latest": "1.14.0+kotlin.2.4.20"
+      "latest": "1.14.1+kotlin.2.4.20"
     },
     "fabricproxy-lite": {
       "name": "FabricProxy-Lite",
