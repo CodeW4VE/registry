@@ -3049,6 +3049,54 @@
       },
       "releases": [
         {
+          "version": "0.160.2+26.3",
+          "source": "modrinth",
+          "published": "2026-09-09T08:24:16.893675Z",
+          "prerelease": true,
+          "minecraft": [
+            "26.3-pre-3"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "fabric-api-0.160.2+26.3.jar",
+              "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/cFI1ZXnT/fabric-api-0.160.2%2B26.3.jar",
+              "size": 2584182,
+              "hashes": {
+                "sha1": "cab68347323dae750347aa5f18e404fefcbdf47b",
+                "sha512": "d664db31bee0ac52e92d1010ee4600dae741ace5e0bc770d86b85fffdca52e63760635cd580675c175db805f2edc0815026953bf13e2660d0a6b5bca9f332e63"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "0.160.1+26.3",
+          "source": "modrinth",
+          "published": "2026-09-08T14:25:20.957684Z",
+          "prerelease": true,
+          "minecraft": [
+            "26.3-pre-3"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "fabric-api-0.160.1+26.3.jar",
+              "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/nJUuh2dv/fabric-api-0.160.1%2B26.3.jar",
+              "size": 2582949,
+              "hashes": {
+                "sha1": "b5c81d30de6cfe379688a56e1931a34c520560d8",
+                "sha512": "8d562900908da5bd80f6ca0e86ffc95c5332ed3c4e9f420a210a8a96434a659b6396d86ee59ade0ca744b71eea0d6dd75daffe0d4e09d373f439716b6f43c409"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
           "version": "0.160.0+26.3",
           "source": "modrinth",
           "published": "2026-09-07T17:58:08.735164Z",
@@ -3091,32 +3139,6 @@
               "hashes": {
                 "sha1": "58e82722dee4a78235c4b5c06100ae433973f62e",
                 "sha512": "1a08b68b2c2c90f6005ef441ab71b65f464be964005b9c0d18e6fc6c5ec53fe346e7dd76189c4f09ade59ef9bc3b836376a2cc71d4ce6e9be47122477d1bbd1e"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "0.155.3+26.1.2",
-          "source": "modrinth",
-          "published": "2026-09-07T17:43:20.715454Z",
-          "prerelease": false,
-          "minecraft": [
-            "26.1",
-            "26.1.1",
-            "26.1.2"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "fabric-api-0.155.3+26.1.2.jar",
-              "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/3dM0X6ou/fabric-api-0.155.3%2B26.1.2.jar",
-              "size": 2521340,
-              "hashes": {
-                "sha1": "16c30dfcceaed1ac3b6ac84cbd348a906dc5093e",
-                "sha512": "fa0308b42e9cd0dc3ff946f246d199d74547e0c946d7e3c9780a2537155307baf25129f69bd1349273babf879ffb4608b7e4af0740938f9c0f7b371b1c67d6ca"
               },
               "primary": true
             }
