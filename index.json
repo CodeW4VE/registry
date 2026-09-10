@@ -41,6 +41,78 @@
       },
       "releases": [
         {
+          "version": "21.1.8+neoforge",
+          "source": "modrinth",
+          "published": "2026-09-09T12:24:44.727844Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.2"
+          ],
+          "loaders": [
+            "neoforge"
+          ],
+          "files": [
+            {
+              "name": "architectury-neoforge-21.1.8.jar",
+              "url": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/a9FZvbkE/architectury-neoforge-21.1.8.jar",
+              "size": 620799,
+              "hashes": {
+                "sha1": "b42b474378fa653b784a2e0cee030af3efcd81a5",
+                "sha512": "cf1a6d8714e1aaa6a48d24c4b123876c500e01f8d10812057edde3256cab2450713524c44f90d185bdff34da413303fb781260bb9470b3d46b47a39ee4b0c28c"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "21.1.8+fabric",
+          "source": "modrinth",
+          "published": "2026-09-09T12:24:44.726583Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.2"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "architectury-fabric-21.1.8.jar",
+              "url": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/3iJSN9Sa/architectury-fabric-21.1.8.jar",
+              "size": 622155,
+              "hashes": {
+                "sha1": "247e47ed9fb1eb83259f76ee00fc6027e412951d",
+                "sha512": "40be21f33be139db894af8f457847aaad340ab8bc20f9d0bfdc95e9160a36f7fe771a05cd29368e10efde9f52c03ac9eeeea6c21ffa81ffca802ba949239b9e7"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "20.1.13+neoforge",
+          "source": "modrinth",
+          "published": "2026-09-09T11:33:10.335612Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.1.2"
+          ],
+          "loaders": [
+            "neoforge"
+          ],
+          "files": [
+            {
+              "name": "architectury-neoforge-20.1.13.jar",
+              "url": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/DfIq2aeZ/architectury-neoforge-20.1.13.jar",
+              "size": 617697,
+              "hashes": {
+                "sha1": "78ae30e5c264b7df2e40fd8bb2b9e5c90163a7f1",
+                "sha512": "bac7c5defbde852047a85ce4da51c8826187bb4918934c85ecd16e986e98c9583e02207de057975ea6922fb68756ffd4404bec8823331546a1467072711ef893"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
           "version": "21.0.7+fabric",
           "source": "modrinth",
           "published": "2026-08-02T17:03:28.000032Z",
@@ -59,78 +131,6 @@
               "hashes": {
                 "sha1": "7c00161fc93303ba504f02f6bf3e3f42b99e1d84",
                 "sha512": "deffcad73b8f73d611d8e43ddad3b380e7896ba53e4b4f3660ab877b9c4ba20561e498888b17456b2b8819fb902e2070760613ce6fec9e1f1082990014e92dd4"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "21.0.7+neoforge",
-          "source": "modrinth",
-          "published": "2026-08-02T17:03:27.993371Z",
-          "prerelease": false,
-          "minecraft": [
-            "26.2"
-          ],
-          "loaders": [
-            "neoforge"
-          ],
-          "files": [
-            {
-              "name": "architectury-neoforge-21.0.7.jar",
-              "url": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/9D1cNuR2/architectury-neoforge-21.0.7.jar",
-              "size": 581749,
-              "hashes": {
-                "sha1": "c47ec87515e86af442baf5fb820ec271ac04fbac",
-                "sha512": "c095a42c903da7cfc7ed7e668ee768bbf4143eab3ecfced1a731158c6f606c7b222e6db44fa5952422fc529e4015786e67637127ede6c684ea8b7a502e834091"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "20.0.12+fabric",
-          "source": "modrinth",
-          "published": "2026-07-26T15:20:23.853045Z",
-          "prerelease": false,
-          "minecraft": [
-            "26.1.2"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "architectury-fabric-20.0.12.jar",
-              "url": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/hNxqF6r7/architectury-fabric-20.0.12.jar",
-              "size": 585817,
-              "hashes": {
-                "sha1": "bd3c9d7dce7fed0bbf3db8d7d1f49bedc5ff2091",
-                "sha512": "d8f8ecbc8f4769e9c225d5c7eb9aac0c66fdcaae92bd1e1dea74282b2d24337c7a5bb63ecf3b1465bb639ab15f10b394a7df6e283ba36791bdab377bda8e6383"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "21.0.6+neoforge",
-          "source": "modrinth",
-          "published": "2026-07-25T13:46:41.754195Z",
-          "prerelease": false,
-          "minecraft": [
-            "26.2"
-          ],
-          "loaders": [
-            "neoforge"
-          ],
-          "files": [
-            {
-              "name": "architectury-neoforge-21.0.6.jar",
-              "url": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/RFm4qRgD/architectury-neoforge-21.0.6.jar",
-              "size": 581967,
-              "hashes": {
-                "sha1": "138eb0c96ca1f7126b024130f4372b52463c5f08",
-                "sha512": "f6e26183c06860c7c7e9b9b4a25ad4d20de482d018a522936d5ccf020521615a20b4d478ee8a1c17d942fa54d19bc2872ef424871b550f06984186f60e0cac45"
               },
               "primary": true
             }
@@ -212,7 +212,7 @@
           ]
         }
       ],
-      "latest": "21.0.7+fabric"
+      "latest": "21.1.8+neoforge"
     },
     "axiom": {
       "name": "Axiom",
