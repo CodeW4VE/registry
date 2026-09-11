@@ -41,6 +41,78 @@
       },
       "releases": [
         {
+          "version": "21.1.9+neoforge",
+          "source": "modrinth",
+          "published": "2026-09-10T15:05:03.788280Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.2"
+          ],
+          "loaders": [
+            "neoforge"
+          ],
+          "files": [
+            {
+              "name": "architectury-neoforge-21.1.9.jar",
+              "url": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/t6H9g0ug/architectury-neoforge-21.1.9.jar",
+              "size": 621834,
+              "hashes": {
+                "sha1": "e1a01a6437ce032b5e664c8072ca17ad08e40fd9",
+                "sha512": "715f2b934390ef8242f5bcef1f2045eb865d0932c89a2d36cea0a4bd03717ec8aace590d211b2fadadd5068e114fb6b6a0abab7ff16ae25c90d65d8d0d2e3c44"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "21.1.9+fabric",
+          "source": "modrinth",
+          "published": "2026-09-10T15:05:03.787647Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.2"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "architectury-fabric-21.1.9.jar",
+              "url": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/Jmfixwxe/architectury-fabric-21.1.9.jar",
+              "size": 624046,
+              "hashes": {
+                "sha1": "0f04392a752c3e75d95c3342ec43163b65fbd088",
+                "sha512": "577e8102cf1026e575c84528155f9a4a542692fbbef7766ca2ebdfd0e785312653f77a893f592d036ccfb3a87d6d89988862814ed3c8f8b8c49c95ce0ecb375b"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "20.1.14+fabric",
+          "source": "modrinth",
+          "published": "2026-09-10T15:02:44.530309Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.1.2"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "architectury-fabric-20.1.14.jar",
+              "url": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/k9DCEQ4B/architectury-fabric-20.1.14.jar",
+              "size": 622802,
+              "hashes": {
+                "sha1": "3b64f1930f5ec852ab2332ae78fa864a1098dabe",
+                "sha512": "0dfe72d4bf98db09b72fef7dd9d2cd0c7d817781015bf339075a2bae2d3950cce4c35b5433c1eda0ac7f713eeca869bd850eb5eef43130e93c55da712e3cc19a"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
           "version": "21.1.8+neoforge",
           "source": "modrinth",
           "published": "2026-09-09T12:24:44.727844Z",
@@ -59,78 +131,6 @@
               "hashes": {
                 "sha1": "b42b474378fa653b784a2e0cee030af3efcd81a5",
                 "sha512": "cf1a6d8714e1aaa6a48d24c4b123876c500e01f8d10812057edde3256cab2450713524c44f90d185bdff34da413303fb781260bb9470b3d46b47a39ee4b0c28c"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "21.1.8+fabric",
-          "source": "modrinth",
-          "published": "2026-09-09T12:24:44.726583Z",
-          "prerelease": false,
-          "minecraft": [
-            "26.2"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "architectury-fabric-21.1.8.jar",
-              "url": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/3iJSN9Sa/architectury-fabric-21.1.8.jar",
-              "size": 622155,
-              "hashes": {
-                "sha1": "247e47ed9fb1eb83259f76ee00fc6027e412951d",
-                "sha512": "40be21f33be139db894af8f457847aaad340ab8bc20f9d0bfdc95e9160a36f7fe771a05cd29368e10efde9f52c03ac9eeeea6c21ffa81ffca802ba949239b9e7"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "20.1.13+neoforge",
-          "source": "modrinth",
-          "published": "2026-09-09T11:33:10.335612Z",
-          "prerelease": false,
-          "minecraft": [
-            "26.1.2"
-          ],
-          "loaders": [
-            "neoforge"
-          ],
-          "files": [
-            {
-              "name": "architectury-neoforge-20.1.13.jar",
-              "url": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/DfIq2aeZ/architectury-neoforge-20.1.13.jar",
-              "size": 617697,
-              "hashes": {
-                "sha1": "78ae30e5c264b7df2e40fd8bb2b9e5c90163a7f1",
-                "sha512": "bac7c5defbde852047a85ce4da51c8826187bb4918934c85ecd16e986e98c9583e02207de057975ea6922fb68756ffd4404bec8823331546a1467072711ef893"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "21.0.7+fabric",
-          "source": "modrinth",
-          "published": "2026-08-02T17:03:28.000032Z",
-          "prerelease": false,
-          "minecraft": [
-            "26.2"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "architectury-fabric-21.0.7.jar",
-              "url": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/1yQC4VvP/architectury-fabric-21.0.7.jar",
-              "size": 587038,
-              "hashes": {
-                "sha1": "7c00161fc93303ba504f02f6bf3e3f42b99e1d84",
-                "sha512": "deffcad73b8f73d611d8e43ddad3b380e7896ba53e4b4f3660ab877b9c4ba20561e498888b17456b2b8819fb902e2070760613ce6fec9e1f1082990014e92dd4"
               },
               "primary": true
             }
@@ -212,7 +212,7 @@
           ]
         }
       ],
-      "latest": "21.1.8+neoforge"
+      "latest": "21.1.9+neoforge"
     },
     "axiom": {
       "name": "Axiom",
@@ -1110,6 +1110,33 @@
       },
       "releases": [
         {
+          "version": "5.24-fabric",
+          "source": "modrinth",
+          "published": "2026-09-10T15:38:16.522019Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.1",
+            "26.1.1",
+            "26.1.2",
+            "26.2"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "bluemap-5.24-fabric.jar",
+              "url": "https://cdn.modrinth.com/data/swbUV1cr/versions/xvccCRD9/bluemap-5.24-fabric.jar",
+              "size": 6528864,
+              "hashes": {
+                "sha1": "8d1dac9455f41c53eae62f7e15a0abc0b86ab8a4",
+                "sha512": "cb81b5382b58837b8dfb92f97e9234ea15b1a4125ec8b57913f06f9d0baf29f0091c2b9dbd189c97aa75ae4832c5acc4c670fb4afbaa67b0ea8b7e9c0f7bbe13"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
           "version": "5.23-fabric",
           "source": "modrinth",
           "published": "2026-08-06T17:05:50.678195Z",
@@ -1158,33 +1185,6 @@
               "hashes": {
                 "sha1": "df1947ae2b0ec6de78ed2c70223294d493031641",
                 "sha512": "ec597df7e974f1f28baa15325373442968c9643a157a6d2627cd5c36f8841c3023f2c08023d203bcfa7e0e51bce69d4623ba712babb84da73bd40f0e0c7f4dbd"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "5.21-fabric",
-          "source": "modrinth",
-          "published": "2026-06-16T23:33:28.666798Z",
-          "prerelease": false,
-          "minecraft": [
-            "26.1",
-            "26.1.1",
-            "26.1.2",
-            "26.2"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "bluemap-5.21-fabric.jar",
-              "url": "https://cdn.modrinth.com/data/swbUV1cr/versions/9m8tLuL5/bluemap-5.21-fabric.jar",
-              "size": 6494186,
-              "hashes": {
-                "sha1": "18e711ea04cbe39dfbb07c10c478e06cbfc001f9",
-                "sha512": "c262c19bf7a61041aa19bc88954bc7880ebae3683f475fd2ae72c0631ced4a433272f3ff1650742814dd0b8e4200e16b24e712bde09b5947f8c0e54216b3fdd2"
               },
               "primary": true
             }
@@ -1276,7 +1276,7 @@
           ]
         }
       ],
-      "latest": "5.23-fabric"
+      "latest": "5.24-fabric"
     },
     "botinventory-carpet": {
       "name": "BotInventory",
@@ -3049,6 +3049,30 @@
       },
       "releases": [
         {
+          "version": "0.160.3+26.3",
+          "source": "modrinth",
+          "published": "2026-09-10T17:47:42.250162Z",
+          "prerelease": true,
+          "minecraft": [
+            "26.3-rc-1"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "fabric-api-0.160.3+26.3.jar",
+              "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/QfyrYezy/fabric-api-0.160.3%2B26.3.jar",
+              "size": 2584156,
+              "hashes": {
+                "sha1": "8a8744b8bba955917bc33df055c9265528982899",
+                "sha512": "ab97f5860d4bdfb5542c82da1aedff9c094a74252e77cf91d860b916567246291bed16493881cecbed27e66a99ac740a1b395fc92373f72a8b679658f3ff17fd"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
           "version": "0.160.2+26.3",
           "source": "modrinth",
           "published": "2026-09-09T08:24:16.893675Z",
@@ -3091,30 +3115,6 @@
               "hashes": {
                 "sha1": "b5c81d30de6cfe379688a56e1931a34c520560d8",
                 "sha512": "8d562900908da5bd80f6ca0e86ffc95c5332ed3c4e9f420a210a8a96434a659b6396d86ee59ade0ca744b71eea0d6dd75daffe0d4e09d373f439716b6f43c409"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "0.160.0+26.3",
-          "source": "modrinth",
-          "published": "2026-09-07T17:58:08.735164Z",
-          "prerelease": true,
-          "minecraft": [
-            "26.3-pre-2"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "fabric-api-0.160.0+26.3.jar",
-              "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/o9uChmGq/fabric-api-0.160.0%2B26.3.jar",
-              "size": 2582954,
-              "hashes": {
-                "sha1": "b290eb13fa2728c9ac452e83ad87c3dbc555de12",
-                "sha512": "0f9fb41ec3e480e7680e1640f90fb82a9298f5848c049ded3be47605615c3117fc17fc7acab59ec145dd4653422b742df5c5f137608d243d9aa4bf2d9ba2427d"
               },
               "primary": true
             }
@@ -9342,6 +9342,30 @@
       },
       "releases": [
         {
+          "version": "2.14.0+26.3",
+          "source": "modrinth",
+          "published": "2026-09-11T11:17:36.928109Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.3-rc-1"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "styled-chat-2.14.0+26.3.jar",
+              "url": "https://cdn.modrinth.com/data/doqSKB0e/versions/HQ91YnMY/styled-chat-2.14.0%2B26.3.jar",
+              "size": 493972,
+              "hashes": {
+                "sha1": "4fec918083d641c2394ab258ffbdd7025105df1f",
+                "sha512": "c373aa2688e21bf51489b8f2934216630aa981fc0816ad480772549705cbab28d7e97c4eebee553826c10d846bcd5076e98e475a54d2f28a98da2b5c2c14271f"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
           "version": "2.13.0+26.2",
           "source": "modrinth",
           "published": "2026-06-16T19:08:08.987800Z",
@@ -9384,32 +9408,6 @@
               "hashes": {
                 "sha1": "3649f0bd1b41543b5327e05e8802b7faf609920c",
                 "sha512": "00fb483310d05fc914153f4e37f1a4fec88b6c741d43d1ae49805529e821cedd2fc709da6fab2214fc821ec2f8bcbda0b42db162bb851b1d1112966e4dbaf800"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "2.12.0-pre.1+26.1",
-          "source": "modrinth",
-          "published": "2026-03-25T10:16:01.371332Z",
-          "prerelease": false,
-          "minecraft": [
-            "26.1",
-            "26.1.1",
-            "26.1.2"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "styled-chat-2.12.0-pre.1+26.1.jar",
-              "url": "https://cdn.modrinth.com/data/doqSKB0e/versions/V5imDrbM/styled-chat-2.12.0-pre.1%2B26.1.jar",
-              "size": 501270,
-              "hashes": {
-                "sha1": "43205f93959be902e6eff4f62f8db6841fa63e21",
-                "sha512": "15db6b24d32d46547f0bf0cfa669ad3d027604135a72869ea4280919c95045b59d1e62b2249ca77157da30db6337de3f790c16c24e5e17bbb5a84c21d96a86e3"
               },
               "primary": true
             }
@@ -9471,7 +9469,7 @@
           ]
         }
       ],
-      "latest": "2.13.0+26.2"
+      "latest": "2.14.0+26.3"
     },
     "syncmatica": {
       "name": "Syncmatica",
@@ -10296,6 +10294,108 @@
       },
       "releases": [
         {
+          "version": "fabric-26.2-26.5.0",
+          "source": "modrinth",
+          "published": "2026-09-10T11:44:27.035690Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.2"
+          ],
+          "loaders": [
+            "fabric",
+            "quilt"
+          ],
+          "files": [
+            {
+              "name": "xaerominimap-fabric-26.2-26.5.0.jar",
+              "url": "https://cdn.modrinth.com/data/1bokaNcj/versions/tBIPWIKW/xaerominimap-fabric-26.2-26.5.0.jar",
+              "size": 2221887,
+              "hashes": {
+                "sha1": "40282debf4cd8e91712ba26d90e78f2e3eb067e1",
+                "sha512": "b00df8bb410fae12b08788044f2f03cec34bfc4506da419d11d364e2f229b814dbb272d297fbe4b0cdfac18beeeed4dc8f1bdfc96fb113867857527e31965049"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "fabric-26.1.2-26.5.0",
+          "source": "modrinth",
+          "published": "2026-09-10T11:43:27.463583Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.1",
+            "26.1.1",
+            "26.1.2"
+          ],
+          "loaders": [
+            "fabric",
+            "quilt"
+          ],
+          "files": [
+            {
+              "name": "xaerominimap-fabric-26.1.2-26.5.0.jar",
+              "url": "https://cdn.modrinth.com/data/1bokaNcj/versions/kWf58HtH/xaerominimap-fabric-26.1.2-26.5.0.jar",
+              "size": 2216048,
+              "hashes": {
+                "sha1": "f7ed556df35e06ae476c76d98c41ba42e999fbb1",
+                "sha512": "5faeb5fad6059d7d7a4d2c8159ecf8e641700ea09652e6a01fcc9e3498654ba5aa778648d57cdd96c04dabe1aa80f2699490facaf67f8f8ada0afe86c74a00e2"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "fabric-1.21.11-26.5.0",
+          "source": "modrinth",
+          "published": "2026-09-10T11:43:11.198364Z",
+          "prerelease": false,
+          "minecraft": [
+            "1.21.11"
+          ],
+          "loaders": [
+            "fabric",
+            "quilt"
+          ],
+          "files": [
+            {
+              "name": "xaerominimap-fabric-1.21.11-26.5.0.jar",
+              "url": "https://cdn.modrinth.com/data/1bokaNcj/versions/VNYP3B0c/xaerominimap-fabric-1.21.11-26.5.0.jar",
+              "size": 2203817,
+              "hashes": {
+                "sha1": "eabdde26b6ac762bbf6283f5b5e07fd1504acc94",
+                "sha512": "8d9d2eccd96f5c446ff0e88d7680cc8fee2d7a4a9192a6fdba71cefd503c5c7c419221320628a55576d90431fc86caff215566ff3dd52500a8cc5702d1559394"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "fabric-1.21.1-26.5.0",
+          "source": "modrinth",
+          "published": "2026-09-10T11:39:38.129289Z",
+          "prerelease": false,
+          "minecraft": [
+            "1.21.1"
+          ],
+          "loaders": [
+            "fabric",
+            "quilt"
+          ],
+          "files": [
+            {
+              "name": "xaerominimap-fabric-1.21.1-26.5.0.jar",
+              "url": "https://cdn.modrinth.com/data/1bokaNcj/versions/ZD6hK4GV/xaerominimap-fabric-1.21.1-26.5.0.jar",
+              "size": 2233763,
+              "hashes": {
+                "sha1": "b9cec1acb286b6d7c05759c0c1e4b8a04f28d785",
+                "sha512": "0064c7f0a947717e8cdc22f83ecea077dc9f38c3a83d699d6d5ff41bd7f02700e4ad9b012636369210f4f9dfee35e39b8aad340488448104aca45395642dd136"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
           "version": "fabric-26.2-26.4.2",
           "source": "modrinth",
           "published": "2026-07-17T08:58:12.713664Z",
@@ -10315,58 +10415,6 @@
               "hashes": {
                 "sha1": "2c1f7688658101cc7e76b8469016bbebcf176a58",
                 "sha512": "dba00f85308524d9d65c559bc48456c8b65cef58eb54891e069cbaacb6e2f633d279b0d65325f510e3d9e590b67e6f5bdb7c816ada484a0d018850267fbc9131"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "fabric-26.1.2-26.4.2",
-          "source": "modrinth",
-          "published": "2026-07-17T08:57:20.270758Z",
-          "prerelease": false,
-          "minecraft": [
-            "26.1",
-            "26.1.1",
-            "26.1.2"
-          ],
-          "loaders": [
-            "fabric",
-            "quilt"
-          ],
-          "files": [
-            {
-              "name": "xaerominimap-fabric-26.1.2-26.4.2.jar",
-              "url": "https://cdn.modrinth.com/data/1bokaNcj/versions/fklv23QW/xaerominimap-fabric-26.1.2-26.4.2.jar",
-              "size": 2216030,
-              "hashes": {
-                "sha1": "861266c190489fa2b5df121469bd279ba0508223",
-                "sha512": "e11634beba35c11c10c887b695769e54c2e04ad15b7c98c6342bdcb8aaaf85b7be29d465ade83172a99cc7bb36ea9ecd48e6fbaf4a8baf7cd615669c4beb46b0"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "fabric-1.21.11-26.4.2",
-          "source": "modrinth",
-          "published": "2026-07-17T08:56:08.481152Z",
-          "prerelease": false,
-          "minecraft": [
-            "1.21.11"
-          ],
-          "loaders": [
-            "fabric",
-            "quilt"
-          ],
-          "files": [
-            {
-              "name": "xaerominimap-fabric-1.21.11-26.4.2.jar",
-              "url": "https://cdn.modrinth.com/data/1bokaNcj/versions/8MdqDp18/xaerominimap-fabric-1.21.11-26.4.2.jar",
-              "size": 2203673,
-              "hashes": {
-                "sha1": "8e7405597308d68c6e030876262458ce0b872c2c",
-                "sha512": "7df415f04472bf9de4cf5c2b6d11e640c1018d121829e859ea92bb61c75996c6a7fced5707e70743ac9a33aed725e5501e143f82a03f17fc022a1a8ed32c6238"
               },
               "primary": true
             }
@@ -10423,31 +10471,6 @@
           ]
         },
         {
-          "version": "fabric-26.2-26.3.0",
-          "source": "modrinth",
-          "published": "2026-07-13T14:55:29.657925Z",
-          "prerelease": false,
-          "minecraft": [
-            "26.2"
-          ],
-          "loaders": [
-            "fabric",
-            "quilt"
-          ],
-          "files": [
-            {
-              "name": "xaerominimap-fabric-26.2-26.3.0.jar",
-              "url": "https://cdn.modrinth.com/data/1bokaNcj/versions/d1F2ppTa/xaerominimap-fabric-26.2-26.3.0.jar",
-              "size": 2218785,
-              "hashes": {
-                "sha1": "23db3cbd4b783e6d41a5ca4dd982f43e755e10bd",
-                "sha512": "619d6acf321da44ba757b470d9abe28aa974777fc72218f384fb04d365bb13ed6de1d1e6166c3300883541c43c5212cca0a7d96db1ddf1f5578131313915aa88"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
           "version": "fabric-1.21.1-26.3.0",
           "source": "modrinth",
           "published": "2026-07-13T12:32:39.939812Z",
@@ -10467,31 +10490,6 @@
               "hashes": {
                 "sha1": "ade83613e5ad54fc3c5a6322c8b92493a8110788",
                 "sha512": "aae4bb032eecb2d44ce1a78f4c542f18aeca386285e1aaa452ac77022aa8ad1f3bf641e99c0ae1c0e6416272f61d58d5847f86c8b16ebe3ee63ffd1e7aefb496"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "fabric-1.21.1-26.2.0",
-          "source": "modrinth",
-          "published": "2026-07-08T10:40:09.390178Z",
-          "prerelease": false,
-          "minecraft": [
-            "1.21.1"
-          ],
-          "loaders": [
-            "fabric",
-            "quilt"
-          ],
-          "files": [
-            {
-              "name": "xaerominimap-fabric-1.21.1-26.2.0.jar",
-              "url": "https://cdn.modrinth.com/data/1bokaNcj/versions/JVCvGnhe/xaerominimap-fabric-1.21.1-26.2.0.jar",
-              "size": 2220634,
-              "hashes": {
-                "sha1": "9b4bdb594f6772ef05d7e6930c5f1cee23ef69cb",
-                "sha512": "bf3bf6fcace4d1b955e22c99df9dcaff5ada6d486afe87508d353acf607ec7821157d173999a09632f989e8105aa6b14ef4445340fa1916b794d1094e1d8b5ab"
               },
               "primary": true
             }
@@ -10576,7 +10574,7 @@
           ]
         }
       ],
-      "latest": "fabric-26.2-26.4.2"
+      "latest": "fabric-26.2-26.5.0"
     }
   },
   "profiles": {
