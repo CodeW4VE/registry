@@ -3049,6 +3049,30 @@
       },
       "releases": [
         {
+          "version": "0.160.4+26.3",
+          "source": "modrinth",
+          "published": "2026-09-11T16:47:17.247308Z",
+          "prerelease": true,
+          "minecraft": [
+            "26.3-rc-2"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "fabric-api-0.160.4+26.3.jar",
+              "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/i5JXnZn6/fabric-api-0.160.4%2B26.3.jar",
+              "size": 2587950,
+              "hashes": {
+                "sha1": "86cceb70e8a434e4a87ffa111347a912d9764677",
+                "sha512": "29d746fae1f4d6e9878aa580f90341ecd2ab665f97a48439e2f226bbd8c79d151dc5ad7a4306b9e488331c14b9a14ad7c471b11fa154070a6060a46f9ab0463c"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
           "version": "0.160.3+26.3",
           "source": "modrinth",
           "published": "2026-09-10T17:47:42.250162Z",
@@ -3091,30 +3115,6 @@
               "hashes": {
                 "sha1": "cab68347323dae750347aa5f18e404fefcbdf47b",
                 "sha512": "d664db31bee0ac52e92d1010ee4600dae741ace5e0bc770d86b85fffdca52e63760635cd580675c175db805f2edc0815026953bf13e2660d0a6b5bca9f332e63"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "0.160.1+26.3",
-          "source": "modrinth",
-          "published": "2026-09-08T14:25:20.957684Z",
-          "prerelease": true,
-          "minecraft": [
-            "26.3-pre-3"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "fabric-api-0.160.1+26.3.jar",
-              "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/nJUuh2dv/fabric-api-0.160.1%2B26.3.jar",
-              "size": 2582949,
-              "hashes": {
-                "sha1": "b5c81d30de6cfe379688a56e1931a34c520560d8",
-                "sha512": "8d562900908da5bd80f6ca0e86ffc95c5332ed3c4e9f420a210a8a96434a659b6396d86ee59ade0ca744b71eea0d6dd75daffe0d4e09d373f439716b6f43c409"
               },
               "primary": true
             }
@@ -6799,6 +6799,30 @@
       },
       "releases": [
         {
+          "version": "0.3.0-alpha.0.4+26.3-rc-2",
+          "source": "modrinth",
+          "published": "2026-09-12T09:16:24.024646Z",
+          "prerelease": true,
+          "minecraft": [
+            "26.3-rc-2"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "ScalableLux-fabric-0.3.0-alpha.0.4-all.jar",
+              "url": "https://cdn.modrinth.com/data/Ps1zyz6x/versions/z2JqNJyJ/ScalableLux-fabric-0.3.0-alpha.0.4-all.jar",
+              "size": 193027,
+              "hashes": {
+                "sha1": "b363d41dbe12000ed8290cf4ea85c888093fa10a",
+                "sha512": "4684717bc68f78ddf4166edd7fa78746b5e1770573f1eb15acfd696736b7a96ec2adcb49bc24ce02281e6e2ccb6003a565849fe91ed3a9f7ff686f55f65d35de"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
           "version": "0.3.0-alpha.0.7+1.21.1",
           "source": "modrinth",
           "published": "2026-08-16T13:37:58.569409Z",
@@ -6841,30 +6865,6 @@
               "hashes": {
                 "sha1": "3c6b7bee20932f81dd1182c5426bfc4d5e482ee3",
                 "sha512": "a15a9d52f186dff23044c913f827b44c5ba223f6b3c4fda52805d2f7ebd8f07741d5ede79fbc5bc2856676b1fcf368c1620347c03fd1773159eda234ec05437f"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "0.3.0-alpha.0.3+1.21.11",
-          "source": "modrinth",
-          "published": "2026-07-09T17:17:54.422691Z",
-          "prerelease": true,
-          "minecraft": [
-            "1.21.11"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "ScalableLux-fabric-0.3.0-alpha.0.3-all.jar",
-              "url": "https://cdn.modrinth.com/data/Ps1zyz6x/versions/ju27pK32/ScalableLux-fabric-0.3.0-alpha.0.3-all.jar",
-              "size": 195351,
-              "hashes": {
-                "sha1": "e834feeca2246156f01df257da910d47dd9a5916",
-                "sha512": "521e1c4abc4193141d5894b686fa5314e89f4b0031aaf8bf59280d562c68b90abd71497634ddde84406c68b892713cefd89e622528a2984b65c0a627ca392f42"
               },
               "primary": true
             }
