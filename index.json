@@ -8392,6 +8392,33 @@
       },
       "releases": [
         {
+          "version": "1.10.185-fabric",
+          "source": "modrinth",
+          "published": "2026-09-12T11:50:43.986020Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.1",
+            "26.1.1",
+            "26.1.2",
+            "26.2"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "spark-1.10.185-fabric.jar",
+              "url": "https://cdn.modrinth.com/data/l6YH9Als/versions/RH6bRLqh/spark-1.10.185-fabric.jar",
+              "size": 3975801,
+              "hashes": {
+                "sha1": "cc8dfe9817ea7aed09eff62db22e364b9d2963ff",
+                "sha512": "d2082e47d95cb2da77cafb20c6164ead13cbed717498dba4ae0d17adbe3425315ada32038a89ca0ae871773086e139a3b133bff1e8f8a96d8ef5028f4bea0758"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
           "version": "1.10.173-fabric",
           "source": "modrinth",
           "published": "2026-06-18T21:12:12.918302Z",
@@ -8439,30 +8466,6 @@
               "hashes": {
                 "sha1": "fc1dbd31d83599a9af17393e2c9b461521ac343f",
                 "sha512": "e0697663689c5459b7ed92f21d86b0191bbe7f6327ac7e8972ad9f6318ef7a8ca93da3a8495459ee6f1443cadff7656b150ea0efc81f8cf1300c9301483a2fb3"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "1.10.170-fabric",
-          "source": "modrinth",
-          "published": "2026-03-26T07:43:06.831770Z",
-          "prerelease": false,
-          "minecraft": [
-            "1.21.11"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "spark-1.10.170-fabric.jar",
-              "url": "https://cdn.modrinth.com/data/l6YH9Als/versions/gonLOAU1/spark-1.10.170-fabric.jar",
-              "size": 3921256,
-              "hashes": {
-                "sha1": "2a3745baa44e11672c4befe3beeccef758581f80",
-                "sha512": "7460ac92a1241f373238b7afe3c9e8dc67101d3cc6d95322f9a86b7db4dc3be5da5e3ce80ad9653bff682f796a79cd8384851e0ed757b468f2f52b6bde71cb00"
               },
               "primary": true
             }
@@ -8543,7 +8546,7 @@
           ]
         }
       ],
-      "latest": "1.10.173-fabric"
+      "latest": "1.10.185-fabric"
     },
     "stackdeobf": {
       "name": "StackDeobfuscator",
