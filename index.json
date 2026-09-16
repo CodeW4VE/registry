@@ -41,6 +41,54 @@
       },
       "releases": [
         {
+          "version": "22.0.1+fabric",
+          "source": "modrinth",
+          "published": "2026-09-15T20:21:42.903608Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.3"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "architectury-fabric-22.0.1.jar",
+              "url": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/q66myQEq/architectury-fabric-22.0.1.jar",
+              "size": 622447,
+              "hashes": {
+                "sha1": "6ef3af6c076e953e7781bedfe14a1566482e669f",
+                "sha512": "9b76e76ce2a919c55d26abb06054f5b97eaba75e25b06e9349f93974f77d38e1b6f007706bb4323654523924c0e5a06635aed1203ed5cad5c1bd0c7ac58a5896"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "22.0.1+neoforge",
+          "source": "modrinth",
+          "published": "2026-09-15T20:21:42.899785Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.3"
+          ],
+          "loaders": [
+            "neoforge"
+          ],
+          "files": [
+            {
+              "name": "architectury-neoforge-22.0.1.jar",
+              "url": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/3Cv08YHj/architectury-neoforge-22.0.1.jar",
+              "size": 622488,
+              "hashes": {
+                "sha1": "6d8cbc4edfeebddd6b2db422a3c5b0496390d123",
+                "sha512": "62244f031b1d41a47eca4882478a6d688816ca8ad94e01ea12b6c6443d26f9ad6cec6a456c1703d8813b7672e7357950dc8b003d87894508cf72b56f8204ca33"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
           "version": "21.1.9+neoforge",
           "source": "modrinth",
           "published": "2026-09-10T15:05:03.788280Z",
@@ -83,30 +131,6 @@
               "hashes": {
                 "sha1": "0f04392a752c3e75d95c3342ec43163b65fbd088",
                 "sha512": "577e8102cf1026e575c84528155f9a4a542692fbbef7766ca2ebdfd0e785312653f77a893f592d036ccfb3a87d6d89988862814ed3c8f8b8c49c95ce0ecb375b"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "20.1.14+fabric",
-          "source": "modrinth",
-          "published": "2026-09-10T15:02:44.530309Z",
-          "prerelease": false,
-          "minecraft": [
-            "26.1.2"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "architectury-fabric-20.1.14.jar",
-              "url": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/k9DCEQ4B/architectury-fabric-20.1.14.jar",
-              "size": 622802,
-              "hashes": {
-                "sha1": "3b64f1930f5ec852ab2332ae78fa864a1098dabe",
-                "sha512": "0dfe72d4bf98db09b72fef7dd9d2cd0c7d817781015bf339075a2bae2d3950cce4c35b5433c1eda0ac7f713eeca869bd850eb5eef43130e93c55da712e3cc19a"
               },
               "primary": true
             }
@@ -212,7 +236,7 @@
           ]
         }
       ],
-      "latest": "21.1.9+neoforge"
+      "latest": "22.0.1+fabric"
     },
     "axiom": {
       "name": "Axiom",
@@ -1110,81 +1134,84 @@
       },
       "releases": [
         {
-          "version": "5.24-fabric",
+          "version": "5.27-fabric",
           "source": "modrinth",
-          "published": "2026-09-10T15:38:16.522019Z",
+          "published": "2026-09-16T07:20:43.247387Z",
           "prerelease": false,
           "minecraft": [
             "26.1",
             "26.1.1",
             "26.1.2",
-            "26.2"
+            "26.2",
+            "26.3"
           ],
           "loaders": [
             "fabric"
           ],
           "files": [
             {
-              "name": "bluemap-5.24-fabric.jar",
-              "url": "https://cdn.modrinth.com/data/swbUV1cr/versions/xvccCRD9/bluemap-5.24-fabric.jar",
-              "size": 6528864,
+              "name": "bluemap-5.27-fabric.jar",
+              "url": "https://cdn.modrinth.com/data/swbUV1cr/versions/MX0sTM4l/bluemap-5.27-fabric.jar",
+              "size": 7025635,
               "hashes": {
-                "sha1": "8d1dac9455f41c53eae62f7e15a0abc0b86ab8a4",
-                "sha512": "cb81b5382b58837b8dfb92f97e9234ea15b1a4125ec8b57913f06f9d0baf29f0091c2b9dbd189c97aa75ae4832c5acc4c670fb4afbaa67b0ea8b7e9c0f7bbe13"
+                "sha1": "3bdb1400b8976cbf0fd4d78ed3f8c69ee4c24d6f",
+                "sha512": "bfc07f69c6582b892967e8b2cd11c37ac2cad2b1930f7e325c9acd6ddad389752f082f9f3d735e2d4e2528fa7888c152e29c1e28dcf68acc0afd368828b67d34"
               },
               "primary": true
             }
           ]
         },
         {
-          "version": "5.23-fabric",
+          "version": "5.26-fabric",
           "source": "modrinth",
-          "published": "2026-08-06T17:05:50.678195Z",
+          "published": "2026-09-15T23:27:30.206566Z",
           "prerelease": false,
           "minecraft": [
             "26.1",
             "26.1.1",
             "26.1.2",
-            "26.2"
+            "26.2",
+            "26.3"
           ],
           "loaders": [
             "fabric"
           ],
           "files": [
             {
-              "name": "bluemap-5.23-fabric.jar",
-              "url": "https://cdn.modrinth.com/data/swbUV1cr/versions/bR8uae8S/bluemap-5.23-fabric.jar",
-              "size": 6507617,
+              "name": "bluemap-5.26-fabric.jar",
+              "url": "https://cdn.modrinth.com/data/swbUV1cr/versions/D2AfEu6B/bluemap-5.26-fabric.jar",
+              "size": 7025670,
               "hashes": {
-                "sha1": "0a36c4e7cffcfaff28d23a17ccf7286101293c9b",
-                "sha512": "7997e47e89ddf69ccea187f8b2e52a278c9d4d3e77636f06b581e7166b7549f7c900d0867a827b81eb54823d804d4d422d040788a530559f27410a539450a91e"
+                "sha1": "fb844befacdaf5d21231cc8f9e35d6deec20aa19",
+                "sha512": "bccc4263694f97ad2107c76e875d44b8f97c1a345951c8a34c85e65fbfa3506df3217238c513c2b13a50300bf8105b153aa057be1c9a291dd70cec28e3a7b2b4"
               },
               "primary": true
             }
           ]
         },
         {
-          "version": "5.22-fabric",
+          "version": "5.25-fabric",
           "source": "modrinth",
-          "published": "2026-06-17T07:14:35.640358Z",
+          "published": "2026-09-15T16:24:21.767463Z",
           "prerelease": false,
           "minecraft": [
             "26.1",
             "26.1.1",
             "26.1.2",
-            "26.2"
+            "26.2",
+            "26.3"
           ],
           "loaders": [
             "fabric"
           ],
           "files": [
             {
-              "name": "bluemap-5.22-fabric.jar",
-              "url": "https://cdn.modrinth.com/data/swbUV1cr/versions/VTvifNPN/bluemap-5.22-fabric.jar",
-              "size": 6494225,
+              "name": "bluemap-5.25-fabric.jar",
+              "url": "https://cdn.modrinth.com/data/swbUV1cr/versions/p8hLlqrQ/bluemap-5.25-fabric.jar",
+              "size": 7025508,
               "hashes": {
-                "sha1": "df1947ae2b0ec6de78ed2c70223294d493031641",
-                "sha512": "ec597df7e974f1f28baa15325373442968c9643a157a6d2627cd5c36f8841c3023f2c08023d203bcfa7e0e51bce69d4623ba712babb84da73bd40f0e0c7f4dbd"
+                "sha1": "d057c87dfe95d963870a5051a63441b6f6810c38",
+                "sha512": "87d58b0fa729822f7b582e6b585c08ed21b022dbca4bdccc85986d04922dd17dc6e79fb00816727de9e647d6008c5866e9a0173b382cb3645dcb8ae8dc812142"
               },
               "primary": true
             }
@@ -1276,7 +1303,7 @@
           ]
         }
       ],
-      "latest": "5.24-fabric"
+      "latest": "5.27-fabric"
     },
     "botinventory-carpet": {
       "name": "BotInventory",
@@ -2298,6 +2325,30 @@
       },
       "releases": [
         {
+          "version": "2.9.0+26.3",
+          "source": "modrinth",
+          "published": "2026-09-15T20:20:38.540596Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.3"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "ChunkDebug-2.9.0+26.3.jar",
+              "url": "https://cdn.modrinth.com/data/zQxjhDPq/versions/7VvIfDve/ChunkDebug-2.9.0%2B26.3.jar",
+              "size": 198245,
+              "hashes": {
+                "sha1": "e61442ffba1cbd136e7056e7f8b1c0b97d3c2668",
+                "sha512": "91dffc22183fd8d31a131e83049db7d0aa7c9dc6ea46888b71d1a71d54d25ed17c887a5c32d6447cf1f07ee676149b07d17d73c21169e73fb321b91031c5b031"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
           "version": "2.8.0+26.2",
           "source": "modrinth",
           "published": "2026-06-17T19:39:03.842115Z",
@@ -2340,32 +2391,6 @@
               "hashes": {
                 "sha1": "e8e6d066197a57c2fcedc100d5b07d3f63d24132",
                 "sha512": "48efcb6059fd8b2483be87ad04bcd907a7f48d33d42578c6c3e6f1deac8f3041b9d9bdd499560d144b61ac3850406857cde7454ff031b2b2ff9960c5497c9664"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "2.7.2+26.1",
-          "source": "modrinth",
-          "published": "2026-04-10T20:41:47.295346Z",
-          "prerelease": false,
-          "minecraft": [
-            "26.1",
-            "26.1.1",
-            "26.1.2"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "ChunkDebug-2.7.2+26.1.jar",
-              "url": "https://cdn.modrinth.com/data/zQxjhDPq/versions/vN1zxc3Y/ChunkDebug-2.7.2%2B26.1.jar",
-              "size": 196003,
-              "hashes": {
-                "sha1": "3e973d8cfa1fee2baa5e1c4d16f50c2762e95e74",
-                "sha512": "028ec808a7a4964fec035c0d663bb9b6ada2b1e45559f161232b11679b9267f310a19f6f1a78d576d988ac00b6fbb1380209c221aced943fde6e8f6ea03f0ad6"
               },
               "primary": true
             }
@@ -2470,7 +2495,7 @@
           ]
         }
       ],
-      "latest": "2.8.0+26.2"
+      "latest": "2.9.0+26.3"
     },
     "command-suggest": {
       "name": "CommandSuggest",
@@ -2879,6 +2904,54 @@
       },
       "releases": [
         {
+          "version": "2.6.1+26.3",
+          "source": "modrinth",
+          "published": "2026-09-15T22:18:39.218873Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.3"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "EssentialAddons-2.6.1+26.3.jar",
+              "url": "https://cdn.modrinth.com/data/3WQaouc1/versions/z85W57NI/EssentialAddons-2.6.1%2B26.3.jar",
+              "size": 1366344,
+              "hashes": {
+                "sha1": "298384857dc02fa662c2cd18dd0ea3cc4b537002",
+                "sha512": "4ed8a6e019274c74b01dc7974dd9630426b202933f5810e96c4389131519412979eba0c45c2624c5d9e2eaa2bd656d9c2b289ea0fce980f9009b584102039433"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "2.6.0+26.3",
+          "source": "modrinth",
+          "published": "2026-09-15T21:22:15.985600Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.3"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "EssentialAddons-2.6.0+26.3.jar",
+              "url": "https://cdn.modrinth.com/data/3WQaouc1/versions/IKrPQcy3/EssentialAddons-2.6.0%2B26.3.jar",
+              "size": 1362208,
+              "hashes": {
+                "sha1": "286091a6f38aa23c289f154430e066d8ae0abe9f",
+                "sha512": "80c0acfd832bc54a4aa706f7e6c2fcfeb25e9832473d1637356cb0af2c5809e65b15cb5c096e1f69c26b898925ceba0f3b7ffe84c8d413f0f3c21378b585a9be"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
           "version": "2.5.1+26.2",
           "source": "modrinth",
           "published": "2026-08-09T20:31:06.164942Z",
@@ -2921,31 +2994,6 @@
               "hashes": {
                 "sha1": "9dd68670bc4d83aae6fcc6584009ecd853b85fd0",
                 "sha512": "4268d6d0c1d1a361008f527cbacabe6c3717e306c551fd8118e1f0d564dd7b67153f919b63656b521634b0acb17bd82ee7d80a79af396155ace6f1e7ed70e287"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "2.4.3+26.1.1",
-          "source": "modrinth",
-          "published": "2026-05-29T01:36:20.396753Z",
-          "prerelease": false,
-          "minecraft": [
-            "26.1.1",
-            "26.1.2"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "EssentialAddons-2.4.3+26.1.1.jar",
-              "url": "https://cdn.modrinth.com/data/3WQaouc1/versions/xVk8vmU4/EssentialAddons-2.4.3%2B26.1.1.jar",
-              "size": 1287999,
-              "hashes": {
-                "sha1": "d2552573df8d0e3f0b99d8142efe62b1e5d3d325",
-                "sha512": "840b96df4df24ed25401da4e895fea70359433ddde49914b3e56b63802838e74c0198844e8ae085495b7961809182a86e367f753919c5a22ea731dcd7cbe79b5"
               },
               "primary": true
             }
@@ -3026,7 +3074,7 @@
           ]
         }
       ],
-      "latest": "2.5.1+26.2"
+      "latest": "2.6.1+26.3"
     },
     "fabric-api": {
       "name": "Fabric API",
@@ -3052,9 +3100,9 @@
           "version": "0.160.5+26.3",
           "source": "modrinth",
           "published": "2026-09-14T20:06:49.529032Z",
-          "prerelease": true,
+          "prerelease": false,
           "minecraft": [
-            "26.3-rc-3"
+            "26.3"
           ],
           "loaders": [
             "fabric"
@@ -3337,7 +3385,7 @@
           ]
         }
       ],
-      "latest": "0.160.0+26.2"
+      "latest": "0.160.5+26.3"
     },
     "fabric-language-kotlin": {
       "name": "Fabric Language Kotlin",
@@ -3411,7 +3459,8 @@
             "26.1",
             "26.1.1",
             "26.1.2",
-            "26.2"
+            "26.2",
+            "26.3"
           ],
           "loaders": [
             "fabric"
@@ -5186,6 +5235,31 @@
       },
       "releases": [
         {
+          "version": "mc26.3-0.26.0-fabric",
+          "source": "modrinth",
+          "published": "2026-09-15T21:38:55.831870Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.3"
+          ],
+          "loaders": [
+            "fabric",
+            "quilt"
+          ],
+          "files": [
+            {
+              "name": "lithium-fabric-0.26.0+mc26.3.jar",
+              "url": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/UnOXzpHc/lithium-fabric-0.26.0%2Bmc26.3.jar",
+              "size": 915419,
+              "hashes": {
+                "sha1": "a39dfde53fbc8a0231b98ddfb6d1ea9c5a847215",
+                "sha512": "b97609ba9fdff2a17f5d1df23600420a428ab65b2b4b3fe0c5610aa71cc535ace119e46477698f7c2ec0a16fe7460d17d6f4bc8b9a1aa2c216a28ea9b785b8f2"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
           "version": "mc26.2-0.25.3-fabric",
           "source": "modrinth",
           "published": "2026-07-29T12:19:55.348704Z",
@@ -5414,7 +5488,7 @@
           ]
         }
       ],
-      "latest": "mc26.2-0.25.3-fabric"
+      "latest": "mc26.3-0.26.0-fabric"
     },
     "malilib": {
       "name": "MaLiLib",
@@ -5918,7 +5992,38 @@
       ],
       "id": "mankelist",
       "conflicts": [],
+      "modrinth_info": {
+        "id": "cvuaajxS",
+        "status": "approved",
+        "client_side": "optional",
+        "server_side": "required"
+      },
       "releases": [
+        {
+          "version": "1.0.0+1.21",
+          "source": "modrinth",
+          "published": "2026-08-14T21:15:33.465474Z",
+          "prerelease": false,
+          "minecraft": [
+            "1.21",
+            "1.21.1"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "mankelist-1.0.0+1.21.jar",
+              "url": "https://cdn.modrinth.com/data/cvuaajxS/versions/lwJdzmvR/mankelist-1.0.0%2B1.21.jar",
+              "size": 474049,
+              "hashes": {
+                "sha1": "69d0f3700cbff0cb12e4f004fbe38b4ee4df2727",
+                "sha512": "ae9272dd9b543724ab234cddb90b6384311f5d50f274a79c9deb48602247ef348fdae590b9c890af161878b473dd2c9400e5443988e613595d47abc91eeaeddd"
+              },
+              "primary": true
+            }
+          ]
+        },
         {
           "version": "1.0.0",
           "tag": "v1.0.0",
@@ -5948,7 +6053,7 @@
           ]
         }
       ],
-      "latest": "1.0.0"
+      "latest": "1.0.0+1.21"
     },
     "mcdreforged": {
       "name": "MCDReforged",
@@ -6649,7 +6754,38 @@
       ],
       "id": "regioncast",
       "conflicts": [],
+      "modrinth_info": {
+        "id": "t75vYk7n",
+        "status": "approved",
+        "client_side": "optional",
+        "server_side": "required"
+      },
       "releases": [
+        {
+          "version": "1.0.1+1.21",
+          "source": "modrinth",
+          "published": "2026-08-14T21:15:35.274989Z",
+          "prerelease": false,
+          "minecraft": [
+            "1.21",
+            "1.21.1"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "regioncast-1.0.1+1.21.jar",
+              "url": "https://cdn.modrinth.com/data/t75vYk7n/versions/UdYmoyWK/regioncast-1.0.1%2B1.21.jar",
+              "size": 124052,
+              "hashes": {
+                "sha1": "777e5dad33a719f3cc07cff46d8d2100dffa3a98",
+                "sha512": "25404507ea435f3fde9260a0282c5108aab39fad30eb8d1d244ae05f1a0374d1066e9eefe695ea5c899f2931413064455ca6105b7653d7b1c6c65c4ce1e1b140"
+              },
+              "primary": true
+            }
+          ]
+        },
         {
           "version": "1.0.1",
           "tag": "v1.0.1",
@@ -6707,7 +6843,7 @@
           ]
         }
       ],
-      "latest": "1.0.1"
+      "latest": "1.0.1+1.21"
     },
     "ripdeepslate": {
       "name": "RipDeepslate",
@@ -6804,7 +6940,8 @@
           "published": "2026-09-12T09:16:24.024646Z",
           "prerelease": true,
           "minecraft": [
-            "26.3-rc-2"
+            "26.3-rc-2",
+            "26.3"
           ],
           "loaders": [
             "fabric"
@@ -9350,7 +9487,8 @@
           "published": "2026-09-11T11:17:36.928109Z",
           "prerelease": false,
           "minecraft": [
-            "26.3-rc-1"
+            "26.3-rc-1",
+            "26.3"
           ],
           "loaders": [
             "fabric"
@@ -10303,7 +10441,8 @@
           "prerelease": false,
           "minecraft": [
             "26.3-rc-2",
-            "26.3-rc-3"
+            "26.3-rc-3",
+            "26.3"
           ],
           "loaders": [
             "fabric",
