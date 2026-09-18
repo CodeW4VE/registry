@@ -3824,7 +3824,8 @@
             "26.1",
             "26.1.1",
             "26.1.2",
-            "26.2"
+            "26.2",
+            "26.3"
           ],
           "loaders": [
             "fabric"
@@ -6071,6 +6072,30 @@
       "tags": [],
       "releases": [
         {
+          "version": "2.16.0b1",
+          "source": "pypi",
+          "published": "2026-09-17T19:40:13.804212Z",
+          "prerelease": true,
+          "files": [
+            {
+              "name": "mcdreforged-2.16.0b1-py3-none-any.whl",
+              "url": "https://files.pythonhosted.org/packages/d8/c7/4a9f4416926cd0d813e5b29e9f5e7a15c9973f7dc9791c8d2a4b5a2a9c96/mcdreforged-2.16.0b1-py3-none-any.whl",
+              "size": 310996,
+              "hashes": {
+                "sha256": "736a57b1df111dcb2ea981d5848a92087dc350f8d4325e333a44408818253d2d"
+              }
+            },
+            {
+              "name": "mcdreforged-2.16.0b1.tar.gz",
+              "url": "https://files.pythonhosted.org/packages/03/01/d495c8e0616918af63cc3c616f72c041233fa8f84ec54dc9b00fccd4ff18/mcdreforged-2.16.0b1.tar.gz",
+              "size": 240163,
+              "hashes": {
+                "sha256": "aba6b6f6788f73fa4dbfedf62d7ad8dd964035694464d3a5a73a407d2dd3bd79"
+              }
+            }
+          ]
+        },
+        {
           "version": "2.16.0a5",
           "source": "pypi",
           "published": "2026-09-16T12:27:15.909974Z",
@@ -6117,17 +6142,9 @@
               }
             }
           ]
-        },
-        {
-          "version": "2.15.7",
-          "tag": "v2.15.7",
-          "source": "github",
-          "published": "2026-01-12T18:27:26Z",
-          "prerelease": false,
-          "files": []
         }
       ],
-      "latest": "2.15.7"
+      "latest": "2.16.0b1"
     },
     "minecraft-data-api": {
       "name": "MinecraftDataAPI",
