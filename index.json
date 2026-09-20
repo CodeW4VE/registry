@@ -6377,9 +6377,33 @@
       },
       "releases": [
         {
-          "version": "v0.3.14-mc26.1.1",
+          "version": "v0.3.15-mc26.3",
           "source": "modrinth",
-          "published": "2026-04-06T18:30:18.824865Z",
+          "published": "2026-09-19T12:40:21.975119Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.3"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "pca-protocol-v0.3.15-mc26.3.jar",
+              "url": "https://cdn.modrinth.com/data/DTjVkI5f/versions/2raGXS5A/pca-protocol-v0.3.15-mc26.3.jar",
+              "size": 84868,
+              "hashes": {
+                "sha1": "977aa545459c03fb5e98e9031246d31223ad67e5",
+                "sha512": "d1d07a0459e144cd2b7fddda3c519f79027d09e23e10cc63aacdadebd62ff28dea732a42c01a8061e423aa041b46f515f78fcc98e855a1b6cf4b6908a2e8cbea"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "v0.3.15-mc26.1.2",
+          "source": "modrinth",
+          "published": "2026-09-19T12:40:13.989071Z",
           "prerelease": false,
           "minecraft": [
             "26.1",
@@ -6391,62 +6415,61 @@
           ],
           "files": [
             {
-              "name": "pca-protocol-v0.3.14-mc26.1.1.jar",
-              "url": "https://cdn.modrinth.com/data/DTjVkI5f/versions/8CpS8fVt/pca-protocol-v0.3.14-mc26.1.1.jar",
-              "size": 84750,
+              "name": "pca-protocol-v0.3.15-mc26.1.2.jar",
+              "url": "https://cdn.modrinth.com/data/DTjVkI5f/versions/XAwphCV0/pca-protocol-v0.3.15-mc26.1.2.jar",
+              "size": 84874,
               "hashes": {
-                "sha1": "b3c46e64f7001b5625f25820992917b2329c72e4",
-                "sha512": "90a63cc2784b46565c73380227633ef72a9ae85dbc10ee44c48e136e270350ac7fda5debef3140fba962ca7a6e29ddb32779fa2e665b3e4933c148f109c54cc6"
+                "sha1": "b2bcf96e0b058cfaa6112585e77837a4555a790d",
+                "sha512": "ee34db04de28ffbf5d192d85c4df74cda75923424cc3fd9426b3b84ce3507077e74b5585128ca9cdd9a7c8c6ebf4011f682ea8fdc94014171d1d9ab2b6b76988"
               },
               "primary": true
             }
           ]
         },
         {
-          "version": "v0.3.14-mc1.21.11",
+          "version": "v0.3.15-mc26.2",
           "source": "modrinth",
-          "published": "2026-04-06T18:30:17.264974Z",
+          "published": "2026-09-19T12:40:12.189272Z",
           "prerelease": false,
           "minecraft": [
-            "1.21.11"
+            "26.2"
           ],
           "loaders": [
             "fabric"
           ],
           "files": [
             {
-              "name": "pca-protocol-v0.3.14-mc1.21.11.jar",
-              "url": "https://cdn.modrinth.com/data/DTjVkI5f/versions/z62dL4Oj/pca-protocol-v0.3.14-mc1.21.11.jar",
-              "size": 84816,
+              "name": "pca-protocol-v0.3.15-mc26.2.jar",
+              "url": "https://cdn.modrinth.com/data/DTjVkI5f/versions/Vz0c5Ttc/pca-protocol-v0.3.15-mc26.2.jar",
+              "size": 84873,
               "hashes": {
-                "sha1": "c22834bcd5d65b2a6ca1e38dacf4ce7a24a85e41",
-                "sha512": "beb5152a6f9194f760bc59e12a40d50719d6b00eef4ece3a1c7ebeb4c232be3c4fb171f8bce290d39d33601153147b99ccc753722e25363cc412cffefd146aef"
+                "sha1": "5756c2f7cde636d463ebe86212aa9d4203987eb7",
+                "sha512": "22127bdebb9f7536a12ed381a2065327966708043bf594a1d3c5111eccb721106e0475b8d718bdd93196385796c516aedaffa5f753aff9127bc80c67dba51571"
               },
               "primary": true
             }
           ]
         },
         {
-          "version": "v0.3.14-mc1.21.8",
+          "version": "v0.3.15-mc1.21.1",
           "source": "modrinth",
-          "published": "2026-04-06T18:30:16.138300Z",
+          "published": "2026-09-19T12:39:45.973338Z",
           "prerelease": false,
           "minecraft": [
-            "1.21.6",
-            "1.21.7",
-            "1.21.8"
+            "1.21",
+            "1.21.1"
           ],
           "loaders": [
             "fabric"
           ],
           "files": [
             {
-              "name": "pca-protocol-v0.3.14-mc1.21.8.jar",
-              "url": "https://cdn.modrinth.com/data/DTjVkI5f/versions/RUsSPL54/pca-protocol-v0.3.14-mc1.21.8.jar",
-              "size": 84813,
+              "name": "pca-protocol-v0.3.15-mc1.21.1.jar",
+              "url": "https://cdn.modrinth.com/data/DTjVkI5f/versions/LkAUkbXX/pca-protocol-v0.3.15-mc1.21.1.jar",
+              "size": 83848,
               "hashes": {
-                "sha1": "f52e1cc80c8651fcfedc5633e6946e27926a49d8",
-                "sha512": "af0e060d220198fd401d86482a557f8b8cd76329fca56d9039bb33544fe93ab500a855a3d84fc7c29322f63a6bef9baeb95a3982123b2e3c548f4a371224edca"
+                "sha1": "9c00985578386ef8f8a2e0f4778b432bdef236dc",
+                "sha512": "af7bc7f384c903bfdae189008d4d5d90e3c32d76f8f7776bc9570520137a0bcf3baa8e7ee74c0f5e0c72bb2d34b3dd338ffea94035aac3d48b09fb1a85961161"
               },
               "primary": true
             }
@@ -6503,7 +6526,7 @@
           ]
         }
       ],
-      "latest": "v0.3.14-mc26.1.1"
+      "latest": "v0.3.15-mc26.3"
     },
     "primebackup": {
       "name": "PrimeBackup",
