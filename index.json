@@ -5508,6 +5508,30 @@
       },
       "releases": [
         {
+          "version": "0.30.0",
+          "source": "modrinth",
+          "published": "2026-09-21T05:50:55.503308Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.3"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "malilib-fabric-26.3-0.30.0.jar",
+              "url": "https://cdn.modrinth.com/data/GcWjdA9I/versions/eAj1QaLG/malilib-fabric-26.3-0.30.0.jar",
+              "size": 2054048,
+              "hashes": {
+                "sha1": "efb2f2f513e5ddb34e63565d6543d27040d48c34",
+                "sha512": "69fa337f96439ed02ac32e9ceeeca40106e30e15182d7bddffd1edfd18a96a70507e5c56feaa2d2eb697878983c0ac1b9c3e97eb9afb736d977ccf05d8c9eb7a"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
           "version": "0.29.6",
           "source": "modrinth",
           "published": "2026-09-04T18:29:23.813423Z",
@@ -5552,30 +5576,6 @@
               "hashes": {
                 "sha1": "63948feb57a7d3410e5404a23cb7bd1bac25ece2",
                 "sha512": "e1ef04504991f395e30266f2cb006a17ec5657a00b6d84df4d327e486ac35944346e17bcb610d24c98b7ea828cac6f5c80968e09416d73847540dfee8436466a"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "0.27.20",
-          "source": "modrinth",
-          "published": "2026-09-04T18:28:33.106366Z",
-          "prerelease": false,
-          "minecraft": [
-            "1.21.11"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "malilib-fabric-1.21.11-0.27.20.jar",
-              "url": "https://cdn.modrinth.com/data/GcWjdA9I/versions/loabWpyU/malilib-fabric-1.21.11-0.27.20.jar",
-              "size": 2161348,
-              "hashes": {
-                "sha1": "ba18a2c6664b4136006090e3cd0263a2703edb75",
-                "sha512": "c6a0cbc407962b43316e52b15d928aa2137efa86963cdcea29699f43efa6442519206bdbfac23e4c6c36237931006ecd12b9c6450a4efd1a9a20689e50b5622a"
               },
               "primary": true
             }
@@ -5705,7 +5705,7 @@
           ]
         }
       ],
-      "latest": "0.29.6"
+      "latest": "0.30.0"
     },
     "manke": {
       "name": "Manke",
@@ -7302,6 +7302,54 @@
       },
       "releases": [
         {
+          "version": "3.6.0-beta.2+26.3",
+          "source": "modrinth",
+          "published": "2026-09-21T10:32:14.834670Z",
+          "prerelease": true,
+          "minecraft": [
+            "26.3"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "ServerReplay-3.6.0-beta.2+26.3.jar",
+              "url": "https://cdn.modrinth.com/data/qCvSZ8ra/versions/TGUAJcTJ/ServerReplay-3.6.0-beta.2%2B26.3.jar",
+              "size": 10236631,
+              "hashes": {
+                "sha1": "d33a769a0077fe09fd68a87390e550e02109c7ba",
+                "sha512": "1d2a7c1864cf6fcf044748dce513735a5d32f426d5af054df2d0147b975a4e88497e091393c62ed736134a300d9563972a10d5f94517c5da0526e258b33a3620"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "3.6.0-beta.1+26.3",
+          "source": "modrinth",
+          "published": "2026-09-20T23:50:43.646205Z",
+          "prerelease": true,
+          "minecraft": [
+            "26.3"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "ServerReplay-3.6.0-beta.1+26.3.jar",
+              "url": "https://cdn.modrinth.com/data/qCvSZ8ra/versions/4gMHwqkR/ServerReplay-3.6.0-beta.1%2B26.3.jar",
+              "size": 10190830,
+              "hashes": {
+                "sha1": "1225e33251f126ed671dff3473ddb969d51656b7",
+                "sha512": "2e5107f3c6318ed8962c493d46a2852efdb1a9b575ca5d7a8da36908927abd7b8d3b4dd2983c93437b6fe80a1e5dc9cccb5f54ad7619b0f4a9bc4dda9700989d"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
           "version": "3.5.2+26.2",
           "source": "modrinth",
           "published": "2026-08-09T20:33:07.381056Z",
@@ -7725,6 +7773,30 @@
       },
       "releases": [
         {
+          "version": "0.12.0",
+          "source": "modrinth",
+          "published": "2026-09-21T05:51:23.057422Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.3"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "servux-fabric-26.3-0.12.0.jar",
+              "url": "https://cdn.modrinth.com/data/zQhsx8KF/versions/Rgo8sWzc/servux-fabric-26.3-0.12.0.jar",
+              "size": 934937,
+              "hashes": {
+                "sha1": "cf5a38c749ef7bdd71ae07f613a0a179769dbccb",
+                "sha512": "f67753df7f5c71fcbc50e21afe390a555d3237bba1c51975352ed35984168a69ed6f68197daf0f0737237df028f069b7425a5c04559894897ff746c495a52ee7"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
           "version": "0.11.5",
           "source": "modrinth",
           "published": "2026-09-04T18:30:58.022651Z",
@@ -7769,30 +7841,6 @@
               "hashes": {
                 "sha1": "8863ddac74a2c599a889b00ef7e4c63a4835bd28",
                 "sha512": "66daab7e683bc6a3cb518aa141ca012bd3f7e21a6b1d5ba29b6709ffa3e647a7f8ea753582f66daabc492cfc33ac2426771176df75901f35f0c7b611bedeb99d"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "0.9.9",
-          "source": "modrinth",
-          "published": "2026-09-04T18:30:10.077214Z",
-          "prerelease": false,
-          "minecraft": [
-            "1.21.11"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "servux-fabric-1.21.11-0.9.9.jar",
-              "url": "https://cdn.modrinth.com/data/zQhsx8KF/versions/9041JwWA/servux-fabric-1.21.11-0.9.9.jar",
-              "size": 942336,
-              "hashes": {
-                "sha1": "038b86f6f3433b5a82af613d71a7d9272ccf0671",
-                "sha512": "e5f8d6a7d774be82b65893363ab3180871ebf932a107ec89350f454e434b90c844e94ac19a09df21aed484b9f3333d14f267ee38097a107e04bb910d994c5d27"
               },
               "primary": true
             }
@@ -7872,7 +7920,7 @@
           ]
         }
       ],
-      "latest": "0.11.5"
+      "latest": "0.12.0"
     },
     "shapeboard": {
       "name": "ShapeBoard",
@@ -10320,6 +10368,31 @@
         "server_side": "unknown"
       },
       "releases": [
+        {
+          "version": "7.4.6-beta-01",
+          "source": "modrinth",
+          "published": "2026-09-21T12:34:16.777841Z",
+          "prerelease": true,
+          "minecraft": [
+            "26.3"
+          ],
+          "loaders": [
+            "fabric",
+            "neoforge"
+          ],
+          "files": [
+            {
+              "name": "worldedit-mod-7.4.6-beta-01.jar",
+              "url": "https://cdn.modrinth.com/data/1u6JkXh5/versions/J63KECL1/worldedit-mod-7.4.6-beta-01.jar",
+              "size": 5165505,
+              "hashes": {
+                "sha1": "a472b8e464f45aeb6231a0474e7746978225caa8",
+                "sha512": "2104cc4ebb3cc9c1ef0973b8664c8569eb3d75ab11dee215cdf75dfc54a884553fb29fb97674d5c16fe0a02ef2aadd811033569576a5064ff4a8f7388091c74a"
+              },
+              "primary": true
+            }
+          ]
+        },
         {
           "version": "7.4.5",
           "source": "modrinth",
