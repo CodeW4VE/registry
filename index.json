@@ -1132,6 +1132,34 @@
       },
       "releases": [
         {
+          "version": "5.28-fabric",
+          "source": "modrinth",
+          "published": "2026-09-25T17:18:32.021450Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.1",
+            "26.1.1",
+            "26.1.2",
+            "26.2",
+            "26.3"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "bluemap-5.28-fabric.jar",
+              "url": "https://cdn.modrinth.com/data/swbUV1cr/versions/bbzcTCOs/bluemap-5.28-fabric.jar",
+              "size": 7034681,
+              "hashes": {
+                "sha1": "0f4289092d6cd5e1e028ace14b4464f096e90595",
+                "sha512": "21978808ee083f6abe06ba23fd0ff6c0e07fcfa7260f3e1cff959a517836e3e71a08a43574a3711ec37456bd6ad9fc1ebaabb736b590ee53f0d79f01637f8b26"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
           "version": "5.27-fabric",
           "source": "modrinth",
           "published": "2026-09-16T07:20:43.247387Z",
@@ -1182,34 +1210,6 @@
               "hashes": {
                 "sha1": "fb844befacdaf5d21231cc8f9e35d6deec20aa19",
                 "sha512": "bccc4263694f97ad2107c76e875d44b8f97c1a345951c8a34c85e65fbfa3506df3217238c513c2b13a50300bf8105b153aa057be1c9a291dd70cec28e3a7b2b4"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "5.25-fabric",
-          "source": "modrinth",
-          "published": "2026-09-15T16:24:21.767463Z",
-          "prerelease": false,
-          "minecraft": [
-            "26.1",
-            "26.1.1",
-            "26.1.2",
-            "26.2",
-            "26.3"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "bluemap-5.25-fabric.jar",
-              "url": "https://cdn.modrinth.com/data/swbUV1cr/versions/p8hLlqrQ/bluemap-5.25-fabric.jar",
-              "size": 7025508,
-              "hashes": {
-                "sha1": "d057c87dfe95d963870a5051a63441b6f6810c38",
-                "sha512": "87d58b0fa729822f7b582e6b585c08ed21b022dbca4bdccc85986d04922dd17dc6e79fb00816727de9e647d6008c5866e9a0173b382cb3645dcb8ae8dc812142"
               },
               "primary": true
             }
@@ -1301,7 +1301,7 @@
           ]
         }
       ],
-      "latest": "5.27-fabric"
+      "latest": "5.28-fabric"
     },
     "botinventory-carpet": {
       "name": "BotInventory",
