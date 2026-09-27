@@ -41,9 +41,9 @@
       },
       "releases": [
         {
-          "version": "22.0.2+neoforge",
+          "version": "22.0.3+neoforge",
           "source": "modrinth",
-          "published": "2026-09-18T21:12:40.982712Z",
+          "published": "2026-09-26T23:43:57.025103Z",
           "prerelease": false,
           "minecraft": [
             "26.3"
@@ -53,21 +53,21 @@
           ],
           "files": [
             {
-              "name": "architectury-neoforge-22.0.2.jar",
-              "url": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/52uLtQg9/architectury-neoforge-22.0.2.jar",
-              "size": 622485,
+              "name": "architectury-neoforge-22.0.3.jar",
+              "url": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/uEV9xTeI/architectury-neoforge-22.0.3.jar",
+              "size": 622489,
               "hashes": {
-                "sha1": "75fe85dab670be0b54a3b8f42343e54f1c4fe3b6",
-                "sha512": "0fcd90b7ba301bc7bf644b5f2ab7d7ae73799a966131b23d2fb0566040425c8d57f1101cc62a5b8b66b792311b96930571f6a48ad8eba1f48c22db12c80fa1e5"
+                "sha1": "a97df42477fde1d7ff9c465f48a14370468d0478",
+                "sha512": "7bc322c83a350e2445530bad0d93f9e21c52eb70ae4d121e460155a6da416de14249f9f01cee90136c4b21733ee989de9f3ceea905e66761f25af2a98f4ad34b"
               },
               "primary": true
             }
           ]
         },
         {
-          "version": "22.0.2+fabric",
+          "version": "22.0.3+fabric",
           "source": "modrinth",
-          "published": "2026-09-18T21:12:40.982114Z",
+          "published": "2026-09-26T23:43:57.021792Z",
           "prerelease": false,
           "minecraft": [
             "26.3"
@@ -77,12 +77,60 @@
           ],
           "files": [
             {
-              "name": "architectury-fabric-22.0.2.jar",
-              "url": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/gkoJCQn0/architectury-fabric-22.0.2.jar",
+              "name": "architectury-fabric-22.0.3.jar",
+              "url": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/gAI51C1M/architectury-fabric-22.0.3.jar",
               "size": 622449,
               "hashes": {
-                "sha1": "3d2795fe029dfed6212e5ce1eef362459d24895d",
-                "sha512": "23ddacd8ca3289302d860a5b63362ae705721ec4275c86514dbc28a9b7e6afd8392dd2241845676c059e9ecf8e6df85bc6fe35cfeb26d0a44fa3ac4f4b6d2a2c"
+                "sha1": "7d72ecc77151be1edbf8ce3e72fc7e2370b57006",
+                "sha512": "0045da94a9e8fd48a9ed6eea8d0d981257fa38188d4b3d54c959349b16cbb13965fe4f9050c166d0cb67c1438409f10a856afa48b05430b92a5022206fffac59"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "21.1.11+fabric",
+          "source": "modrinth",
+          "published": "2026-09-26T23:31:57.469843Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.2"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "architectury-fabric-21.1.11.jar",
+              "url": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/w3CUWoxd/architectury-fabric-21.1.11.jar",
+              "size": 624051,
+              "hashes": {
+                "sha1": "5b5e3db505b2d6267bc88c41e47da2e3c196fecc",
+                "sha512": "b4c74ce1c0bb47e8ba54cbdd9b24fe8cc7cfc2ed7194f1e451e369adb1f1ae9ac37afc4612124b9793cb5fd7705ebce5634caa80c2825bd23d3dba8eb0bcc53d"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "21.1.11+neoforge",
+          "source": "modrinth",
+          "published": "2026-09-26T23:31:57.469121Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.2"
+          ],
+          "loaders": [
+            "neoforge"
+          ],
+          "files": [
+            {
+              "name": "architectury-neoforge-21.1.11.jar",
+              "url": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/huNlZW4Q/architectury-neoforge-21.1.11.jar",
+              "size": 621850,
+              "hashes": {
+                "sha1": "c1459a6fde3401ed831395c22b81d679e38b7a19",
+                "sha512": "86674feff159d1512f2377db979b9ec0de1843075617a39f28c24dd56330c244195497f525ce032850308a57da48c0f401cbe521afdaa2294ed9397cc3e1cc07"
               },
               "primary": true
             }
@@ -107,54 +155,6 @@
               "hashes": {
                 "sha1": "9e86771d69124e5c02248ee21c72339ac4a87e81",
                 "sha512": "533f938b40e95f53a021da0247758579c1b65840d37b6b00266e0ddbe2cc80c9f19c0844398630c09c1328ab9a3794e1e4507946124d2d302e11db20ded93fb6"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "21.1.10+fabric",
-          "source": "modrinth",
-          "published": "2026-09-18T21:08:37.913661Z",
-          "prerelease": false,
-          "minecraft": [
-            "26.2"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "architectury-fabric-21.1.10.jar",
-              "url": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/bZ8FOeFo/architectury-fabric-21.1.10.jar",
-              "size": 624052,
-              "hashes": {
-                "sha1": "a7bd3f3fc984ab8309b8d6360a3ad1f322476835",
-                "sha512": "75abf7d58fceec3274a05ef2d8272cd15d15f8a62342753878e0942d18d5df7b1982d4432e5a2da2d24a9df4bc6a2cdc877ac537d930ff01c2431de8abaa54de"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "21.1.9+neoforge",
-          "source": "modrinth",
-          "published": "2026-09-10T15:05:03.788280Z",
-          "prerelease": false,
-          "minecraft": [
-            "26.2"
-          ],
-          "loaders": [
-            "neoforge"
-          ],
-          "files": [
-            {
-              "name": "architectury-neoforge-21.1.9.jar",
-              "url": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/t6H9g0ug/architectury-neoforge-21.1.9.jar",
-              "size": 621834,
-              "hashes": {
-                "sha1": "e1a01a6437ce032b5e664c8072ca17ad08e40fd9",
-                "sha512": "715f2b934390ef8242f5bcef1f2045eb865d0932c89a2d36cea0a4bd03717ec8aace590d211b2fadadd5068e114fb6b6a0abab7ff16ae25c90d65d8d0d2e3c44"
               },
               "primary": true
             }
@@ -236,7 +236,7 @@
           ]
         }
       ],
-      "latest": "22.0.2+neoforge"
+      "latest": "22.0.3+neoforge"
     },
     "axiom": {
       "name": "Axiom",
@@ -4057,6 +4057,30 @@
       },
       "releases": [
         {
+          "version": "1.6.1-mc26.3",
+          "source": "modrinth",
+          "published": "2026-09-26T14:29:41.992063Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.3"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "g4mespeed-1.6.1-mc26.3.jar",
+              "url": "https://cdn.modrinth.com/data/gW29KsnL/versions/kZ7xQ0ce/g4mespeed-1.6.1-mc26.3.jar",
+              "size": 719011,
+              "hashes": {
+                "sha1": "d67a39ee09f039c30bd62520196d249d4271913a",
+                "sha512": "e96c3feaa3a446da86b3fab6dec949ec9dbf62f661f9e8373f296114737097ffbec9c2dfdeceffe46c3b995306a37b86084304b41a9d2b5a8cd249e88688c140"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
           "version": "1.6.1-mc26.2",
           "source": "modrinth",
           "published": "2026-07-16T18:30:14.147201Z",
@@ -4099,30 +4123,6 @@
               "hashes": {
                 "sha1": "a8c68d1fb6213f5f222e43fa16a69c830bad4748",
                 "sha512": "7110cf5182166709d37c2c7a309fb65d28d9a36b9e68c596ef2191f9ea66393ffd0010acd1a980a9fced5f07c6d2f9a69ea5819108f3266245863b07951a138a"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "1.6.1-mc1.21.11",
-          "source": "modrinth",
-          "published": "2026-07-16T18:29:07.493191Z",
-          "prerelease": false,
-          "minecraft": [
-            "1.21.11"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "g4mespeed-1.6.1-mc1.21.11.jar",
-              "url": "https://cdn.modrinth.com/data/gW29KsnL/versions/aOjO3CsD/g4mespeed-1.6.1-mc1.21.11.jar",
-              "size": 729673,
-              "hashes": {
-                "sha1": "c071417f9b2d37c571b9d670aac3bf30965ff84d",
-                "sha512": "e096bb53be1996c241f956d1cec05b24284df6ab457963c5716ecc2a55f137d20cf87ffb75450b94328957d03528b235a40a2fd717db6cca9f2ddbe03097d081"
               },
               "primary": true
             }
@@ -4203,7 +4203,7 @@
           ]
         }
       ],
-      "latest": "1.6.1-mc26.2"
+      "latest": "1.6.1-mc26.3"
     },
     "gooderrails": {
       "name": "Gooder Rails",
@@ -4472,6 +4472,31 @@
       },
       "releases": [
         {
+          "version": "1.4.22",
+          "source": "modrinth",
+          "published": "2026-09-26T20:25:54.225380Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.3"
+          ],
+          "loaders": [
+            "fabric",
+            "quilt"
+          ],
+          "files": [
+            {
+              "name": "InvView-1.4.22-26.3+.jar",
+              "url": "https://cdn.modrinth.com/data/jrDKjZP7/versions/uySsk7v8/InvView-1.4.22-26.3%2B.jar",
+              "size": 169075,
+              "hashes": {
+                "sha1": "2d77dbcc5ca6886b269b969ed9bdbaf5fa429640",
+                "sha512": "a7e21e1833b581cfdcd7b5096c3654ab5a3f7acb8e62dcaa91b0930009063abe407fb0de6031345c0f839e958f3a1f11f9984d8c3ed43aa2bf2542000429a09f"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
           "version": "1.4.21",
           "source": "modrinth",
           "published": "2026-06-17T04:40:12.202815Z",
@@ -4524,31 +4549,6 @@
           ]
         },
         {
-          "version": "1.4.19",
-          "source": "modrinth",
-          "published": "2025-12-17T22:17:18.080575Z",
-          "prerelease": false,
-          "minecraft": [
-            "1.21.11"
-          ],
-          "loaders": [
-            "fabric",
-            "quilt"
-          ],
-          "files": [
-            {
-              "name": "InvView-1.4.19-1.21.11+.jar",
-              "url": "https://cdn.modrinth.com/data/jrDKjZP7/versions/r95mrAaQ/InvView-1.4.19-1.21.11%2B.jar",
-              "size": 172490,
-              "hashes": {
-                "sha1": "27aaeb27643f564dd179bac5fbed5d9066211744",
-                "sha512": "63de563def778f03963061c039073a638e15339b0a23a61a92f8d3d4ddd824439e02f990e907d8b196ba9481b3e57148fc99cf25990d3eb793cc25057feebad9"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
           "version": "1.4.15",
           "source": "modrinth",
           "published": "2024-05-27T19:56:39.205551Z",
@@ -4580,7 +4580,7 @@
           ]
         }
       ],
-      "latest": "1.4.21"
+      "latest": "1.4.22"
     },
     "joacarpet": {
       "name": "JoaCarpet",
@@ -5100,35 +5100,33 @@
       },
       "releases": [
         {
-          "version": "v1.3.13-mc26.1.2",
+          "version": "v1.3.14-mc26.3",
           "source": "modrinth",
-          "published": "2026-04-16T17:18:42.487135Z",
+          "published": "2026-09-26T19:18:54.140875Z",
           "prerelease": false,
           "minecraft": [
-            "26.1",
-            "26.1.1",
-            "26.1.2"
+            "26.3"
           ],
           "loaders": [
             "fabric"
           ],
           "files": [
             {
-              "name": "litematica-server-paster-v1.3.13-mc26.1.2.jar",
-              "url": "https://cdn.modrinth.com/data/HCbarMw6/versions/NrFyDrD9/litematica-server-paster-v1.3.13-mc26.1.2.jar",
-              "size": 80062,
+              "name": "litematica-server-paster-v1.3.14-mc26.3.jar",
+              "url": "https://cdn.modrinth.com/data/HCbarMw6/versions/766FLe1j/litematica-server-paster-v1.3.14-mc26.3.jar",
+              "size": 80006,
               "hashes": {
-                "sha1": "6bdc24b26111fb4e4044b62a0f09b4c046d15aa1",
-                "sha512": "dd75eb0dcba9f0ee8b9045abb34e6947bd4cd2a21846195b513bcbb59cff0e20fafa02b74a1af0fa231b30a72ef629b9765e5c8a0b339c4850ea74073e4ba3ed"
+                "sha1": "4de7a03789c94a278c4d08fdf46169ddb09577a1",
+                "sha512": "2c8238421af729d571b8bf104b96f8347e5cf4651671d44ca46a805aaf7f4005801ff08c13eba380c1ed99a6d75cbde5d0577e9eab067cb3caa6e51c6ef72290"
               },
               "primary": true
             }
           ]
         },
         {
-          "version": "v1.3.13-mc1.21.11",
+          "version": "v1.3.14-mc1.21.11",
           "source": "modrinth",
-          "published": "2026-04-16T17:18:40.759948Z",
+          "published": "2026-09-26T19:18:53.555645Z",
           "prerelease": false,
           "minecraft": [
             "1.21.11"
@@ -5138,37 +5136,61 @@
           ],
           "files": [
             {
-              "name": "litematica-server-paster-v1.3.13-mc1.21.11.jar",
-              "url": "https://cdn.modrinth.com/data/HCbarMw6/versions/NxXeWjl7/litematica-server-paster-v1.3.13-mc1.21.11.jar",
-              "size": 80191,
+              "name": "litematica-server-paster-v1.3.14-mc1.21.11.jar",
+              "url": "https://cdn.modrinth.com/data/HCbarMw6/versions/BpoLlvPp/litematica-server-paster-v1.3.14-mc1.21.11.jar",
+              "size": 80034,
               "hashes": {
-                "sha1": "2b050d58180012107b9f0f4b5797e7b004b168ce",
-                "sha512": "ed9c15129eb7b4e7a09518f65fb34db53c99ffcae65b70e18faa614c0cfbaeaeee8d7a3185ebb1fbfc5563269acf4360154d8d294ad0f9365ae3edf707a65710"
+                "sha1": "dbf652cbb1c248ce3ed6cce6c30b95be4fc740ca",
+                "sha512": "e10d9c13b6e4eb5c3640bbad7300058fef102093a57df6b96777034bded1205c66764b6e3d3199dff5b590eef083063eee66582d96cac6b7377e0ae4e431e64d"
               },
               "primary": true
             }
           ]
         },
         {
-          "version": "v1.3.13-mc1.21.10",
+          "version": "v1.3.14-mc26.2",
           "source": "modrinth",
-          "published": "2026-04-16T17:18:30.622129Z",
+          "published": "2026-09-26T19:18:51.618885Z",
           "prerelease": false,
           "minecraft": [
-            "1.21.9",
-            "1.21.10"
+            "26.2"
           ],
           "loaders": [
             "fabric"
           ],
           "files": [
             {
-              "name": "litematica-server-paster-v1.3.13-mc1.21.10.jar",
-              "url": "https://cdn.modrinth.com/data/HCbarMw6/versions/ItSXaTkL/litematica-server-paster-v1.3.13-mc1.21.10.jar",
-              "size": 80175,
+              "name": "litematica-server-paster-v1.3.14-mc26.2.jar",
+              "url": "https://cdn.modrinth.com/data/HCbarMw6/versions/p26ED2uk/litematica-server-paster-v1.3.14-mc26.2.jar",
+              "size": 80009,
               "hashes": {
-                "sha1": "e26cb4404a3ad60632b9afd4af63b7f7f2be2be2",
-                "sha512": "0240ca9358a41e9c5c3d6cc6df227cb2e70a8a4d6a35726f30d9af4aa2bb91dea7c0d64dd59fe9c8ed3f756831d23e442df91913aec8f11903c28fba19f7d1db"
+                "sha1": "17e6b9afd3391a85364a2b9c6174c4baa205f9d2",
+                "sha512": "06756bc7ae51e01c9ad536c6e454f169ca2597b36198d0672f7af00e4e06ecdf86d4de990189db930de694d84e11f9a10bbb0a73d42ef1561c223a5ac139d28b"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "v1.3.14-mc1.21.1",
+          "source": "modrinth",
+          "published": "2026-09-26T19:18:09.464673Z",
+          "prerelease": false,
+          "minecraft": [
+            "1.21",
+            "1.21.1"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "litematica-server-paster-v1.3.14-mc1.21.1.jar",
+              "url": "https://cdn.modrinth.com/data/HCbarMw6/versions/UH66zoGE/litematica-server-paster-v1.3.14-mc1.21.1.jar",
+              "size": 79338,
+              "hashes": {
+                "sha1": "8789757734d80c28d795ab641b3e47029a88199b",
+                "sha512": "011f18b2df862e34a1ab5ddf9ef9279f11018bc0c58dc622c58190551d30a56bc662928d29e0fc94a88c260c55753e305efbdc87d8e07c018ea99429a358b52b"
               },
               "primary": true
             }
@@ -5223,34 +5245,9 @@
               "primary": true
             }
           ]
-        },
-        {
-          "version": "v1.3.11-mc1.21.1",
-          "source": "modrinth",
-          "published": "2025-09-30T18:15:39.686961Z",
-          "prerelease": false,
-          "minecraft": [
-            "1.21",
-            "1.21.1"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "litematica-server-paster-v1.3.11-mc1.21.1.jar",
-              "url": "https://cdn.modrinth.com/data/HCbarMw6/versions/Y8dCuzKw/litematica-server-paster-v1.3.11-mc1.21.1.jar",
-              "size": 80721,
-              "hashes": {
-                "sha1": "a25c5f9e0cdd8096fa64a51890babdf47a805eb1",
-                "sha512": "f108a4b133bef715882a59c8b691a5a1110d51fdc3796d1031b151d1f3ad4bfa427c0553574288d1c857f7e35d24589c17b7148284f78083c4911a503b07db39"
-              },
-              "primary": true
-            }
-          ]
         }
       ],
-      "latest": "v1.3.13-mc26.1.2"
+      "latest": "v1.3.14-mc26.3"
     },
     "lithium": {
       "name": "Lithium",
