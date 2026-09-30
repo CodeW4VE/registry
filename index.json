@@ -3188,6 +3188,30 @@
       },
       "releases": [
         {
+          "version": "0.161.2+26.4",
+          "source": "modrinth",
+          "published": "2026-09-29T14:26:20.087533Z",
+          "prerelease": true,
+          "minecraft": [
+            "26.4-snapshot-2"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "fabric-api-0.161.2+26.4.jar",
+              "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/WCnCDG9V/fabric-api-0.161.2%2B26.4.jar",
+              "size": 2621408,
+              "hashes": {
+                "sha1": "a0788bb2492cd2737c7eeb9f3e9cd7ae3788d1da",
+                "sha512": "fe6f69a7cfbefd153d676248a6087f2dd644fb3cd2411ad233d77f09b4935dedafc491066ca2d9c83d242e34c3d1f1e411c80dba4f09414fbd54fcd6e896067e"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
           "version": "0.161.1+26.4",
           "source": "modrinth",
           "published": "2026-09-22T20:19:52.389874Z",
@@ -4775,6 +4799,30 @@
       },
       "releases": [
         {
+          "version": "0.3.2",
+          "source": "modrinth",
+          "published": "2026-09-30T05:12:54.012334Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.3"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "krypton-0.3.2.jar",
+              "url": "https://cdn.modrinth.com/data/fQEb0iXm/versions/UugdIYJw/krypton-0.3.2.jar",
+              "size": 268849,
+              "hashes": {
+                "sha1": "21b21cb88e412f0bce73b6609de6dd6aca958d7d",
+                "sha512": "d1d57ebd41395b75b01f130cd9503eb8d208212424a399ff9f367f50be8fbc1c6472442b33c686e777c3148f6a609520e8fb732c755157c358cb207fd4d1123a"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
           "version": "0.3.1",
           "source": "modrinth",
           "published": "2026-07-14T22:10:35.227152Z",
@@ -4825,32 +4873,6 @@
           ]
         },
         {
-          "version": "0.2.10",
-          "source": "modrinth",
-          "published": "2025-10-05T19:06:22.210926Z",
-          "prerelease": false,
-          "minecraft": [
-            "1.21.9",
-            "1.21.10",
-            "1.21.11"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "krypton-0.2.10.jar",
-              "url": "https://cdn.modrinth.com/data/fQEb0iXm/versions/O9LmWYR7/krypton-0.2.10.jar",
-              "size": 270195,
-              "hashes": {
-                "sha1": "94ddaeeae6ca7fecc79e54a0aa02a5438a775a99",
-                "sha512": "4dcd7228d1890ddfc78c99ff284b45f9cf40aae77ef6359308e26d06fa0d938365255696af4cc12d524c46c4886cdcd19268c165a2bf0a2835202fe857da5cab"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
           "version": "0.2.8",
           "source": "modrinth",
           "published": "2024-06-22T23:06:40.497411Z",
@@ -4879,7 +4901,7 @@
           ]
         }
       ],
-      "latest": "0.3.1"
+      "latest": "0.3.2"
     },
     "litematica": {
       "name": "Litematica",
