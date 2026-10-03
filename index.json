@@ -1662,9 +1662,33 @@
       },
       "releases": [
         {
-          "version": "mc1.18.2-v26.3",
+          "version": "mc1.20.6-v26.3.1",
           "source": "modrinth",
-          "published": "2026-09-24T09:28:48.181505Z",
+          "published": "2026-10-02T15:34:54.838843Z",
+          "prerelease": false,
+          "minecraft": [
+            "1.20.6"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "carpet-ams-addition-v26.3.1-mc1.20.6.jar",
+              "url": "https://cdn.modrinth.com/data/q4fx1eTg/versions/tUG18Zo6/carpet-ams-addition-v26.3.1-mc1.20.6.jar",
+              "size": 1246804,
+              "hashes": {
+                "sha1": "28ea9954cdd555005ef1cfa7dea8241d3f9dad49",
+                "sha512": "ac601704af81023d1f52657915f212b36ede8113f69eeb4acb2665e25bbe04b480bc7a6c9eeef1ed0f5a8f47745fe3097e666339b269ae935616eea3b7339fbe"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "mc1.18.2-v26.3.1",
+          "source": "modrinth",
+          "published": "2026-10-02T15:34:52.229071Z",
           "prerelease": false,
           "minecraft": [
             "1.18.2"
@@ -1674,60 +1698,60 @@
           ],
           "files": [
             {
-              "name": "carpet-ams-addition-v26.3-mc1.18.2.jar",
-              "url": "https://cdn.modrinth.com/data/q4fx1eTg/versions/PoPF43oX/carpet-ams-addition-v26.3-mc1.18.2.jar",
-              "size": 1245117,
+              "name": "carpet-ams-addition-v26.3.1-mc1.18.2.jar",
+              "url": "https://cdn.modrinth.com/data/q4fx1eTg/versions/m3ESVhnt/carpet-ams-addition-v26.3.1-mc1.18.2.jar",
+              "size": 1243565,
               "hashes": {
-                "sha1": "608a11582d65f21c8c3537bd0fcd882fd18ba77b",
-                "sha512": "09897795d5ce4087a107c34572fd9ee2acda11efb15cc2c29a6379bfcd8a06c01e3b83accaa2da38864abb09f2e40b3fefe77c2e6e9a8026bc38f7e0aa5f4b4c"
+                "sha1": "3cf7b204ec971b48bf8085b1cb2885ee4a1db5ce",
+                "sha512": "12e15ee79ffd47dd12a61e96e52e7c3132934dd558e23a067bc7e9314f9178bd5103f0405263b87048d46b1b2e0090cf3b23a43ee44be752148449ee86a3b457"
               },
               "primary": true
             }
           ]
         },
         {
-          "version": "mc1.17.1-v26.3",
+          "version": "mc1.21.8-v26.3.1",
           "source": "modrinth",
-          "published": "2026-09-24T09:28:47.386649Z",
+          "published": "2026-10-02T15:34:52.108738Z",
           "prerelease": false,
           "minecraft": [
-            "1.17.1"
+            "1.21.8"
           ],
           "loaders": [
             "fabric"
           ],
           "files": [
             {
-              "name": "carpet-ams-addition-v26.3-mc1.17.1.jar",
-              "url": "https://cdn.modrinth.com/data/q4fx1eTg/versions/McACD87O/carpet-ams-addition-v26.3-mc1.17.1.jar",
-              "size": 1246665,
+              "name": "carpet-ams-addition-v26.3.1-mc1.21.8.jar",
+              "url": "https://cdn.modrinth.com/data/q4fx1eTg/versions/ektmE6lC/carpet-ams-addition-v26.3.1-mc1.21.8.jar",
+              "size": 1263151,
               "hashes": {
-                "sha1": "553dd968823235dbfbd7ce023d57730723cdda36",
-                "sha512": "1779547cbf7dc90be1c53999e0c7e23043ede09ffd24ce346287a539f25f9ffebb888f0e9eda4d4e938cd91b1c49a6862442e6377435bdd9f79d44d5562729aa"
+                "sha1": "cc1a21ce8265b2819ef3fc9f6f763ac22f3f0524",
+                "sha512": "9c4a2e2dff3a104acf493836118f6364f66f9138ffe42f61d110d376c02cdee42af63b9cf373cd2a00fc6940fca01ac26043e9de4f99d1de4f865e0931fd20e5"
               },
               "primary": true
             }
           ]
         },
         {
-          "version": "mc1.21.10-v26.3",
+          "version": "mc26.2-v26.3.1",
           "source": "modrinth",
-          "published": "2026-09-24T09:28:47.299748Z",
+          "published": "2026-10-02T15:34:49.832076Z",
           "prerelease": false,
           "minecraft": [
-            "1.21.10"
+            "26.2"
           ],
           "loaders": [
             "fabric"
           ],
           "files": [
             {
-              "name": "carpet-ams-addition-v26.3-mc1.21.10.jar",
-              "url": "https://cdn.modrinth.com/data/q4fx1eTg/versions/y1NdrNMH/carpet-ams-addition-v26.3-mc1.21.10.jar",
-              "size": 1271642,
+              "name": "carpet-ams-addition-v26.3.1-mc26.2.jar",
+              "url": "https://cdn.modrinth.com/data/q4fx1eTg/versions/8SjFgbFq/carpet-ams-addition-v26.3.1-mc26.2.jar",
+              "size": 1262750,
               "hashes": {
-                "sha1": "fbaa1372276a1f305c195e6d4d7dbf61ccc34fed",
-                "sha512": "726014fd01b24d769b01b53a37a73fef7d6896f2c50323e0ba09a80a7d1f0164b63c630fa40afae8e08508a9de83968ca9aa76b340ffaebf544ba1d0b8543dab"
+                "sha1": "d27a1afea8c71eebd976f248f40ed1fdf5ef6376",
+                "sha512": "106245f4d4e54f112ddd11c4932749e10ffe6afae37e259bfe8f8b2d338f41270cb6a2bcd1d12ce2746e7218b04847bae02ac191ed7c11fb7a55b903b31db404"
               },
               "primary": true
             }
@@ -1926,7 +1950,7 @@
           ]
         }
       ],
-      "latest": "mc1.18.2-v26.3"
+      "latest": "mc1.20.6-v26.3.1"
     },
     "carpet-extra": {
       "name": "Carpet Extra",
