@@ -493,6 +493,390 @@
       },
       "releases": [
         {
+          "version": "2.3.2+26.3",
+          "source": "modrinth",
+          "published": "2026-10-04T23:52:51.537621Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.3"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "beaconator-2.3.2+26.3.jar",
+              "url": "https://cdn.modrinth.com/data/1LmFuBOw/versions/esCfW2dW/beaconator-2.3.2%2B26.3.jar",
+              "size": 306197,
+              "hashes": {
+                "sha1": "310ee391dfc676ad40cb4c505d676f177b049b65",
+                "sha512": "39ac7b43e38d1f26c4f5caad631070e0b8958b6f725b7f1177cce6409be75dd523fb9f1b335def29a769ed778b7ce46a46522164103fda00063fd5ead9e3f150"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "2.3.2+26.1.2",
+          "source": "modrinth",
+          "published": "2026-10-04T23:52:50.665940Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.1.2"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "beaconator-2.3.2+26.1.2.jar",
+              "url": "https://cdn.modrinth.com/data/1LmFuBOw/versions/tCP3024M/beaconator-2.3.2%2B26.1.2.jar",
+              "size": 305973,
+              "hashes": {
+                "sha1": "5a26c62b2d5beca98a5044005e8b9afbb9bf1345",
+                "sha512": "b169c1a4587efa6a1a2f477653817f3d6f5e80538aa7abcae83714bddb8285752d63f8abb4dff918764867a938765836e9064a22a611d858c52cc4eef0f80e72"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "2.3.2+1.21.11",
+          "source": "modrinth",
+          "published": "2026-10-04T23:52:49.636921Z",
+          "prerelease": false,
+          "minecraft": [
+            "1.21.11"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "beaconator-2.3.2+1.21.11.jar",
+              "url": "https://cdn.modrinth.com/data/1LmFuBOw/versions/2W2xsRKj/beaconator-2.3.2%2B1.21.11.jar",
+              "size": 306280,
+              "hashes": {
+                "sha1": "4b9746e5ef462a2ecbb7a7064a7f4b9c01c5ccc0",
+                "sha512": "1724701f720152bac08fd3b7ac11c17955a3770b8cd442833faea619bae65b0bc98f576be86655e16bd93a2e343056693a85e565b7cf5aeb8ae1b5556d79bcc2"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "2.3.2+1.21.8",
+          "source": "modrinth",
+          "published": "2026-10-04T23:52:48.639392Z",
+          "prerelease": false,
+          "minecraft": [
+            "1.21.8"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "beaconator-2.3.2+1.21.8.jar",
+              "url": "https://cdn.modrinth.com/data/1LmFuBOw/versions/COmipME4/beaconator-2.3.2%2B1.21.8.jar",
+              "size": 307882,
+              "hashes": {
+                "sha1": "224029eb6ac06531b9c7f41720baa260f7d297c7",
+                "sha512": "5b78182826eb2a69ac7018269006321b87a90cc1388e15ace6b0f1a5d5088b086454cd6c719468ab5d4735c5f9bcbed7a9817f3a375d83ba6d514d3f5a013275"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "2.3.2+1.21.7",
+          "source": "modrinth",
+          "published": "2026-10-04T23:52:47.810131Z",
+          "prerelease": false,
+          "minecraft": [
+            "1.21.7"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "beaconator-2.3.2+1.21.7.jar",
+              "url": "https://cdn.modrinth.com/data/1LmFuBOw/versions/3IHJhYrj/beaconator-2.3.2%2B1.21.7.jar",
+              "size": 307883,
+              "hashes": {
+                "sha1": "b80e1c94a0932450ede7dad8a6329da053d58f40",
+                "sha512": "b7fd43395bd94a769afd02f017f1c14f854a6e0be574a3f9d73eee37944378a5e1708383955877eb1e1e9edd18a12a0eb3cbe492d3c46e8112f9b01cf4ebe923"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "2.3.2+1.21.6",
+          "source": "modrinth",
+          "published": "2026-10-04T23:52:46.488298Z",
+          "prerelease": false,
+          "minecraft": [
+            "1.21.6"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "beaconator-2.3.2+1.21.6.jar",
+              "url": "https://cdn.modrinth.com/data/1LmFuBOw/versions/LnGVnNV4/beaconator-2.3.2%2B1.21.6.jar",
+              "size": 307882,
+              "hashes": {
+                "sha1": "710337cd7c6b7deba0248a01befdd1bf6ca94324",
+                "sha512": "08767cb14dddc578c4f644019e6028138876dc3c7179e48e831886c6996e89b645073db3a746770639c4f5df21cf4e716632aa24485ca29e8cf1ae97db1be3d3"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "2.3.2+1.21.5",
+          "source": "modrinth",
+          "published": "2026-10-04T23:52:45.547580Z",
+          "prerelease": false,
+          "minecraft": [
+            "1.21.5"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "beaconator-2.3.2+1.21.5.jar",
+              "url": "https://cdn.modrinth.com/data/1LmFuBOw/versions/Xk6egufa/beaconator-2.3.2%2B1.21.5.jar",
+              "size": 307419,
+              "hashes": {
+                "sha1": "8500fc0072234873ae1dc7f8920069d6e1ff94a1",
+                "sha512": "050af4f0ac208097c802164aac6566f807340e263c73926d4334aeacd361f70e617d6dc4a0ff82953bf269bd270c0db4ecff8c9a3265b251d9d461e1355f8145"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "2.3.2+1.21.4",
+          "source": "modrinth",
+          "published": "2026-10-04T23:52:44.670261Z",
+          "prerelease": false,
+          "minecraft": [
+            "1.21.4"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "beaconator-2.3.2+1.21.4.jar",
+              "url": "https://cdn.modrinth.com/data/1LmFuBOw/versions/PGqdnkoq/beaconator-2.3.2%2B1.21.4.jar",
+              "size": 304061,
+              "hashes": {
+                "sha1": "fe379b7c96de9c803473a717f6398f7ad8fc1e6a",
+                "sha512": "0c76f048f790d3863fc8630255d452eef72caac660004813b768e3f92ce4116c88c834d62b111fd53ca231b4b1df40c0c10a299ba8406950cb16b9d8699bcac9"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "2.3.2+1.21.3",
+          "source": "modrinth",
+          "published": "2026-10-04T23:52:43.724246Z",
+          "prerelease": false,
+          "minecraft": [
+            "1.21.3"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "beaconator-2.3.2+1.21.3.jar",
+              "url": "https://cdn.modrinth.com/data/1LmFuBOw/versions/C1468UFe/beaconator-2.3.2%2B1.21.3.jar",
+              "size": 304012,
+              "hashes": {
+                "sha1": "3cfeae13dea24cc8f60ba26379437f4038cd6b4d",
+                "sha512": "75e4fed1536e75f503f3e45b2e65d32aae58399125ab8700ac9336449e919c7b005a671394677be2bcf2b9ab297ecf2332581a1ed61fdb7c16d52dc47c32cd04"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "2.3.2+1.21.2",
+          "source": "modrinth",
+          "published": "2026-10-04T23:52:42.413533Z",
+          "prerelease": false,
+          "minecraft": [
+            "1.21.2"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "beaconator-2.3.2+1.21.2.jar",
+              "url": "https://cdn.modrinth.com/data/1LmFuBOw/versions/pg4v3SNJ/beaconator-2.3.2%2B1.21.2.jar",
+              "size": 304011,
+              "hashes": {
+                "sha1": "ddae7e1fc087541d4dedc47ad0aa6217d40111ba",
+                "sha512": "38393aa357937748ad5b9326bc18c4262fccc1a70e9e45e474b7ec3271d6642314cc3e39ac6242a375fbc0a734b7db9172cae98d7fb7847568d3d8da143c5c93"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "2.3.2+1.21",
+          "source": "modrinth",
+          "published": "2026-10-04T23:52:41.644613Z",
+          "prerelease": false,
+          "minecraft": [
+            "1.21",
+            "1.21.1"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "beaconator-2.3.2+1.21.jar",
+              "url": "https://cdn.modrinth.com/data/1LmFuBOw/versions/gVqcAoz2/beaconator-2.3.2%2B1.21.jar",
+              "size": 303605,
+              "hashes": {
+                "sha1": "9914f318255ebf2e45c23aa7c1751e4d8a6f52b3",
+                "sha512": "54b26c6107922d6d0d13aed9a616e4619585c7a95c450448023ad2b4d077033d88d7b2267be90c6f1287676ca84d5c2a809ed6dc874359c68e538cfd824ecabf"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "2.3.2",
+          "tag": "v2.3.2",
+          "source": "github",
+          "published": "2026-10-04T23:52:40Z",
+          "prerelease": false,
+          "files": [
+            {
+              "name": "beaconator-2.3.2+1.21.1.jar",
+              "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.3.2/beaconator-2.3.2%2B1.21.1.jar",
+              "size": 303607,
+              "minecraft": [
+                "1.21.1"
+              ]
+            },
+            {
+              "name": "beaconator-2.3.2+1.21.11.jar",
+              "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.3.2/beaconator-2.3.2%2B1.21.11.jar",
+              "size": 306280,
+              "minecraft": [
+                "1.21.11"
+              ]
+            },
+            {
+              "name": "beaconator-2.3.2+1.21.2.jar",
+              "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.3.2/beaconator-2.3.2%2B1.21.2.jar",
+              "size": 304011,
+              "minecraft": [
+                "1.21.2"
+              ]
+            },
+            {
+              "name": "beaconator-2.3.2+1.21.3.jar",
+              "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.3.2/beaconator-2.3.2%2B1.21.3.jar",
+              "size": 304012,
+              "minecraft": [
+                "1.21.3"
+              ]
+            },
+            {
+              "name": "beaconator-2.3.2+1.21.4.jar",
+              "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.3.2/beaconator-2.3.2%2B1.21.4.jar",
+              "size": 304061,
+              "minecraft": [
+                "1.21.4"
+              ]
+            },
+            {
+              "name": "beaconator-2.3.2+1.21.5.jar",
+              "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.3.2/beaconator-2.3.2%2B1.21.5.jar",
+              "size": 307419,
+              "minecraft": [
+                "1.21.5"
+              ]
+            },
+            {
+              "name": "beaconator-2.3.2+1.21.6.jar",
+              "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.3.2/beaconator-2.3.2%2B1.21.6.jar",
+              "size": 307882,
+              "minecraft": [
+                "1.21.6"
+              ]
+            },
+            {
+              "name": "beaconator-2.3.2+1.21.7.jar",
+              "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.3.2/beaconator-2.3.2%2B1.21.7.jar",
+              "size": 307883,
+              "minecraft": [
+                "1.21.7"
+              ]
+            },
+            {
+              "name": "beaconator-2.3.2+1.21.8.jar",
+              "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.3.2/beaconator-2.3.2%2B1.21.8.jar",
+              "size": 307882,
+              "minecraft": [
+                "1.21.8"
+              ]
+            },
+            {
+              "name": "beaconator-2.3.2+1.21.jar",
+              "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.3.2/beaconator-2.3.2%2B1.21.jar",
+              "size": 303605,
+              "minecraft": [
+                "1.21"
+              ]
+            },
+            {
+              "name": "beaconator-2.3.2+26.1.2.jar",
+              "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.3.2/beaconator-2.3.2%2B26.1.2.jar",
+              "size": 305973,
+              "minecraft": [
+                "26.1.2"
+              ]
+            },
+            {
+              "name": "beaconator-2.3.2+26.3.jar",
+              "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.3.2/beaconator-2.3.2%2B26.3.jar",
+              "size": 306197,
+              "minecraft": [
+                "26.3"
+              ]
+            }
+          ],
+          "minecraft": [
+            "1.21",
+            "1.21.1",
+            "1.21.11",
+            "1.21.2",
+            "1.21.3",
+            "1.21.4",
+            "1.21.5",
+            "1.21.6",
+            "1.21.7",
+            "1.21.8",
+            "26.1.2",
+            "26.3"
+          ]
+        },
+        {
           "version": "2.3.1+26.1.2",
           "source": "modrinth",
           "published": "2026-08-28T02:13:24.887432Z",
@@ -683,384 +1067,9 @@
               "primary": true
             }
           ]
-        },
-        {
-          "version": "2.3.1+1.21.2",
-          "source": "modrinth",
-          "published": "2026-08-28T02:13:11.476999Z",
-          "prerelease": false,
-          "minecraft": [
-            "1.21.2"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "beaconator-2.3.1+1.21.2.jar",
-              "url": "https://cdn.modrinth.com/data/1LmFuBOw/versions/T2Q3DOAQ/beaconator-2.3.1%2B1.21.2.jar",
-              "size": 302627,
-              "hashes": {
-                "sha1": "ebf7345dd83c124b92b3832beb8175e17163dedd",
-                "sha512": "d9361cbbe1c7b1d359da8a1b4b05d52bc94fa95ff8ca7d71538e8361fa23319dbc66bc3625390395cfceda38b487da232639f062f8c7d653d88aad412a26da3f"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "2.3.1+1.21",
-          "source": "modrinth",
-          "published": "2026-08-28T02:13:09.841542Z",
-          "prerelease": false,
-          "minecraft": [
-            "1.21",
-            "1.21.1"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "beaconator-2.3.1+1.21.jar",
-              "url": "https://cdn.modrinth.com/data/1LmFuBOw/versions/5xbTB1V6/beaconator-2.3.1%2B1.21.jar",
-              "size": 302221,
-              "hashes": {
-                "sha1": "7f57aea611c31e9ae6ce1a30b05609145ba37a3d",
-                "sha512": "bc657955dc1ddca00ecc16ef973180269f3320ba34ed880a7781376f8014fb933f2c47836a7025241867b34cde4495a5d4da144c8083dbe77b8344404efc0f1e"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "2.3.1",
-          "tag": "v2.3.1",
-          "source": "github",
-          "published": "2026-08-28T02:13:07Z",
-          "prerelease": false,
-          "files": [
-            {
-              "name": "beaconator-2.3.1+1.21.1.jar",
-              "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.3.1/beaconator-2.3.1%2B1.21.1.jar",
-              "size": 302223,
-              "minecraft": [
-                "1.21.1"
-              ]
-            },
-            {
-              "name": "beaconator-2.3.1+1.21.11.jar",
-              "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.3.1/beaconator-2.3.1%2B1.21.11.jar",
-              "size": 304898,
-              "minecraft": [
-                "1.21.11"
-              ]
-            },
-            {
-              "name": "beaconator-2.3.1+1.21.2.jar",
-              "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.3.1/beaconator-2.3.1%2B1.21.2.jar",
-              "size": 302627,
-              "minecraft": [
-                "1.21.2"
-              ]
-            },
-            {
-              "name": "beaconator-2.3.1+1.21.3.jar",
-              "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.3.1/beaconator-2.3.1%2B1.21.3.jar",
-              "size": 302629,
-              "minecraft": [
-                "1.21.3"
-              ]
-            },
-            {
-              "name": "beaconator-2.3.1+1.21.4.jar",
-              "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.3.1/beaconator-2.3.1%2B1.21.4.jar",
-              "size": 302678,
-              "minecraft": [
-                "1.21.4"
-              ]
-            },
-            {
-              "name": "beaconator-2.3.1+1.21.5.jar",
-              "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.3.1/beaconator-2.3.1%2B1.21.5.jar",
-              "size": 306036,
-              "minecraft": [
-                "1.21.5"
-              ]
-            },
-            {
-              "name": "beaconator-2.3.1+1.21.6.jar",
-              "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.3.1/beaconator-2.3.1%2B1.21.6.jar",
-              "size": 306503,
-              "minecraft": [
-                "1.21.6"
-              ]
-            },
-            {
-              "name": "beaconator-2.3.1+1.21.7.jar",
-              "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.3.1/beaconator-2.3.1%2B1.21.7.jar",
-              "size": 306502,
-              "minecraft": [
-                "1.21.7"
-              ]
-            },
-            {
-              "name": "beaconator-2.3.1+1.21.8.jar",
-              "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.3.1/beaconator-2.3.1%2B1.21.8.jar",
-              "size": 306503,
-              "minecraft": [
-                "1.21.8"
-              ]
-            },
-            {
-              "name": "beaconator-2.3.1+1.21.jar",
-              "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.3.1/beaconator-2.3.1%2B1.21.jar",
-              "size": 302221,
-              "minecraft": [
-                "1.21"
-              ]
-            },
-            {
-              "name": "beaconator-2.3.1+26.1.2.jar",
-              "url": "https://github.com/CodeW4VE/Beaconator/releases/download/v2.3.1/beaconator-2.3.1%2B26.1.2.jar",
-              "size": 304558,
-              "minecraft": [
-                "26.1.2"
-              ]
-            }
-          ],
-          "minecraft": [
-            "1.21",
-            "1.21.1",
-            "1.21.11",
-            "1.21.2",
-            "1.21.3",
-            "1.21.4",
-            "1.21.5",
-            "1.21.6",
-            "1.21.7",
-            "1.21.8",
-            "26.1.2"
-          ]
-        },
-        {
-          "version": "2.3.0+26.1.2",
-          "source": "modrinth",
-          "published": "2026-08-09T03:50:43.169495Z",
-          "prerelease": false,
-          "minecraft": [
-            "26.1.2"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "beaconator-2.3.0+26.1.2.jar",
-              "url": "https://cdn.modrinth.com/data/1LmFuBOw/versions/yLw5gTkO/beaconator-2.3.0%2B26.1.2.jar",
-              "size": 304481,
-              "hashes": {
-                "sha1": "56f7847e6c3a557ea5ed7711dd0c258bf408432d",
-                "sha512": "90673ca44c46ac2168608fdf72a706d6326da1bf3bfb015a71ba91fde3865a9e4c5cf35e30d006d487d55767dbf06ababa5435021d3bee65a32a7b9d7bd7ac17"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "2.3.0+1.21.11",
-          "source": "modrinth",
-          "published": "2026-08-09T03:50:42.460258Z",
-          "prerelease": false,
-          "minecraft": [
-            "1.21.11"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "beaconator-2.3.0+1.21.11.jar",
-              "url": "https://cdn.modrinth.com/data/1LmFuBOw/versions/5t5IqilC/beaconator-2.3.0%2B1.21.11.jar",
-              "size": 304827,
-              "hashes": {
-                "sha1": "4c050a0f8f41f5bda463f15d270f065d0a792bb9",
-                "sha512": "5c6ef495c79dafa88383d235f69402d1e241effb242d0c49f58dd6ee0ac51a6df3a39f6bf1245f87a96db5e3f3bb1330d8d21058a36aee42cd7dedc46b071d45"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "2.3.0+1.21.8",
-          "source": "modrinth",
-          "published": "2026-08-09T03:50:41.820255Z",
-          "prerelease": false,
-          "minecraft": [
-            "1.21.8"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "beaconator-2.3.0+1.21.8.jar",
-              "url": "https://cdn.modrinth.com/data/1LmFuBOw/versions/sSOckX8Z/beaconator-2.3.0%2B1.21.8.jar",
-              "size": 306424,
-              "hashes": {
-                "sha1": "52e77382bdeddddd610a9104c843a3b8a744f25d",
-                "sha512": "c2facc2bf3c3fd27048f307f4c0e9a9da4bdda9f40a65c7ddcbab6cf032dd6d0dcc0937af4210fa0bad1443e9affa87f346f50938427926df76e9fb5face9a35"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "2.3.0+1.21.7",
-          "source": "modrinth",
-          "published": "2026-08-09T03:50:41.003070Z",
-          "prerelease": false,
-          "minecraft": [
-            "1.21.7"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "beaconator-2.3.0+1.21.7.jar",
-              "url": "https://cdn.modrinth.com/data/1LmFuBOw/versions/8j0la8EM/beaconator-2.3.0%2B1.21.7.jar",
-              "size": 306423,
-              "hashes": {
-                "sha1": "0203313d511a62e7c7fa63da24f543a5b326b635",
-                "sha512": "28cae0ba06d7685a18185af35d6b323c74848cf9f48de9fe01e87e312cf66372f81d45725477b624da90d0f45a6e6ecdaea729b045a97d745c6127751f4ff3fb"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "2.3.0+1.21.6",
-          "source": "modrinth",
-          "published": "2026-08-09T03:50:40.431042Z",
-          "prerelease": false,
-          "minecraft": [
-            "1.21.6"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "beaconator-2.3.0+1.21.6.jar",
-              "url": "https://cdn.modrinth.com/data/1LmFuBOw/versions/ZWTb7pnC/beaconator-2.3.0%2B1.21.6.jar",
-              "size": 306424,
-              "hashes": {
-                "sha1": "d9b6b508254d350a0b2580e66179832de55f17ee",
-                "sha512": "144ec2d58bb635387f861e21d61372ab560b3268c5486da11e4a00aee3247fd8794f1d4ff2291045ad45f16952f68db7653ff3065f48d19df98a9b30e6b181b1"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "2.3.0+1.21.5",
-          "source": "modrinth",
-          "published": "2026-08-09T03:50:39.853747Z",
-          "prerelease": false,
-          "minecraft": [
-            "1.21.5"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "beaconator-2.3.0+1.21.5.jar",
-              "url": "https://cdn.modrinth.com/data/1LmFuBOw/versions/VeW0MnrW/beaconator-2.3.0%2B1.21.5.jar",
-              "size": 305957,
-              "hashes": {
-                "sha1": "9ecc046a4c1e9143566854a6db0c41bb7719ffd8",
-                "sha512": "ce5a7906f55ab3cd693b72391747be480b391f044ad61a85cf4af383a3b7f51852436488e541301d3df925fe72e212c350addb41f343eecbb8201dad95176de9"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "2.3.0+1.21.4",
-          "source": "modrinth",
-          "published": "2026-08-09T03:50:39.202152Z",
-          "prerelease": false,
-          "minecraft": [
-            "1.21.4"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "beaconator-2.3.0+1.21.4.jar",
-              "url": "https://cdn.modrinth.com/data/1LmFuBOw/versions/5QqbjOrR/beaconator-2.3.0%2B1.21.4.jar",
-              "size": 302599,
-              "hashes": {
-                "sha1": "380b9a39d54ab245b4ea4708d30ef0347212ac50",
-                "sha512": "24f9fde47d791502de6021c04c81101c622fdddaee78aea1e4ef983d6c7f19cc96f5763a9418a36bd1e680abcc61337ecb1de88d3e947c2661f2987c7a6d36a1"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "2.3.0+1.21.3",
-          "source": "modrinth",
-          "published": "2026-08-09T03:50:38.557725Z",
-          "prerelease": false,
-          "minecraft": [
-            "1.21.3"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "beaconator-2.3.0+1.21.3.jar",
-              "url": "https://cdn.modrinth.com/data/1LmFuBOw/versions/uWHVwCgE/beaconator-2.3.0%2B1.21.3.jar",
-              "size": 302550,
-              "hashes": {
-                "sha1": "70260d27ab66b44755a0a9ba70b53e75c3ae67a3",
-                "sha512": "1b00f383a4791aa435a4819c127cf4785b637dce65ca674964829e1b414a97d4c3c841ced456d18a58b8f318a0ac7e6777d337bc92b5a0180717afcd82424e96"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "2.3.0+1.21.2",
-          "source": "modrinth",
-          "published": "2026-08-09T03:50:37.993220Z",
-          "prerelease": false,
-          "minecraft": [
-            "1.21.2"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "beaconator-2.3.0+1.21.2.jar",
-              "url": "https://cdn.modrinth.com/data/1LmFuBOw/versions/RE78yRtM/beaconator-2.3.0%2B1.21.2.jar",
-              "size": 302548,
-              "hashes": {
-                "sha1": "fe9ddc2f5c52ccde26dd1c88b95d99ce825685e8",
-                "sha512": "960499c54eaa5f9065df061ce4508629c757aa6b9d7f3ce3d388c5797ae9fefb005ef0e444b5c6249d73db7df28c151ba82472279733b628cb57e9d3fc538c58"
-              },
-              "primary": true
-            }
-          ]
         }
       ],
-      "latest": "2.3.1+26.1.2"
+      "latest": "2.3.2+26.3"
     },
     "beep": {
       "name": "Beep",
@@ -1328,6 +1337,35 @@
       "conflicts": [],
       "releases": [
         {
+          "version": "1.0.1",
+          "tag": "v1.0.1",
+          "source": "github",
+          "published": "2026-10-04T16:38:51Z",
+          "prerelease": false,
+          "files": [
+            {
+              "name": "botinventory-carpet-1.0.1+26.2.jar",
+              "url": "https://github.com/CodeW4VE/BotInventory-Carpet/releases/download/v1.0.1/botinventory-carpet-1.0.1%2B26.2.jar",
+              "size": 181887,
+              "minecraft": [
+                "26.2"
+              ]
+            },
+            {
+              "name": "botinventory-carpet-1.0.1+26.3.jar",
+              "url": "https://github.com/CodeW4VE/BotInventory-Carpet/releases/download/v1.0.1/botinventory-carpet-1.0.1%2B26.3.jar",
+              "size": 182592,
+              "minecraft": [
+                "26.3"
+              ]
+            }
+          ],
+          "minecraft": [
+            "26.2",
+            "26.3"
+          ]
+        },
+        {
           "version": "1.0.0",
           "tag": "1.0.0",
           "source": "github",
@@ -1362,7 +1400,7 @@
           ]
         }
       ],
-      "latest": "1.0.0"
+      "latest": "1.0.1"
     },
     "buildevents": {
       "name": "Build Events",
@@ -6267,6 +6305,84 @@
       },
       "releases": [
         {
+          "version": "1.0.1+26.3",
+          "source": "modrinth",
+          "published": "2026-10-04T16:58:30.880170Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.3"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "mankelist-1.0.1+26.3.jar",
+              "url": "https://cdn.modrinth.com/data/cvuaajxS/versions/le3GbVmD/mankelist-1.0.1%2B26.3.jar",
+              "size": 474879,
+              "hashes": {
+                "sha1": "ba400e7ddac40294cc289a0eb9805c6c35deb8d4",
+                "sha512": "aa98fc295f3cc3623d6af3ff737a1f30fcf4c079209e9a4be6e569865a3fd81aad5ba3127f65de3289459ad14159c886b7cbebb72cf7ae5b31fdbdcc0385222e"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "1.0.1+1.21",
+          "source": "modrinth",
+          "published": "2026-10-04T16:58:29.359486Z",
+          "prerelease": false,
+          "minecraft": [
+            "1.21",
+            "1.21.1"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "mankelist-1.0.1+1.21.jar",
+              "url": "https://cdn.modrinth.com/data/cvuaajxS/versions/NL7cCENA/mankelist-1.0.1%2B1.21.jar",
+              "size": 474238,
+              "hashes": {
+                "sha1": "1a84d3ab22831c7f29d8c31688a25888f1e9f603",
+                "sha512": "eb0879024e939b91e9438e0d06e941fcd3dc574888d3090f389d9a51ef3b85869c755fea841c731ec8df41e8ae7d843bd9c1e0fccb1743988b214ca7c50c3145"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "1.0.1",
+          "tag": "v1.0.1",
+          "source": "github",
+          "published": "2026-10-04T16:58:27Z",
+          "prerelease": false,
+          "files": [
+            {
+              "name": "mankelist-1.0.1+1.21.jar",
+              "url": "https://github.com/CodeW4VE/MankeList/releases/download/v1.0.1/mankelist-1.0.1%2B1.21.jar",
+              "size": 474238,
+              "minecraft": [
+                "1.21"
+              ]
+            },
+            {
+              "name": "mankelist-1.0.1+26.3.jar",
+              "url": "https://github.com/CodeW4VE/MankeList/releases/download/v1.0.1/mankelist-1.0.1%2B26.3.jar",
+              "size": 474879,
+              "minecraft": [
+                "26.3"
+              ]
+            }
+          ],
+          "minecraft": [
+            "1.21",
+            "26.3"
+          ]
+        },
+        {
           "version": "1.0.0+1.21",
           "source": "modrinth",
           "published": "2026-08-14T21:15:33.465474Z",
@@ -6320,7 +6436,7 @@
           ]
         }
       ],
-      "latest": "1.0.0+1.21"
+      "latest": "1.0.1+26.3"
     },
     "mcdreforged": {
       "name": "MCDReforged",
@@ -6482,6 +6598,35 @@
       "conflicts": [],
       "releases": [
         {
+          "version": "1.2.3-w4ve.2",
+          "tag": "v1.2.3-w4ve.2",
+          "source": "github",
+          "published": "2026-10-05T03:00:26Z",
+          "prerelease": false,
+          "files": [
+            {
+              "name": "minimapsync-1.2.3-w4ve.2+mc1.21.1.jar",
+              "url": "https://github.com/CodeW4VE/minimap-sync/releases/download/v1.2.3-w4ve.2/minimapsync-1.2.3-w4ve.2%2Bmc1.21.1.jar",
+              "size": 182569,
+              "minecraft": [
+                "1.21.1"
+              ]
+            },
+            {
+              "name": "minimapsync-1.2.3-w4ve.2+mc26.3.jar",
+              "url": "https://github.com/CodeW4VE/minimap-sync/releases/download/v1.2.3-w4ve.2/minimapsync-1.2.3-w4ve.2%2Bmc26.3.jar",
+              "size": 183306,
+              "minecraft": [
+                "26.3"
+              ]
+            }
+          ],
+          "minecraft": [
+            "1.21.1",
+            "26.3"
+          ]
+        },
+        {
           "version": "1.2.3-w4ve.1",
           "tag": "v1.2.3-w4ve.1",
           "source": "github",
@@ -6502,7 +6647,7 @@
           ]
         }
       ],
-      "latest": "1.2.3-w4ve.1"
+      "latest": "1.2.3-w4ve.2"
     },
     "multi-rcon-api": {
       "name": "MultiRconAPI",
@@ -7068,6 +7213,84 @@
       },
       "releases": [
         {
+          "version": "1.0.2+26.3",
+          "source": "modrinth",
+          "published": "2026-10-04T16:57:57.139718Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.3"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "regioncast-1.0.2+26.3.jar",
+              "url": "https://cdn.modrinth.com/data/t75vYk7n/versions/Itu918CS/regioncast-1.0.2%2B26.3.jar",
+              "size": 125606,
+              "hashes": {
+                "sha1": "f4ce544e340f7cb948c15294e425deda09d2c3f0",
+                "sha512": "f6b62ffa6f77ee863ea92eb63282b1f8ef8cdf78e55a50b22a2da20ed64cd179f6d190275471cd537303b3c502213e80af2116f8fa07934f0e2fe237ed8097b3"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "1.0.2+1.21",
+          "source": "modrinth",
+          "published": "2026-10-04T16:57:56.216677Z",
+          "prerelease": false,
+          "minecraft": [
+            "1.21",
+            "1.21.1"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "regioncast-1.0.2+1.21.jar",
+              "url": "https://cdn.modrinth.com/data/t75vYk7n/versions/Czp0pK4r/regioncast-1.0.2%2B1.21.jar",
+              "size": 125608,
+              "hashes": {
+                "sha1": "0d0344fc59b4a435e86b2bd6e8b1550692f11ea4",
+                "sha512": "18591259b61ac176b67151622cc339508bc512eaf73a6057bf76321f6df4b0672f73661055558de1919d9d83a0f653727b6c1f79c2a2cedc082342dc69ce17fb"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "1.0.2",
+          "tag": "v1.0.2",
+          "source": "github",
+          "published": "2026-10-04T16:57:54Z",
+          "prerelease": false,
+          "files": [
+            {
+              "name": "regioncast-1.0.2+1.21.jar",
+              "url": "https://github.com/CodeW4VE/RegionCast/releases/download/v1.0.2/regioncast-1.0.2%2B1.21.jar",
+              "size": 125608,
+              "minecraft": [
+                "1.21"
+              ]
+            },
+            {
+              "name": "regioncast-1.0.2+26.3.jar",
+              "url": "https://github.com/CodeW4VE/RegionCast/releases/download/v1.0.2/regioncast-1.0.2%2B26.3.jar",
+              "size": 125606,
+              "minecraft": [
+                "26.3"
+              ]
+            }
+          ],
+          "minecraft": [
+            "1.21",
+            "26.3"
+          ]
+        },
+        {
           "version": "1.0.1+1.21",
           "source": "modrinth",
           "published": "2026-08-14T21:15:35.274989Z",
@@ -7149,7 +7372,7 @@
           ]
         }
       ],
-      "latest": "1.0.1+1.21"
+      "latest": "1.0.2+26.3"
     },
     "ripdeepslate": {
       "name": "RipDeepslate",
@@ -10661,6 +10884,35 @@
       "conflicts": [],
       "releases": [
         {
+          "version": "1.3.1",
+          "tag": "v1.3.1",
+          "source": "github",
+          "published": "2026-10-04T16:54:23Z",
+          "prerelease": false,
+          "files": [
+            {
+              "name": "worldeaternotifier-1.3.1+1.21.11.jar",
+              "url": "https://github.com/CodeW4VE/WorldEaterNotifier/releases/download/v1.3.1/worldeaternotifier-1.3.1%2B1.21.11.jar",
+              "size": 16089200,
+              "minecraft": [
+                "1.21.11"
+              ]
+            },
+            {
+              "name": "worldeaternotifier-1.3.1+26.3.jar",
+              "url": "https://github.com/CodeW4VE/WorldEaterNotifier/releases/download/v1.3.1/worldeaternotifier-1.3.1%2B26.3.jar",
+              "size": 15821463,
+              "minecraft": [
+                "26.3"
+              ]
+            }
+          ],
+          "minecraft": [
+            "1.21.11",
+            "26.3"
+          ]
+        },
+        {
           "version": "1.3.0",
           "tag": "1.3.0",
           "source": "github",
@@ -10757,7 +11009,7 @@
           ]
         }
       ],
-      "latest": "1.3.0"
+      "latest": "1.3.1"
     },
     "worldedit": {
       "name": "WorldEdit",
@@ -11006,9 +11258,9 @@
       },
       "releases": [
         {
-          "version": "fabric-26.3-26.5.3",
+          "version": "fabric-26.3-26.6.0",
           "source": "modrinth",
-          "published": "2026-09-17T07:02:10.831127Z",
+          "published": "2026-10-05T07:48:35.941884Z",
           "prerelease": false,
           "minecraft": [
             "26.3"
@@ -11019,24 +11271,24 @@
           ],
           "files": [
             {
-              "name": "xaerominimap-fabric-26.3-26.5.3.jar",
-              "url": "https://cdn.modrinth.com/data/1bokaNcj/versions/YPkAliDt/xaerominimap-fabric-26.3-26.5.3.jar",
-              "size": 2229348,
+              "name": "xaerominimap-fabric-26.3-26.6.0.jar",
+              "url": "https://cdn.modrinth.com/data/1bokaNcj/versions/B2aG1aya/xaerominimap-fabric-26.3-26.6.0.jar",
+              "size": 2230141,
               "hashes": {
-                "sha1": "28b67391892582747bd17a7525318a954e54c80a",
-                "sha512": "86de35d7c6ae10441d9a1e7f14656a87dc3cfa17487b122ea5bfa6f322b56bfa1b96662903a36f2ff0e0d579644474510c4463ea21dea8223b8931d6dbf64e61"
+                "sha1": "287f670348124261bef5c7833715c49960e74dee",
+                "sha512": "c704ed5154e66e891517b9b6778b3227a276823844ec70b348a32dc91d38e3500a6e74d8c69d7f9c68e3137b49511258b0b7d5e0b503391dd959f31e8c4e5112"
               },
               "primary": true
             }
           ]
         },
         {
-          "version": "fabric-26.3-26.5.2",
+          "version": "fabric-26.2-26.6.0",
           "source": "modrinth",
-          "published": "2026-09-16T12:20:59.703232Z",
+          "published": "2026-10-05T07:47:55.085254Z",
           "prerelease": false,
           "minecraft": [
-            "26.3"
+            "26.2"
           ],
           "loaders": [
             "fabric",
@@ -11044,26 +11296,26 @@
           ],
           "files": [
             {
-              "name": "xaerominimap-fabric-26.3-26.5.2.jar",
-              "url": "https://cdn.modrinth.com/data/1bokaNcj/versions/ie70HnZq/xaerominimap-fabric-26.3-26.5.2.jar",
-              "size": 2229173,
+              "name": "xaerominimap-fabric-26.2-26.6.0.jar",
+              "url": "https://cdn.modrinth.com/data/1bokaNcj/versions/JRopWECg/xaerominimap-fabric-26.2-26.6.0.jar",
+              "size": 2222684,
               "hashes": {
-                "sha1": "57faac22807c936b2f940991abf9111a4a4e1162",
-                "sha512": "f71d9406e8ec5511e944bc204a5a9bbd9831b040940a6bb169cb8dfe97f4eb62166a7a01016b5663228c405db505b474f257339a17dbf49acabfa867988cf594"
+                "sha1": "2c5c6f8ac852d0fcb6666ff79e52efef9b468166",
+                "sha512": "7452e9d462d5803eb81ef0f931d265da86ce81917eba6de124cccee40eb244d7e4bfd88eb85f8bb739970ecd12d74a6b0754e60c3fcbbdd9cabb0012c1f04f46"
               },
               "primary": true
             }
           ]
         },
         {
-          "version": "fabric-26.3-26.5.1",
+          "version": "fabric-26.1.2-26.6.0",
           "source": "modrinth",
-          "published": "2026-09-15T09:24:13.859015Z",
+          "published": "2026-10-05T07:47:06.227658Z",
           "prerelease": false,
           "minecraft": [
-            "26.3-rc-2",
-            "26.3-rc-3",
-            "26.3"
+            "26.1",
+            "26.1.1",
+            "26.1.2"
           ],
           "loaders": [
             "fabric",
@@ -11071,12 +11323,37 @@
           ],
           "files": [
             {
-              "name": "xaerominimap-fabric-26.3-26.5.1.jar",
-              "url": "https://cdn.modrinth.com/data/1bokaNcj/versions/bxZ2OjkZ/xaerominimap-fabric-26.3-26.5.1.jar",
-              "size": 2229181,
+              "name": "xaerominimap-fabric-26.1.2-26.6.0.jar",
+              "url": "https://cdn.modrinth.com/data/1bokaNcj/versions/65WQiJg9/xaerominimap-fabric-26.1.2-26.6.0.jar",
+              "size": 2216842,
               "hashes": {
-                "sha1": "cfce17f4a407bdeef6df03e193473bc8090e1b17",
-                "sha512": "9d3026bbe52132f7fbdedf51bc72fe2b794c46ef06b102942bd494a07809c46669fd6c49d86db9c9831552b5f443e587ff5e05aa020781cf2317343c20df0edc"
+                "sha1": "4bf4f12e84acd44cf65c7ca10c01b32ee55b84ec",
+                "sha512": "d04521d8606cc847d0ecbf4e0171a4dd16a6e277688d6942b78ec8413ea86309ead502ef18ce587a661bf7e581f50cfef7b1b1cfde2cd8c167001051092bb6c2"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "fabric-1.21.1-26.6.0",
+          "source": "modrinth",
+          "published": "2026-10-05T07:42:26.768740Z",
+          "prerelease": false,
+          "minecraft": [
+            "1.21.1"
+          ],
+          "loaders": [
+            "fabric",
+            "quilt"
+          ],
+          "files": [
+            {
+              "name": "xaerominimap-fabric-1.21.1-26.6.0.jar",
+              "url": "https://cdn.modrinth.com/data/1bokaNcj/versions/W4dcLcUs/xaerominimap-fabric-1.21.1-26.6.0.jar",
+              "size": 2234556,
+              "hashes": {
+                "sha1": "5fbb03dd3f22c0c3d5466d1366222d7d277a8df3",
+                "sha512": "bad6dfbdfa4fa83c10155380e44e7c7a181c86144cbb377548a3df94e1fdadb88a27dbf18dca89bf8748a49a1c485a03b458e1f74a7881029763297106ed26b7"
               },
               "primary": true
             }
@@ -11158,31 +11435,6 @@
           ]
         },
         {
-          "version": "fabric-26.2-26.4.2",
-          "source": "modrinth",
-          "published": "2026-07-17T08:58:12.713664Z",
-          "prerelease": false,
-          "minecraft": [
-            "26.2"
-          ],
-          "loaders": [
-            "fabric",
-            "quilt"
-          ],
-          "files": [
-            {
-              "name": "xaerominimap-fabric-26.2-26.4.2.jar",
-              "url": "https://cdn.modrinth.com/data/1bokaNcj/versions/W7vHFz3T/xaerominimap-fabric-26.2-26.4.2.jar",
-              "size": 2221925,
-              "hashes": {
-                "sha1": "2c1f7688658101cc7e76b8469016bbebcf176a58",
-                "sha512": "dba00f85308524d9d65c559bc48456c8b65cef58eb54891e069cbaacb6e2f633d279b0d65325f510e3d9e590b67e6f5bdb7c816ada484a0d018850267fbc9131"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
           "version": "fabric-1.21.1-26.4.2",
           "source": "modrinth",
           "published": "2026-07-17T08:51:46.192422Z",
@@ -11202,31 +11454,6 @@
               "hashes": {
                 "sha1": "9293ef9b2626ae3180625c003290a838879cc0b4",
                 "sha512": "153c2273971f2a8b0dbd25a60aff67eb4018b7b8c4786a6d3bdfa97860054200d7d69f634ae2d86f46cc00a66fba53370507bfda7c5f42ed5cc559dbb8d42a59"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "fabric-1.21.1-26.3.0",
-          "source": "modrinth",
-          "published": "2026-07-13T12:32:39.939812Z",
-          "prerelease": false,
-          "minecraft": [
-            "1.21.1"
-          ],
-          "loaders": [
-            "fabric",
-            "quilt"
-          ],
-          "files": [
-            {
-              "name": "xaerominimap-fabric-1.21.1-26.3.0.jar",
-              "url": "https://cdn.modrinth.com/data/1bokaNcj/versions/fPArBs97/xaerominimap-fabric-1.21.1-26.3.0.jar",
-              "size": 2229894,
-              "hashes": {
-                "sha1": "ade83613e5ad54fc3c5a6322c8b92493a8110788",
-                "sha512": "aae4bb032eecb2d44ce1a78f4c542f18aeca386285e1aaa452ac77022aa8ad1f3bf641e99c0ae1c0e6416272f61d58d5847f86c8b16ebe3ee63ffd1e7aefb496"
               },
               "primary": true
             }
@@ -11311,7 +11538,7 @@
           ]
         }
       ],
-      "latest": "fabric-26.3-26.5.3"
+      "latest": "fabric-26.3-26.6.0"
     }
   },
   "profiles": {
