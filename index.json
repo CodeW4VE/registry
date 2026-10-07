@@ -1724,72 +1724,72 @@
       },
       "releases": [
         {
-          "version": "mc1.20.6-v26.3.1",
+          "version": "mc1.19.4-v26.4-beta.1",
           "source": "modrinth",
-          "published": "2026-10-02T15:34:54.838843Z",
+          "published": "2026-10-06T17:57:27.188956Z",
           "prerelease": false,
           "minecraft": [
-            "1.20.6"
+            "1.19.4"
           ],
           "loaders": [
             "fabric"
           ],
           "files": [
             {
-              "name": "carpet-ams-addition-v26.3.1-mc1.20.6.jar",
-              "url": "https://cdn.modrinth.com/data/q4fx1eTg/versions/tUG18Zo6/carpet-ams-addition-v26.3.1-mc1.20.6.jar",
-              "size": 1246804,
+              "name": "carpet-ams-addition-v26.4-beta.1-mc1.19.4.jar",
+              "url": "https://cdn.modrinth.com/data/q4fx1eTg/versions/2D2L8opU/carpet-ams-addition-v26.4-beta.1-mc1.19.4.jar",
+              "size": 1271543,
               "hashes": {
-                "sha1": "28ea9954cdd555005ef1cfa7dea8241d3f9dad49",
-                "sha512": "ac601704af81023d1f52657915f212b36ede8113f69eeb4acb2665e25bbe04b480bc7a6c9eeef1ed0f5a8f47745fe3097e666339b269ae935616eea3b7339fbe"
+                "sha1": "5d401d5f6ad9177e404b1badd81a49ba20027003",
+                "sha512": "cd7908b262de0b01070fb66ebdbc74ade4b3547ceb12f72e97909f571e6fc8d3015a016b4810ab7b81326a57e6245474ee8dab3e94f22e56d6f15146e157a692"
               },
               "primary": true
             }
           ]
         },
         {
-          "version": "mc1.18.2-v26.3.1",
+          "version": "mc26.3-v26.4-beta.1",
           "source": "modrinth",
-          "published": "2026-10-02T15:34:52.229071Z",
+          "published": "2026-10-06T17:57:20.638295Z",
           "prerelease": false,
           "minecraft": [
-            "1.18.2"
+            "26.3"
           ],
           "loaders": [
             "fabric"
           ],
           "files": [
             {
-              "name": "carpet-ams-addition-v26.3.1-mc1.18.2.jar",
-              "url": "https://cdn.modrinth.com/data/q4fx1eTg/versions/m3ESVhnt/carpet-ams-addition-v26.3.1-mc1.18.2.jar",
-              "size": 1243565,
+              "name": "carpet-ams-addition-v26.4-beta.1-mc26.3.jar",
+              "url": "https://cdn.modrinth.com/data/q4fx1eTg/versions/vkHHUt5c/carpet-ams-addition-v26.4-beta.1-mc26.3.jar",
+              "size": 1289354,
               "hashes": {
-                "sha1": "3cf7b204ec971b48bf8085b1cb2885ee4a1db5ce",
-                "sha512": "12e15ee79ffd47dd12a61e96e52e7c3132934dd558e23a067bc7e9314f9178bd5103f0405263b87048d46b1b2e0090cf3b23a43ee44be752148449ee86a3b457"
+                "sha1": "406353f03a172e0f7468ae71e24e1b915fc3aa0d",
+                "sha512": "7d6460a1cdcb45fe8fee9b2a7bdbdaccd7912637f7df6f49b523d595ad09e847e82e4264b7227187dbaea66afb078b92c29af5e5a27beed267db2e3cf788cfe2"
               },
               "primary": true
             }
           ]
         },
         {
-          "version": "mc1.21.8-v26.3.1",
+          "version": "mc26.2-v26.4-beta.1",
           "source": "modrinth",
-          "published": "2026-10-02T15:34:52.108738Z",
+          "published": "2026-10-06T17:57:20.376759Z",
           "prerelease": false,
           "minecraft": [
-            "1.21.8"
+            "26.2"
           ],
           "loaders": [
             "fabric"
           ],
           "files": [
             {
-              "name": "carpet-ams-addition-v26.3.1-mc1.21.8.jar",
-              "url": "https://cdn.modrinth.com/data/q4fx1eTg/versions/ektmE6lC/carpet-ams-addition-v26.3.1-mc1.21.8.jar",
-              "size": 1263151,
+              "name": "carpet-ams-addition-v26.4-beta.1-mc26.2.jar",
+              "url": "https://cdn.modrinth.com/data/q4fx1eTg/versions/rxRBDzg2/carpet-ams-addition-v26.4-beta.1-mc26.2.jar",
+              "size": 1288342,
               "hashes": {
-                "sha1": "cc1a21ce8265b2819ef3fc9f6f763ac22f3f0524",
-                "sha512": "9c4a2e2dff3a104acf493836118f6364f66f9138ffe42f61d110d376c02cdee42af63b9cf373cd2a00fc6940fca01ac26043e9de4f99d1de4f865e0931fd20e5"
+                "sha1": "413bfeae607ec72d9b67e1c15de63b31e433f6b5",
+                "sha512": "9a3995aa14179214529e0bdbac797b3eed68bd5e535e8de210284d11d215f2f309938cd1ce7b9bfdca12f51f7554312543814186bf5e0114a4371d62de094be0"
               },
               "primary": true
             }
@@ -1892,30 +1892,6 @@
           ]
         },
         {
-          "version": "mc26.2-v26.2",
-          "source": "modrinth",
-          "published": "2026-06-19T11:08:52.597554Z",
-          "prerelease": false,
-          "minecraft": [
-            "26.2"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "carpet-ams-addition-v26.2-mc26.2.jar",
-              "url": "https://cdn.modrinth.com/data/q4fx1eTg/versions/tnJqmHTA/carpet-ams-addition-v26.2-mc26.2.jar",
-              "size": 1257185,
-              "hashes": {
-                "sha1": "95d1d6f191f7010ed062b96e8c34016b71a35fd7",
-                "sha512": "fd9256c0b80117de0bfbcff210b074a11546c4529b0111fbc0928b5181147b658a6f4e6895ecd584d5df7fdc23a9369926be2844ba24719afb37629d83610385"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
           "version": "mc1.21.1-v26.1.2",
           "source": "modrinth",
           "published": "2026-03-24T18:15:08.560506Z",
@@ -2012,7 +1988,7 @@
           ]
         }
       ],
-      "latest": "mc1.20.6-v26.3.1"
+      "latest": "mc1.19.4-v26.4-beta.1"
     },
     "carpet-extra": {
       "name": "Carpet Extra",
@@ -3274,6 +3250,30 @@
       },
       "releases": [
         {
+          "version": "0.162.2+26.4",
+          "source": "modrinth",
+          "published": "2026-10-06T15:50:00.575961Z",
+          "prerelease": true,
+          "minecraft": [
+            "26.4-snapshot-3"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "fabric-api-0.162.2+26.4.jar",
+              "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/ds8TaZ94/fabric-api-0.162.2%2B26.4.jar",
+              "size": 1772386,
+              "hashes": {
+                "sha1": "1a776d7521dde467a223fd454de62ac571944632",
+                "sha512": "922279c65649502307ef0b8b0708b2d0000084e18e5c0278b700d25a4da80450b232fa99108d08af71835191a3eaded351d064553a5109b168c9a44455890e09"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
           "version": "0.162.1+26.4",
           "source": "modrinth",
           "published": "2026-10-06T13:08:45.847859Z",
@@ -3316,30 +3316,6 @@
               "hashes": {
                 "sha1": "5d520bc859387a386720a8fbd4ecd79dfb6d9728",
                 "sha512": "09d8f3fcf3baf3145736550f3a3a3d60800f467582ec7aec25e5b6c313bf8c6ba4643d3212ccc68639c0890eb9b795f0e79f49dc17ce6fdecc26bffa2785b074"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "0.162.0+26.3",
-          "source": "modrinth",
-          "published": "2026-10-06T08:27:32.636180Z",
-          "prerelease": false,
-          "minecraft": [
-            "26.3"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "fabric-api-0.162.0+26.3.jar",
-              "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/v2j28coa/fabric-api-0.162.0%2B26.3.jar",
-              "size": 1772377,
-              "hashes": {
-                "sha1": "273cd2dcbd92d1559edcc91c9f23fee47f6ff93f",
-                "sha512": "5ab70908952f1d2346d16b122ca31327f4055db59c279a1bc3c3c581ce359bb541cba15730f55b0727be7c7c4debc4a4412a183c228e0d4dea81c734f7b412ce"
               },
               "primary": true
             }
@@ -3562,7 +3538,7 @@
           ]
         }
       ],
-      "latest": "0.162.0+26.3"
+      "latest": "0.161.0+26.2"
     },
     "fabric-language-kotlin": {
       "name": "Fabric Language Kotlin",
