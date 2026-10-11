@@ -1141,6 +1141,34 @@
       },
       "releases": [
         {
+          "version": "5.29-fabric",
+          "source": "modrinth",
+          "published": "2026-10-10T17:42:04.727286Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.1",
+            "26.1.1",
+            "26.1.2",
+            "26.2",
+            "26.3"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "bluemap-5.29-fabric.jar",
+              "url": "https://cdn.modrinth.com/data/swbUV1cr/versions/SX74rxzP/bluemap-5.29-fabric.jar",
+              "size": 7085342,
+              "hashes": {
+                "sha1": "1fbd340333962fc778d88c23a618e6208d48ce55",
+                "sha512": "032a96971437e43a3722d8d6c026aeb9837117e1a56521d017a68fce8bb5630ceffd98454672b9d6c589a1008fcd2ab4cd48f4af8fadf08755313b1e326bedb1"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
           "version": "5.28-fabric",
           "source": "modrinth",
           "published": "2026-09-25T17:18:32.021450Z",
@@ -1191,34 +1219,6 @@
               "hashes": {
                 "sha1": "3bdb1400b8976cbf0fd4d78ed3f8c69ee4c24d6f",
                 "sha512": "bfc07f69c6582b892967e8b2cd11c37ac2cad2b1930f7e325c9acd6ddad389752f082f9f3d735e2d4e2528fa7888c152e29c1e28dcf68acc0afd368828b67d34"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "5.26-fabric",
-          "source": "modrinth",
-          "published": "2026-09-15T23:27:30.206566Z",
-          "prerelease": false,
-          "minecraft": [
-            "26.1",
-            "26.1.1",
-            "26.1.2",
-            "26.2",
-            "26.3"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "bluemap-5.26-fabric.jar",
-              "url": "https://cdn.modrinth.com/data/swbUV1cr/versions/D2AfEu6B/bluemap-5.26-fabric.jar",
-              "size": 7025670,
-              "hashes": {
-                "sha1": "fb844befacdaf5d21231cc8f9e35d6deec20aa19",
-                "sha512": "bccc4263694f97ad2107c76e875d44b8f97c1a345951c8a34c85e65fbfa3506df3217238c513c2b13a50300bf8105b153aa057be1c9a291dd70cec28e3a7b2b4"
               },
               "primary": true
             }
@@ -1310,7 +1310,7 @@
           ]
         }
       ],
-      "latest": "5.28-fabric"
+      "latest": "5.29-fabric"
     },
     "botinventory-carpet": {
       "name": "BotInventory",
@@ -7906,6 +7906,30 @@
         "server_side": "required"
       },
       "releases": [
+        {
+          "version": "3.6.0-beta.5+26.3",
+          "source": "modrinth",
+          "published": "2026-10-10T21:29:13.372374Z",
+          "prerelease": true,
+          "minecraft": [
+            "26.3"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "ServerReplay-3.6.0-beta.5+26.3.jar",
+              "url": "https://cdn.modrinth.com/data/qCvSZ8ra/versions/rCmC09FF/ServerReplay-3.6.0-beta.5%2B26.3.jar",
+              "size": 10299035,
+              "hashes": {
+                "sha1": "385e820b5980c485cab4560587092142ae824cc5",
+                "sha512": "fe857584ff5795dd088b7acae8e8c934e85695df53a095dc8029be18f87b1fec005b5bdd532c2ae20b0be51b9cba2d06bf2e5b14abe58a364d5b7118bfdd8c98"
+              },
+              "primary": true
+            }
+          ]
+        },
         {
           "version": "3.6.0-beta.2+26.3",
           "source": "modrinth",
