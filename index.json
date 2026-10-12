@@ -1425,6 +1425,40 @@
       },
       "releases": [
         {
+          "version": "0.4.0+26.3",
+          "source": "modrinth",
+          "published": "2026-10-11T21:19:37.577265Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.3"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "buildevents-0.4.0+26.3.jar",
+              "url": "https://cdn.modrinth.com/data/fzSM8IMo/versions/ziDzYY3K/buildevents-0.4.0%2B26.3.jar",
+              "size": 77697,
+              "hashes": {
+                "sha1": "df33d499934c904d505abed08c7c044aa65776a7",
+                "sha512": "47f1edbbcf115e777d3c2a81d1d2150eb6d154b768c2e66320518f1c699373d614a74fa2d1222688a9dc85ffb069ed1a6298d2c8741f486ea30455d82b6a05c5"
+              },
+              "primary": true
+            },
+            {
+              "name": "buildevents-0.4.0+26.3-sources.jar",
+              "url": "https://cdn.modrinth.com/data/fzSM8IMo/versions/ziDzYY3K/buildevents-0.4.0%2B26.3-sources.jar",
+              "size": 14869,
+              "hashes": {
+                "sha1": "220566f128a874b0b9e1c78d8a1a5b075af8e9b3",
+                "sha512": "03ef385be9d85fe55741f9cb083a984c54107833cb0c6a366be1b5ef6e84ffb010cb4b834152ecd08be8148aba8e30da5fd4d21b665b84b9e087503c660765a6"
+              },
+              "primary": false
+            }
+          ]
+        },
+        {
           "version": "0.4.0+1.21.11",
           "source": "modrinth",
           "published": "2026-07-23T20:32:59.654306Z",
@@ -1531,7 +1565,7 @@
           ]
         }
       ],
-      "latest": "0.4.0+1.21.11"
+      "latest": "0.4.0+26.3"
     },
     "carpet": {
       "name": "Carpet",
