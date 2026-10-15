@@ -8232,6 +8232,109 @@
       },
       "releases": [
         {
+          "version": "4.0.0",
+          "source": "modrinth",
+          "published": "2026-10-15T07:46:52.584892Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.3"
+          ],
+          "loaders": [
+            "fabric",
+            "quilt"
+          ],
+          "files": [
+            {
+              "name": "server_waypoint-4.0.0-fabric-mc26.3.jar",
+              "url": "https://cdn.modrinth.com/data/UyBaYBa7/versions/yQ1tB9ui/server_waypoint-4.0.0-fabric-mc26.3.jar",
+              "size": 2656551,
+              "hashes": {
+                "sha1": "f6ab64ea01dc9a2ffed56009837b75ec3e424fc1",
+                "sha512": "ab99dc6d86c12efe38670d5e7ff783368eee19193c5fe500fa638d10f6f65743eb9c28f3beba1d0e294a16b6151672639e6115c8a1f81ff3bb77feb8a5d10eff"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "4.0.0",
+          "source": "modrinth",
+          "published": "2026-10-15T07:46:47.122126Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.2"
+          ],
+          "loaders": [
+            "fabric",
+            "quilt"
+          ],
+          "files": [
+            {
+              "name": "server_waypoint-4.0.0-fabric-mc26.2.jar",
+              "url": "https://cdn.modrinth.com/data/UyBaYBa7/versions/VGU7vTn0/server_waypoint-4.0.0-fabric-mc26.2.jar",
+              "size": 2656636,
+              "hashes": {
+                "sha1": "86f76b94670766b14f93792cfb2e785219f3e445",
+                "sha512": "d9feda1ac45e0391a79be39d9d649e7ab2bf8f317bc289a0139c4439458bc5b9460b03c73019b736c9f7793f8d0aad3d19d236251d7c13f480c6fd78ecc8be1d"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "4.0.0",
+          "source": "modrinth",
+          "published": "2026-10-15T07:46:41.710223Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.1",
+            "26.1.1",
+            "26.1.2"
+          ],
+          "loaders": [
+            "fabric",
+            "quilt"
+          ],
+          "files": [
+            {
+              "name": "server_waypoint-4.0.0-fabric-mc26.1-26.1.2.jar",
+              "url": "https://cdn.modrinth.com/data/UyBaYBa7/versions/d9cEEuh7/server_waypoint-4.0.0-fabric-mc26.1-26.1.2.jar",
+              "size": 2656481,
+              "hashes": {
+                "sha1": "2712cec59f255de6de54c9e94598f5835abf0012",
+                "sha512": "6e969efa15fc1d7e4da41656521cbab91f0c41ce1be4e3857077fc1512f8d2b6f66a1b13a3637689ce2f5c0558144202cb285d97e049ce56bb1cf212c560f11f"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "4.0.0",
+          "source": "modrinth",
+          "published": "2026-10-15T07:45:46.348636Z",
+          "prerelease": false,
+          "minecraft": [
+            "1.21",
+            "1.21.1"
+          ],
+          "loaders": [
+            "fabric",
+            "quilt"
+          ],
+          "files": [
+            {
+              "name": "server_waypoint-4.0.0-fabric-mc1.21-1.21.1.jar",
+              "url": "https://cdn.modrinth.com/data/UyBaYBa7/versions/D2RbTNNv/server_waypoint-4.0.0-fabric-mc1.21-1.21.1.jar",
+              "size": 2558782,
+              "hashes": {
+                "sha1": "beac2e0acd2f52cce85d370ba371d8715d3a9a02",
+                "sha512": "3d04de9d3a4f8ee58a0cd0e73847065132ddf47fe8db0c2802e1c731a97e38d8d2cdc6628aede089cdfe01eb6f6c037bb755d096387f2bbb9b6602b89809a6a9"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
           "version": "3.0.4",
           "source": "modrinth",
           "published": "2026-08-24T08:51:09.460861Z",
@@ -8251,59 +8354,6 @@
               "hashes": {
                 "sha1": "4596a9a382791f657686d2c1a0ead4cf86c95400",
                 "sha512": "b30600b8004f847e341b2fad824e0b180ca5be9cd6c588899da28e0627e95f3906bbc147574e08f6c99fdee16e695e947e698eb0dde61c1700a7200ff32a218e"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "3.0.4",
-          "source": "modrinth",
-          "published": "2026-08-24T08:51:04.284824Z",
-          "prerelease": false,
-          "minecraft": [
-            "26.1",
-            "26.1.1",
-            "26.1.2"
-          ],
-          "loaders": [
-            "fabric",
-            "quilt"
-          ],
-          "files": [
-            {
-              "name": "server_waypoint-3.0.4-fabric-mc26.1-26.1.2.jar",
-              "url": "https://cdn.modrinth.com/data/UyBaYBa7/versions/ZjCKabkR/server_waypoint-3.0.4-fabric-mc26.1-26.1.2.jar",
-              "size": 997955,
-              "hashes": {
-                "sha1": "cb8fcf85a199be7fa7986cf687ac887c8eeaf821",
-                "sha512": "4e53da18c418a6a31706a164231ff85adcf41a89f4a1cff7224cf863db983d0c137a6fea7d35850ce2f8b796caa1b4733730111ad13824cae6269d5c9b6f821a"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "3.0.4",
-          "source": "modrinth",
-          "published": "2026-08-24T08:50:59.142032Z",
-          "prerelease": false,
-          "minecraft": [
-            "1.21.9",
-            "1.21.10"
-          ],
-          "loaders": [
-            "fabric",
-            "quilt"
-          ],
-          "files": [
-            {
-              "name": "server_waypoint-3.0.4-fabric-mc1.21.9-1.21.10.jar",
-              "url": "https://cdn.modrinth.com/data/UyBaYBa7/versions/Lvvxq0fq/server_waypoint-3.0.4-fabric-mc1.21.9-1.21.10.jar",
-              "size": 995977,
-              "hashes": {
-                "sha1": "fd827ceb525a57d2672107e882885593e8de7377",
-                "sha512": "91f11bf839c594b00a665257496a7dfa967ba47cab0402ca8a6c8f60ffabed4673374041e6d9ea70ebd3f2865bb00507008b5e5af6b4f9fc4f409ac0fd5ee34c"
               },
               "primary": true
             }
@@ -8385,35 +8435,9 @@
               "primary": true
             }
           ]
-        },
-        {
-          "version": "3.0.2",
-          "source": "modrinth",
-          "published": "2026-05-19T04:40:49.157027Z",
-          "prerelease": false,
-          "minecraft": [
-            "1.21",
-            "1.21.1"
-          ],
-          "loaders": [
-            "fabric",
-            "quilt"
-          ],
-          "files": [
-            {
-              "name": "server_waypoint-3.0.2-fabric-mc1.21-1.21.1.jar",
-              "url": "https://cdn.modrinth.com/data/UyBaYBa7/versions/cAqq0eYc/server_waypoint-3.0.2-fabric-mc1.21-1.21.1.jar",
-              "size": 886426,
-              "hashes": {
-                "sha1": "b8003dc86b93e78ed28d60f8598d53e407cf1c8d",
-                "sha512": "fa34364e2288cc62e228be3be19c26f54d0f9988408a7a0f36124edd3805cf70fe5c9d7aad670151b402dd67c2ccca7e1a71b2222e1ffe59cae057832671781a"
-              },
-              "primary": true
-            }
-          ]
         }
       ],
-      "latest": "3.0.4"
+      "latest": "4.0.0"
     },
     "servux": {
       "name": "Servux",
@@ -11091,6 +11115,31 @@
       },
       "releases": [
         {
+          "version": "7.4.6",
+          "source": "modrinth",
+          "published": "2026-10-15T04:01:42.286446Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.3"
+          ],
+          "loaders": [
+            "fabric",
+            "neoforge"
+          ],
+          "files": [
+            {
+              "name": "worldedit-mod-7.4.6.jar",
+              "url": "https://cdn.modrinth.com/data/1u6JkXh5/versions/ByRNkO83/worldedit-mod-7.4.6.jar",
+              "size": 5166790,
+              "hashes": {
+                "sha1": "8f7962199ec8b3fef214b7f81c07fcf2d1eac28f",
+                "sha512": "3bc4fbf2ee36746f54dc036283b3ded3f17fd91991eaa1ead76b0861aa902cd7ffbc0962db0065d8690e46d1c4890847ebe97ee0b4e36a979b41168c30586ee4"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
           "version": "7.4.6-beta-02",
           "source": "modrinth",
           "published": "2026-09-24T10:25:37.705513Z",
@@ -11294,7 +11343,7 @@
           ]
         }
       ],
-      "latest": "7.4.5"
+      "latest": "7.4.6"
     },
     "xaeros-minimap": {
       "name": "Xaero's Minimap",
