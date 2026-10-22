@@ -576,6 +576,76 @@ def render_commands(lang, langs, help_texts, commands):
                 "\n".join(body), "commands")
 
 
+def render_community(lang, langs):
+    """One chat across your servers and your Discord: the guide for an admin.
+
+    Only built once wavechat-server has a release (see main): a page telling
+    people to install something they cannot install is worse than no page.
+    """
+    def T(key, default):
+        return lang.t("community", key, default)
+
+    def code(lines):
+        return "<pre><code>" + "\n".join(
+            esc(command) + (f'  <span class="c"># {esc(note)}</span>' if note else "")
+            for command, note in lines) + "</code></pre>"
+
+    body = [
+        f'<p class="eyebrow">{esc(T("eyebrow", "W4VE / WaveChat"))}</p>',
+        f'<h1>{esc(T("title", "Your community"))}</h1>',
+        "<p>" + esc(T("intro",
+            "WaveChat makes the chat of all your Minecraft servers and your Discord "
+            "one conversation. One server runs the hub; every other one joins it "
+            "with a code. Nobody copies an ID, a secret or an address by hand.")) + "</p>",
+
+        f'<h2 id="first">{esc(T("first_title", "The first server"))}</h2>',
+        "<p>" + esc(T("first_body",
+            "On the server that will run the hub. W4VE asks for the public HTTPS "
+            "address players reach it on and, if you want Discord, the bot token; "
+            "the bridge channel is chosen by name from the ones the bot can see.")) + "</p>",
+        code([("w4ve install wavechat-server", T("c_install", "asks what it needs")),
+              ("w4ve run", T("c_run", "the server, the hub and the bridge"))]),
+
+        f'<h2 id="more">{esc(T("more_title", "More servers"))}</h2>',
+        "<p>" + esc(T("more_body",
+            "On the first server, ask for a code for the new one. It works once, "
+            "for 30 minutes, and the command to run on the other machine comes "
+            "with it.")) + "</p>",
+        code([("w4ve community invite cmp", T("c_invite", "on the first server")),
+              ("w4ve join https://chat.example.net W4-7K2P-9QXM", T("c_join", "on the new one")),
+              ("w4ve community", T("c_list", "who is in it"))]),
+        callout("info", esc(T("join_note_title", "What join does")),
+                esc(T("join_note_body",
+                  "It joins the community, keeps the server's identity in its own "
+                  "file (readable only by the server), adds the WaveChat jar for that "
+                  "Minecraft version with its checksum verified, and turns on sending "
+                  "and receiving. Restart the server and its players are in."))),
+
+        f'<h2 id="look">{esc(T("look_title", "How it looks"))}</h2>',
+        "<p>" + inline(T("look_body",
+            "A line from another server says which one, in that server's colour: "
+            "`[cmp] <Alice> hi`. Colours follow the order servers "
+            "joined in until you choose.")) + "</p>",
+        code([("w4ve community color cmp red", ""),
+              ("w4ve community label discord dc", T("c_label", "a shorter tag"))]),
+
+        f'<h2 id="players">{esc(T("players_title", "For players"))}</h2>',
+        "<p>" + esc(T("players_body",
+            "These are server commands: they work with the mod and without it.")) + "</p>",
+        code([("/link", T("c_link", "ties your Discord account, with a code")),
+              ("/chat", T("c_chat", "the other servers, with buttons")),
+              ("/chat cmp off", T("c_off", "hide cmp until you leave")),
+              ("/chat cmp off forever", T("c_forever", "until you turn it on")),
+              ("/chat cmp on", "")]),
+        "<p>" + esc(T("mod_body",
+            "With the mod, the normal chat window (T) does more: right click a line "
+            "to reply, react, edit or delete it, and emotes show as pictures. "
+            "Players without the mod still read every line.")) + "</p>",
+    ]
+    return page(lang, langs, "community.html", T("page_title", "Your community") + " - W4VE docs",
+                "\n".join(body), "community")
+
+
 def render_home(lang, langs, index):
     reg = index["registry"]
     pieces = index["pieces"]
@@ -770,6 +840,10 @@ def main():
 
     build_nav(pieces)
     langs = load_langs()
+    # The community guide waits for something people can install.
+    community = bool((pieces.get("wavechat-server") or {}).get("latest"))
+    if community and not any(s[0] == "community" for s in SECTIONS):
+        SECTIONS.insert(1, ("community", "community.html", "community", "Your community"))
 
     cli = Path(args.cli) if args.cli else None
     if cli is None:
@@ -790,6 +864,8 @@ def main():
         (root / "pieces").mkdir(parents=True, exist_ok=True)
         (root / "index.html").write_text(render_home(lang, langs, index))
         (root / "profiles.html").write_text(render_profiles(lang, langs, index))
+        if community:
+            (root / "community.html").write_text(render_community(lang, langs))
         if helps:
             (root / "commands.html").write_text(
                 render_commands(lang, langs, helps, commands))
