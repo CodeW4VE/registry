@@ -3,7 +3,7 @@
   "registry": {
     "name": "W4VE",
     "tagline": "Ware 4 Vanilla Experience",
-    "description": "Tools for technical Minecraft servers that do not break vanilla.",
+    "description": "The runtime that runs your Fabric server and keeps it healthy, without breaking vanilla.",
     "homepage": "https://w4ve.xyz/",
     "docs": "https://docs.w4ve.xyz/",
     "github_org": "CodeW4VE",
@@ -6489,6 +6489,14 @@
       "tags": [],
       "releases": [
         {
+          "version": "2.16.2",
+          "tag": "v2.16.2",
+          "source": "github",
+          "published": "2026-10-22T05:19:21Z",
+          "prerelease": false,
+          "files": []
+        },
+        {
           "version": "2.16.1",
           "tag": "v2.16.1",
           "source": "github",
@@ -6503,33 +6511,9 @@
           "published": "2026-09-19T05:58:29Z",
           "prerelease": false,
           "files": []
-        },
-        {
-          "version": "2.16.0b1",
-          "source": "pypi",
-          "published": "2026-09-17T19:40:13.804212Z",
-          "prerelease": true,
-          "files": [
-            {
-              "name": "mcdreforged-2.16.0b1-py3-none-any.whl",
-              "url": "https://files.pythonhosted.org/packages/d8/c7/4a9f4416926cd0d813e5b29e9f5e7a15c9973f7dc9791c8d2a4b5a2a9c96/mcdreforged-2.16.0b1-py3-none-any.whl",
-              "size": 310996,
-              "hashes": {
-                "sha256": "736a57b1df111dcb2ea981d5848a92087dc350f8d4325e333a44408818253d2d"
-              }
-            },
-            {
-              "name": "mcdreforged-2.16.0b1.tar.gz",
-              "url": "https://files.pythonhosted.org/packages/03/01/d495c8e0616918af63cc3c616f72c041233fa8f84ec54dc9b00fccd4ff18/mcdreforged-2.16.0b1.tar.gz",
-              "size": 240163,
-              "hashes": {
-                "sha256": "aba6b6f6788f73fa4dbfedf62d7ad8dd964035694464d3a5a73a407d2dd3bd79"
-              }
-            }
-          ]
         }
       ],
-      "latest": "2.16.1"
+      "latest": "2.16.2"
     },
     "minecraft-data-api": {
       "name": "MinecraftDataAPI",
@@ -10747,6 +10731,22 @@
       "conflicts": [],
       "releases": [
         {
+          "version": "0.5.0",
+          "tag": "v0.5.0",
+          "source": "github",
+          "published": "2026-10-22T06:02:59Z",
+          "prerelease": false,
+          "files": []
+        },
+        {
+          "version": "0.4.0",
+          "tag": "v0.4.0",
+          "source": "github",
+          "published": "2026-10-22T05:20:38Z",
+          "prerelease": false,
+          "files": []
+        },
+        {
           "version": "0.1.1",
           "tag": "v0.1.1",
           "source": "github",
@@ -10763,7 +10763,7 @@
           "files": []
         }
       ],
-      "latest": "0.1.1"
+      "latest": "0.5.0"
     },
     "w4ve-core": {
       "name": "w4ve-core",
