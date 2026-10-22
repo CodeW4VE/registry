@@ -35,7 +35,9 @@ ASSETS = HERE / "assets"
 I18N = HERE / "i18n"
 OUT = HERE / "site"
 
-CLI_RELEASE = "https://github.com/CodeW4VE/w4ve/releases/latest/download/w4ve.py"
+# Releases carry the whole runtime as a tarball since 0.4.0; for its own
+# help, w4ve.py alone is enough, and main is what the latest release was cut from.
+CLI_RELEASE = "https://raw.githubusercontent.com/CodeW4VE/w4ve/main/w4ve.py"
 # Only a fallback. The real list is asked of the CLI (see discover_commands):
 # this was a hand written list, and it quietly went stale the day the runtime
 # arrived. Thirteen commands existed, worked, and were documented nowhere,
@@ -610,32 +612,44 @@ def render_home(lang, langs, index):
             for n, label in stats) + "</dl>",
         "</div>",
 
-        f'<h2 id="install">{esc(T("install_title", "Install the command"))}</h2>',
+        f'<h2 id="install">{esc(T("install_title", "Three commands"))}</h2>',
         "<p>" + esc(T("install_body",
-                      "One file, standard library only, Python 3.8 or newer. No "
-                      "pip, no virtualenv, nothing to install first.")) + "</p>",
-        "<pre><code>curl -LO https://github.com/CodeW4VE/w4ve/releases/latest/download/w4ve.py\n"
-        "chmod +x w4ve.py &amp;&amp; sudo mv w4ve.py /usr/local/bin/w4ve</code></pre>",
-
-        f'<h2>{esc(T("point_title", "Point it at a server"))}</h2>',
-        "<pre><code>cd /path/to/your/server\n"
-        f'w4ve init                  <span class="c"># '
-        f'{esc(T("c_init", "writes w4ve.toml"))}</span>\n'
-        f'w4ve adopt                 <span class="c"># '
-        f'{esc(T("c_adopt", "writes down the mods this server already has"))}</span>\n'
-        f'w4ve install shapeboard    <span class="c"># '
-        f'{esc(T("c_install", "downloads it, puts it where it goes"))}</span>\n'
-        f'w4ve status                <span class="c"># '
-        f'{esc(T("c_status", "what is installed, what needs a restart"))}</span>\n'
-        f'w4ve doctor                <span class="c"># '
-        f'{esc(T("c_doctor", "what is wrong, before the server finds out"))}</span>'
+                      "From nothing to a running Fabric server. Linux (a VM or a "
+                      "container is fine) and Python 3.11 or newer, standard "
+                      "library only.")) + "</p>",
+        "<pre><code>curl -fsSL https://github.com/CodeW4VE/w4ve/releases/latest/download/get.sh | sh\n"
+        f'cd your-server            <span class="c"># '
+        f'{esc(T("c_cd", "or an empty folder"))}</span>\n'
+        f'w4ve init                 <span class="c"># '
+        f'{esc(T("c_init", "looks first, shows the plan, then sets it up"))}</span>\n'
+        f'w4ve run                  <span class="c"># '
+        f'{esc(T("c_run", "starts the server and looks after it"))}</span>'
         "</code></pre>",
-        callout("info", T("adopt_title", "It reads what is already there"),
+        callout("info", T("adopt_title", "It looks before it writes"),
                 T("adopt_body",
-                  "<code>w4ve adopt</code> opens every jar and reads the "
-                  "manifest inside instead of guessing from the file name, so a "
-                  "server you have been running for a year is understood as it "
-                  "is, and the mods it does not recognise are left alone.")),
+                  "<code>w4ve init</code> says what it found (an existing "
+                  "server, MCDR and its plugins, the Minecraft version, Java, "
+                  "your mods) and what it is going to do, before it does "
+                  "anything. It never moves or deletes a file. In an empty "
+                  "folder it offers to make a new Fabric server, and the "
+                  "Minecraft EULA is yours to accept, never ours.")),
+
+        f'<h2>{esc(T("point_title", "After that"))}</h2>',
+        "<pre><code>"
+        f'w4ve install shapeboard    <span class="c"># '
+        f'{esc(T("c_install", "adds a piece, and asks what it needs to know"))}</span>\n'
+        f'w4ve status                <span class="c"># '
+        f'{esc(T("c_status", "what is running, what waits for a restart"))}</span>\n'
+        f'w4ve doctor                <span class="c"># '
+        f'{esc(T("c_doctor", "what is wrong, before the server finds out"))}</span>\n'
+        f'w4ve update                <span class="c"># '
+        f'{esc(T("c_update", "moves everything to its newest version"))}</span>\n'
+        f'w4ve self-update           <span class="c"># '
+        f'{esc(T("c_selfupdate", "updates W4VE itself"))}</span>'
+        "</code></pre>",
+        "<p>" + esc(T("after_body",
+                      "w4ve help lists the rest. Every question has a flag, so "
+                      "a script gets what a person gets.")) + "</p>",
 
         f'<h2>{esc(T("catalog_title", "What is in the catalog"))}</h2>',
         "<p>" + esc(T("catalog_body",
@@ -660,11 +674,13 @@ def render_home(lang, langs, index):
 
         f'<h2>{esc(T("why_title", "Why this exists"))}</h2>',
         "<p>" + esc(T("why_body",
-                      "These tools grew one at a time out of running a technical "
-                      "server, and for a while the only way to install them was "
-                      "to know which jar went where. The catalog is that "
-                      "knowledge written down in one place, and the command is "
-                      "what reads it.")) + "</p>",
+                      "Running a technical server used to mean a wrapper around "
+                      "a wrapper, jars copied by hand and knowledge only one "
+                      "person had. W4VE owns the server process, knows what it "
+                      "runs and how to go back, keeps your MCDReforged plugins "
+                      "working without MCDR, and leaves your world and files "
+                      "as normal files: stop using it and the server still "
+                      "starts with plain Java.")) + "</p>",
     ]
     return page(lang, langs, "index.html", "W4VE docs", "\n".join(body), "index")
 
@@ -681,6 +697,17 @@ def discover_commands(cli_path):
     twenty-five commands is how this page came to describe a version of W4VE
     that stopped existing in August.
     """
+    # Since 0.5.0 `--help` shows only the everyday commands, and `help --names`
+    # is the CLI's own list of all of them, one per line.
+    try:
+        named = subprocess.run([sys.executable, str(cli_path), "help", "--names"],
+                               capture_output=True, text=True, timeout=30)
+        names = [line.strip() for line in (named.stdout or "").splitlines() if line.strip()]
+        if named.returncode == 0 and len(names) >= 10:
+            print(f"the CLI has {len(names)} commands")
+            return names
+    except (OSError, subprocess.SubprocessError):
+        pass
     try:
         out = subprocess.run([sys.executable, str(cli_path), "--help"],
                              capture_output=True, text=True, timeout=30,
