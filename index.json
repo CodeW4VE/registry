@@ -3284,6 +3284,54 @@
       },
       "releases": [
         {
+          "version": "0.165.0+26.4",
+          "source": "modrinth",
+          "published": "2026-10-23T08:42:31.302500Z",
+          "prerelease": true,
+          "minecraft": [
+            "26.4-snapshot-5"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "fabric-api-0.165.0+26.4.jar",
+              "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/tCBJwbEV/fabric-api-0.165.0%2B26.4.jar",
+              "size": 1739466,
+              "hashes": {
+                "sha1": "e1292ea41d82e17a2a42af11bfebdd99e9114541",
+                "sha512": "5d4695150491d5066b95f400a6e5a19a1e9a85edd07418287e97ef5059f124ad447ed1ff61f8c06ebc2632fafb78973980e9ff879607509cd17262df21f49803"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "0.165.0+26.3",
+          "source": "modrinth",
+          "published": "2026-10-23T08:35:46.648085Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.3"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "fabric-api-0.165.0+26.3.jar",
+              "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/EQKgpeKu/fabric-api-0.165.0%2B26.3.jar",
+              "size": 1778588,
+              "hashes": {
+                "sha1": "8f8a23d6c9fbf7b075b31b4fb0a1007b0488d1d2",
+                "sha512": "0a4b8a14e847b71567b557b43d906c2167fa263eeeef37454a821ba286996e3da1616dc2d9647736d28a250d5ecf400541cae808359b29a62324a8a6f2ad5e30"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
           "version": "0.164.1+26.4",
           "source": "modrinth",
           "published": "2026-10-20T16:26:07.911368Z",
@@ -3302,54 +3350,6 @@
               "hashes": {
                 "sha1": "2f640e504736e320322d10ad9d1d697a4e1d07a0",
                 "sha512": "a09ed6d835df4c4e54abafa2d9e13b9cbda821bf78aa98b9f9a50603cbc0256840934bb440ea5fb13bb84879a775d1debb8705b8327ded7efedf927d3224ba0e"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "0.164.0+26.4",
-          "source": "modrinth",
-          "published": "2026-10-19T10:17:12.234455Z",
-          "prerelease": true,
-          "minecraft": [
-            "26.4-snapshot-4"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "fabric-api-0.164.0+26.4.jar",
-              "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/lT0oNjkF/fabric-api-0.164.0%2B26.4.jar",
-              "size": 1775999,
-              "hashes": {
-                "sha1": "c370d0e17f887f535f5b557316d58657e9ca660c",
-                "sha512": "d662f8ea1532967bb114afa47874da30416b5037b6107d4fc8df264e262ead69fcc48de6146c0caaa782f2bf9b4fd5eeb59bfde3e1b82a198e85fbfc63fe91ed"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "0.164.0+26.3",
-          "source": "modrinth",
-          "published": "2026-10-19T10:10:38.206621Z",
-          "prerelease": false,
-          "minecraft": [
-            "26.3"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "fabric-api-0.164.0+26.3.jar",
-              "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/LEklt8GT/fabric-api-0.164.0%2B26.3.jar",
-              "size": 1775592,
-              "hashes": {
-                "sha1": "7ec45ba92a286ed7d0c57bcd74cf9182789741ec",
-                "sha512": "2ce7b0826f75801a56e8150eb5ceca467cdf8b4b44e160b5a5381e5412567d024f46a16c679f29c4a9346b2687fa1740f91ed6026a31b2ed1f3d4b5035968d69"
               },
               "primary": true
             }
@@ -3572,7 +3572,7 @@
           ]
         }
       ],
-      "latest": "0.164.0+26.3"
+      "latest": "0.165.0+26.3"
     },
     "fabric-language-kotlin": {
       "name": "Fabric Language Kotlin",
