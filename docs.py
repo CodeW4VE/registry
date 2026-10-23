@@ -605,6 +605,11 @@ def render_community(lang, langs):
             "the bridge channel is chosen by name from the ones the bot can see.")) + "</p>",
         code([("w4ve install wavechat-server", T("c_install", "asks what it needs")),
               ("w4ve run", T("c_run", "the server, the hub and the bridge"))]),
+        callout("warn", esc(T("intent_title", "The Discord switch everybody misses")),
+                esc(T("intent_body",
+                  "In the Discord developer portal, on your application's Bot page, turn "
+                  "ON \"Message Content Intent\" and save. Without it Discord refuses the "
+                  "bot and nothing crosses; the hub's log says so with the exact link."))),
 
         f'<h2 id="more">{esc(T("more_title", "More servers"))}</h2>',
         "<p>" + esc(T("more_body",
@@ -641,6 +646,28 @@ def render_community(lang, langs):
             "With the mod, the normal chat window (T) does more: right click a line "
             "to reply, react, edit or delete it, and emotes show as pictures. "
             "Players without the mod still read every line.")) + "</p>",
+
+        f'<h2 id="discord">{esc(T("discord_title", "Discord"))}</h2>',
+        "<p>" + esc(T("discord_body",
+            "The bridge channel is one more place in the conversation: every server's "
+            "chat appears there under the player's name and server, and what people "
+            "write there reaches every server. Edits, deletions, reactions and replies "
+            "cross both ways. Emotes added to your Discord reach the game within "
+            "minutes, with no jar to update.")) + "</p>",
+        "<p>" + esc(T("shots_body",
+            "A screenshot sent from the game to another channel goes there and only "
+            "there, as a Discord attachment: the hub does not keep it, so it is as "
+            "private as that channel.")) + "</p>",
+
+        f'<h2 id="translate">{esc(T("translate_title", "Translation"))}</h2>',
+        "<p>" + esc(T("translate_body",
+            "Optional, and it runs on your own machine (Spanish, English and "
+            "Portuguese). With the mod, two buttons above the chat box say what "
+            "happens: \"Send in: EN\" sends what you write in English, with your "
+            "original shown under it, and \"Read in ES: on\" puts a line in your "
+            "language under what others write. Game words (farm names, mods, "
+            "!!commands, laughs) are left as they are.")) + "</p>",
+        code([("w4ve configure wavechat-server --set translation=true", "")]),
     ]
     return page(lang, langs, "community.html", T("page_title", "Your community") + " - W4VE docs",
                 "\n".join(body), "community")
