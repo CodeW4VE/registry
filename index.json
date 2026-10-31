@@ -7937,6 +7937,30 @@
       },
       "releases": [
         {
+          "version": "3.6.0+26.3",
+          "source": "modrinth",
+          "published": "2026-10-30T14:10:17.290011Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.3"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "ServerReplay-3.6.0+26.3.jar",
+              "url": "https://cdn.modrinth.com/data/qCvSZ8ra/versions/ly1yAeRN/ServerReplay-3.6.0%2B26.3.jar",
+              "size": 10376712,
+              "hashes": {
+                "sha1": "a1f6d811a96071662fcb6f062c4b3f6eab821c9d",
+                "sha512": "17e2e88d1277d41fe6b447c23063eee73d939b14879c38a12a444fbce6c4180405660ab18b25d1558c0490cda03de9fdd5a141d459b7df851ffde0f228f113bb"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
           "version": "3.6.0-beta.5+26.3",
           "source": "modrinth",
           "published": "2026-10-10T21:29:13.372374Z",
@@ -7979,30 +8003,6 @@
               "hashes": {
                 "sha1": "d33a769a0077fe09fd68a87390e550e02109c7ba",
                 "sha512": "1d2a7c1864cf6fcf044748dce513735a5d32f426d5af054df2d0147b975a4e88497e091393c62ed736134a300d9563972a10d5f94517c5da0526e258b33a3620"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "3.6.0-beta.1+26.3",
-          "source": "modrinth",
-          "published": "2026-09-20T23:50:43.646205Z",
-          "prerelease": true,
-          "minecraft": [
-            "26.3"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "ServerReplay-3.6.0-beta.1+26.3.jar",
-              "url": "https://cdn.modrinth.com/data/qCvSZ8ra/versions/4gMHwqkR/ServerReplay-3.6.0-beta.1%2B26.3.jar",
-              "size": 10190830,
-              "hashes": {
-                "sha1": "1225e33251f126ed671dff3473ddb969d51656b7",
-                "sha512": "2e5107f3c6318ed8962c493d46a2852efdb1a9b575ca5d7a8da36908927abd7b8d3b4dd2983c93437b6fe80a1e5dc9cccb5f54ad7619b0f4a9bc4dda9700989d"
               },
               "primary": true
             }
@@ -8201,7 +8201,7 @@
           ]
         }
       ],
-      "latest": "3.5.2+26.2"
+      "latest": "3.6.0+26.3"
     },
     "server-waypoint": {
       "name": "Server Waypoint",
