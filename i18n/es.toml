@@ -80,7 +80,7 @@ skip = "Ir al contenido"
 # ------------------------------------------------------------------ home page
 [home]
 eyebrow = "W4VE / documentación"
-tagline = "El runtime que corre tu servidor Fabric y lo mantiene sano, sin romper el vanilla."
+tagline = "Instala y corre un servidor técnico de Fabric, con sus mods y plugins de MCDReforged, sin cambiar el juego vanilla."
 cta_start = "Empezar"
 cta_catalog = "Ver el catálogo"
 
@@ -97,19 +97,19 @@ c_init = "mira primero, enseña el plan y después lo prepara"
 c_run = "arranca el servidor y lo cuida"
 c_install = "añade una pieza, y pregunta lo que necesita saber"
 c_status = "qué está corriendo y qué espera un reinicio"
-c_doctor = "qué está mal, antes de que lo descubra el servidor"
+c_doctor = "busca problemas"
 c_update = "lleva todo a su versión más nueva"
 c_selfupdate = "actualiza el propio W4VE"
-after_body = "w4ve help enseña el resto. Cada pregunta tiene su flag, así que un script obtiene lo mismo que una persona."
-adopt_title = "Mira antes de escribir"
-adopt_body = "<code>w4ve init</code> dice qué encontró (un servidor que ya existe, MCDR y sus plugins, la versión de Minecraft, Java, tus mods) y qué va a hacer, antes de hacer nada. Nunca mueve ni borra un archivo. En una carpeta vacía ofrece montar un servidor Fabric nuevo, y el EULA de Minecraft lo aceptas tú, nunca nosotros."
+after_body = "w4ve help enseña el resto. Cada pregunta también se puede contestar con un flag, para scripts."
+adopt_title = "No cambia nada hasta que digas que sí"
+adopt_body = "<code>w4ve init</code> dice qué encontró (un servidor que ya existe, MCDR y sus plugins, la versión de Minecraft, Java, tus mods) y qué va a hacer, antes de hacer nada. Nunca mueve ni borra un archivo. En una carpeta vacía ofrece montar un servidor Fabric nuevo, El EULA de Minecraft lo aceptas tú; W4VE nunca lo acepta por ti."
 catalog_title = "Qué hay en el catálogo"
-catalog_body = "{n} piezas: {mods} mods de Fabric, {plugins} plugins de MCDReforged, y las herramientas y bots de alrededor. Al día para Minecraft {targets}, porque son las versiones que corren nuestros propios servidores."
-nav_catalog = "Cada pieza, qué necesita y con qué se niega a convivir."
+catalog_body = "{n} piezas: {mods} mods de Fabric, {plugins} plugins de MCDReforged, y las herramientas y bots de alrededor. Probado en Minecraft {targets}, las versiones que corren nuestros propios servidores."
+nav_catalog = "Cada pieza, qué necesita y con qué choca."
 nav_profiles = "Un servidor técnico entero en un comando."
 nav_commands = "La referencia, generada desde el propio CLI."
 why_title = "Por qué existe esto"
-why_body = "Llevar un servidor técnico era un wrapper dentro de otro, jars copiados a mano y conocimiento que solo tenía una persona. W4VE es dueño del proceso del servidor, sabe qué corre y cómo volver atrás, mantiene tus plugins de MCDReforged funcionando sin MCDR, y deja tu mundo y tus archivos como archivos normales: si dejas de usarlo, el servidor sigue arrancando con Java a secas."
+why_body = "Llevar un servidor técnico suele significar wrappers, jars copiados a mano y una configuración que solo conoce una persona. W4VE corre el proceso del servidor, sabe qué tiene instalado y cómo volver atrás, y corre tus plugins de MCDReforged sin MCDR. Tu mundo y tus archivos siguen siendo archivos normales: si dejas de usar W4VE, el servidor sigue arrancando con Java a secas."
 
 # --------------------------------------------------------------- other pages
 [catalog]
@@ -130,7 +130,7 @@ english_title = "La ayuda sale en inglés"
 english_body = "Los bloques de abajo son la salida literal del programa, no texto de esta página: se copian tal cual para que no puedan mentir sobre lo que hace el comando."
 
 [registry]
-description = "El runtime que corre tu servidor Fabric y lo mantiene sano, sin romper el vanilla."
+description = "Instala y corre un servidor técnico de Fabric, con sus mods y plugins de MCDReforged, sin cambiar el juego vanilla."
 
 # ------------------------------------------------------------------- profiles
 [profiles.technical-survival]

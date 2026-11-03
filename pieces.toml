@@ -45,7 +45,7 @@ schema = 1
 [registry]
 name = "W4VE"
 tagline = "Ware 4 Vanilla Experience"
-description = "The runtime that runs your Fabric server and keeps it healthy, without breaking vanilla."
+description = "Installs and runs a technical Fabric server, with its mods and MCDReforged plugins, without changing vanilla gameplay."
 homepage = "https://w4ve.xyz/"
 docs = "https://docs.w4ve.xyz/"
 github_org = "CodeW4VE"

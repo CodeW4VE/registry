@@ -722,14 +722,14 @@ def render_home(lang, langs, index):
         f'w4ve run                  <span class="c"># '
         f'{esc(T("c_run", "starts the server and looks after it"))}</span>'
         "</code></pre>",
-        callout("info", T("adopt_title", "It looks before it writes"),
+        callout("info", T("adopt_title", "Nothing changes until you say yes"),
                 T("adopt_body",
                   "<code>w4ve init</code> says what it found (an existing "
                   "server, MCDR and its plugins, the Minecraft version, Java, "
                   "your mods) and what it is going to do, before it does "
                   "anything. It never moves or deletes a file. In an empty "
-                  "folder it offers to make a new Fabric server, and the "
-                  "Minecraft EULA is yours to accept, never ours.")),
+                  "folder it offers to make a new Fabric server. You accept "
+                  "the Minecraft EULA yourself; W4VE never does it for you.")),
 
         f'<h2>{esc(T("point_title", "After that"))}</h2>',
         "<pre><code>"
@@ -738,29 +738,28 @@ def render_home(lang, langs, index):
         f'w4ve status                <span class="c"># '
         f'{esc(T("c_status", "what is running, what waits for a restart"))}</span>\n'
         f'w4ve doctor                <span class="c"># '
-        f'{esc(T("c_doctor", "what is wrong, before the server finds out"))}</span>\n'
+        f'{esc(T("c_doctor", "checks for problems"))}</span>\n'
         f'w4ve update                <span class="c"># '
         f'{esc(T("c_update", "moves everything to its newest version"))}</span>\n'
         f'w4ve self-update           <span class="c"># '
         f'{esc(T("c_selfupdate", "updates W4VE itself"))}</span>'
         "</code></pre>",
         "<p>" + esc(T("after_body",
-                      "w4ve help lists the rest. Every question has a flag, so "
-                      "a script gets what a person gets.")) + "</p>",
+                      "w4ve help lists the rest. Every question can also be "
+                      "answered with a flag, for scripts.")) + "</p>",
 
         f'<h2>{esc(T("catalog_title", "What is in the catalog"))}</h2>',
         "<p>" + esc(T("catalog_body",
                       "{n} pieces: {mods} Fabric mods, {plugins} MCDReforged "
-                      "plugins, and the tools and bots around them. Kept honest "
-                      "for Minecraft {targets}, because those are the versions "
-                      "our own servers run.").format(
+                      "plugins, and the tools and bots around them. Tested on "
+                      "Minecraft {targets}, the versions our own servers run.").format(
                           n=len(pieces), mods=mods, plugins=plugins,
                           targets=targets)) + "</p>",
         '<div class="cards">'
         '<a class="card" href="pieces/index.html">'
         f'<span class="card-title">'
         f'{esc(lang.t("ui", "the_catalog", "The catalog"))}</span>'
-        f'<span class="card-body">{esc(T("nav_catalog", "Every piece, what it needs, and what it refuses to sit next to."))}</span></a>'
+        f'<span class="card-body">{esc(T("nav_catalog", "Every piece, what it needs and what it conflicts with."))}</span></a>'
         '<a class="card" href="profiles.html">'
         f'<span class="card-title">{esc(lang.t("ui", "profiles", "Profiles"))}</span>'
         f'<span class="card-body">{esc(T("nav_profiles", "A whole technical server in one command."))}</span></a>'
@@ -771,13 +770,13 @@ def render_home(lang, langs, index):
 
         f'<h2>{esc(T("why_title", "Why this exists"))}</h2>',
         "<p>" + esc(T("why_body",
-                      "Running a technical server used to mean a wrapper around "
-                      "a wrapper, jars copied by hand and knowledge only one "
-                      "person had. W4VE owns the server process, knows what it "
-                      "runs and how to go back, keeps your MCDReforged plugins "
-                      "working without MCDR, and leaves your world and files "
-                      "as normal files: stop using it and the server still "
-                      "starts with plain Java.")) + "</p>",
+                      "Running a technical server usually means wrappers, jars "
+                      "copied by hand and setup only one person knows. W4VE "
+                      "runs the server process, knows what is installed and "
+                      "how to roll it back, and runs your MCDReforged plugins "
+                      "without MCDR. Your world and files stay normal files: "
+                      "if you stop using W4VE, the server still starts with "
+                      "plain Java.")) + "</p>",
     ]
     return page(lang, langs, "index.html", "W4VE docs", "\n".join(body), "index")
 
