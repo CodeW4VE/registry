@@ -189,6 +189,12 @@ def fetch_modrinth(slug, loader="fabric"):
     versions = get_json(f"{MODRINTH_API}/project/{slug}/version")
     if not versions:
         return []
+    # On 3-nov-2026 Modrinth answered every project with game_versions empty.
+    # An empty list reads as "any Minecraft" to the CLI, which then installs
+    # the newest jar everywhere: stop the build and keep yesterday's index.
+    if not any(ver.get("game_versions") for ver in versions):
+        raise SystemExit(f"modrinth: {slug} came back with no game versions on any "
+                         "release; not rebuilding from that")
     releases = []
     for ver in versions:
         loaders = ver.get("loaders", [])
