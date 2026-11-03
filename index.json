@@ -3,7 +3,7 @@
   "registry": {
     "name": "W4VE",
     "tagline": "Ware 4 Vanilla Experience",
-    "description": "The runtime that runs your Fabric server and keeps it healthy, without breaking vanilla.",
+    "description": "Installs and runs a technical Fabric server, with its mods and MCDReforged plugins, without changing vanilla gameplay.",
     "homepage": "https://w4ve.xyz/",
     "docs": "https://docs.w4ve.xyz/",
     "github_org": "CodeW4VE",
@@ -2182,33 +2182,34 @@
       },
       "releases": [
         {
-          "version": "v1.83.0-mc26.4-snapshot-6",
+          "version": "v1.83.1-mc1.21.10",
           "source": "modrinth",
-          "published": "2026-11-01T18:31:04.018308Z",
+          "published": "2026-11-02T18:50:04.337829Z",
           "prerelease": false,
           "minecraft": [
-            "26.4-snapshot-6"
+            "1.21.9",
+            "1.21.10"
           ],
           "loaders": [
             "fabric"
           ],
           "files": [
             {
-              "name": "carpet-tis-addition-v1.83.0-mc26.4-snapshot-6.jar",
-              "url": "https://cdn.modrinth.com/data/jE0SjGuf/versions/bktnMRcy/carpet-tis-addition-v1.83.0-mc26.4-snapshot-6.jar",
-              "size": 1721408,
+              "name": "carpet-tis-addition-v1.83.1-mc1.21.10.jar",
+              "url": "https://cdn.modrinth.com/data/jE0SjGuf/versions/fhYPGfDU/carpet-tis-addition-v1.83.1-mc1.21.10.jar",
+              "size": 1865546,
               "hashes": {
-                "sha1": "b71acfc4870c26bdf6340c049510f3a6bccf166c",
-                "sha512": "a38af8d395aaca079a7023ee7820f3f8ef3e139dbe6b37df5489885d70b279c126ab1f6895ac61241b086071c453b0da6fec7dc0c91cb2b13a728fe1a698ef5c"
+                "sha1": "8f7c6f9a4a2c3bc7ec7792763a2607bfbb6c9d14",
+                "sha512": "4260392ef8901d23d642f5663d74f592c3a6e8cafb00f6dfc0fa65211ae18798ba517bb7360f537a73318caca838c7f5252723221df9840e7b0b60dc42e65715"
               },
               "primary": true
             }
           ]
         },
         {
-          "version": "v1.83.0-mc26.1.2",
+          "version": "v1.83.1-mc26.1.2",
           "source": "modrinth",
-          "published": "2026-11-01T18:30:57.603727Z",
+          "published": "2026-11-02T18:48:12.953383Z",
           "prerelease": false,
           "minecraft": [
             "26.1",
@@ -2220,12 +2221,60 @@
           ],
           "files": [
             {
-              "name": "carpet-tis-addition-v1.83.0-mc26.1.2.jar",
-              "url": "https://cdn.modrinth.com/data/jE0SjGuf/versions/IkYXXMbQ/carpet-tis-addition-v1.83.0-mc26.1.2.jar",
-              "size": 1717913,
+              "name": "carpet-tis-addition-v1.83.1-mc26.1.2.jar",
+              "url": "https://cdn.modrinth.com/data/jE0SjGuf/versions/fj1kAmuX/carpet-tis-addition-v1.83.1-mc26.1.2.jar",
+              "size": 1717914,
               "hashes": {
-                "sha1": "61f74fe84068770ca499466c14742fa6d7548e48",
-                "sha512": "9a69cb5c7064d060b96d2305c7bb3fe3721ccc57e7fba48dd35559edc3b0a2b72e104fa4933e8cf8e81f6c58918c09c8c3860cfc29a4079fe3aa7f2d443d46af"
+                "sha1": "dc5271c48dc0e1d56f67d3c5101c67f5976a837c",
+                "sha512": "634d2b0eb4cf57d156effc159c7dd3822d570533c8ba576e40885e64a000177b44656e15a6ab294c25add71737d8c7e79a3cb7979bdba182b5dd53acfb25a653"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "v1.83.1-mc26.4-snapshot-6",
+          "source": "modrinth",
+          "published": "2026-11-02T18:46:21.132202Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.4-snapshot-6"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "carpet-tis-addition-v1.83.1-mc26.4-snapshot-6.jar",
+              "url": "https://cdn.modrinth.com/data/jE0SjGuf/versions/P1g8MEjH/carpet-tis-addition-v1.83.1-mc26.4-snapshot-6.jar",
+              "size": 1721408,
+              "hashes": {
+                "sha1": "5b1d203d02aa77fea53b49c1d878e515abec8487",
+                "sha512": "713b1c4f7ba9586340cc9cffdad802629ebf8b8ecf6312c031273cb7cb8036bc2b19a0194f7900b4e270f2b642994e4aa3323ebe8cbb679af2ae0eeca5a34765"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "v1.83.1-mc26.2",
+          "source": "modrinth",
+          "published": "2026-11-02T18:46:02.904610Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.2"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "carpet-tis-addition-v1.83.1-mc26.2.jar",
+              "url": "https://cdn.modrinth.com/data/jE0SjGuf/versions/oED8TLqR/carpet-tis-addition-v1.83.1-mc26.2.jar",
+              "size": 1718286,
+              "hashes": {
+                "sha1": "e7564f2df573b4518c5ccc8c66cc98b7c4c4dd21",
+                "sha512": "d810f15517862f9510df0691f61ba0d18455764cc7ee915917165a3d79cc3ac174e1042751c52bde9ae2e7acf242914f81a7a7d90a2570026ea3ec25dde92868"
               },
               "primary": true
             }
@@ -2330,30 +2379,6 @@
           ]
         },
         {
-          "version": "v1.82.3-mc26.2",
-          "source": "modrinth",
-          "published": "2026-07-14T19:11:53.322649Z",
-          "prerelease": false,
-          "minecraft": [
-            "26.2"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "carpet-tis-addition-v1.82.3-mc26.2.jar",
-              "url": "https://cdn.modrinth.com/data/jE0SjGuf/versions/daCrSdc6/carpet-tis-addition-v1.82.3-mc26.2.jar",
-              "size": 1687629,
-              "hashes": {
-                "sha1": "3a0d992ce9babfb05a488efd1c77f920e5945659",
-                "sha512": "49f63b989e157d3d0bf465d8923418c66789a75c10d8b2574c125656f70a75433600ce7eba913e5c643c1a76d3a6039e3d759fecc7af3da7340339e9cef0d3f5"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
           "version": "v1.82.3-mc1.21.1",
           "source": "modrinth",
           "published": "2026-07-14T19:11:15.643396Z",
@@ -2379,7 +2404,7 @@
           ]
         }
       ],
-      "latest": "v1.83.0-mc26.4-snapshot-6"
+      "latest": "v1.83.1-mc1.21.10"
     },
     "chatbridge": {
       "name": "ChatBridge",
@@ -2443,6 +2468,30 @@
       },
       "releases": [
         {
+          "version": "2.9.1+26.3",
+          "source": "modrinth",
+          "published": "2026-11-02T19:22:25.227573Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.3"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "ChunkDebug-2.9.1+26.3.jar",
+              "url": "https://cdn.modrinth.com/data/zQxjhDPq/versions/IFuvPrIy/ChunkDebug-2.9.1%2B26.3.jar",
+              "size": 198297,
+              "hashes": {
+                "sha1": "e014e6dc094890588977b8d172efaa7df254cb80",
+                "sha512": "3510ccb5a44ddf7070c384943305327ec55d10173d9cce1d8931a7c18a53732869236dc1f76e1e4f0a9fc3d451f1b2bbfe34ab70a4498be7bca4293d9c2c58a7"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
           "version": "2.9.0+26.3",
           "source": "modrinth",
           "published": "2026-09-15T20:20:38.540596Z",
@@ -2485,30 +2534,6 @@
               "hashes": {
                 "sha1": "536faccc051da7441c4238e70839faae4753e496",
                 "sha512": "7e5bed2d14df2bd1aef123ed664d5d7092da93610ffa9bfffcdc440eb71e91b584c62f7c3ee9505f30237582e55a2310deb37b9fe71080ce3fd0aef3f18d4816"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "2.6.5+1.21.11",
-          "source": "modrinth",
-          "published": "2026-04-10T20:47:54.364215Z",
-          "prerelease": false,
-          "minecraft": [
-            "1.21.11"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "ChunkDebug-2.6.5+1.21.11.jar",
-              "url": "https://cdn.modrinth.com/data/zQxjhDPq/versions/FlVffAdC/ChunkDebug-2.6.5%2B1.21.11.jar",
-              "size": 196088,
-              "hashes": {
-                "sha1": "e8e6d066197a57c2fcedc100d5b07d3f63d24132",
-                "sha512": "48efcb6059fd8b2483be87ad04bcd907a7f48d33d42578c6c3e6f1deac8f3041b9d9bdd499560d144b61ac3850406857cde7454ff031b2b2ff9960c5497c9664"
               },
               "primary": true
             }
@@ -2613,7 +2638,7 @@
           ]
         }
       ],
-      "latest": "2.9.0+26.3"
+      "latest": "2.9.1+26.3"
     },
     "command-suggest": {
       "name": "CommandSuggest",
