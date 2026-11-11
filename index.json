@@ -3261,33 +3261,33 @@
       },
       "releases": [
         {
-          "version": "0.166.0+26.4",
+          "version": "0.166.2+26.4",
           "source": "modrinth",
-          "published": "2026-11-09T15:32:52.696203Z",
+          "published": "2026-11-11T13:44:09.177173Z",
           "prerelease": true,
           "minecraft": [
-            "26.4-snapshot-7"
+            "26.4-snapshot-8"
           ],
           "loaders": [
             "fabric"
           ],
           "files": [
             {
-              "name": "fabric-api-0.166.0+26.4.jar",
-              "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/NW528GYu/fabric-api-0.166.0%2B26.4.jar",
-              "size": 1757333,
+              "name": "fabric-api-0.166.2+26.4.jar",
+              "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/wW9iRH4q/fabric-api-0.166.2%2B26.4.jar",
+              "size": 1584250,
               "hashes": {
-                "sha1": "3a63d6fdd821fd62484be5d1cd6b6cceefaf937a",
-                "sha512": "b6476a005b4325b57783582fec3a99df2f935cad83bb4b876cc9ca3b0c4d5dec35f534a3255825daac92c20cb4d6f3ec4e86a877495bee879af1fb9b0e1af9c3"
+                "sha1": "8c147ef2606e01778a61cacb447861e1d9b1f0fe",
+                "sha512": "f1c5518f3d66520ca4e1d322173d994eb175d1ec1159a8f2752809487be788264cd975caf40427a004d5303c175bb36bfac9795071e9a865c5bb4cbf78f83c06"
               },
               "primary": true
             }
           ]
         },
         {
-          "version": "0.166.0+26.3",
+          "version": "0.166.2+26.3",
           "source": "modrinth",
-          "published": "2026-11-09T15:27:33.590886Z",
+          "published": "2026-11-11T13:38:52.250683Z",
           "prerelease": false,
           "minecraft": [
             "26.3"
@@ -3297,12 +3297,36 @@
           ],
           "files": [
             {
-              "name": "fabric-api-0.166.0+26.3.jar",
-              "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/998R2rNP/fabric-api-0.166.0%2B26.3.jar",
-              "size": 1797522,
+              "name": "fabric-api-0.166.2+26.3.jar",
+              "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/Zns5SSRA/fabric-api-0.166.2%2B26.3.jar",
+              "size": 1797523,
               "hashes": {
-                "sha1": "7f16cfcd4ef3d225a21417907634957787b31a5f",
-                "sha512": "de0d1a502cfcfcc594e0338e91c2fcf92a1239d47904ac2c3c50980ee132c676dba6abd81cd9449cdb0383657683c286f5bfc5c1bc1609c6b13bd569d36351d2"
+                "sha1": "65636253571429971f25f5619692e6c1a6362028",
+                "sha512": "fb686a9fa923248328107a12498229d6951e316257f18b7d0e4cbd6885ba447ed50a44076a8a5ba47cfe2043b329db3587ab000aeab1face26b2587a5d4ba6b5"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "0.166.1+26.4",
+          "source": "modrinth",
+          "published": "2026-11-10T18:39:30.116842Z",
+          "prerelease": true,
+          "minecraft": [
+            "26.4-snapshot-8"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "fabric-api-0.166.1+26.4.jar",
+              "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/9mx5Zplf/fabric-api-0.166.1%2B26.4.jar",
+              "size": 1555694,
+              "hashes": {
+                "sha1": "bdddcdc9945f6d55558c5447f9718bfebf7f979f",
+                "sha512": "009a0b9d4656398b44fcb6a0d454d66d45b37f492514e6a66d73cccec30f26d3e0b97a8d6fe5aee8938a7099990c6ab35f5fff1ab39362277539fef43e9a1c14"
               },
               "primary": true
             }
@@ -3525,7 +3549,7 @@
           ]
         }
       ],
-      "latest": "0.166.0+26.3"
+      "latest": "0.166.2+26.3"
     },
     "fabric-language-kotlin": {
       "name": "Fabric Language Kotlin",
@@ -6467,6 +6491,14 @@
       "tags": [],
       "releases": [
         {
+          "version": "2.16.3",
+          "tag": "v2.16.3",
+          "source": "github",
+          "published": "2026-11-10T16:03:39Z",
+          "prerelease": false,
+          "files": []
+        },
+        {
           "version": "2.16.2",
           "tag": "v2.16.2",
           "source": "github",
@@ -6481,17 +6513,9 @@
           "published": "2026-10-19T16:44:01Z",
           "prerelease": false,
           "files": []
-        },
-        {
-          "version": "2.16.0",
-          "tag": "v2.16.0",
-          "source": "github",
-          "published": "2026-09-19T05:58:29Z",
-          "prerelease": false,
-          "files": []
         }
       ],
-      "latest": "2.16.2"
+      "latest": "2.16.3"
     },
     "minecraft-data-api": {
       "name": "MinecraftDataAPI",
