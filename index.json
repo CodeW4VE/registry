@@ -41,6 +41,56 @@
       },
       "releases": [
         {
+          "version": "13.0.12+fabric",
+          "source": "modrinth",
+          "published": "2026-11-14T11:30:41.018726Z",
+          "prerelease": false,
+          "minecraft": [
+            "1.21",
+            "1.21.1"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "architectury-13.0.12-fabric.jar",
+              "url": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/WklfM1A0/architectury-13.0.12-fabric.jar",
+              "size": 600949,
+              "hashes": {
+                "sha1": "40207f77dcce4b19e64d2ad8ec53ecdf53147278",
+                "sha512": "e436b24aa54f9401bd0c3bfff95fd8df1fe44ebb7ea6e41aca0b337e09413265fbf96761065b8d7ebf3fabe45bd0fad0dee43d302efbf43e7bb8853dc9c821af"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "13.0.12+neoforge",
+          "source": "modrinth",
+          "published": "2026-11-14T11:30:41.016741Z",
+          "prerelease": false,
+          "minecraft": [
+            "1.21",
+            "1.21.1"
+          ],
+          "loaders": [
+            "neoforge"
+          ],
+          "files": [
+            {
+              "name": "architectury-13.0.12-neoforge.jar",
+              "url": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/xGfBrBzj/architectury-13.0.12-neoforge.jar",
+              "size": 584731,
+              "hashes": {
+                "sha1": "646dace27624ac08ad8d229fe15f6601a8b7fbb2",
+                "sha512": "286127f99708d1e2723e1dcc9104ebcab258f04db92040fc2394e5b7faf36d731ef3b84e592d94ec0d0f7f899eca84f806b1e012223da4894d4d8af5030ffe0f"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
           "version": "22.0.5+neoforge",
           "source": "modrinth",
           "published": "2026-10-09T19:30:17.890953Z",
@@ -59,30 +109,6 @@
               "hashes": {
                 "sha1": "3d97172dfd753f70a1ece295af19bc1a8bcd32f6",
                 "sha512": "04e6fb056ada0f0148c002527cdac09a651f275c5fa6b6dbcbcd7d4fd62a4eb6f583d7711030e1c82b00339ba808d8070a588a5432f334903d8b430a0da47ae5"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "22.0.5+fabric",
-          "source": "modrinth",
-          "published": "2026-10-09T19:30:17.890431Z",
-          "prerelease": false,
-          "minecraft": [
-            "26.3"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "architectury-fabric-22.0.5.jar",
-              "url": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/1pMaB6So/architectury-fabric-22.0.5.jar",
-              "size": 622542,
-              "hashes": {
-                "sha1": "8c5f566e32bd47fbb80be4932b9be1cfa97c4e3a",
-                "sha512": "14c61af2088b80b465f06edd3b3005038fa5be1c95a2161ce712c8da408a358038b7cd7ae4acf3198f6d47c693e4fdf65d646dac7e124f7cdd7f32bbc0dcd0ce"
               },
               "primary": true
             }
@@ -184,59 +210,9 @@
               "primary": true
             }
           ]
-        },
-        {
-          "version": "13.0.11+fabric",
-          "source": "modrinth",
-          "published": "2026-07-23T09:57:30.288849Z",
-          "prerelease": false,
-          "minecraft": [
-            "1.21",
-            "1.21.1"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "architectury-13.0.11-fabric.jar",
-              "url": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/Pzc2FP5K/architectury-13.0.11-fabric.jar",
-              "size": 600921,
-              "hashes": {
-                "sha1": "18200609d4c3571c4237b50884966f6fd82431ea",
-                "sha512": "53314eb34890b11ad3c06c6f3ba2d01ae1ca756235ce4f0574e4b0544952a2ab3c628c81b521653d6487d62c5dc3055e06fed6367a3a499bafad909512f0c716"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "13.0.8+neoforge",
-          "source": "modrinth",
-          "published": "2024-10-05T19:24:08.875561Z",
-          "prerelease": false,
-          "minecraft": [
-            "1.21",
-            "1.21.1"
-          ],
-          "loaders": [
-            "neoforge"
-          ],
-          "files": [
-            {
-              "name": "architectury-13.0.8-neoforge.jar",
-              "url": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/ZxYGwlk0/architectury-13.0.8-neoforge.jar",
-              "size": 584004,
-              "hashes": {
-                "sha1": "6ca11d3cc136bf69bb8f4d56982481eb85b5100b",
-                "sha512": "65e3664953385d880320dd6bb818bcb96d361c07c53e2a7f65e64c6a47720ee26b233224ae9cad465ef0b2bbaefdaf30fb0175a983cecd91de058817d6fcf57e"
-              },
-              "primary": true
-            }
-          ]
         }
       ],
-      "latest": "22.0.5+neoforge"
+      "latest": "13.0.12+fabric"
     },
     "axiom": {
       "name": "Axiom",
@@ -2182,33 +2158,57 @@
       },
       "releases": [
         {
-          "version": "v1.83.2-mc26.4-snapshot-7",
+          "version": "v1.83.3-mc26.2",
           "source": "modrinth",
-          "published": "2026-11-07T08:26:00.598345Z",
+          "published": "2026-11-14T10:22:20.221816Z",
           "prerelease": false,
           "minecraft": [
-            "26.4-snapshot-7"
+            "26.2"
           ],
           "loaders": [
             "fabric"
           ],
           "files": [
             {
-              "name": "carpet-tis-addition-v1.83.2-mc26.4-snapshot-7.jar",
-              "url": "https://cdn.modrinth.com/data/jE0SjGuf/versions/6bAEIoFv/carpet-tis-addition-v1.83.2-mc26.4-snapshot-7.jar",
-              "size": 1723716,
+              "name": "carpet-tis-addition-v1.83.3-mc26.2.jar",
+              "url": "https://cdn.modrinth.com/data/jE0SjGuf/versions/jtyqAhAd/carpet-tis-addition-v1.83.3-mc26.2.jar",
+              "size": 1720941,
               "hashes": {
-                "sha1": "21bf7b8e698453b135e3cc7ee77d692019d398b2",
-                "sha512": "a900f97ebe8e083c7f1d3208fb03246cc02024978d35be321ed35aded263063b39eac057ac6aa0d8fa550714e5f56ee6733e344a9b21dd6aa42dde4a65949c18"
+                "sha1": "fb279ef8befe712656d518ce5e42761f542353fa",
+                "sha512": "5675ad02fb57d9b1b7ed83857f10d6fd36f4a7904587463e87f67440b83e4fce07af677bbf3e056136ea420c12145d5869c458c3c9d3f3bb7e30e0eb2b3417a5"
               },
               "primary": true
             }
           ]
         },
         {
-          "version": "v1.83.2-mc26.3",
+          "version": "v1.83.3-mc26.4-snapshot-8",
           "source": "modrinth",
-          "published": "2026-11-07T08:25:49.171037Z",
+          "published": "2026-11-14T10:22:19.091289Z",
+          "prerelease": false,
+          "minecraft": [
+            "26.4-snapshot-8"
+          ],
+          "loaders": [
+            "fabric"
+          ],
+          "files": [
+            {
+              "name": "carpet-tis-addition-v1.83.3-mc26.4-snapshot-8.jar",
+              "url": "https://cdn.modrinth.com/data/jE0SjGuf/versions/gIJh5Uvj/carpet-tis-addition-v1.83.3-mc26.4-snapshot-8.jar",
+              "size": 1723683,
+              "hashes": {
+                "sha1": "94d5653c6e8b6367cdf88241a6477c24917d37ef",
+                "sha512": "7d13ede0356715c60ace2c66656cce435d38c585bead7edc0b30e13827e4ab47e8c41315f4900c11a659990558002737dbbdd1ddf4d8a5bb952efadeecc5ad2e"
+              },
+              "primary": true
+            }
+          ]
+        },
+        {
+          "version": "v1.83.3-mc26.3",
+          "source": "modrinth",
+          "published": "2026-11-14T10:22:17.126944Z",
           "prerelease": false,
           "minecraft": [
             "26.3"
@@ -2218,36 +2218,37 @@
           ],
           "files": [
             {
-              "name": "carpet-tis-addition-v1.83.2-mc26.3.jar",
-              "url": "https://cdn.modrinth.com/data/jE0SjGuf/versions/EkoQdQKl/carpet-tis-addition-v1.83.2-mc26.3.jar",
-              "size": 1722755,
+              "name": "carpet-tis-addition-v1.83.3-mc26.3.jar",
+              "url": "https://cdn.modrinth.com/data/jE0SjGuf/versions/Zo8yy53j/carpet-tis-addition-v1.83.3-mc26.3.jar",
+              "size": 1723101,
               "hashes": {
-                "sha1": "9d3b1e683e070c88a434bff1a4ea70bba1ba973a",
-                "sha512": "12df137d6ac7f6796eec9570821d2d4d610d0844259281921d1f2718617675157c554bb8a97a1d878c4be2a534003611eee9e38f72da0ae67e768eebfc1428a5"
+                "sha1": "1569475f58f7cc36de3585cef58d180e92118d1c",
+                "sha512": "bc7f1bc9a58f23b2d91f7c5dd6631f02292fb9d71e96eb02cddd086b999eeb97e821be9d346118e7fcf0a83a05b9e820534a381a6f33bd9530e2297c343cf0c7"
               },
               "primary": true
             }
           ]
         },
         {
-          "version": "v1.83.2-mc1.21.11",
+          "version": "v1.83.3-mc1.21.1",
           "source": "modrinth",
-          "published": "2026-11-07T08:25:45.295800Z",
+          "published": "2026-11-14T10:21:34.370874Z",
           "prerelease": false,
           "minecraft": [
-            "1.21.11"
+            "1.21.1",
+            "1.21"
           ],
           "loaders": [
             "fabric"
           ],
           "files": [
             {
-              "name": "carpet-tis-addition-v1.83.2-mc1.21.11.jar",
-              "url": "https://cdn.modrinth.com/data/jE0SjGuf/versions/5gsrPfEj/carpet-tis-addition-v1.83.2-mc1.21.11.jar",
-              "size": 1868162,
+              "name": "carpet-tis-addition-v1.83.3-mc1.21.1.jar",
+              "url": "https://cdn.modrinth.com/data/jE0SjGuf/versions/SaAXgiNV/carpet-tis-addition-v1.83.3-mc1.21.1.jar",
+              "size": 1863574,
               "hashes": {
-                "sha1": "b6035ff368abcc40af4abc80560fac5c8b65f676",
-                "sha512": "bafe8756e8283e0c6bf783a07bb67c116b30f0f04936c6d6cca2bd12548ec2fba5a6757435d4f1d4d7e9bfa55a065fb2c4f8e49455d6a221e635da9eec462119"
+                "sha1": "343de372bebaf25f99cde968047ceda53960a886",
+                "sha512": "671e01751a445161903b720c757d9c42d05e2ab91b72ba0d48ede6b3538bd5f406b21f11e76318892a045e1dc64d9abc30ab603ce56fc1817031e494cef826a4"
               },
               "primary": true
             }
@@ -2350,58 +2351,9 @@
               "primary": true
             }
           ]
-        },
-        {
-          "version": "v1.83.0-mc26.2",
-          "source": "modrinth",
-          "published": "2026-11-01T18:30:49.153849Z",
-          "prerelease": false,
-          "minecraft": [
-            "26.2"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "carpet-tis-addition-v1.83.0-mc26.2.jar",
-              "url": "https://cdn.modrinth.com/data/jE0SjGuf/versions/AvPlgyx3/carpet-tis-addition-v1.83.0-mc26.2.jar",
-              "size": 1718285,
-              "hashes": {
-                "sha1": "c5daf50f02f8082069d4603fbf9383b373ae64e8",
-                "sha512": "caec3df5a3bb28a95a393b46c691df6d1556407313a825d223fded7c4e407edd4a9df742d3748c91fb3d91ca152d67a616ff9a318b550cfec7452e9d03fa7842"
-              },
-              "primary": true
-            }
-          ]
-        },
-        {
-          "version": "v1.83.0-mc1.21.1",
-          "source": "modrinth",
-          "published": "2026-11-01T18:30:03.959137Z",
-          "prerelease": false,
-          "minecraft": [
-            "1.21",
-            "1.21.1"
-          ],
-          "loaders": [
-            "fabric"
-          ],
-          "files": [
-            {
-              "name": "carpet-tis-addition-v1.83.0-mc1.21.1.jar",
-              "url": "https://cdn.modrinth.com/data/jE0SjGuf/versions/bHPHaaqd/carpet-tis-addition-v1.83.0-mc1.21.1.jar",
-              "size": 1859294,
-              "hashes": {
-                "sha1": "5e0cd9a27dd48325e52edfb4169c340a8826d7e4",
-                "sha512": "98dbd657df96954cd3e577703fc5e84dfecdfcf5d2a434971a3b90553ca885ae11f0afe9bbf437758dc9535347f91770e56962296a910fdee219443e29089b76"
-              },
-              "primary": true
-            }
-          ]
         }
       ],
-      "latest": "v1.83.2-mc26.4-snapshot-7"
+      "latest": "v1.83.3-mc26.2"
     },
     "chatbridge": {
       "name": "ChatBridge",
